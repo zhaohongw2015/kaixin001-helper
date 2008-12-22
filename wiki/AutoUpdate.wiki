@@ -1,1 +1,1 @@
-Kaixin001.Helper.V1.0.Beta1.zip
+string lastedFile = "Kaixin001.Helper.V1.0.Beta1.zip";
