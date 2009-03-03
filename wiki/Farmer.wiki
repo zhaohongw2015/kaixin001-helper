@@ -1,2 +1,2 @@
-string last = "20090303";
-string file = "kaixin001-helper.googlecode.com/files/Kaixin001.Helper.V1.0.Beta1.patch001.zip";
+string last = "20090303b";
+string file = "kaixin001-helper.googlecode.com/files/Farmer_V1.0_Build20090303b.zip";
