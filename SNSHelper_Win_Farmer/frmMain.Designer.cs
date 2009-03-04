@@ -75,7 +75,6 @@
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.ckxAutoGrass = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cbxFriendWater = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.comboItem5 = new DevComponents.Editors.ComboItem();
             this.comboItem6 = new DevComponents.Editors.ComboItem();
@@ -90,7 +89,6 @@
             this.ckxAutoFarm = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ckxAutoVermin = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cbxWater = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.comboItem10 = new DevComponents.Editors.ComboItem();
             this.comboItem11 = new DevComponents.Editors.ComboItem();
@@ -130,6 +128,7 @@
             this.balloonTip1 = new DevComponents.DotNetBar.BalloonTip();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.biImport = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
@@ -177,7 +176,7 @@
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(0, 584);
+            this.dockSite4.Location = new System.Drawing.Point(0, 633);
             this.dockSite4.Name = "dockSite4";
             this.dockSite4.Size = new System.Drawing.Size(542, 0);
             this.dockSite4.TabIndex = 3;
@@ -190,7 +189,7 @@
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite1.Location = new System.Drawing.Point(0, 25);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 559);
+            this.dockSite1.Size = new System.Drawing.Size(0, 608);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -201,7 +200,7 @@
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite2.Location = new System.Drawing.Point(542, 25);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 559);
+            this.dockSite2.Size = new System.Drawing.Size(0, 608);
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
@@ -209,7 +208,7 @@
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(0, 584);
+            this.dockSite8.Location = new System.Drawing.Point(0, 633);
             this.dockSite8.Name = "dockSite8";
             this.dockSite8.Size = new System.Drawing.Size(542, 0);
             this.dockSite8.TabIndex = 7;
@@ -221,7 +220,7 @@
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite5.Location = new System.Drawing.Point(0, 25);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 559);
+            this.dockSite5.Size = new System.Drawing.Size(0, 608);
             this.dockSite5.TabIndex = 4;
             this.dockSite5.TabStop = false;
             // 
@@ -231,7 +230,7 @@
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite6.Location = new System.Drawing.Point(542, 25);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 559);
+            this.dockSite6.Size = new System.Drawing.Size(0, 608);
             this.dockSite6.TabIndex = 5;
             this.dockSite6.TabStop = false;
             // 
@@ -270,6 +269,7 @@
             this.buttonItem1.ImagePaddingHorizontal = 8;
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.biImport,
             this.buttonItem3});
             this.buttonItem1.Text = "文件(&F)";
             // 
@@ -334,14 +334,14 @@
             // 
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
+            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.tabControl1.SelectedTabIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(542, 559);
+            this.tabControl1.Size = new System.Drawing.Size(542, 608);
             this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Office2007Document;
             this.tabControl1.TabIndex = 8;
             this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
@@ -354,10 +354,10 @@
             this.tabControlPanel1.Controls.Add(this.txtWorkingBoard);
             this.tabControlPanel1.Controls.Add(this.panelEx1);
             this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(542, 534);
+            this.tabControlPanel1.Size = new System.Drawing.Size(542, 585);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -375,11 +375,11 @@
             // 
             this.txtWorkingBoard.Border.Class = "TextBoxBorder";
             this.txtWorkingBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 30);
+            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 32);
             this.txtWorkingBoard.Multiline = true;
             this.txtWorkingBoard.Name = "txtWorkingBoard";
             this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWorkingBoard.Size = new System.Drawing.Size(540, 503);
+            this.txtWorkingBoard.Size = new System.Drawing.Size(540, 552);
             this.txtWorkingBoard.TabIndex = 2;
             // 
             // panelEx1
@@ -392,7 +392,7 @@
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEx1.Location = new System.Drawing.Point(1, 1);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(540, 29);
+            this.panelEx1.Size = new System.Drawing.Size(540, 31);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -407,7 +407,7 @@
             this.lblWorkingRemainingTime.ForeColor = System.Drawing.Color.Red;
             this.lblWorkingRemainingTime.Location = new System.Drawing.Point(464, 4);
             this.lblWorkingRemainingTime.Name = "lblWorkingRemainingTime";
-            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 21);
+            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 23);
             this.lblWorkingRemainingTime.TabIndex = 4;
             this.lblWorkingRemainingTime.Text = "00:21:35";
             this.lblWorkingRemainingTime.Visible = false;
@@ -416,7 +416,7 @@
             // 
             this.lblNextWorkingTime.Location = new System.Drawing.Point(180, 4);
             this.lblNextWorkingTime.Name = "lblNextWorkingTime";
-            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 21);
+            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 23);
             this.lblNextWorkingTime.TabIndex = 2;
             this.lblNextWorkingTime.Text = "距下次工作(2009-03-03 14:00:00)还有：";
             this.lblNextWorkingTime.Visible = false;
@@ -428,7 +428,7 @@
             this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(98, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 21);
+            this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "停止工作";
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
@@ -439,7 +439,7 @@
             this.btnStart.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnStart.Location = new System.Drawing.Point(17, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 21);
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "开始工作";
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -455,10 +455,10 @@
             this.tabControlPanel2.Controls.Add(this.groupPanel2);
             this.tabControlPanel2.Controls.Add(this.groupPanel1);
             this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(542, 534);
+            this.tabControlPanel2.Size = new System.Drawing.Size(542, 585);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -480,9 +480,9 @@
             this.groupPanel2.Controls.Add(this.btnNewAccount);
             this.groupPanel2.Controls.Add(this.labelX7);
             this.groupPanel2.Controls.Add(this.lsbAccount);
-            this.groupPanel2.Location = new System.Drawing.Point(9, 67);
+            this.groupPanel2.Location = new System.Drawing.Point(9, 73);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(522, 470);
+            this.groupPanel2.Size = new System.Drawing.Size(522, 509);
             // 
             // 
             // 
@@ -511,7 +511,7 @@
             this.contextMenuBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.biAccountList,
             this.biFriendList});
-            this.contextMenuBar2.Location = new System.Drawing.Point(24, 174);
+            this.contextMenuBar2.Location = new System.Drawing.Point(24, 189);
             this.contextMenuBar2.Name = "contextMenuBar2";
             this.contextMenuBar2.Size = new System.Drawing.Size(108, 47);
             this.contextMenuBar2.Stretch = true;
@@ -606,9 +606,9 @@
             this.groupPanel5.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel5.Controls.Add(this.lblNetworkingStatus);
-            this.groupPanel5.Location = new System.Drawing.Point(185, 8);
+            this.groupPanel5.Location = new System.Drawing.Point(185, 9);
             this.groupPanel5.Name = "groupPanel5";
-            this.groupPanel5.Size = new System.Drawing.Size(207, 60);
+            this.groupPanel5.Size = new System.Drawing.Size(207, 65);
             // 
             // 
             // 
@@ -635,9 +635,9 @@
             // lblNetworkingStatus
             // 
             this.lblNetworkingStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblNetworkingStatus.Location = new System.Drawing.Point(6, 16);
+            this.lblNetworkingStatus.Location = new System.Drawing.Point(6, 17);
             this.lblNetworkingStatus.Name = "lblNetworkingStatus";
-            this.lblNetworkingStatus.Size = new System.Drawing.Size(192, 23);
+            this.lblNetworkingStatus.Size = new System.Drawing.Size(192, 25);
             this.lblNetworkingStatus.TabIndex = 5;
             // 
             // groupPanel4
@@ -660,9 +660,9 @@
             this.groupPanel4.Controls.Add(this.dgvFriendList);
             this.groupPanel4.Controls.Add(this.btnSaveAccount);
             this.groupPanel4.Controls.Add(this.cbxIsOperation);
-            this.groupPanel4.Location = new System.Drawing.Point(178, 60);
+            this.groupPanel4.Location = new System.Drawing.Point(178, 65);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(327, 384);
+            this.groupPanel4.Size = new System.Drawing.Size(327, 416);
             // 
             // 
             // 
@@ -688,9 +688,9 @@
             // ckxAutoGrass
             // 
             this.ckxAutoGrass.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoGrass.Location = new System.Drawing.Point(17, 315);
+            this.ckxAutoGrass.Location = new System.Drawing.Point(17, 341);
             this.ckxAutoGrass.Name = "ckxAutoGrass";
-            this.ckxAutoGrass.Size = new System.Drawing.Size(107, 23);
+            this.ckxAutoGrass.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoGrass.TabIndex = 38;
             this.ckxAutoGrass.Text = "是否自动锄草";
             // 
@@ -703,7 +703,6 @@
             this.cbxFriendWater.FormattingEnabled = true;
             this.cbxFriendWater.ItemHeight = 15;
             this.cbxFriendWater.Items.AddRange(new object[] {
-            this.comboItem3,
             this.comboItem4,
             this.comboItem5,
             this.comboItem6,
@@ -713,10 +712,6 @@
             this.cbxFriendWater.Name = "cbxFriendWater";
             this.cbxFriendWater.Size = new System.Drawing.Size(54, 21);
             this.cbxFriendWater.TabIndex = 37;
-            // 
-            // comboItem3
-            // 
-            this.comboItem3.Text = "5";
             // 
             // comboItem4
             // 
@@ -743,34 +738,34 @@
             this.labelX10.BackColor = System.Drawing.Color.Transparent;
             this.labelX10.Location = new System.Drawing.Point(108, 4);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(123, 21);
+            this.labelX10.Size = new System.Drawing.Size(123, 23);
             this.labelX10.TabIndex = 36;
             this.labelX10.Text = "好友花园浇水下限：";
             // 
             // ckxAutoHavest
             // 
             this.ckxAutoHavest.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoHavest.Location = new System.Drawing.Point(147, 287);
+            this.ckxAutoHavest.Location = new System.Drawing.Point(147, 311);
             this.ckxAutoHavest.Name = "ckxAutoHavest";
-            this.ckxAutoHavest.Size = new System.Drawing.Size(107, 23);
+            this.ckxAutoHavest.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoHavest.TabIndex = 35;
             this.ckxAutoHavest.Text = "是否自动收获";
             // 
             // ckxAutoBuySeed
             // 
             this.ckxAutoBuySeed.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoBuySeed.Location = new System.Drawing.Point(17, 288);
+            this.ckxAutoBuySeed.Location = new System.Drawing.Point(17, 312);
             this.ckxAutoBuySeed.Name = "ckxAutoBuySeed";
-            this.ckxAutoBuySeed.Size = new System.Drawing.Size(107, 23);
+            this.ckxAutoBuySeed.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoBuySeed.TabIndex = 34;
             this.ckxAutoBuySeed.Text = "是否自动购买";
             // 
             // ckxAutoPlough
             // 
             this.ckxAutoPlough.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoPlough.Location = new System.Drawing.Point(147, 261);
+            this.ckxAutoPlough.Location = new System.Drawing.Point(147, 283);
             this.ckxAutoPlough.Name = "ckxAutoPlough";
-            this.ckxAutoPlough.Size = new System.Drawing.Size(117, 23);
+            this.ckxAutoPlough.Size = new System.Drawing.Size(117, 25);
             this.ckxAutoPlough.TabIndex = 33;
             this.ckxAutoPlough.Text = "是否自动犁地";
             // 
@@ -781,7 +776,7 @@
             this.cbxCrops.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCrops.FormattingEnabled = true;
             this.cbxCrops.ItemHeight = 15;
-            this.cbxCrops.Location = new System.Drawing.Point(214, 207);
+            this.cbxCrops.Location = new System.Drawing.Point(214, 224);
             this.cbxCrops.Name = "cbxCrops";
             this.cbxCrops.Size = new System.Drawing.Size(76, 21);
             this.cbxCrops.TabIndex = 32;
@@ -789,18 +784,18 @@
             // labelX4
             // 
             this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            this.labelX4.Location = new System.Drawing.Point(147, 207);
+            this.labelX4.Location = new System.Drawing.Point(147, 224);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(64, 21);
+            this.labelX4.Size = new System.Drawing.Size(64, 23);
             this.labelX4.TabIndex = 31;
             this.labelX4.Text = "农作物：";
             // 
             // ckxAutoFarm
             // 
             this.ckxAutoFarm.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoFarm.Location = new System.Drawing.Point(17, 207);
+            this.ckxAutoFarm.Location = new System.Drawing.Point(17, 224);
             this.ckxAutoFarm.Name = "ckxAutoFarm";
-            this.ckxAutoFarm.Size = new System.Drawing.Size(107, 23);
+            this.ckxAutoFarm.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoFarm.TabIndex = 30;
             this.ckxAutoFarm.Text = "是否自动播种";
             this.ckxAutoFarm.CheckedChanged += new System.EventHandler(this.ckxAutoFarm_CheckedChanged);
@@ -808,9 +803,9 @@
             // ckxAutoVermin
             // 
             this.ckxAutoVermin.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoVermin.Location = new System.Drawing.Point(17, 262);
+            this.ckxAutoVermin.Location = new System.Drawing.Point(17, 284);
             this.ckxAutoVermin.Name = "ckxAutoVermin";
-            this.ckxAutoVermin.Size = new System.Drawing.Size(107, 23);
+            this.ckxAutoVermin.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoVermin.TabIndex = 29;
             this.ckxAutoVermin.Text = "是否自动捉虫";
             // 
@@ -822,20 +817,15 @@
             this.cbxWater.FormattingEnabled = true;
             this.cbxWater.ItemHeight = 15;
             this.cbxWater.Items.AddRange(new object[] {
-            this.comboItem1,
             this.comboItem2,
             this.comboItem10,
             this.comboItem11,
             this.comboItem12,
             this.comboItem13});
-            this.cbxWater.Location = new System.Drawing.Point(214, 234);
+            this.cbxWater.Location = new System.Drawing.Point(214, 254);
             this.cbxWater.Name = "cbxWater";
             this.cbxWater.Size = new System.Drawing.Size(54, 21);
             this.cbxWater.TabIndex = 28;
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.Text = "5";
             // 
             // comboItem2
             // 
@@ -860,18 +850,18 @@
             // labelX1
             // 
             this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            this.labelX1.Location = new System.Drawing.Point(147, 234);
+            this.labelX1.Location = new System.Drawing.Point(147, 254);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(72, 21);
+            this.labelX1.Size = new System.Drawing.Size(72, 23);
             this.labelX1.TabIndex = 22;
             this.labelX1.Text = "浇水下限：";
             // 
             // ckxAutoWater
             // 
             this.ckxAutoWater.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoWater.Location = new System.Drawing.Point(17, 234);
+            this.ckxAutoWater.Location = new System.Drawing.Point(17, 254);
             this.ckxAutoWater.Name = "ckxAutoWater";
-            this.ckxAutoWater.Size = new System.Drawing.Size(107, 23);
+            this.ckxAutoWater.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoWater.TabIndex = 20;
             this.ckxAutoWater.Text = "是否自动浇水";
             this.ckxAutoWater.CheckedChanged += new System.EventHandler(this.ckxAutoWater_CheckedChanged);
@@ -894,19 +884,19 @@
             this.锄草});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFriendList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvFriendList.Location = new System.Drawing.Point(3, 30);
+            this.dgvFriendList.Location = new System.Drawing.Point(3, 33);
             this.dgvFriendList.MultiSelect = false;
             this.dgvFriendList.Name = "dgvFriendList";
             this.dgvFriendList.RowTemplate.Height = 23;
             this.dgvFriendList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvFriendList.Size = new System.Drawing.Size(315, 167);
+            this.dgvFriendList.Size = new System.Drawing.Size(315, 181);
             this.dgvFriendList.TabIndex = 18;
             this.dgvFriendList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvFriendList_MouseClick);
             this.dgvFriendList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFriendList_CellEndEdit);
@@ -970,9 +960,9 @@
             // 
             this.btnSaveAccount.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSaveAccount.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveAccount.Location = new System.Drawing.Point(153, 346);
+            this.btnSaveAccount.Location = new System.Drawing.Point(153, 375);
             this.btnSaveAccount.Name = "btnSaveAccount";
-            this.btnSaveAccount.Size = new System.Drawing.Size(109, 23);
+            this.btnSaveAccount.Size = new System.Drawing.Size(109, 25);
             this.btnSaveAccount.TabIndex = 5;
             this.btnSaveAccount.Text = "保存帐号设置";
             this.btnSaveAccount.Click += new System.EventHandler(this.btnSaveAccount_Click);
@@ -985,7 +975,7 @@
             this.cbxIsOperation.CheckValue = "Y";
             this.cbxIsOperation.Location = new System.Drawing.Point(17, 4);
             this.cbxIsOperation.Name = "cbxIsOperation";
-            this.cbxIsOperation.Size = new System.Drawing.Size(76, 21);
+            this.cbxIsOperation.Size = new System.Drawing.Size(76, 23);
             this.cbxIsOperation.TabIndex = 1;
             this.cbxIsOperation.Text = "是否操作";
             // 
@@ -1000,7 +990,7 @@
             this.groupPanel3.Controls.Add(this.labelX8);
             this.groupPanel3.Location = new System.Drawing.Point(178, 3);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(327, 50);
+            this.groupPanel3.Size = new System.Drawing.Size(327, 54);
             // 
             // 
             // 
@@ -1027,44 +1017,45 @@
             // 
             this.btnLoadFriend.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnLoadFriend.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLoadFriend.Location = new System.Drawing.Point(219, 7);
+            this.btnLoadFriend.Location = new System.Drawing.Point(219, 8);
             this.btnLoadFriend.Name = "btnLoadFriend";
-            this.btnLoadFriend.Size = new System.Drawing.Size(89, 33);
+            this.btnLoadFriend.Size = new System.Drawing.Size(89, 36);
             this.btnLoadFriend.TabIndex = 5;
             this.btnLoadFriend.Text = "加载好友信息";
             this.btnLoadFriend.Click += new System.EventHandler(this.btnLoadFriend_Click);
             // 
             // txtNewLoginPwd
             // 
-            this.txtNewLoginPwd.Location = new System.Drawing.Point(57, 26);
+            this.txtNewLoginPwd.Location = new System.Drawing.Point(57, 28);
             this.txtNewLoginPwd.Name = "txtNewLoginPwd";
-            this.txtNewLoginPwd.Size = new System.Drawing.Size(145, 14);
+            this.txtNewLoginPwd.PasswordChar = '*';
+            this.txtNewLoginPwd.Size = new System.Drawing.Size(145, 13);
             this.txtNewLoginPwd.TabIndex = 4;
             this.txtNewLoginPwd.WatermarkText = "请输入密码...";
             // 
             // labelX9
             // 
             this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            this.labelX9.Location = new System.Drawing.Point(17, 26);
+            this.labelX9.Location = new System.Drawing.Point(17, 28);
             this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(45, 21);
+            this.labelX9.Size = new System.Drawing.Size(45, 23);
             this.labelX9.TabIndex = 3;
             this.labelX9.Text = "密码：";
             // 
             // txtNewLoginEmail
             // 
-            this.txtNewLoginEmail.Location = new System.Drawing.Point(57, 6);
+            this.txtNewLoginEmail.Location = new System.Drawing.Point(57, 7);
             this.txtNewLoginEmail.Name = "txtNewLoginEmail";
-            this.txtNewLoginEmail.Size = new System.Drawing.Size(145, 14);
+            this.txtNewLoginEmail.Size = new System.Drawing.Size(145, 13);
             this.txtNewLoginEmail.TabIndex = 2;
             this.txtNewLoginEmail.WatermarkText = "请输入帐号...";
             // 
             // labelX8
             // 
             this.labelX8.BackColor = System.Drawing.Color.Transparent;
-            this.labelX8.Location = new System.Drawing.Point(17, 7);
+            this.labelX8.Location = new System.Drawing.Point(17, 8);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(45, 21);
+            this.labelX8.Size = new System.Drawing.Size(45, 23);
             this.labelX8.TabIndex = 1;
             this.labelX8.Text = "帐号：";
             // 
@@ -1074,7 +1065,7 @@
             this.btnNewAccount.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnNewAccount.Location = new System.Drawing.Point(113, 1);
             this.btnNewAccount.Name = "btnNewAccount";
-            this.btnNewAccount.Size = new System.Drawing.Size(55, 21);
+            this.btnNewAccount.Size = new System.Drawing.Size(55, 23);
             this.btnNewAccount.TabIndex = 2;
             this.btnNewAccount.Text = "新建帐号";
             this.btnNewAccount.Click += new System.EventHandler(this.btnNewAccount_Click);
@@ -1084,7 +1075,7 @@
             this.labelX7.BackColor = System.Drawing.Color.Transparent;
             this.labelX7.Location = new System.Drawing.Point(9, 3);
             this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(98, 21);
+            this.labelX7.Size = new System.Drawing.Size(98, 23);
             this.labelX7.TabIndex = 1;
             this.labelX7.Text = "双击选择帐号↓";
             // 
@@ -1095,10 +1086,10 @@
             // 
             this.lsbAccount.Border.Class = "ListViewBorder";
             this.lsbAccount.FullRowSelect = true;
-            this.lsbAccount.Location = new System.Drawing.Point(10, 26);
+            this.lsbAccount.Location = new System.Drawing.Point(10, 28);
             this.lsbAccount.MultiSelect = false;
             this.lsbAccount.Name = "lsbAccount";
-            this.lsbAccount.Size = new System.Drawing.Size(162, 418);
+            this.lsbAccount.Size = new System.Drawing.Size(162, 453);
             this.lsbAccount.TabIndex = 0;
             this.lsbAccount.UseCompatibleStateImageBehavior = false;
             this.lsbAccount.View = System.Windows.Forms.View.List;
@@ -1117,7 +1108,7 @@
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Location = new System.Drawing.Point(9, 4);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(523, 56);
+            this.groupPanel1.Size = new System.Drawing.Size(523, 61);
             // 
             // 
             // 
@@ -1145,9 +1136,9 @@
             // 
             this.btnSaveGlobalSetting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSaveGlobalSetting.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveGlobalSetting.Location = new System.Drawing.Point(405, 6);
+            this.btnSaveGlobalSetting.Location = new System.Drawing.Point(405, 7);
             this.btnSaveGlobalSetting.Name = "btnSaveGlobalSetting";
-            this.btnSaveGlobalSetting.Size = new System.Drawing.Size(75, 21);
+            this.btnSaveGlobalSetting.Size = new System.Drawing.Size(75, 23);
             this.btnSaveGlobalSetting.TabIndex = 6;
             this.btnSaveGlobalSetting.Text = "保存设置";
             this.btnSaveGlobalSetting.Click += new System.EventHandler(this.btnSaveGlobalSetting_Click);
@@ -1155,9 +1146,9 @@
             // labelX5
             // 
             this.labelX5.BackColor = System.Drawing.Color.Transparent;
-            this.labelX5.Location = new System.Drawing.Point(350, 8);
+            this.labelX5.Location = new System.Drawing.Point(350, 9);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(33, 21);
+            this.labelX5.Size = new System.Drawing.Size(33, 23);
             this.labelX5.TabIndex = 5;
             this.labelX5.Text = "(秒)";
             // 
@@ -1167,30 +1158,30 @@
             // 
             // 
             this.txtNetDelay.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtNetDelay.Location = new System.Drawing.Point(289, 7);
+            this.txtNetDelay.Location = new System.Drawing.Point(289, 8);
             this.txtNetDelay.MaxValue = 30;
             this.txtNetDelay.MinValue = 0;
             this.txtNetDelay.Name = "txtNetDelay";
             this.txtNetDelay.ShowUpDown = true;
-            this.txtNetDelay.Size = new System.Drawing.Size(55, 21);
+            this.txtNetDelay.Size = new System.Drawing.Size(55, 20);
             this.txtNetDelay.TabIndex = 4;
             this.txtNetDelay.Value = 3;
             // 
             // labelX6
             // 
             this.labelX6.BackColor = System.Drawing.Color.Transparent;
-            this.labelX6.Location = new System.Drawing.Point(221, 8);
+            this.labelX6.Location = new System.Drawing.Point(221, 9);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(72, 21);
+            this.labelX6.Size = new System.Drawing.Size(72, 23);
             this.labelX6.TabIndex = 3;
             this.labelX6.Text = "网络延迟：";
             // 
             // labelX3
             // 
             this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            this.labelX3.Location = new System.Drawing.Point(155, 8);
+            this.labelX3.Location = new System.Drawing.Point(155, 9);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(52, 21);
+            this.labelX3.Size = new System.Drawing.Size(52, 23);
             this.labelX3.TabIndex = 2;
             this.labelX3.Text = "(分钟)";
             // 
@@ -1200,21 +1191,21 @@
             // 
             // 
             this.txtParkingInterval.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtParkingInterval.Location = new System.Drawing.Point(93, 8);
+            this.txtParkingInterval.Location = new System.Drawing.Point(93, 9);
             this.txtParkingInterval.MaxValue = 720;
             this.txtParkingInterval.MinValue = 0;
             this.txtParkingInterval.Name = "txtParkingInterval";
             this.txtParkingInterval.ShowUpDown = true;
-            this.txtParkingInterval.Size = new System.Drawing.Size(55, 21);
+            this.txtParkingInterval.Size = new System.Drawing.Size(55, 20);
             this.txtParkingInterval.TabIndex = 1;
             this.txtParkingInterval.Value = 60;
             // 
             // labelX2
             // 
             this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            this.labelX2.Location = new System.Drawing.Point(25, 8);
+            this.labelX2.Location = new System.Drawing.Point(25, 9);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 21);
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "工作周期：";
             // 
@@ -1236,11 +1227,18 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // biImport
+            // 
+            this.biImport.ImagePaddingHorizontal = 8;
+            this.biImport.Name = "biImport";
+            this.biImport.Text = "帐号批量导入";
+            this.biImport.Click += new System.EventHandler(this.biImport_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 584);
+            this.ClientSize = new System.Drawing.Size(542, 633);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
@@ -1250,6 +1248,7 @@
             this.Controls.Add(this.dockSite6);
             this.Controls.Add(this.dockSite7);
             this.Controls.Add(this.dockSite8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
@@ -1344,7 +1343,6 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX ckxAutoFarm;
         private DevComponents.DotNetBar.Controls.CheckBoxX ckxAutoVermin;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbxWater;
-        private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.Editors.ComboItem comboItem10;
         private DevComponents.Editors.ComboItem comboItem11;
@@ -1354,7 +1352,6 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX ckxAutoBuySeed;
         private DevComponents.DotNetBar.Controls.CheckBoxX ckxAutoPlough;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbxFriendWater;
-        private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;
         private DevComponents.Editors.ComboItem comboItem5;
         private DevComponents.Editors.ComboItem comboItem6;
@@ -1378,5 +1375,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn 锄草;
         private DevComponents.DotNetBar.ButtonItem biInvertSelectFullRow;
         private DevComponents.DotNetBar.ButtonItem biInvertSelectFullColumn;
+        private DevComponents.DotNetBar.ButtonItem biImport;
     }
 }
