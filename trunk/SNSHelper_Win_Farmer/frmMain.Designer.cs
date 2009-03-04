@@ -49,6 +49,14 @@
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.txtWorkingBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.lblWorkingRemainingTime = new DevComponents.DotNetBar.LabelX();
+            this.lblNextWorkingTime = new DevComponents.DotNetBar.LabelX();
+            this.btnStop = new DevComponents.DotNetBar.ButtonX();
+            this.btnStart = new DevComponents.DotNetBar.ButtonX();
+            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.contextMenuBar2 = new DevComponents.DotNetBar.ContextMenuBar();
@@ -119,14 +127,6 @@
             this.txtParkingInterval = new DevComponents.Editors.IntegerInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.txtWorkingBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.lblWorkingRemainingTime = new DevComponents.DotNetBar.LabelX();
-            this.lblNextWorkingTime = new DevComponents.DotNetBar.LabelX();
-            this.btnStop = new DevComponents.DotNetBar.ButtonX();
-            this.btnStart = new DevComponents.DotNetBar.ButtonX();
-            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.balloonTip1 = new DevComponents.DotNetBar.BalloonTip();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -134,6 +134,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabControlPanel1.SuspendLayout();
+            this.panelEx1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).BeginInit();
@@ -144,8 +146,6 @@
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).BeginInit();
-            this.tabControlPanel1.SuspendLayout();
-            this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dotNetBarManager1
@@ -348,6 +348,107 @@
             this.tabControl1.Tabs.Add(this.tabItem1);
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Text = "tabControl1";
+            // 
+            // tabControlPanel1
+            // 
+            this.tabControlPanel1.Controls.Add(this.txtWorkingBoard);
+            this.tabControlPanel1.Controls.Add(this.panelEx1);
+            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel1.Name = "tabControlPanel1";
+            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel1.Size = new System.Drawing.Size(542, 534);
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel1.Style.GradientAngle = 90;
+            this.tabControlPanel1.TabIndex = 1;
+            this.tabControlPanel1.TabItem = this.tabItem1;
+            // 
+            // txtWorkingBoard
+            // 
+            // 
+            // 
+            // 
+            this.txtWorkingBoard.Border.Class = "TextBoxBorder";
+            this.txtWorkingBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 30);
+            this.txtWorkingBoard.Multiline = true;
+            this.txtWorkingBoard.Name = "txtWorkingBoard";
+            this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtWorkingBoard.Size = new System.Drawing.Size(540, 503);
+            this.txtWorkingBoard.TabIndex = 2;
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx1.Controls.Add(this.lblWorkingRemainingTime);
+            this.panelEx1.Controls.Add(this.lblNextWorkingTime);
+            this.panelEx1.Controls.Add(this.btnStop);
+            this.panelEx1.Controls.Add(this.btnStart);
+            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEx1.Location = new System.Drawing.Point(1, 1);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(540, 29);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 1;
+            // 
+            // lblWorkingRemainingTime
+            // 
+            this.lblWorkingRemainingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblWorkingRemainingTime.ForeColor = System.Drawing.Color.Red;
+            this.lblWorkingRemainingTime.Location = new System.Drawing.Point(464, 4);
+            this.lblWorkingRemainingTime.Name = "lblWorkingRemainingTime";
+            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 21);
+            this.lblWorkingRemainingTime.TabIndex = 4;
+            this.lblWorkingRemainingTime.Text = "00:21:35";
+            this.lblWorkingRemainingTime.Visible = false;
+            // 
+            // lblNextWorkingTime
+            // 
+            this.lblNextWorkingTime.Location = new System.Drawing.Point(180, 4);
+            this.lblNextWorkingTime.Name = "lblNextWorkingTime";
+            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 21);
+            this.lblNextWorkingTime.TabIndex = 2;
+            this.lblNextWorkingTime.Text = "距下次工作(2009-03-03 14:00:00)还有：";
+            this.lblNextWorkingTime.Visible = false;
+            // 
+            // btnStop
+            // 
+            this.btnStop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStop.Enabled = false;
+            this.btnStop.Location = new System.Drawing.Point(98, 4);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(75, 21);
+            this.btnStop.TabIndex = 1;
+            this.btnStop.Text = "停止工作";
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStart.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStart.Location = new System.Drawing.Point(17, 4);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 21);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "开始工作";
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // tabItem1
+            // 
+            this.tabItem1.AttachedControl = this.tabControlPanel1;
+            this.tabItem1.Name = "tabItem1";
+            this.tabItem1.Text = "花园情况";
             // 
             // tabControlPanel2
             // 
@@ -596,7 +697,6 @@
             // cbxFriendWater
             // 
             this.balloonTip1.SetBalloonCaption(this.cbxFriendWater, "农夫建议：为提供性能，请把该项值设小");
-            this.balloonTip1.SetBalloonText(this.cbxFriendWater, null);
             this.cbxFriendWater.DisplayMember = "Text";
             this.cbxFriendWater.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxFriendWater.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1124,107 +1224,6 @@
             this.tabItem2.Name = "tabItem2";
             this.tabItem2.Text = "农夫设置";
             // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Controls.Add(this.txtWorkingBoard);
-            this.tabControlPanel1.Controls.Add(this.panelEx1);
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(542, 534);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.tabItem1;
-            // 
-            // txtWorkingBoard
-            // 
-            // 
-            // 
-            // 
-            this.txtWorkingBoard.Border.Class = "TextBoxBorder";
-            this.txtWorkingBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 30);
-            this.txtWorkingBoard.Multiline = true;
-            this.txtWorkingBoard.Name = "txtWorkingBoard";
-            this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWorkingBoard.Size = new System.Drawing.Size(540, 503);
-            this.txtWorkingBoard.TabIndex = 2;
-            // 
-            // panelEx1
-            // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.Controls.Add(this.lblWorkingRemainingTime);
-            this.panelEx1.Controls.Add(this.lblNextWorkingTime);
-            this.panelEx1.Controls.Add(this.btnStop);
-            this.panelEx1.Controls.Add(this.btnStart);
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEx1.Location = new System.Drawing.Point(1, 1);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(540, 29);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 1;
-            // 
-            // lblWorkingRemainingTime
-            // 
-            this.lblWorkingRemainingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblWorkingRemainingTime.ForeColor = System.Drawing.Color.Red;
-            this.lblWorkingRemainingTime.Location = new System.Drawing.Point(464, 4);
-            this.lblWorkingRemainingTime.Name = "lblWorkingRemainingTime";
-            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 21);
-            this.lblWorkingRemainingTime.TabIndex = 4;
-            this.lblWorkingRemainingTime.Text = "00:21:35";
-            this.lblWorkingRemainingTime.Visible = false;
-            // 
-            // lblNextWorkingTime
-            // 
-            this.lblNextWorkingTime.Location = new System.Drawing.Point(180, 4);
-            this.lblNextWorkingTime.Name = "lblNextWorkingTime";
-            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 21);
-            this.lblNextWorkingTime.TabIndex = 2;
-            this.lblNextWorkingTime.Text = "距下次工作(2009-03-03 14:00:00)还有：";
-            this.lblNextWorkingTime.Visible = false;
-            // 
-            // btnStop
-            // 
-            this.btnStop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(98, 4);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 21);
-            this.btnStop.TabIndex = 1;
-            this.btnStop.Text = "停止工作";
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-            // 
-            // btnStart
-            // 
-            this.btnStart.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStart.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStart.Location = new System.Drawing.Point(17, 4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 21);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "开始工作";
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // tabItem1
-            // 
-            this.tabItem1.AttachedControl = this.tabControlPanel1;
-            this.tabItem1.Name = "tabItem1";
-            this.tabItem1.Text = "花园情况";
-            // 
             // countDownTimer
             // 
             this.countDownTimer.Interval = 1000;
@@ -1254,7 +1253,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "开心网花园农夫 V1.0 Build20090304 -- By Jailu (高兴网出品)";
+            this.Text = "开心网花园农夫 V1.0 Build20090304b -- By Jailu (高兴网出品)";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
@@ -1262,6 +1261,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabControlPanel1.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).EndInit();
@@ -1272,8 +1273,6 @@
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).EndInit();
-            this.tabControlPanel1.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

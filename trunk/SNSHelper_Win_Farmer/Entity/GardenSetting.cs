@@ -149,6 +149,9 @@ namespace SNSHelper_Win_Garden.Entity
                     case "FriendWaterLowLimit":
                         etAccountSetting.FriendWaterLowLimit = item.InnerText;
                         break;
+                    case "AutoGrass":
+                        etAccountSetting.AutoGrass = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
+                        break;
                     case "FriendSettings":
                         etAccountSetting.FriendSettings = LoadFriendSettings(item);
                         break;
@@ -272,6 +275,7 @@ namespace SNSHelper_Win_Garden.Entity
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoBuySeed", Convert.ToInt32(accountSetting.AutoBuySeed).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "Seed", accountSetting.Seed));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoHavest", Convert.ToInt32(accountSetting.AutoHavest).ToString()));
+            node.AppendChild(CreateElement(node.OwnerDocument, "AutoGrass", Convert.ToInt32(accountSetting.AutoGrass).ToString()));
 
             XmlNode newFriendSettingsNode = node.OwnerDocument.CreateElement("FriendSettings");
             SaveFriendSettings(newFriendSettingsNode, accountSetting.FriendSettings);
