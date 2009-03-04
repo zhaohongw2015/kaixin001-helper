@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarMarket>
+  <Car ID="1" Name="二手奥拓" Price="16000"></Car>
+  <Car ID="2" Name="奥拓小王子" Price="20000"></Car>
+  <Car ID="9" Name="夏利" Price="32000"></Car>
+  <Car ID="3" Name="奇瑞QQ" Price="36000"></Car>
+  <Car ID="62" Name="SPARK乐驰" Price="45800"></Car>
+  <Car ID="10" Name="吉利自由舰" Price="48000"></Car>
+  <Car ID="11" Name="富康" Price="62000"></Car>
+  <Car ID="36" Name="雨燕" Price="69000"></Car>
+  <Car ID="30" Name="标致206" Price="78000"></Car>
+  <Car ID="35" Name="雪铁龙C2" Price="79000"></Car>
+  <Car ID="69" Name="名爵3SW" Price="79800"></Car>
+  <Car ID="12" Name="桑塔纳" Price="80000"></Car>
+  <Car ID="13" Name="POLO" Price="91000"></Car>
+  <Car ID="67" Name="福田欧马可" Price="98800"></Car>
+  <Car ID="14" Name="别克凯越" Price="105000"></Car>
+</CarMarket>
