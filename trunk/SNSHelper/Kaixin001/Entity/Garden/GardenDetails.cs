@@ -16,7 +16,15 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             xml = "<?xml version=\"1.0\" encoding=\"gb2312\" ?>" + xml;
 
             XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
+            try
+            {
+                doc.LoadXml(xml);
+            }
+            catch (Exception e)
+            {
+                errMsg = e.Message;
+                return;
+            }
 
             if (doc.DocumentElement.SelectSingleNode("account") != null)
             {
@@ -75,6 +83,18 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             }
         }
 
+        private string errMsg = string.Empty;
+        public string ErrMsg
+        {
+            get
+            {
+                return errMsg;
+            }
+            set
+            {
+                errMsg = value;
+            }
+        }
         #endregion
 
         #region 给属性赋值相关方法

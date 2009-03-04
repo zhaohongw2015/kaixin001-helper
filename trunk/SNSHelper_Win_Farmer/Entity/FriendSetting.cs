@@ -29,7 +29,7 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
-        private bool plough = true;
+        private bool plough = false;
         public bool Plough
         {
             get
@@ -42,7 +42,7 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
-        private bool farm = true;
+        private bool farm = false;
         public bool Farm
         {
             get
@@ -55,7 +55,7 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
-        private bool water = true;
+        private bool water = false;
         public bool Water
         {
             get
@@ -68,7 +68,7 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
-        private bool vermin = true;
+        private bool vermin = false;
         public bool Vermin
         {
             get
@@ -81,7 +81,7 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
-        private bool steal = true;
+        private bool steal = false;
         public bool Steal
         {
             get
@@ -94,7 +94,7 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
-        private bool grass = true;
+        private bool grass = false;
         public bool Grass
         {
             get

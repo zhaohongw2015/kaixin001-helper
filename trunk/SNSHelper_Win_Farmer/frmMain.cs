@@ -17,6 +17,7 @@ namespace SNSHelper_Win_Garden
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
         string currentBuildVersion = "20090304b";
+        bool isAutoUpdate = false;
 
         public frmMain()
         {
@@ -32,6 +33,7 @@ namespace SNSHelper_Win_Garden
 
             originalTitle = this.Text;
 
+            isAutoUpdate = true;
             BeginCheckUpdate();
         }
 
@@ -48,7 +50,9 @@ namespace SNSHelper_Win_Garden
             gardenSetting = GardenSetting.LoadGardenSetting();
 
             txtParkingInterval.Value = gardenSetting.GlobalSetting.WorkingInterval;
-            txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay;
+            txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000;
+
+            Utility.NetworkDelay = gardenSetting.GlobalSetting.NetworkDelay;
 
             ShowAccountInList(gardenSetting.AccountSettings);
         }
@@ -119,6 +123,11 @@ namespace SNSHelper_Win_Garden
 
         private void btnLoadFriend_Click(object sender, EventArgs e)
         {
+            if (farmerWorkingThread != null)
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show("农夫定时任务正在运行，暂时不能进行账户导入工作！", "提示");
+                return;
+            }
             if (string.IsNullOrEmpty(txtNewLoginEmail.Text.Trim()) || string.IsNullOrEmpty(txtNewLoginPwd.Text.Trim()))
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("请输入完整的帐号信息！");
@@ -250,7 +259,7 @@ namespace SNSHelper_Win_Garden
             ckxAutoWater.Checked = true;
             cbxWater.Enabled = true;
             cbxWater.SelectedIndex = 0;
-            cbxFriendWater.SelectedIndex = 5;
+            cbxFriendWater.SelectedIndex = 4;
 
             ckxAutoVermin.Checked = true;
             ckxAutoPlough.Checked = true;
@@ -345,9 +354,9 @@ namespace SNSHelper_Win_Garden
 
             ckxAutoWater.Checked = accountSetting.AutoWater;
             cbxWater.Enabled = accountSetting.AutoWater;
-            cbxWater.Text = accountSetting.WaterLowLimit;
+            cbxWater.Text = Convert.ToInt32(accountSetting.WaterLowLimit) >= 5 ? "4" : accountSetting.WaterLowLimit;
 
-            cbxFriendWater.Text = accountSetting.FriendWaterLowLimit;
+            cbxFriendWater.Text = Convert.ToInt32(accountSetting.FriendWaterLowLimit) >= 5 ? "4" : accountSetting.FriendWaterLowLimit;
 
             ckxAutoPlough.Checked = accountSetting.AutoPlough;
             ckxAutoVermin.Checked = accountSetting.AutoVermin;
@@ -445,11 +454,13 @@ namespace SNSHelper_Win_Garden
         private void btnSaveGlobalSetting_Click(object sender, EventArgs e)
         {
             gardenSetting.GlobalSetting.WorkingInterval = txtParkingInterval.Value;
-            gardenSetting.GlobalSetting.NetworkDelay = txtNetDelay.Value;
+            gardenSetting.GlobalSetting.NetworkDelay = txtNetDelay.Value * 1000;
 
             GardenSetting.SaveGardenSetting(gardenSetting);
 
             DevComponents.DotNetBar.MessageBoxEx.Show("保存设置成功！", "提示");
+
+            Utility.NetworkDelay = gardenSetting.GlobalSetting.NetworkDelay;
         }
 
         #endregion
@@ -621,6 +632,14 @@ namespace SNSHelper_Win_Garden
                 ShowMsgWhileWorking("正在读取花园信息...");
                 GardenDetails gardenDetails = helper.GetGardenDetails(null);
 
+                if (!string.IsNullOrEmpty(gardenDetails.ErrMsg))
+                {
+                    ShowMsgWhileWorking("读取花园信息失败！！！");
+                    ShowMsgWhileWorking("");
+
+                    continue;
+                }
+
                 ShowMsgWhileWorking("农田信息：");
                 foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
@@ -649,7 +668,7 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsStatus == "2")
                         {
-                            ShowMsgWhileWorking(string.Format("正在收割{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
+                            //ShowMsgWhileWorking(string.Format("正在收割{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
                             HavestResult hr = helper.Havest(gi.FarmNum, null, null);
 
                             if (hr.Ret == "succ")
@@ -675,15 +694,15 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.Status == "1" && Convert.ToInt32(gi.Water) <= Convert.ToInt32(workingAccountSetting.WaterLowLimit))
                         {
-                            ShowMsgWhileWorking(string.Format("正在给{0}号农田浇水...", gi.FarmNum));
+                            //ShowMsgWhileWorking(string.Format("正在给{0}号农田浇水...", gi.FarmNum));
 
                             if (helper.WaterFarm(gi.FarmNum, null, null))
                             {
-                                ShowMsgWhileWorking("成功！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，浇水成功！", gi.FarmNum));
                             }
                             else
                             {
-                                ShowMsgWhileWorking("失败！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，浇水失败！", gi.FarmNum));
                             }
                         }
                     }
@@ -700,15 +719,15 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.Vermin > 0)
                         {
-                            ShowMsgWhileWorking(string.Format("{0}号农田上有{1}条虫子，正在捉虫...", gi.FarmNum, gi.Vermin));
+                            //ShowMsgWhileWorking(string.Format("{0}号农田上有{1}条虫子，正在捉虫...", gi.FarmNum, gi.Vermin));
 
                             if (helper.AntiVermin(gi.FarmNum, null, null))
                             {
-                                ShowMsgWhileWorking("成功！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，捉到{1}条虫子！", gi.FarmNum, gi.Vermin));
                             }
                             else
                             {
-                                ShowMsgWhileWorking("失败！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，捉虫失败！！！", gi.FarmNum));
                             }
                         }
                     }
@@ -724,16 +743,16 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsStatus == "3")
                         {
-                            ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
+                            //ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
                             if (helper.Plough(gi.FarmNum, null, null))
                             {
-                                ShowMsgWhileWorking("成功！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，犁地成功！", gi.FarmNum));
                                 gi.CropsStatus = "";
                                 gi.CropsId = "0";
                             }
                             else
                             {
-                                ShowMsgWhileWorking("失败！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，犁地失败！！！", gi.FarmNum));
                             }
                         }
                     }
@@ -749,14 +768,14 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.Grass == "1")
                         {
-                            ShowMsgWhileWorking(string.Format("正在给{0}号农田锄草...", gi.FarmNum));
+                            //ShowMsgWhileWorking(string.Format("正在给{0}号农田锄草...", gi.FarmNum));
                             if (helper.AntiGrass(gi.FarmNum, null, null))
                             {
-                                ShowMsgWhileWorking("成功！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，锄草成功！", gi.FarmNum));
                             }
                             else
                             {
-                                ShowMsgWhileWorking("失败！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，锄草失败！", gi.FarmNum));
                             }
                         }
                     }
@@ -822,19 +841,19 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsId == "0" && !gi.Shared && gi.Status == "1")
                         {
-                            ShowMsgWhileWorking(string.Format("{0}号农田可种植农作物...", gi.FarmNum));
+                            //ShowMsgWhileWorking(string.Format("{0}号农田可种植农作物...", gi.FarmNum));
 
                             SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.Crops);
 
                             if (si == null)
                             {
-                                ShowMsgWhileWorking("失败！");
+                                ShowMsgWhileWorking(string.Format("{0}号农田，种植失败！！！", gi.FarmNum));
                             }
                             else
                             {
                                 if (helper.FarmSeed(gi.FarmNum, null, si.SeedID))
                                 {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田已成功种植{1}！", gi.FarmNum, workingAccountSetting.Crops));
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.Crops));
                                     si.Num--;
                                 }
                             }
@@ -858,6 +877,7 @@ namespace SNSHelper_Win_Garden
                 ShowMsgWhileWorking(granaryInfo);
                 #endregion
 
+                ShowMsgWhileWorking("");
                 ShowMsgWhileWorking(string.Format("{0} 的花园工作完毕！", workingAccountSetting.LoginEmail));
 
                 #region 去好友花园“做事”
@@ -897,7 +917,7 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过"))
                                 {
-                                    ShowMsgWhileWorking(string.Format("正在偷取好友{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
+                                    //ShowMsgWhileWorking(string.Format("正在偷取好友{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
                                     HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
 
                                     if (hr.Ret == "succ")
@@ -923,15 +943,15 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.Status == "1" && Convert.ToInt32(gi.Water) <= Convert.ToInt32(workingAccountSetting.FriendWaterLowLimit))
                                 {
-                                    ShowMsgWhileWorking(string.Format("正在给好友的{0}号农田浇水...", gi.FarmNum));
+                                    //ShowMsgWhileWorking(string.Format("正在给好友的{0}号农田浇水...", gi.FarmNum));
 
                                     if (helper.WaterFarm(gi.FarmNum, friendSetting.UID, null))
                                     {
-                                        ShowMsgWhileWorking("成功！");
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，浇水成功！", gi.FarmNum));
                                     }
                                     else
                                     {
-                                        ShowMsgWhileWorking("失败！");
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，浇水失败！", gi.FarmNum));
                                     }
                                 }
                             }
@@ -948,15 +968,15 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.Vermin > 0)
                                 {
-                                    ShowMsgWhileWorking(string.Format("好友{0}号农田上有{1}条虫子，正在捉虫...", gi.FarmNum, gi.Vermin));
+                                    //ShowMsgWhileWorking(string.Format("好友{0}号农田上有{1}条虫子，正在捉虫...", gi.FarmNum, gi.Vermin));
 
                                     if (helper.AntiVermin(gi.FarmNum, friendSetting.UID, null))
                                     {
-                                        ShowMsgWhileWorking("成功！");
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，捉到{1}条虫子！", gi.FarmNum, gi.Vermin));
                                     }
                                     else
                                     {
-                                        ShowMsgWhileWorking("失败！");
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，捉虫失败！！！", gi.FarmNum));
                                     }
                                 }
                             }
@@ -976,15 +996,15 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.Grass == "1")
                                 {
-                                    ShowMsgWhileWorking(string.Format("好友{0}号农田上长草了，正在锄草...", gi.FarmNum));
+                                    //ShowMsgWhileWorking(string.Format("好友{0}号农田上长草了，正在锄草...", gi.FarmNum));
 
                                     if (helper.AntiGrass(gi.FarmNum, friendSetting.UID, null))
                                     {
-                                        ShowMsgWhileWorking("成功！");
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，锄草成功！", gi.FarmNum));
                                     }
                                     else
                                     {
-                                        ShowMsgWhileWorking("失败！");
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，锄草失败！", gi.FarmNum));
                                     }
                                 }
                             }
@@ -1126,11 +1146,12 @@ namespace SNSHelper_Win_Garden
 
         #endregion
 
-        #region Check new version
+        #region Check new version & download new file
 
         Thread updateThread;
         private void buttonItem5_Click(object sender, EventArgs e)
         {
+            isAutoUpdate = false;
             BeginCheckUpdate();
         }
 
@@ -1143,41 +1164,86 @@ namespace SNSHelper_Win_Garden
             }
         }
 
+        int newFileSize;
         private void CheckUpdate()
         {
             ChangeFormTitleInThread(originalTitle + "   正在检查更新...");
             HttpHelper httpHelper = new HttpHelper();
             httpHelper.NetworkDelay = 1000;
             string autoUpdateHtml = httpHelper.GetHtml("http://code.google.com/p/kaixin001-helper/wiki/Farmer");
+
+            if (string.IsNullOrEmpty(autoUpdateHtml))
+            {
+                if (!isAutoUpdate)
+                {
+                    DevComponents.DotNetBar.MessageBoxEx.Show("检查更新失败，请稍候重试！", "提示");
+                }
+
+                ChangeFormTitleInThread(originalTitle + "   检查更新失败，请稍候重试！");
+
+                updateThread = null;
+                return;
+            }
+
             string latestBuildVersion = ContentHelper.GetMidString(autoUpdateHtml, "string last = &quot;", "&quot;;");
             string filePath = ContentHelper.GetMidString(autoUpdateHtml, "string file = &quot;", "&quot;;");
+            newFileSize = Convert.ToInt32(ContentHelper.GetMidString(autoUpdateHtml, "string size = &quot;", "&quot;;"));
 
             if (latestBuildVersion != currentBuildVersion)
             {
-                if (DevComponents.DotNetBar.MessageBoxEx.Show(this, "发现开心网花园农夫新版本，是否立即下载？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    DownLoadFile(filePath);
-                }
-                else
-                {
-                    ChangeFormTitleInThread(originalTitle + "   发现新版本，尚未下载...");
-                    updateThread = null;
-                }
+                NoticeUserForUpdateWhileCheckingUpdate(filePath);
             }
             else
             {
-                DevComponents.DotNetBar.MessageBoxEx.Show("未发现新版本", "提示");
+                if (!isAutoUpdate)
+                {
+                    DevComponents.DotNetBar.MessageBoxEx.Show("未发现新版本", "提示");
+                }
+
                 ChangeFormTitleInThread(originalTitle);
                 updateThread = null;
             }
         }
 
-        string originalTitle;
+        private void NoticeUserForUpdateWhileCheckingUpdate(string filePath)
+        {
+            MethodWithParmString noticeUserForUpdateWhileCheckingUpdate = new MethodWithParmString(NoticeUserForUpdate);
+            this.Invoke(noticeUserForUpdateWhileCheckingUpdate, new object[] { filePath });
+        }
 
-        private void DownLoadFile(string filePath)
+        private void NoticeUserForUpdate(string filePath)
+        {
+            if (DevComponents.DotNetBar.MessageBoxEx.Show(this, "发现开心网花园农夫新版本，是否立即下载？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                BeginDownLoadFile(filePath);
+            }
+            else
+            {
+                ChangeFormTitleInThread(originalTitle + "   发现新版本，尚未下载...");
+                updateThread = null;
+            }
+        }
+
+        string originalTitle;
+        Thread downloadFileThread;
+        private void BeginDownLoadFile(string filePath)
+        {
+            if (downloadFileThread == null)
+            {
+                downloadFileThread = new Thread(DownLoadFile);
+                downloadFileThread.Start(filePath);
+            }
+            else
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show(this, "正在下载新版本，请稍候！", "提示");
+            }
+        }
+
+        private void DownLoadFile(object file)
         {
             try
             {
+                string filePath = file.ToString();
                 ChangeFormTitleInThread(originalTitle + "   正在下载新版本...");
 
                 filePath = "http://" + filePath;
@@ -1185,7 +1251,7 @@ namespace SNSHelper_Win_Garden
                 string[] items = filePath.Split('/');
                 string localFile = Path.Combine(Path.Combine(Application.StartupPath, "New"), items[items.Length - 1]);
 
-                if (File.Exists(localFile))
+                if (File.Exists(localFile) && new FileInfo(localFile).Length == newFileSize)
                 {
                     DevComponents.DotNetBar.MessageBoxEx.Show("新版本以下载至 " + localFile, "提示");
 
@@ -1202,18 +1268,29 @@ namespace SNSHelper_Win_Garden
                 WebClient client = new WebClient();
                 client.DownloadFile(filePath, localFile);
 
-                DevComponents.DotNetBar.MessageBoxEx.Show("新版本以下载至 " + localFile, "提示");
-
                 ChangeFormTitleInThread(originalTitle + "   新版本下载完毕...");
+
+                ShowAlertInThread("新版本以下载至 " + localFile);
             }
             catch (Exception)
             {
-                DevComponents.DotNetBar.MessageBoxEx.Show("新版本下载失败!", "提示");
+                ShowAlertInThread("新版本下载失败");
             }
             finally
             {
                 updateThread = null;
             }
+        }
+
+        private void ShowAlertInThread(string msg)
+        {
+            MethodWithParmString showAlertInThread = new MethodWithParmString(ShowAlert);
+            this.Invoke(showAlertInThread, new object[] { msg });
+        }
+
+        private void ShowAlert(string msg)
+        {
+            DevComponents.DotNetBar.MessageBoxEx.Show(this, msg, "提示");
         }
 
         private void ChageFormTitle(string title)
@@ -1471,6 +1548,19 @@ namespace SNSHelper_Win_Garden
                         break;
                 }
             }
+        }
+
+        private void biImport_Click(object sender, EventArgs e)
+        {
+            if (farmerWorkingThread != null)
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show(this, "农夫定时任务正在运行，请停止后再执行导入操作！", "提示");
+
+                return;
+            }
+
+            frmImport newfrm = new frmImport();
+            newfrm.ShowDialog();
         }
     }
 }
