@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <GlobalSetting>
+    <WorkingInterval>180</WorkingInterval>
+    <NetworkDelay>3000</NetworkDelay>
+  </GlobalSetting>
+  <AccountSettings>
+    <AccountSetting>
+      <LoginEmail>jailusd@hotmail.com</LoginEmail>
+      <LoginPassword>123456789</LoginPassword>
+      <IsOperate>1</IsOperate>
+      <AutoFarm>1</AutoFarm>
+      <Crops>胡萝卜</Crops>
+      <AutoWater>1</AutoWater>
+      <WaterLowLimit>3</WaterLowLimit>
+      <AutoVermin>1</AutoVermin>
+      <AutoPlough>1</AutoPlough>
+      <AutoBuySeed>1</AutoBuySeed>
+      <Seed>胡萝卜</Seed>
+      <AutoHavest>1</AutoHavest>
+      <FriendSettings>
+        <FriendSetting>
+          <UID>11948259</UID>
+          <Name>李敏杰</Name>
+          <Plough>1</Plough>
+          <Water>1</Water>
+          <Farm>1</Farm>
+          <Vermin>1</Vermin>
+          <Steal>1</Steal>
+        </FriendSetting>
+      </FriendSettings>
+    </AccountSetting>
+  </AccountSettings>
+</Settings>
