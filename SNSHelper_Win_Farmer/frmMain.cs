@@ -16,7 +16,7 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        string currentBuildVersion = "20090304";
+        string currentBuildVersion = "20090304b";
 
         public frmMain()
         {
@@ -1154,7 +1154,7 @@ namespace SNSHelper_Win_Garden
 
             if (latestBuildVersion != currentBuildVersion)
             {
-                if (DevComponents.DotNetBar.MessageBoxEx.Show("发现开心网花园农夫新版本，是否立即下载？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (DevComponents.DotNetBar.MessageBoxEx.Show(this, "发现开心网花园农夫新版本，是否立即下载？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     DownLoadFile(filePath);
                 }
