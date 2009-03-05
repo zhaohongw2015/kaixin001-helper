@@ -183,11 +183,11 @@ namespace SNSHelper.Kaixin001
         /// <param name="fuid">好友编号（可无）</param>
         /// <param name="seedId">种子编号（可无）</param>
         /// <returns></returns>
-        public bool FarmSeed(string farmNum, string fuid, string seedId)
+        public FarmResult FarmSeed(string farmNum, string fuid, string seedId)
         {
             string result = httpHelper.GetHtml(string.Format(farmSeedUrl, verifyCode, seedId, fuid, farmNum));
 
-            return result.Contains(SUCC);
+            return new FarmResult(result);
         }
 
         /// <summary>

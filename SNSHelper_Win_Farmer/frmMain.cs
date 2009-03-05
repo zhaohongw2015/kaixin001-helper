@@ -16,7 +16,7 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        string currentBuildVersion = "20090304b";
+        string currentBuildVersion = "20090305c";
         bool isAutoUpdate = false;
 
         public frmMain()
@@ -47,7 +47,7 @@ namespace SNSHelper_Win_Garden
 
             InitGardenSetting();
 
-            gardenSetting = GardenSetting.LoadGardenSetting();
+            gardenSetting = GardenSetting.LoadGardenSetting(Application.StartupPath);
 
             txtParkingInterval.Value = gardenSetting.GlobalSetting.WorkingInterval;
             txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000;
@@ -100,7 +100,7 @@ namespace SNSHelper_Win_Garden
         SeedData seedData;
         private void ShowSeedData()
         {
-            string xml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "SeedData.xml"), Encoding.GetEncoding("GB2312"));
+            string xml = File.ReadAllText(Path.Combine(Application.StartupPath, "SeedData.xml"), Encoding.GetEncoding("GB2312"));
             xml = xml.Replace("<?xml version=\"1.0\" encoding=\"gb2312\" ?>", "");
 
             seedData = new SeedData(xml);
@@ -318,6 +318,8 @@ namespace SNSHelper_Win_Garden
 
         private void ShowAccountInList(List<SNSHelper_Win_Garden.Entity.AccountSetting> accountSettings)
         {
+            lsbAccount.Items.Clear();
+
             for (int i = 0; i < accountSettings.Count; i++)
             {
                 lsbAccount.Items.Add(accountSettings[i].LoginEmail);
@@ -386,7 +388,7 @@ namespace SNSHelper_Win_Garden
         {
             gardenSetting.AccountSettings.Remove(accountSetting);
 
-            GardenSetting.SaveGardenSetting(gardenSetting);
+            GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
 
             lsbAccount.Items.Remove(lsbAccount.SelectedItems[0]);
 
@@ -432,7 +434,7 @@ namespace SNSHelper_Win_Garden
             gardenSetting.AccountSettings[index] = gardenSetting.AccountSettings[index - 1];
             gardenSetting.AccountSettings[index - 1] = temp;
 
-            GardenSetting.SaveGardenSetting(gardenSetting);
+            GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
         }
 
         private void btiDown_Click(object sender, EventArgs e)
@@ -447,7 +449,7 @@ namespace SNSHelper_Win_Garden
             gardenSetting.AccountSettings[index] = gardenSetting.AccountSettings[index + 1];
             gardenSetting.AccountSettings[index + 1] = temp;
 
-            GardenSetting.SaveGardenSetting(gardenSetting);
+            GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
 
         }
 
@@ -456,7 +458,7 @@ namespace SNSHelper_Win_Garden
             gardenSetting.GlobalSetting.WorkingInterval = txtParkingInterval.Value;
             gardenSetting.GlobalSetting.NetworkDelay = txtNetDelay.Value * 1000;
 
-            GardenSetting.SaveGardenSetting(gardenSetting);
+            GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
 
             DevComponents.DotNetBar.MessageBoxEx.Show("保存设置成功！", "提示");
 
@@ -524,7 +526,7 @@ namespace SNSHelper_Win_Garden
                 gardenSetting.AccountSettings.Add(currentConfiguringAccountSetting);
             }
 
-            if (GardenSetting.SaveGardenSetting(gardenSetting))
+            if (GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting))
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("帐号设置保存成功");
 
@@ -568,6 +570,8 @@ namespace SNSHelper_Win_Garden
 
                 farmerWorkingThread = new Thread(Working);
                 farmerWorkingThread.Start();
+
+                txtWorkingBoard.Clear();
             }
         }
 
@@ -643,7 +647,7 @@ namespace SNSHelper_Win_Garden
                 ShowMsgWhileWorking("农田信息：");
                 foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
-                    ShowMsgWhileWorking(string.Format("{0}号农田：{1} {2} 水{3} 害虫{4} {6} [{5}]",
+                    ShowMsgWhileWorking(string.Format("{0}号农田：{1} {2}水{3} 害虫{4} {6}[{5}]",
                                                         gi.FarmNum,
                                                         string.IsNullOrEmpty(gi.Crops) ? "无农作物" : GetSeedName(gi.SeedId),
                                                         string.IsNullOrEmpty(gi.Crops) ? "" : gi.Crops.Replace("<br>", " ").Replace("<font size='12' color='#666666'>", "").Replace("</font>", ""),
@@ -741,18 +745,34 @@ namespace SNSHelper_Win_Garden
                 {
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
+                        //ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
                         if (gi.CropsStatus == "3")
                         {
-                            //ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
-                            if (helper.Plough(gi.FarmNum, null, null))
+                            if (gi.Shared == "2")
                             {
-                                ShowMsgWhileWorking(string.Format("{0}号农田，犁地成功！", gi.FarmNum));
-                                gi.CropsStatus = "";
-                                gi.CropsId = "0";
+                                if (helper.Plough(gi.FarmNum, gi.FUId, null))
+                                {
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，犁地成功！", gi.FarmNum));
+                                    gi.CropsStatus = "";
+                                    gi.CropsId = "0";
+                                }
+                                else
+                                {
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，犁地失败！！！", gi.FarmNum));
+                                }
                             }
                             else
                             {
-                                ShowMsgWhileWorking(string.Format("{0}号农田，犁地失败！！！", gi.FarmNum));
+                                if (helper.Plough(gi.FarmNum, null, null))
+                                {
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，犁地成功！", gi.FarmNum));
+                                    gi.CropsStatus = "";
+                                    gi.CropsId = "0";
+                                }
+                                else
+                                {
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，犁地失败！！！", gi.FarmNum));
+                                }
                             }
                         }
                     }
@@ -785,61 +805,21 @@ namespace SNSHelper_Win_Garden
 
                 #region 播种
 
+                List<MySeeds> mySeedsList = null;
                 if (workingAccountSetting.AutoFarm)
                 {
-                    List<MySeeds> mySeedsList = new List<MySeeds>();
+                    //foreach (GardenItem gi in gardenDetails.GarderItems)
+                    //{
+                    //    if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
+                    //    {
+
+                    //        break;
+                    //    }
+                    //}
 
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
-                        if (gi.CropsId == "0" && !gi.Shared && gi.Status == "1")
-                        {
-                            #region 显示用户拥有的种子信息
-
-                            ShowMsgWhileWorking("");
-                            ShowMsgWhileWorking("正在获取用户种子信息...");
-
-                            for (int i = 0; i < int.MaxValue; i++)
-                            {
-                                MySeeds etMySeeds = helper.GetMySeeds(i + 1);
-
-                                if (etMySeeds.SeedItems.Count > 0)
-                                {
-                                    mySeedsList.Add(etMySeeds);
-                                }
-
-                                if (etMySeeds.TotalPage == 0 || etMySeeds.TotalPage == i + 1)
-                                {
-                                    break;
-                                }
-                            }
-
-                            if (mySeedsList.Count == 0)
-                            {
-                                ShowMsgWhileWorking("用户没有一粒种子！");
-                            }
-                            else
-                            {
-                                string seedInfo = "种子信息：";
-                                foreach (MySeeds mySeeds in mySeedsList)
-                                {
-                                    foreach (SeedItem seedItem in mySeeds.SeedItems)
-                                    {
-                                        seedInfo += string.Format("{0}({1}) ", seedItem.Name, seedItem.Num);
-                                    }
-                                }
-
-                                ShowMsgWhileWorking(seedInfo);
-                            }
-
-                            #endregion
-
-                            break;
-                        }
-                    }
-
-                    foreach (GardenItem gi in gardenDetails.GarderItems)
-                    {
-                        if (gi.CropsId == "0" && !gi.Shared && gi.Status == "1")
+                        if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
                             //ShowMsgWhileWorking(string.Format("{0}号农田可种植农作物...", gi.FarmNum));
 
@@ -851,10 +831,15 @@ namespace SNSHelper_Win_Garden
                             }
                             else
                             {
-                                if (helper.FarmSeed(gi.FarmNum, null, si.SeedID))
+                                FarmResult fr = helper.FarmSeed(gi.FarmNum, null, si.SeedID);
+                                if (fr.Ret == "succ")
                                 {
                                     ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.Crops));
                                     si.Num--;
+                                }
+                                else
+                                {
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.Crops, fr.Reason));
                                 }
                             }
                         }
@@ -881,6 +866,8 @@ namespace SNSHelper_Win_Garden
                 ShowMsgWhileWorking(string.Format("{0} 的花园工作完毕！", workingAccountSetting.LoginEmail));
 
                 #region 去好友花园“做事”
+
+                bool canFarmHeartFarm = true;
 
                 foreach (FriendSetting friendSetting in workingAccountSetting.FriendSettings)
                 {
@@ -918,6 +905,14 @@ namespace SNSHelper_Win_Garden
                                 if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过"))
                                 {
                                     //ShowMsgWhileWorking(string.Format("正在偷取好友{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
+
+                                    if (gi.Shared != "0")
+                                    {
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+
+                                        continue;
+                                    }
+
                                     HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
 
                                     if (hr.Ret == "succ")
@@ -986,6 +981,33 @@ namespace SNSHelper_Win_Garden
 
                         #region 播种
 
+                        foreach (GardenItem gi in friendGardenDetails.GarderItems)
+                        {
+                            if (gi.CropsId == "0" && gi.Shared == "1" && gi.Status == "1" && canFarmHeartFarm)
+                            {
+                                SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.Crops);
+
+                                if (si == null)
+                                {
+                                    ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植失败！！！", gi.FarmNum));
+                                }
+                                else
+                                {
+                                    FarmResult fr = helper.FarmSeed(gi.FarmNum, friendSetting.UID, si.SeedID);
+                                    if (fr.Ret == "succ")
+                                    {
+                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.Crops));
+                                        si.Num--;
+                                    }
+                                    else
+                                    {
+                                        canFarmHeartFarm = false;
+                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.Crops, fr.Reason));
+                                    }
+                                }
+                            }
+                        }
+
                         #endregion
 
                         #region 锄草
@@ -1024,7 +1046,27 @@ namespace SNSHelper_Win_Garden
                 ShowMsgWhileWorking("");
             }
 
+            RecordFarmerWorkingLog(txtWorkingBoard.Text);
+
             StartCountDownWhileWorking();
+        }
+
+        string logFolderName = "Log";
+        private void RecordFarmerWorkingLog(string log)
+        {
+            string logFileFolderPath = Path.Combine(Application.StartupPath, logFolderName);
+
+            if (!Directory.Exists(logFileFolderPath))
+            {
+                Directory.CreateDirectory(logFileFolderPath);
+            }
+
+            StreamWriter sw = File.CreateText(Path.Combine(logFileFolderPath, string.Format("{0}.log", DateTime.Now.ToString("yyyy-MM-dd HH：mm：ss"))));
+
+            sw.Write(log);
+            sw.Flush();
+
+            sw.Dispose();
         }
 
         private void StartCountDownWhileWorking()
@@ -1095,8 +1137,53 @@ namespace SNSHelper_Win_Garden
 
         private SeedItem GetSeedItemForFarming(GardenHelper helper, List<MySeeds> mySeedsList, string seedName)
         {
-            SeedItem seedItem = GetSeedItem(mySeedsList, seedName);
-            if (seedItem == null)
+            if (mySeedsList == null)
+            {
+                mySeedsList = new List<MySeeds>();
+
+                #region 显示用户拥有的种子信息
+
+                ShowMsgWhileWorking("");
+                ShowMsgWhileWorking("正在获取用户种子信息...");
+
+                for (int i = 0; i < int.MaxValue; i++)
+                {
+                    MySeeds etMySeeds = helper.GetMySeeds(i + 1);
+
+                    if (etMySeeds.SeedItems.Count > 0)
+                    {
+                        mySeedsList.Add(etMySeeds);
+                    }
+
+                    if (etMySeeds.TotalPage == 0 || etMySeeds.TotalPage == i + 1)
+                    {
+                        break;
+                    }
+                }
+
+                if (mySeedsList.Count == 0)
+                {
+                    ShowMsgWhileWorking("用户没有一粒种子！");
+                }
+                else
+                {
+                    string seedInfo = "种子信息：";
+                    foreach (MySeeds mySeeds in mySeedsList)
+                    {
+                        foreach (SeedItem seedItem in mySeeds.SeedItems)
+                        {
+                            seedInfo += string.Format("{0}({1}) ", seedItem.Name, seedItem.Num);
+                        }
+                    }
+
+                    ShowMsgWhileWorking(seedInfo);
+                }
+
+                #endregion
+            }
+
+            SeedItem etSeedItem = GetSeedItem(mySeedsList, seedName);
+            if (etSeedItem == null)
             {
                 ShowMsgWhileWorking(string.Format("没{0}种子了，去商店购买...", seedName));
 
@@ -1111,7 +1198,7 @@ namespace SNSHelper_Win_Garden
 
                     AddSeedItemToMySeedsList(si, mySeedsList);
 
-                    seedItem = si;
+                    etSeedItem = si;
                 }
                 else
                 {
@@ -1120,7 +1207,7 @@ namespace SNSHelper_Win_Garden
                 }
             }
 
-            return seedItem;
+            return etSeedItem;
         }
 
         #region Show message
@@ -1138,7 +1225,7 @@ namespace SNSHelper_Win_Garden
             }
             else
             {
-                msg = string.Format("[{0}] {1}\r\n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), msg);
+                msg = string.Format("[{0}] {1}\r\n", DateTime.Now.ToString("HH:mm:ss"), msg);
             }
 
             this.Invoke(showMsgWhileWorking, new object[] { msg });
@@ -1561,6 +1648,8 @@ namespace SNSHelper_Win_Garden
 
             frmImport newfrm = new frmImport();
             newfrm.ShowDialog();
+
+            BindSetting();
         }
     }
 }

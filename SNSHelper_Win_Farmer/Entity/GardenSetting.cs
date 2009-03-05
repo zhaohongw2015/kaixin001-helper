@@ -39,9 +39,11 @@ namespace SNSHelper_Win_Garden.Entity
         /// 加载花园农夫配置信息
         /// </summary>
         /// <returns></returns>
-        public static GardenSetting LoadGardenSetting()
+        public static GardenSetting LoadGardenSetting(string filePath)
         {
-            string filePath = "GardenSetting.xml";
+            string fileName = "GardenSetting.xml";
+            filePath = Path.Combine(filePath, fileName);
+
             if (!File.Exists(filePath))
             {
                 CreateGardenSettingFile(filePath);
@@ -217,13 +219,13 @@ namespace SNSHelper_Win_Garden.Entity
         #endregion
 
         #region Save
-
         /// <summary>
         /// 保持花园农夫配置信息
         /// </summary>
+        /// <param name="filePath">配置文件保存路径</param>
         /// <param name="gardenSetting"></param>
         /// <returns></returns>
-        public static bool SaveGardenSetting(GardenSetting gardenSetting)
+        public static bool SaveGardenSetting(string filePath, GardenSetting gardenSetting)
         {
             string xml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><Settings><GlobalSetting></GlobalSetting><AccountSettings></AccountSettings></Settings>";
 
@@ -235,7 +237,7 @@ namespace SNSHelper_Win_Garden.Entity
 
             try
             {
-                doc.Save("GardenSetting.xml");
+                doc.Save(Path.Combine(filePath, "GardenSetting.xml"));
                 return true;
             }
             catch (Exception e)

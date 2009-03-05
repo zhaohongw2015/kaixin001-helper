@@ -102,11 +102,11 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             }
         }
 
-        private bool shared = false;
+        private string shared = string.Empty;
         /// <summary>
-        /// 好友是否可种
+        /// 好友种植状态
         /// </summary>
-        public bool Shared
+        public string Shared
         {
             get
             {
