@@ -22,7 +22,7 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             }
             catch (Exception e)
             {
-                errMsg = e.Message;
+                errMsg = "错误编号：001．" + e.Message;
                 return;
             }
 

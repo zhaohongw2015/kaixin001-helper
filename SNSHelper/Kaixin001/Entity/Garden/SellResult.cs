@@ -16,7 +16,15 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             xml = "<?xml version=\"1.0\" encoding=\"gb2312\" ?>" + xml;
 
             XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
+            try
+            {
+                doc.LoadXml(xml);
+            }
+            catch (Exception e)
+            {
+                errMsg = "错误编号：006．" + e.Message;
+                return;
+            }
 
             LoadSellResult(doc.DocumentElement);
         }
@@ -48,6 +56,19 @@ namespace SNSHelper.Kaixin001.Entity.Garden
                     default:
                         break;
                 }
+            }
+        }
+
+        private string errMsg = string.Empty;
+        public string ErrMsg
+        {
+            get
+            {
+                return errMsg;
+            }
+            set
+            {
+                errMsg = value;
             }
         }
 

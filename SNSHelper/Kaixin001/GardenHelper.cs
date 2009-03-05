@@ -237,9 +237,9 @@ namespace SNSHelper.Kaixin001
         {
             string result = httpHelper.GetHtml(string.Format(sellFruitUrl, 
                                                             verifyCode, 
-                                                            Convert.ToInt32(isAll), 
-                                                            seedId, 
-                                                            num));
+                                                            Convert.ToInt32(isAll),
+                                                            string.IsNullOrEmpty(seedId) ? "0" : seedId,
+                                                            string.IsNullOrEmpty(num) ? "0" : num));
             return new SellResult(result);
         }
 

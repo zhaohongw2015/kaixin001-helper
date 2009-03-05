@@ -16,7 +16,15 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             xml = "<?xml version=\"1.0\" encoding=\"gb2312\" ?>" + xml;
 
             XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
+            try
+            {
+                doc.LoadXml(xml);
+            }
+            catch (Exception e)
+            {
+                errMsg = "错误编号：004．" + e.Message;
+                return;
+            }
 
             if (doc.DocumentElement.SelectSingleNode("seed") != null)
             {
@@ -31,6 +39,19 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             if (doc.DocumentElement.SelectSingleNode("totalpage") != null)
             {
                 totalPage = Convert.ToInt32(doc.DocumentElement.SelectSingleNode("totalpage").InnerText);
+            }
+        }
+
+        private string errMsg = string.Empty;
+        public string ErrMsg
+        {
+            get
+            {
+                return errMsg;
+            }
+            set
+            {
+                errMsg = value;
             }
         }
 

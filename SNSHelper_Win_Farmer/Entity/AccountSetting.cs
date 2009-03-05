@@ -186,6 +186,32 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private bool autoSell = false;
+        public bool AutoSell
+        {
+            get
+            {
+                return autoSell;
+            }
+            set
+            {
+                autoSell = value;
+            }
+        }
+
+        private bool isUsingPrivateSetting = false;
+        public bool IsUsingPrivateSetting
+        {
+            get
+            {
+                return isUsingPrivateSetting;
+            }
+            set
+            {
+                isUsingPrivateSetting = value;
+            }
+        }
+
         private List<FriendSetting> friendSettings = new List<FriendSetting>();
         public List<FriendSetting> FriendSettings
         {
