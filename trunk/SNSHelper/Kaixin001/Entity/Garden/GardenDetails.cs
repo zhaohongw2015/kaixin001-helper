@@ -194,7 +194,7 @@ namespace SNSHelper.Kaixin001.Entity.Garden
                         etItem.Status = item.InnerText;
                         break;
                     case "shared":
-                        etItem.Shared = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
+                        etItem.Shared = item.InnerText;
                         break;
                     case "pic":
                         etItem.Pic = item.InnerText;
