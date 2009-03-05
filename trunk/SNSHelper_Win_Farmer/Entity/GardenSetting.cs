@@ -154,6 +154,12 @@ namespace SNSHelper_Win_Garden.Entity
                     case "AutoGrass":
                         etAccountSetting.AutoGrass = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
                         break;
+                    case "AutoSell":
+                        etAccountSetting.AutoSell = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
+                        break;
+                    case "IsUsingPrivateSetting":
+                        etAccountSetting.IsUsingPrivateSetting = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
+                        break;
                     case "FriendSettings":
                         etAccountSetting.FriendSettings = LoadFriendSettings(item);
                         break;
@@ -278,6 +284,8 @@ namespace SNSHelper_Win_Garden.Entity
             node.AppendChild(CreateElement(node.OwnerDocument, "Seed", accountSetting.Seed));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoHavest", Convert.ToInt32(accountSetting.AutoHavest).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoGrass", Convert.ToInt32(accountSetting.AutoGrass).ToString()));
+            node.AppendChild(CreateElement(node.OwnerDocument, "AutoSell", Convert.ToInt32(accountSetting.AutoSell).ToString()));
+            node.AppendChild(CreateElement(node.OwnerDocument, "IsUsingPrivateSetting", Convert.ToInt32(accountSetting.IsUsingPrivateSetting).ToString()));
 
             XmlNode newFriendSettingsNode = node.OwnerDocument.CreateElement("FriendSettings");
             SaveFriendSettings(newFriendSettingsNode, accountSetting.FriendSettings);

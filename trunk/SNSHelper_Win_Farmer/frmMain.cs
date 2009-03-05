@@ -16,7 +16,7 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        string currentBuildVersion = "20090305c";
+        string currentBuildVersion = "20090306";
         bool isAutoUpdate = false;
 
         public frmMain()
@@ -35,6 +35,18 @@ namespace SNSHelper_Win_Garden
 
             isAutoUpdate = true;
             BeginCheckUpdate();
+
+            ShowWhatsNew();
+        }
+
+        private void ShowWhatsNew()
+        {
+            string whatsNewFilePath = Path.Combine(Application.StartupPath, "What's New.txt");
+
+            if (File.Exists(whatsNewFilePath))
+            {
+                txtWorkingBoard.Text = File.ReadAllText(whatsNewFilePath);
+            }
         }
 
         #region Setting
@@ -255,6 +267,8 @@ namespace SNSHelper_Win_Garden
             ckxAutoFarm.Checked = true;
             cbxCrops.Enabled = true;
             cbxCrops.SelectedIndex = 0;
+            ckxIsUsingPrivateSetting.Enabled = true;
+            ckxIsUsingPrivateSetting.Checked = false;
 
             ckxAutoWater.Checked = true;
             cbxWater.Enabled = true;
@@ -269,11 +283,14 @@ namespace SNSHelper_Win_Garden
             ckxAutoHavest.Checked = true;
 
             ckxAutoGrass.Checked = true;
+
+            ckbAutoSell.Checked = true;
         }
 
         private void ckxAutoFarm_CheckedChanged(object sender, EventArgs e)
         {
             cbxCrops.Enabled = ckxAutoFarm.Checked;
+            ckxIsUsingPrivateSetting.Enabled = ckxAutoFarm.Checked;
         }
 
         private void ckxAutoWater_CheckedChanged(object sender, EventArgs e)
@@ -353,6 +370,8 @@ namespace SNSHelper_Win_Garden
             ckxAutoFarm.Checked = accountSetting.AutoFarm;
             cbxCrops.Enabled = accountSetting.AutoFarm;
             cbxCrops.Text = accountSetting.Crops;
+            ckxIsUsingPrivateSetting.Enabled = accountSetting.AutoFarm;
+            ckxIsUsingPrivateSetting.Checked = accountSetting.IsUsingPrivateSetting;
 
             ckxAutoWater.Checked = accountSetting.AutoWater;
             cbxWater.Enabled = accountSetting.AutoWater;
@@ -368,6 +387,8 @@ namespace SNSHelper_Win_Garden
             ckxAutoHavest.Checked = accountSetting.AutoHavest;
 
             ckxAutoGrass.Checked = accountSetting.AutoGrass;
+
+            ckbAutoSell.Checked = accountSetting.AutoSell;
 
             currentConfiguringAccountSetting = accountSetting;
             isNewAccount = false;
@@ -506,6 +527,7 @@ namespace SNSHelper_Win_Garden
 
             currentConfiguringAccountSetting.AutoFarm = ckxAutoFarm.Checked;
             currentConfiguringAccountSetting.Crops = ckxAutoFarm.Checked ? cbxCrops.Text : string.Empty;
+            currentConfiguringAccountSetting.IsUsingPrivateSetting = ckxAutoFarm.Checked ? ckxIsUsingPrivateSetting.Checked : false;
 
             currentConfiguringAccountSetting.AutoWater = ckxAutoWater.Checked;
             currentConfiguringAccountSetting.WaterLowLimit = ckxAutoWater.Checked ? ((DevComponents.Editors.ComboItem)cbxWater.SelectedItem).Text : string.Empty;
@@ -520,6 +542,8 @@ namespace SNSHelper_Win_Garden
             currentConfiguringAccountSetting.AutoHavest = ckxAutoHavest.Checked;
 
             currentConfiguringAccountSetting.AutoGrass = ckxAutoGrass.Checked;
+
+            currentConfiguringAccountSetting.AutoSell = ckbAutoSell.Checked;
 
             if (isNewAccount)
             {
@@ -593,6 +617,9 @@ namespace SNSHelper_Win_Garden
 
             btnStop.Enabled = false;
             btnStart.Enabled = true;
+            lblWorkingRemainingTime.Visible = false;
+            countDownTimer.Enabled = false;
+            lblNextWorkingTime.Visible = false;
         }
 
         private void ShowCurrentAccoutFarmerWorkingFor(string email)
@@ -696,7 +723,7 @@ namespace SNSHelper_Win_Garden
                 {
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
-                        if (gi.Status == "1" && Convert.ToInt32(gi.Water) <= Convert.ToInt32(workingAccountSetting.WaterLowLimit))
+                        if (gi.Status == "1" && Convert.ToInt32(gi.Water) <= Convert.ToInt32(workingAccountSetting.WaterLowLimit) && gi.CropsId != "0")
                         {
                             //ShowMsgWhileWorking(string.Format("正在给{0}号农田浇水...", gi.FarmNum));
 
@@ -808,22 +835,13 @@ namespace SNSHelper_Win_Garden
                 List<MySeeds> mySeedsList = null;
                 if (workingAccountSetting.AutoFarm)
                 {
-                    //foreach (GardenItem gi in gardenDetails.GarderItems)
-                    //{
-                    //    if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
-                    //    {
-
-                    //        break;
-                    //    }
-                    //}
-
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
                         if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
                             //ShowMsgWhileWorking(string.Format("{0}号农田可种植农作物...", gi.FarmNum));
 
-                            SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.Crops);
+                            SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank));
 
                             if (si == null)
                             {
@@ -834,12 +852,12 @@ namespace SNSHelper_Win_Garden
                                 FarmResult fr = helper.FarmSeed(gi.FarmNum, null, si.SeedID);
                                 if (fr.Ret == "succ")
                                 {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.Crops));
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank)));
                                     si.Num--;
                                 }
                                 else
                                 {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.Crops, fr.Reason));
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank), fr.Reason));
                                 }
                             }
                         }
@@ -849,17 +867,35 @@ namespace SNSHelper_Win_Garden
                 #endregion
 
                 #region 显示仓库信息
-                ShowMsgWhileWorking("");
-                ShowMsgWhileWorking("正在读取仓库信息...");
-                Granary myGranary = helper.GetMyGranary();
-
-                string granaryInfo = "仓库信息：";
-                foreach (FruitItem fruit in myGranary.FruitItems)
+                if (workingAccountSetting.AutoSell)
                 {
-                    granaryInfo += string.Format("{0}({1})，", fruit.Name, fruit.Num);
+                    ShowMsgWhileWorking("");
+                    ShowMsgWhileWorking("正在读取仓库信息...");
+                    Granary myGranary = helper.GetMyGranary();
+
+                    string granaryInfo = "仓库信息：";
+                    foreach (FruitItem fruit in myGranary.FruitItems)
+                    {
+                        granaryInfo += string.Format("{0}({1})，", fruit.Name, fruit.Num);
+                    }
+                    granaryInfo += string.Format("总价：{0}元！", myGranary.TotalPrice);
+                    ShowMsgWhileWorking(granaryInfo);
+
+                    if (myGranary.TotalPrice > 0)
+                    {
+                        SellResult sr = helper.SellFruit(true, null, null);
+
+                        if (sr.Ret.ToLower() == "succ")
+                        {
+                            ShowMsgWhileWorking(string.Format("成功出售仓库里的所有农作物，收入 {0} 元！", sr.TotalPrice));
+                        }
+                        else
+                        {
+                            ShowMsgWhileWorking("出售农作物失败！！！");
+                        }
+                    }
                 }
-                granaryInfo += string.Format("总价：{0}元！", myGranary.TotalPrice);
-                ShowMsgWhileWorking(granaryInfo);
+
                 #endregion
 
                 ShowMsgWhileWorking("");
@@ -985,7 +1021,7 @@ namespace SNSHelper_Win_Garden
                         {
                             if (gi.CropsId == "0" && gi.Shared == "1" && gi.Status == "1" && canFarmHeartFarm)
                             {
-                                SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.Crops);
+                                SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank));
 
                                 if (si == null)
                                 {
@@ -996,13 +1032,13 @@ namespace SNSHelper_Win_Garden
                                     FarmResult fr = helper.FarmSeed(gi.FarmNum, friendSetting.UID, si.SeedID);
                                     if (fr.Ret == "succ")
                                     {
-                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.Crops));
+                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank)));
                                         si.Num--;
                                     }
                                     else
                                     {
                                         canFarmHeartFarm = false;
-                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.Crops, fr.Reason));
+                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank), fr.Reason));
                                     }
                                 }
                             }
@@ -1395,14 +1431,9 @@ namespace SNSHelper_Win_Garden
 
         #endregion
 
-        private void buttonItem7_Click(object sender, EventArgs e)
-        {
-            Process.Start("iexplore.exe", "http://code.google.com/p/kaixin001-helper/w/list");
-        }
-
         private void buttonItem4_Click(object sender, EventArgs e)
         {
-            Process.Start("iexplore.exe", "http://code.google.com/p/kaixin001-helper/w/list");
+            Process.Start("iexplore.exe", "http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html");
         }
 
         private void buttonItem6_Click(object sender, EventArgs e)
@@ -1650,6 +1681,12 @@ namespace SNSHelper_Win_Garden
             newfrm.ShowDialog();
 
             BindSetting();
+        }
+
+        private void btnCropsCustomSetting_Click(object sender, EventArgs e)
+        {
+            frmCropsCustomSetting newfrm = new frmCropsCustomSetting();
+            newfrm.ShowDialog();
         }
     }
 }
