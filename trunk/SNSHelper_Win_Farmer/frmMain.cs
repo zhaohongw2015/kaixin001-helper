@@ -112,8 +112,8 @@ namespace SNSHelper_Win_Garden
         SeedData seedData;
         private void ShowSeedData()
         {
-            string xml = File.ReadAllText(Path.Combine(Application.StartupPath, "SeedData.xml"), Encoding.GetEncoding("GB2312"));
-            xml = xml.Replace("<?xml version=\"1.0\" encoding=\"gb2312\" ?>", "");
+            string xml = File.ReadAllText(Path.Combine(Application.StartupPath, "SeedData.xml"), Encoding.UTF8);
+            xml = xml.Replace("<?xml version=\"1.0\" encoding=\"utf-8\" ?>", "");
 
             seedData = new SeedData(xml);
             BindSeedCombox(seedData);
@@ -775,20 +775,7 @@ namespace SNSHelper_Win_Garden
                         //ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
                         if (gi.CropsStatus == "3")
                         {
-                            if (gi.Shared == "2")
-                            {
-                                if (helper.Plough(gi.FarmNum, gi.FUId, null))
-                                {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田，犁地成功！", gi.FarmNum));
-                                    gi.CropsStatus = "";
-                                    gi.CropsId = "0";
-                                }
-                                else
-                                {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田，犁地失败！！！", gi.FarmNum));
-                                }
-                            }
-                            else
+                            if (gi.Shared == "0")
                             {
                                 if (helper.Plough(gi.FarmNum, null, null))
                                 {
