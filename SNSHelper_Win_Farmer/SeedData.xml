@@ -1,146 +1,146 @@
-<?xml version="1.0" encoding="gb2312" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <data>
   <seed>
     <item>
-      <name>ºúÂÜ²·</name>
+      <name>èƒ¡èåœ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/huluobo.swf</fruitpic>
       <seedid>1</seedid>
       <price>30</price>
     </item>
     <item>
-      <name>´ó°×²Ë</name>
+      <name>å¤§ç™½èœ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/dabaicai.swf</fruitpic>
       <seedid>2</seedid>
       <price>50</price>
     </item>
     <item>
-      <name>ÍÁ¶¹</name>
+      <name>åœŸè±†</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/tudou.swf</fruitpic>
       <seedid>3</seedid>
       <price>80</price>
     </item>
     <item>
-      <name>Ç£Å£»¨</name>
+      <name>ç‰µç‰›èŠ±</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/qianniuhua.swf</fruitpic>
       <seedid>4</seedid>
       <price>400</price>
     </item>
     <item>
-      <name>»Æ¹Ï</name>
+      <name>é»„ç“œ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/huanggua.swf</fruitpic>
       <seedid>5</seedid>
       <price>100</price>
     </item>
     <item>
-      <name>À±½·</name>
+      <name>è¾£æ¤’</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/lajiao.swf</fruitpic>
       <seedid>6</seedid>
       <price>120</price>
     </item>
     <item>
-      <name>ÓñÃ×</name>
+      <name>ç‰ç±³</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/yumi.swf</fruitpic>
       <seedid>7</seedid>
       <price>150</price>
     </item>
     <item>
-      <name>¶¹½Ç</name>
+      <name>è±†è§’</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/doujiao.swf</fruitpic>
       <seedid>8</seedid>
       <price>180</price>
     </item>
     <item>
-      <name>ÇÑ×Ó</name>
+      <name>èŒ„å­</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/qiezi.swf</fruitpic>
       <seedid>10</seedid>
       <price>200</price>
     </item>
     <item>
-      <name>ÏòÈÕ¿û</name>
+      <name>å‘æ—¥è‘µ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangrikui.swf</fruitpic>
       <seedid>9</seedid>
       <price>1000</price>
     </item>
     <item>
-      <name>·¬ÇÑ</name>
+      <name>ç•ªèŒ„</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/fanqie.swf</fruitpic>
       <seedid>11</seedid>
       <price>300</price>
     </item>
     <item>
-      <name>Ïã½¶</name>
+      <name>é¦™è•‰</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangjiao.swf</fruitpic>
       <seedid>12</seedid>
       <price>400</price>
     </item>
     <item>
-      <name>Î÷¹Ï</name>
+      <name>è¥¿ç“œ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xigua.swf</fruitpic>
       <seedid>13</seedid>
       <price>500</price>
     </item>
     <item>
-      <name>Ãµ¹å</name>
+      <name>ç«ç‘°</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/meiguihua.swf</fruitpic>
       <seedid>14</seedid>
       <price>1500</price>
     </item>
     <item>
-      <name>²İİ®</name>
+      <name>è‰è“</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/caomei.swf</fruitpic>
       <seedid>15</seedid>
       <price>600</price>
     </item>
     <item>
-      <name>¾Õ»¨</name>
+      <name>èŠèŠ±</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/juhua.swf</fruitpic>
       <seedid>16</seedid>
       <price>2000</price>
     </item>
     <item>
-      <name>ÈË²Î¹û</name>
+      <name>äººå‚æœ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/renshenguo.swf</fruitpic>
       <seedid>18</seedid>
       <price>5000</price>
     </item>
     <item>
-      <name>Äµµ¤</name>
+      <name>ç‰¡ä¸¹</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/mudan.swf</fruitpic>
       <seedid>19</seedid>
       <price>3000</price>
     </item>
     <item>
-      <name>°ÙºÏ</name>
+      <name>ç™¾åˆ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/baihe.swf</fruitpic>
       <seedid>20</seedid>
       <price>4000</price>
     </item>
     <item>
-      <name>Óô½ğÏã</name>
+      <name>éƒé‡‘é¦™</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/yujinxiang.swf</fruitpic>
       <seedid>21</seedid>
       <price>5000</price>
     </item>
     <item>
-      <name>¶¬³æÏÄ²İ</name>
+      <name>å†¬è™«å¤è‰</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/dongchongxiachao.swf</fruitpic>
       <seedid>22</seedid>
       <price>8000</price>
     </item>
     <item>
-      <name>Ñ©Á«</name>
+      <name>é›ªè²</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xuelian.swf</fruitpic>
       <seedid>23</seedid>
       <price>10000</price>
     </item>
     <item>
-      <name>ÁéÖ¥</name>
+      <name>çµèŠ</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/lingzhi.swf</fruitpic>
       <seedid>24</seedid>
       <price>12000</price>
     </item>
     <item>
-      <name>ÈË²Î</name>
+      <name>äººå‚</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/renshen.swf</fruitpic>
       <seedid>25</seedid>
       <price>15000</price>

@@ -1,4 +1,17 @@
-﻿
+﻿==========================================
+帮好友犁地：
+Referer: http://www.kaixin001.com/i2/house/garden/garden0304.swf
+Content-type: application/x-www-form-urlencoded
+Content-length: 139
+
+verify=11948259%5F1062%5F11948259%5F1236317365%5Fafcb29e3af119b2eb2627cfa2a444a38&seedid=0&fuid=12135904
+&farmnum=6&r=0%2E035305737517774105
+
+<data><ret>succ</ret></data>
+=========================================
+
+1. 修正在英文操作系统中无法自动购买种子的Bug(感谢网友：无名有姓，发现bug并提供解决方案)
+
 Kaixin001.Farmer.V1.0.Build20090306 What's New:
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝

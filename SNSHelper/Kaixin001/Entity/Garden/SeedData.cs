@@ -13,7 +13,7 @@ namespace SNSHelper.Kaixin001.Entity.Garden
 
         public SeedData(string xml)
         {
-            xml = "<?xml version=\"1.0\" encoding=\"gb2312\" ?>" + xml;
+            xml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" + xml;
 
             XmlDocument doc = new XmlDocument();
             try
