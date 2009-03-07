@@ -55,9 +55,25 @@ namespace SNSHelper.Kaixin001
         /// 去好友的花园
         /// </summary>
         /// <param name="fuid">好友编号</param>
-        public void GotoFriendGarden(string fuid)
+        /// <returns>1: 不是好友;2: 网络请求失败</returns>
+        public string GotoFriendGarden(string fuid)
         {
-            verifyCode = ContentHelper.GetMidString(httpHelper.GetHtml(gardenIndexUrl + "&fuid=" + fuid), "var g_verify = \"", "\";");
+            string html = httpHelper.GetHtml(gardenIndexUrl + "&fuid=" + fuid);
+            if (string.IsNullOrEmpty(html))
+            {
+                return "2";
+            }
+            else
+            {
+                if (html.Contains("你不是她好友，没有权限查看此内容！"))
+                {
+                    return "1";
+                }
+            }
+
+            verifyCode = ContentHelper.GetMidString(html, "var g_verify = \"", "\";");
+
+            return string.Empty;
         }
 
         #endregion

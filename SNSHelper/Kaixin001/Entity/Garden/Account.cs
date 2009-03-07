@@ -118,6 +118,38 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             }
         }
 
+        private string bFirst = string.Empty;
+        /// <summary>
+        /// 未知属性
+        /// </summary>
+        public string BFirst
+        {
+            get
+            {
+                return bFirst;
+            }
+            set
+            {
+                bFirst = value;
+            }
+        }
+
+        private string tcharms = string.Empty;
+        /// <summary>
+        /// 魅力值
+        /// </summary>
+        public string TCharms
+        {
+            get
+            {
+                return tcharms;
+            }
+            set
+            {
+                tcharms = value;
+            }
+        }
+
         private AccountSetting setting = new AccountSetting();
         /// <summary>
         /// 设置

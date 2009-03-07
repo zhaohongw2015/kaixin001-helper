@@ -212,6 +212,19 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private string stealCorps = string.Empty;
+        public string StealCrops
+        {
+            get
+            {
+                return stealCorps;
+            }
+            set
+            {
+                stealCorps = value;
+            }
+        }
+
         private List<FriendSetting> friendSettings = new List<FriendSetting>();
         public List<FriendSetting> FriendSettings
         {

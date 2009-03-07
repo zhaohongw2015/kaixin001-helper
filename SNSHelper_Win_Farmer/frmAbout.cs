@@ -17,7 +17,7 @@ namespace SNSHelper_Win_Garden
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("iexplore.exe", "http://kaixin001-helper.googlecode.com/files/Kaixin001.Helper.V1.0.Beta1.b.zip");
+            Process.Start("iexplore.exe", "http://code.google.com/p/kaixin001-helper/downloads/list");
         }
     }
 }
