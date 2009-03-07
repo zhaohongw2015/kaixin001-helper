@@ -126,6 +126,12 @@ namespace SNSHelper.Kaixin001.Entity.Garden
                     case "bkswf":
                         account.BkSwf = item.InnerText;
                         break;
+                    case "bfirst":
+                        account.BFirst = item.InnerText;
+                        break;
+                    case "tcharms":
+                        account.TCharms = item.InnerText;
+                        break;
                     case "setting":
                         LoadSetting(item);
                         break;

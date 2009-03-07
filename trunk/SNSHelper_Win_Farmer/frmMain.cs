@@ -16,7 +16,7 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        string currentBuildVersion = "20090306";
+        string currentBuildVersion = "20090307c";
         bool isAutoUpdate = false;
 
         public frmMain()
@@ -45,7 +45,8 @@ namespace SNSHelper_Win_Garden
 
             if (File.Exists(whatsNewFilePath))
             {
-                txtWorkingBoard.Text = File.ReadAllText(whatsNewFilePath);
+                txtWorkingBoard.AppendText("\r\n");
+                txtWorkingBoard.AppendText(File.ReadAllText(whatsNewFilePath));
             }
         }
 
@@ -109,6 +110,19 @@ namespace SNSHelper_Win_Garden
             return string.Empty;
         }
 
+        private double GetSeedPrice(string seedName)
+        {
+            foreach (SeedItem item in seedData.SeedItems)
+            {
+                if (item.Name.Equals(seedName))
+                {
+                    return item.Price;
+                }
+            }
+
+            return 0;
+        }
+
         SeedData seedData;
         private void ShowSeedData()
         {
@@ -124,6 +138,7 @@ namespace SNSHelper_Win_Garden
             foreach (SeedItem item in seedData.SeedItems)
             {
                 cbxCrops.Items.Add(item.Name);
+                cbxStealCrops.Items.Add(item.Name);
             }
         }
 
@@ -375,7 +390,7 @@ namespace SNSHelper_Win_Garden
 
             ckxAutoWater.Checked = accountSetting.AutoWater;
             cbxWater.Enabled = accountSetting.AutoWater;
-            cbxWater.Text = Convert.ToInt32(accountSetting.WaterLowLimit) >= 5 ? "4" : accountSetting.WaterLowLimit;
+            cbxWater.Text = string.IsNullOrEmpty(accountSetting.WaterLowLimit) ? "4" : Convert.ToInt32(accountSetting.WaterLowLimit) >= 5 ? "4" : accountSetting.WaterLowLimit;
 
             cbxFriendWater.Text = Convert.ToInt32(accountSetting.FriendWaterLowLimit) >= 5 ? "4" : accountSetting.FriendWaterLowLimit;
 
@@ -389,6 +404,8 @@ namespace SNSHelper_Win_Garden
             ckxAutoGrass.Checked = accountSetting.AutoGrass;
 
             ckbAutoSell.Checked = accountSetting.AutoSell;
+
+            cbxStealCrops.Text = accountSetting.StealCrops;
 
             currentConfiguringAccountSetting = accountSetting;
             isNewAccount = false;
@@ -545,6 +562,8 @@ namespace SNSHelper_Win_Garden
 
             currentConfiguringAccountSetting.AutoSell = ckbAutoSell.Checked;
 
+            currentConfiguringAccountSetting.StealCrops = cbxStealCrops.Text;
+
             if (isNewAccount)
             {
                 gardenSetting.AccountSettings.Add(currentConfiguringAccountSetting);
@@ -612,6 +631,9 @@ namespace SNSHelper_Win_Garden
                 {
                     farmerWorkingThread.Abort();
                     farmerWorkingThread = null;
+
+                    ShowMsg(string.Format("\r\n[{0}] 操作被暂停！", DateTime.Now.ToString("HH:mm:ss")));
+                    RecordFarmerWorkingLog(txtWorkingBoard.Text);
                 }
             }
 
@@ -677,7 +699,7 @@ namespace SNSHelper_Win_Garden
                     ShowMsgWhileWorking(string.Format("{0}号农田：{1} {2}水{3} 害虫{4} {6}[{5}]",
                                                         gi.FarmNum,
                                                         string.IsNullOrEmpty(gi.Crops) ? "无农作物" : GetSeedName(gi.SeedId),
-                                                        string.IsNullOrEmpty(gi.Crops) ? "" : gi.Crops.Replace("<br>", " ").Replace("<font size='12' color='#666666'>", "").Replace("</font>", ""),
+                                                        string.IsNullOrEmpty(gi.Crops) ? "" : gi.Crops.Replace("<br>", " ").Replace("<font size='12' color='#666666'>", "").Replace("</font>", "").Replace("<font color='#FF0000'>", "").Replace("<font>", ""),
                                                         gi.Water,
                                                         gi.Vermin,
                                                         GetCropStatusDesc(gi.CropsStatus),
@@ -687,8 +709,39 @@ namespace SNSHelper_Win_Garden
 
                 #region 显示用户情况
                 ShowMsgWhileWorking("");
-                ShowMsgWhileWorking(string.Format("{0}，{1}，{2}！", gardenDetails.Account.Name, gardenDetails.Account.RankTip, gardenDetails.Account.CashTip));
-                ShowMsgWhileWorking("");
+                ShowMsgWhileWorking(string.Format("{0}，{1}，魅力 {3}，{2}！", gardenDetails.Account.Name, gardenDetails.Account.RankTip, gardenDetails.Account.CashTip, gardenDetails.Account.TCharms));
+                #endregion
+
+                #region 显示仓库信息
+                if (workingAccountSetting.AutoSell)
+                {
+                    ShowMsgWhileWorking("");
+                    ShowMsgWhileWorking("正在读取仓库信息...");
+                    Granary myGranary = helper.GetMyGranary();
+
+                    string granaryInfo = "仓库信息：";
+                    foreach (FruitItem fruit in myGranary.FruitItems)
+                    {
+                        granaryInfo += string.Format("{0}({1})，", fruit.Name, fruit.Num);
+                    }
+                    granaryInfo += string.Format("总价：{0}元！", myGranary.TotalPrice);
+                    ShowMsgWhileWorking(granaryInfo);
+
+                    if (myGranary.TotalPrice > 0)
+                    {
+                        SellResult sr = helper.SellFruit(true, null, null);
+
+                        if (sr.Ret.ToLower() == "succ")
+                        {
+                            ShowMsgWhileWorking(string.Format("成功出售仓库里的所有农作物，收入 {0} 元！", sr.TotalPrice));
+                        }
+                        else
+                        {
+                            ShowMsgWhileWorking("出售农作物失败！！！");
+                        }
+                    }
+                }
+
                 #endregion
 
                 #region 收获
@@ -773,7 +826,7 @@ namespace SNSHelper_Win_Garden
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
                         //ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
-                        if (gi.CropsStatus == "3")
+                        if (gi.CropsStatus == "3" || gi.CropsStatus == "-1")
                         {
                             if (gi.Shared == "0")
                             {
@@ -826,9 +879,7 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
-                            //ShowMsgWhileWorking(string.Format("{0}号农田可种植农作物...", gi.FarmNum));
-
-                            SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank));
+                            SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank));
 
                             if (si == null)
                             {
@@ -839,46 +890,14 @@ namespace SNSHelper_Win_Garden
                                 FarmResult fr = helper.FarmSeed(gi.FarmNum, null, si.SeedID);
                                 if (fr.Ret == "succ")
                                 {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank)));
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, si.Name));
                                     si.Num--;
                                 }
                                 else
                                 {
-                                    ShowMsgWhileWorking(string.Format("{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank), fr.Reason));
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, si.Name, fr.ErrMsg));
                                 }
                             }
-                        }
-                    }
-                }
-
-                #endregion
-
-                #region 显示仓库信息
-                if (workingAccountSetting.AutoSell)
-                {
-                    ShowMsgWhileWorking("");
-                    ShowMsgWhileWorking("正在读取仓库信息...");
-                    Granary myGranary = helper.GetMyGranary();
-
-                    string granaryInfo = "仓库信息：";
-                    foreach (FruitItem fruit in myGranary.FruitItems)
-                    {
-                        granaryInfo += string.Format("{0}({1})，", fruit.Name, fruit.Num);
-                    }
-                    granaryInfo += string.Format("总价：{0}元！", myGranary.TotalPrice);
-                    ShowMsgWhileWorking(granaryInfo);
-
-                    if (myGranary.TotalPrice > 0)
-                    {
-                        SellResult sr = helper.SellFruit(true, null, null);
-
-                        if (sr.Ret.ToLower() == "succ")
-                        {
-                            ShowMsgWhileWorking(string.Format("成功出售仓库里的所有农作物，收入 {0} 元！", sr.TotalPrice));
-                        }
-                        else
-                        {
-                            ShowMsgWhileWorking("出售农作物失败！！！");
                         }
                     }
                 }
@@ -892,14 +911,28 @@ namespace SNSHelper_Win_Garden
 
                 bool canFarmHeartFarm = true;
 
-                foreach (FriendSetting friendSetting in workingAccountSetting.FriendSettings)
+                for (int i = 0; i < workingAccountSetting.FriendSettings.Count; i++)
                 {
+                    FriendSetting friendSetting = workingAccountSetting.FriendSettings[i];
+
                     if (friendSetting.Steal || friendSetting.Plough || friendSetting.Water || friendSetting.Vermin || friendSetting.Farm || friendSetting.Grass)
                     {
 
                         ShowMsgWhileWorking("");
                         ShowMsgWhileWorking(string.Format("农夫正在前往 {0} 的花园...", friendSetting.Name));
-                        helper.GotoFriendGarden(friendSetting.UID);
+                        switch (helper.GotoFriendGarden(friendSetting.UID))
+                        {
+                            case "1":
+                                ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
+                                workingAccountSetting.FriendSettings.Remove(friendSetting);
+                                GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
+                                i--;
+                                continue;
+                            case "2":
+                                continue;
+                            default:
+                                break;
+                        }
 
                         #region 读取好友花园信息
                         ShowMsgWhileWorking("正在读取花园信息...");
@@ -923,9 +956,11 @@ namespace SNSHelper_Win_Garden
 
                         if (friendSetting.Steal)
                         {
+                            double minStealCropsPrice = GetSeedPrice(workingAccountSetting.StealCrops);
+
                             foreach (GardenItem gi in friendGardenDetails.GarderItems)
                             {
-                                if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过"))
+                                if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
                                 {
                                     //ShowMsgWhileWorking(string.Format("正在偷取好友{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
 
@@ -936,16 +971,19 @@ namespace SNSHelper_Win_Garden
                                         continue;
                                     }
 
-                                    HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
+                                    if (Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                                    {
+                                        HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
 
-                                    if (hr.Ret == "succ")
-                                    {
-                                        ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
-                                        gi.CropsStatus = "3";
-                                    }
-                                    else
-                                    {
-                                        ShowMsgWhileWorking(hr.Reason);
+                                        if (hr.Ret == "succ")
+                                        {
+                                            ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
+                                            gi.CropsStatus = "3";
+                                        }
+                                        else
+                                        {
+                                            ShowMsgWhileWorking(hr.Reason);
+                                        }
                                     }
                                 }
                             }
@@ -961,8 +999,6 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.Status == "1" && Convert.ToInt32(gi.Water) <= Convert.ToInt32(workingAccountSetting.FriendWaterLowLimit))
                                 {
-                                    //ShowMsgWhileWorking(string.Format("正在给好友的{0}号农田浇水...", gi.FarmNum));
-
                                     if (helper.WaterFarm(gi.FarmNum, friendSetting.UID, null))
                                     {
                                         ShowMsgWhileWorking(string.Format("{0}号农田，浇水成功！", gi.FarmNum));
@@ -1002,30 +1038,63 @@ namespace SNSHelper_Win_Garden
 
                         #endregion
 
+                        #region 犁地
+
+                        if (friendSetting.Plough)
+                        {
+                            foreach (GardenItem gi in friendGardenDetails.GarderItems)
+                            {
+                                //ShowMsgWhileWorking(string.Format("正在给{0}号农田犁地...", gi.FarmNum));
+                                if (gi.CropsStatus == "3")
+                                {
+                                    if (gi.Shared == "1" || gi.Shared == "2")
+                                    {
+                                        if (helper.Plough(gi.FarmNum, friendSetting.UID, null))
+                                        {
+                                            ShowMsgWhileWorking(string.Format("{0}号爱心田，犁地成功！", gi.FarmNum));
+                                            gi.CropsStatus = "";
+                                            gi.CropsId = "0";
+                                            gi.Shared = "1";
+                                        }
+                                        else
+                                        {
+                                            ShowMsgWhileWorking(string.Format("{0}号爱心田，犁地失败！！！", gi.FarmNum));
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+
+                        #endregion
+
                         #region 播种
 
-                        foreach (GardenItem gi in friendGardenDetails.GarderItems)
+                        if (friendSetting.Farm && gardenDetails.Account.Rank != "1")
                         {
-                            if (gi.CropsId == "0" && gi.Shared == "1" && gi.Status == "1" && canFarmHeartFarm)
+                            foreach (GardenItem gi in friendGardenDetails.GarderItems)
                             {
-                                SeedItem si = GetSeedItemForFarming(helper, mySeedsList, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank));
+                                if (gi.CropsId == "0" && gi.Shared == "1" && gi.Status == "1" && canFarmHeartFarm)
+                                {
+                                    SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank));
 
-                                if (si == null)
-                                {
-                                    ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植失败！！！", gi.FarmNum));
-                                }
-                                else
-                                {
-                                    FarmResult fr = helper.FarmSeed(gi.FarmNum, friendSetting.UID, si.SeedID);
-                                    if (fr.Ret == "succ")
+                                    if (si == null)
                                     {
-                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，成功种植{1}！", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank)));
-                                        si.Num--;
+                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植失败！！！", gi.FarmNum));
                                     }
                                     else
                                     {
-                                        canFarmHeartFarm = false;
-                                        ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植{1}失败！！！{2}", gi.FarmNum, workingAccountSetting.IsUsingPrivateSetting ? workingAccountSetting.Crops : SeedMVPs.GetSeedName(gardenDetails.Account.Rank), fr.Reason));
+                                        FarmResult fr = helper.FarmSeed(gi.FarmNum, friendSetting.UID, si.SeedID);
+                                        if (fr.Ret == "succ")
+                                        {
+                                            ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，成功种植{1}！", gi.FarmNum, si.Name));
+                                            si.Num--;
+                                        }
+                                        else
+                                        {
+                                            canFarmHeartFarm = false;
+                                            ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植{1}失败！！！{2}", gi.FarmNum, si.Name, fr.Reason));
+                                        }
                                     }
                                 }
                             }
@@ -1072,6 +1141,23 @@ namespace SNSHelper_Win_Garden
             RecordFarmerWorkingLog(txtWorkingBoard.Text);
 
             StartCountDownWhileWorking();
+        }
+
+        private string GetFarmingSeedName(SNSHelper_Win_Garden.Entity.AccountSetting accountSetting, string rank)
+        {
+            if (accountSetting.IsUsingPrivateSetting)
+            {
+                return accountSetting.Crops;
+            }
+
+            string seedName = SeedMVPs.GetSeedName(rank);
+
+            if (string.IsNullOrEmpty(seedName))
+            {
+                return accountSetting.Crops;
+            }
+
+            return seedName;
         }
 
         string logFolderName = "Log";
@@ -1158,7 +1244,7 @@ namespace SNSHelper_Win_Garden
             mySeedsList[0].SeedItems.Add(si);
         }
 
-        private SeedItem GetSeedItemForFarming(GardenHelper helper, List<MySeeds> mySeedsList, string seedName)
+        private SeedItem GetSeedItemForFarming(GardenHelper helper, ref List<MySeeds> mySeedsList, string seedName)
         {
             if (mySeedsList == null)
             {
@@ -1237,7 +1323,13 @@ namespace SNSHelper_Win_Garden
 
         private void ShowMsg(string msg)
         {
+            if (txtWorkingBoard.Lines.Length > 3000)
+            {
+                RecordFarmerWorkingLog(txtWorkingBoard.Text);
+                txtWorkingBoard.Clear();
+            }
             txtWorkingBoard.AppendText(msg);
+
         }
 
         private void ShowMsgWhileWorking(string msg)
