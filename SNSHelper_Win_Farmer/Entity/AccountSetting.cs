@@ -225,6 +225,19 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private bool autoHavestInTime = false;
+        public bool AutoHavestInTime
+        {
+            get
+            {
+                return autoHavestInTime;
+            }
+            set
+            {
+                autoHavestInTime = value;
+            }
+        }
+
         private List<FriendSetting> friendSettings = new List<FriendSetting>();
         public List<FriendSetting> FriendSettings
         {

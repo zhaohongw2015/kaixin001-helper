@@ -108,10 +108,11 @@ namespace SNSHelper.Kaixin001
         #endregion
 
         #region Constructor
-        public ParkingHelper()
+        Utility _utility;
+        public ParkingHelper(Utility utility)
         {
             AppID = "1040";
-
+            _utility = utility;
             GetParkerDetails();
         }
         #endregion
@@ -141,7 +142,7 @@ namespace SNSHelper.Kaixin001
         /// </summary>
         private void GetParkerDetails()
         {
-            if (!Utility.IsLogin)
+            if (!_utility.IsLogin)
             {
                 throw new Exception("请先登录！");
             }
@@ -153,7 +154,7 @@ namespace SNSHelper.Kaixin001
             verify = string.Empty;
             acc = string.Empty;
 
-            string parkingHTML = new HttpHelper().GetHtml(AppUrl + AppID, Utility.Cookies);
+            string parkingHTML = new HttpHelper().GetHtml(AppUrl + AppID, _utility.Cookies);
 
             if (!parkingHTML.Contains("争车位"))
             {
@@ -219,7 +220,7 @@ namespace SNSHelper.Kaixin001
 
             string postParams = string.Format("puid={0}&verify={1}&_=", friendUId, verify);
 
-            string friendParkingJSON = new HttpHelper().GetHtml(url, postParams, true, Utility.Cookies);
+            string friendParkingJSON = new HttpHelper().GetHtml(url, postParams, true, _utility.Cookies);
 
             if (string.IsNullOrEmpty(friendParkingJSON))
             {
@@ -257,7 +258,7 @@ namespace SNSHelper.Kaixin001
             string postParams = string.Format("_=&acc={0}&carid={1}&first_fee_parking={2}&neighbor={3}&park_uid={4}&parkid={5}&verify={6}", acc, carInfo.CarId, parkerInfo.FirstFeeParking, parkerFriendInfo.Neighbor, parkerFriendInfo.UId, parkingInfo.ParkId, verify);
 
             HttpHelper helper = new HttpHelper();
-            string parkResultHtml = helper.GetHtml(parkUrl, postParams, true, Utility.Cookies);
+            string parkResultHtml = helper.GetHtml(parkUrl, postParams, true, _utility.Cookies);
             parkResultHtml = JsonHelper.InitJsonString(parkResultHtml);
 
             if (string.IsNullOrEmpty(parkResultHtml))
@@ -310,7 +311,7 @@ namespace SNSHelper.Kaixin001
             string postUrl = "http://www.kaixin001.com/parking/post.php";
             string postParams = string.Format("_=&acc={0}&parkid={1}&verify={2}", acc, parkingInfo.ParkId, verify);
 
-            string postResultJson = new HttpHelper().GetHtml(postUrl, postParams, true, Utility.Cookies);
+            string postResultJson = new HttpHelper().GetHtml(postUrl, postParams, true, _utility.Cookies);
 
             if (string.IsNullOrEmpty(postResultJson))
             {
@@ -334,9 +335,9 @@ namespace SNSHelper.Kaixin001
         /// <returns></returns>
         public bool BuyCar(string carID, CarColor color)
         {
-            HttpHelper httpHelper = new HttpHelper(Utility.Cookies);
-            string str = httpHelper.GetHtml("http://www.kaixin001.com/parking/purchase.php", string.Format(" verify={0}&action=1&carid={1}&color={2}&_=", verify, carID, GetColorNumber(color)), true, Utility.Cookies);
-            str = httpHelper.GetHtml(string.Format("http://www.kaixin001.com/parking/purchase.php?verify={0}&action=1&carid={1}&color={2}", verify, carID, GetColorNumber(color)), Utility.Cookies);
+            HttpHelper httpHelper = new HttpHelper(_utility.Cookies);
+            string str = httpHelper.GetHtml("http://www.kaixin001.com/parking/purchase.php", string.Format(" verify={0}&action=1&carid={1}&color={2}&_=", verify, carID, GetColorNumber(color)), true, _utility.Cookies);
+            str = httpHelper.GetHtml(string.Format("http://www.kaixin001.com/parking/purchase.php?verify={0}&action=1&carid={1}&color={2}", verify, carID, GetColorNumber(color)), _utility.Cookies);
 
             str = ContentHelper.GetMidString(str, "display:block", "</div>");
 
@@ -383,10 +384,10 @@ namespace SNSHelper.Kaixin001
         /// <returns></returns>
         public bool BuyCard(string cardId)
         {
-            HttpHelper httpHelper = new HttpHelper(Utility.Cookies);
-            string str = httpHelper.GetHtml("http://www.kaixin001.com/parking/buycard.php", string.Format("verify={0}&cardid={1}", verify, cardId), true, Utility.Cookies);
+            HttpHelper httpHelper = new HttpHelper(_utility.Cookies);
+            string str = httpHelper.GetHtml("http://www.kaixin001.com/parking/buycard.php", string.Format("verify={0}&cardid={1}", verify, cardId), true, _utility.Cookies);
 
-            str = httpHelper.GetHtml(string.Format("http://www.kaixin001.com/parking/buycard.php?verify={0}&action=1&cardid={1}", verify, cardId), Utility.Cookies);
+            str = httpHelper.GetHtml(string.Format("http://www.kaixin001.com/parking/buycard.php?verify={0}&action=1&cardid={1}", verify, cardId), _utility.Cookies);
             str = ContentHelper.GetMidString(str, "display:block", "</div>");
 
             if (string.IsNullOrEmpty(str))
@@ -403,8 +404,8 @@ namespace SNSHelper.Kaixin001
         /// <param name="cardId">道具编号</param>
         public bool IsCardExsit(string cardId)
         {
-            HttpHelper httpHelper = new HttpHelper(Utility.Cookies);
-            string str = httpHelper.GetHtml("http://www.kaixin001.com/app/app.php?aid=1040&url=mycard.php", Utility.Cookies);
+            HttpHelper httpHelper = new HttpHelper(_utility.Cookies);
+            string str = httpHelper.GetHtml("http://www.kaixin001.com/app/app.php?aid=1040&url=mycard.php", _utility.Cookies);
 
             return str.IndexOf(string.Format("usecard('{0}', '0', '0')", cardId)) > -1;
         }
@@ -416,13 +417,13 @@ namespace SNSHelper.Kaixin001
         /// <returns></returns>
         public bool UseCard(string cardId)
         {
-            HttpHelper httpHelper = new HttpHelper(Utility.Cookies);
+            HttpHelper httpHelper = new HttpHelper(_utility.Cookies);
             string html = string.Empty;
             switch (cardId)
             {
                 case "15":
-                    html = httpHelper.GetHtml("http://www.kaixin001.com/parking/card_resetpark.php", string.Format("verify={0}&cardid={1}", verify, cardId), true, Utility.Cookies);
-                    html = httpHelper.GetHtml(string.Format("http://www.kaixin001.com/parking/card_resetpark.php?verify={0}&cardid=15&action=1", verify), Utility.Cookies);
+                    html = httpHelper.GetHtml("http://www.kaixin001.com/parking/card_resetpark.php", string.Format("verify={0}&cardid={1}", verify, cardId), true, _utility.Cookies);
+                    html = httpHelper.GetHtml(string.Format("http://www.kaixin001.com/parking/card_resetpark.php?verify={0}&cardid=15&action=1", verify), _utility.Cookies);
                     html = ContentHelper.GetMidString(html, "display:block", "</div>");
                     return html.IndexOf("成功") > -1;
                 default:

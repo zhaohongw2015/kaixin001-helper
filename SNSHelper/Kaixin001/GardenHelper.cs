@@ -35,10 +35,13 @@ namespace SNSHelper.Kaixin001
 
         #endregion
 
-        public GardenHelper()
+        Utility _utility;
+
+        public GardenHelper(Utility utility)
         {
             AppID = "1062";
-            httpHelper = new HttpHelper(Utility.Cookies);
+            _utility = utility;
+            httpHelper = new HttpHelper(_utility.Cookies);
         }
 
         #region Go one's garden
@@ -112,7 +115,7 @@ namespace SNSHelper.Kaixin001
         /// <returns></returns>
         public GardenDetails GetGardenDetails(string fuid)
         {
-            if (!Utility.IsLogin)
+            if (!_utility.IsLogin)
             {
                 throw new Exception("请先登录！");
             }
@@ -128,7 +131,7 @@ namespace SNSHelper.Kaixin001
         /// <returns></returns>
         public SeedData GetSeedData()
         {
-            if (!Utility.IsLogin)
+            if (!_utility.IsLogin)
             {
                 throw new Exception("请先登录！");
             }
@@ -142,7 +145,7 @@ namespace SNSHelper.Kaixin001
         /// <returns></returns>
         public Granary GetMyGranary()
         {
-            if (!Utility.IsLogin)
+            if (!_utility.IsLogin)
             {
                 throw new Exception("请先登录！");
             }

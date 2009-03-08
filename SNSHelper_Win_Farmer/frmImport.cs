@@ -93,16 +93,19 @@ namespace SNSHelper_Win_Garden
                 sr.Dispose();
                 sr = null;
 
-                GardenHelper helper = new GardenHelper();
+                GardenHelper helper;
                 foreach (string email in accountPasswordList.Keys)
                 {
+                    Utility utility = new Utility();
                     ShowMsgWhileImporting(string.Format("{0} 正在登录...\r\n", email));
-                    if (!Utility.Login(email, accountPasswordList[email]))
+                    if (!utility.Login(email, accountPasswordList[email]))
                     {
                         ShowMsgWhileImporting("登录失败！\r\n\r\n");
 
                         continue;
                     }
+
+                    helper = new GardenHelper(utility);
 
                     ShowMsgWhileImporting("登录成功！正在加载好友数据...\r\n");
                     Dictionary<string, string> friendList = helper.GetGardenFriend();
@@ -110,7 +113,7 @@ namespace SNSHelper_Win_Garden
                     gardenSetting.AccountSettings.Add(InitAccountSetting(email, accountPasswordList[email], friendList));
                     ShowMsgWhileImporting("好友数据处理完毕！正在退出...\r\n");
 
-                    Utility.Logout();
+                    utility.Logout();
 
                     ShowMsgWhileImporting("成功退出！\r\n\r\n");
                 }

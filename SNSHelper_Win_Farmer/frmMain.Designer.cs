@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -42,6 +42,7 @@
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.biImport = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
@@ -57,6 +58,9 @@
             this.btnStop = new DevComponents.DotNetBar.ButtonX();
             this.btnStart = new DevComponents.DotNetBar.ButtonX();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.txtInTimeBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.contextMenuBar2 = new DevComponents.DotNetBar.ContextMenuBar();
@@ -73,6 +77,7 @@
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.lblNetworkingStatus = new DevComponents.DotNetBar.LabelX();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.ckxAutoHavestInTime = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.cbxStealCrops = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
@@ -134,12 +139,14 @@
             this.balloonTip1 = new DevComponents.DotNetBar.BalloonTip();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.inTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
             this.panelEx1.SuspendLayout();
+            this.tabControlPanel3.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).BeginInit();
@@ -275,6 +282,7 @@
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.biImport,
+            this.buttonItem7,
             this.buttonItem3});
             this.buttonItem1.Text = "文件(&F)";
             // 
@@ -284,6 +292,13 @@
             this.biImport.Name = "biImport";
             this.biImport.Text = "帐号批量导入";
             this.biImport.Click += new System.EventHandler(this.biImport_Click);
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.ImagePaddingHorizontal = 8;
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Text = "查看日志";
+            this.buttonItem7.Click += new System.EventHandler(this.buttonItem7_Click);
             // 
             // buttonItem3
             // 
@@ -339,6 +354,7 @@
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
             this.tabControl1.Controls.Add(this.tabControlPanel1);
+            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
@@ -350,6 +366,7 @@
             this.tabControl1.TabIndex = 8;
             this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tabControl1.Tabs.Add(this.tabItem1);
+            this.tabControl1.Tabs.Add(this.tabItem3);
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Text = "tabControl1";
             // 
@@ -387,8 +404,7 @@
             this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtWorkingBoard.Size = new System.Drawing.Size(600, 580);
             this.txtWorkingBoard.TabIndex = 2;
-            this.txtWorkingBoard.Text = "QQ交流群：17454750\r\n开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/0" +
-                "3/06/Farmer_Helper.html";
+            this.txtWorkingBoard.Text = resources.GetString("txtWorkingBoard.Text");
             // 
             // panelEx1
             // 
@@ -457,6 +473,46 @@
             this.tabItem1.AttachedControl = this.tabControlPanel1;
             this.tabItem1.Name = "tabItem1";
             this.tabItem1.Text = "花园情况";
+            // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Controls.Add(this.txtInTimeBoard);
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 23);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(602, 613);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 3;
+            this.tabControlPanel3.TabItem = this.tabItem3;
+            // 
+            // txtInTimeBoard
+            // 
+            this.txtInTimeBoard.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtInTimeBoard.Border.Class = "TextBoxBorder";
+            this.txtInTimeBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtInTimeBoard.Location = new System.Drawing.Point(1, 1);
+            this.txtInTimeBoard.Multiline = true;
+            this.txtInTimeBoard.Name = "txtInTimeBoard";
+            this.txtInTimeBoard.ReadOnly = true;
+            this.txtInTimeBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInTimeBoard.Size = new System.Drawing.Size(600, 611);
+            this.txtInTimeBoard.TabIndex = 0;
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel3;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "第一时间";
             // 
             // tabControlPanel2
             // 
@@ -652,6 +708,7 @@
             // 
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.ckxAutoHavestInTime);
             this.groupPanel4.Controls.Add(this.labelX12);
             this.groupPanel4.Controls.Add(this.cbxStealCrops);
             this.groupPanel4.Controls.Add(this.labelX11);
@@ -697,6 +754,15 @@
             this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel4.TabIndex = 4;
+            // 
+            // ckxAutoHavestInTime
+            // 
+            this.ckxAutoHavestInTime.BackColor = System.Drawing.Color.Transparent;
+            this.ckxAutoHavestInTime.Location = new System.Drawing.Point(130, 284);
+            this.ckxAutoHavestInTime.Name = "ckxAutoHavestInTime";
+            this.ckxAutoHavestInTime.Size = new System.Drawing.Size(125, 25);
+            this.ckxAutoHavestInTime.TabIndex = 44;
+            this.ckxAutoHavestInTime.Text = "是否第一时间收获";
             // 
             // labelX12
             // 
@@ -749,7 +815,7 @@
             // ckxAutoGrass
             // 
             this.ckxAutoGrass.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoGrass.Location = new System.Drawing.Point(129, 284);
+            this.ckxAutoGrass.Location = new System.Drawing.Point(130, 315);
             this.ckxAutoGrass.Name = "ckxAutoGrass";
             this.ckxAutoGrass.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoGrass.TabIndex = 38;
@@ -805,7 +871,7 @@
             // ckxAutoHavest
             // 
             this.ckxAutoHavest.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoHavest.Location = new System.Drawing.Point(129, 314);
+            this.ckxAutoHavest.Location = new System.Drawing.Point(17, 285);
             this.ckxAutoHavest.Name = "ckxAutoHavest";
             this.ckxAutoHavest.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoHavest.TabIndex = 35;
@@ -863,7 +929,7 @@
             // ckxAutoVermin
             // 
             this.ckxAutoVermin.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoVermin.Location = new System.Drawing.Point(17, 284);
+            this.ckxAutoVermin.Location = new System.Drawing.Point(278, 252);
             this.ckxAutoVermin.Name = "ckxAutoVermin";
             this.ckxAutoVermin.Size = new System.Drawing.Size(107, 25);
             this.ckxAutoVermin.TabIndex = 29;
@@ -1303,6 +1369,11 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // inTimeTimer
+            // 
+            this.inTimeTimer.Interval = 5000;
+            this.inTimeTimer.Tick += new System.EventHandler(this.inTimeTimer_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1317,11 +1388,10 @@
             this.Controls.Add(this.dockSite6);
             this.Controls.Add(this.dockSite7);
             this.Controls.Add(this.dockSite8);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "开心网花园农夫 V1.0 Build20090307c -- By Jailu (高兴网出品)";
+            this.Text = "开心网花园农夫 V1.0 Build20090308  -- By Jailu (高兴网出品)";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
@@ -1331,6 +1401,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabControlPanel1.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
+            this.tabControlPanel3.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).EndInit();
@@ -1450,5 +1521,11 @@
         private DevComponents.DotNetBar.LabelX labelX12;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbxStealCrops;
         private DevComponents.DotNetBar.LabelX labelX11;
+        private DevComponents.DotNetBar.Controls.CheckBoxX ckxAutoHavestInTime;
+        private DevComponents.DotNetBar.TabControlPanel tabControlPanel3;
+        private DevComponents.DotNetBar.TabItem tabItem3;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtInTimeBoard;
+        private System.Windows.Forms.Timer inTimeTimer;
+        private DevComponents.DotNetBar.ButtonItem buttonItem7;
     }
 }
