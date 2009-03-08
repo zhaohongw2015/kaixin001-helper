@@ -123,6 +123,14 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>75</value>
   </metadata>
+  <data name="txtWorkingBoard.Text" xml:space="preserve">
+    <value>一年一度的38妇女节到了，这里农夫向所用“38”们问好，祝美女们节日快乐！同时，也祝 乐乐 节日快乐！
+
+农夫QQ交流群：17454750
+农夫官方网站：http://code.google.com/p/kaixin001-helper/
+开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
+农夫交流论坛：http://www.gaoxinga.com/forum-32-1.html</value>
+  </data>
   <metadata name="好友名.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2421,4 +2429,7 @@
         ///wAB///////////////////wH///////8=
 </value>
   </data>
+  <metadata name="inTimeTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>533, 17</value>
+  </metadata>
 </root>

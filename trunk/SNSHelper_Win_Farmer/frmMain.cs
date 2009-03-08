@@ -16,8 +16,13 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        string currentBuildVersion = "20090307c";
+        string currentBuildVersion = "20090308b";
         bool isAutoUpdate = false;
+
+        Thread downloadFileThread;
+        Thread updateThread;
+        Thread farmerWorkingThread;
+        Thread loadNetFriendThread;
 
         public frmMain()
         {
@@ -37,6 +42,8 @@ namespace SNSHelper_Win_Garden
             BeginCheckUpdate();
 
             ShowWhatsNew();
+
+            showInTimeMsgInThread = new MethodWithParmString(ShowInTimeMsg);
         }
 
         private void ShowWhatsNew()
@@ -64,8 +71,6 @@ namespace SNSHelper_Win_Garden
 
             txtParkingInterval.Value = gardenSetting.GlobalSetting.WorkingInterval;
             txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000;
-
-            Utility.NetworkDelay = gardenSetting.GlobalSetting.NetworkDelay;
 
             ShowAccountInList(gardenSetting.AccountSettings);
         }
@@ -146,15 +151,15 @@ namespace SNSHelper_Win_Garden
 
         #region Load friend from net
 
-        Thread loadNetFriendThread;
+
 
         private void btnLoadFriend_Click(object sender, EventArgs e)
         {
-            if (farmerWorkingThread != null)
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show("农夫定时任务正在运行，暂时不能进行账户导入工作！", "提示");
-                return;
-            }
+            //if (farmerWorkingThread != null)
+            //{
+            //    DevComponents.DotNetBar.MessageBoxEx.Show("农夫定时任务正在运行，暂时不能进行账户导入工作！", "提示");
+            //    return;
+            //}
             if (string.IsNullOrEmpty(txtNewLoginEmail.Text.Trim()) || string.IsNullOrEmpty(txtNewLoginPwd.Text.Trim()))
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("请输入完整的帐号信息！");
@@ -202,7 +207,8 @@ namespace SNSHelper_Win_Garden
         {
             MethodWithParmString showLoadNetFriendStatus = new MethodWithParmString(ShowLoadNetFriendStatus);
 
-            if (Utility.Login(txtNewLoginEmail.Text, txtNewLoginPwd.Text))
+            Utility utility = new Utility();
+            if (utility.Login(txtNewLoginEmail.Text, txtNewLoginPwd.Text))
             {
                 this.BeginInvoke(showLoadNetFriendStatus, new object[] { "登录成功！正在获取好友数据..." });
             }
@@ -215,13 +221,13 @@ namespace SNSHelper_Win_Garden
                 return;
             }
 
-            GardenHelper helper = new GardenHelper();
+            GardenHelper helper = new GardenHelper(utility);
 
             Dictionary<string, string> friends = helper.GetGardenFriend();
 
             this.BeginInvoke(showLoadNetFriendStatus, new object[] { "好友数据获取完毕！正在退出..." });
 
-            Utility.Logout();
+            utility.Logout();
 
             StopGetNetFriendWhileLoadingNetFriend();
 
@@ -296,6 +302,7 @@ namespace SNSHelper_Win_Garden
             ckxAutoBuySeed.Checked = true;
 
             ckxAutoHavest.Checked = true;
+            ckxAutoHavestInTime.Checked = true;
 
             ckxAutoGrass.Checked = true;
 
@@ -397,9 +404,10 @@ namespace SNSHelper_Win_Garden
             ckxAutoPlough.Checked = accountSetting.AutoPlough;
             ckxAutoVermin.Checked = accountSetting.AutoVermin;
 
-            ckxAutoVermin.Checked = accountSetting.AutoBuySeed;
+            ckxAutoBuySeed.Checked = accountSetting.AutoBuySeed;
 
             ckxAutoHavest.Checked = accountSetting.AutoHavest;
+            ckxAutoHavestInTime.Checked = accountSetting.AutoHavestInTime;
 
             ckxAutoGrass.Checked = accountSetting.AutoGrass;
 
@@ -500,7 +508,7 @@ namespace SNSHelper_Win_Garden
 
             DevComponents.DotNetBar.MessageBoxEx.Show("保存设置成功！", "提示");
 
-            Utility.NetworkDelay = gardenSetting.GlobalSetting.NetworkDelay;
+            //Utility.NetworkDelay = gardenSetting.GlobalSetting.NetworkDelay;
         }
 
         #endregion
@@ -537,6 +545,10 @@ namespace SNSHelper_Win_Garden
 
         private void btnSaveAccount_Click(object sender, EventArgs e)
         {
+            if (currentConfiguringAccountSetting == null)
+            {
+                return;
+            }
             currentConfiguringAccountSetting.LoginEmail = txtNewLoginEmail.Text;
             currentConfiguringAccountSetting.LoginPassword = txtNewLoginPwd.Text;
 
@@ -557,6 +569,7 @@ namespace SNSHelper_Win_Garden
             currentConfiguringAccountSetting.AutoBuySeed = ckxAutoBuySeed.Checked;
 
             currentConfiguringAccountSetting.AutoHavest = ckxAutoHavest.Checked;
+            currentConfiguringAccountSetting.AutoHavestInTime = ckxAutoHavestInTime.Checked;
 
             currentConfiguringAccountSetting.AutoGrass = ckxAutoGrass.Checked;
 
@@ -589,7 +602,7 @@ namespace SNSHelper_Win_Garden
 
         #region 花园农夫主逻辑
 
-        Thread farmerWorkingThread;
+
 
         /// <summary>
         /// 显示工作信息
@@ -615,6 +628,8 @@ namespace SNSHelper_Win_Garden
                 farmerWorkingThread.Start();
 
                 txtWorkingBoard.Clear();
+
+                inTimeTimer.Enabled = true;
             }
         }
 
@@ -671,14 +686,15 @@ namespace SNSHelper_Win_Garden
                 ShowMsgWhileWorking(string.Format("正在读取帐号 {0} 的配置信息！", workingAccountSetting.LoginEmail));
                 ShowMsgWhileWorking("正在登录...");
 
-                if (!Utility.Login(workingAccountSetting.LoginEmail, workingAccountSetting.LoginPassword))
+                Utility utility = new Utility();
+                if (!utility.Login(workingAccountSetting.LoginEmail, workingAccountSetting.LoginPassword))
                 {
                     ShowMsgWhileWorking(string.Format("登录失败！请检查帐号({0})配置的登录信息！", workingAccountSetting.LoginEmail));
                     continue;
                 }
 
                 ShowMsgWhileWorking("登录成功！正在进入我的花园...");
-                GardenHelper helper = new GardenHelper();
+                GardenHelper helper = new GardenHelper(utility);
                 helper.GotoMyGarden();
 
                 #region 显示花园信息
@@ -694,6 +710,8 @@ namespace SNSHelper_Win_Garden
                 }
 
                 ShowMsgWhileWorking("农田信息：");
+                DateTime minDT = DateTime.MaxValue;
+                DateTime temp;
                 foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
                     ShowMsgWhileWorking(string.Format("{0}号农田：{1} {2}水{3} 害虫{4} {6}[{5}]",
@@ -704,6 +722,28 @@ namespace SNSHelper_Win_Garden
                                                         gi.Vermin,
                                                         GetCropStatusDesc(gi.CropsStatus),
                                                         gi.Grass == "1" ? "长草了" : ""));
+
+                    if (gi.CropsStatus != "2")
+                    {
+                        temp = GetRipeTime(gi.Crops);
+                        if (temp != DateTime.MaxValue)
+                        {
+                            if (temp < minDT)
+                            {
+                                minDT = temp;
+                            }
+                        }
+                    }
+                }
+
+                if (minDT != DateTime.MaxValue && workingAccountSetting.AutoHavestInTime)
+                {
+                    InTimeObject o = new InTimeObject();
+                    o.IsSteal = false;
+                    o.ActiveTime = minDT;
+                    o.AccountSetting = workingAccountSetting;
+
+                    AddInTimeObject(o);
                 }
                 #endregion
 
@@ -879,7 +919,18 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
-                            SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank));
+                            string seedName = GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank);
+                            SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
+
+                            if (si == null)
+                            {
+                                if (!BuySeedForFarming(helper, ref mySeedsList, seedName, GetMaxNeededSeedNum(gardenDetails.GarderItems)))
+                                {
+                                    ShowMsgWhileWorking(string.Format("{0}号农田，种植失败！！！", gi.FarmNum));
+                                }
+                            }
+
+                            si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
 
                             if (si == null)
                             {
@@ -891,6 +942,7 @@ namespace SNSHelper_Win_Garden
                                 if (fr.Ret == "succ")
                                 {
                                     ShowMsgWhileWorking(string.Format("{0}号农田，成功种植{1}！", gi.FarmNum, si.Name));
+                                    gi.CropsId = "1";
                                     si.Num--;
                                 }
                                 else
@@ -1076,7 +1128,16 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.CropsId == "0" && gi.Shared == "1" && gi.Status == "1" && canFarmHeartFarm)
                                 {
-                                    SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank));
+                                    string seedName = GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank);
+                                    SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
+
+                                    if (si == null)
+                                    {
+                                        if (!BuySeedForFarming(helper, ref mySeedsList, seedName, 1))
+                                        {
+                                            ShowMsgWhileWorking(string.Format("好友{0}号爱心农田，种植失败！！！", gi.FarmNum));
+                                        }
+                                    }
 
                                     if (si == null)
                                     {
@@ -1133,7 +1194,7 @@ namespace SNSHelper_Win_Garden
 
                 ShowMsgWhileWorking("");
                 ShowMsgWhileWorking("正在退出...");
-                Utility.Logout();
+                utility.Logout();
                 ShowMsgWhileWorking("退出成功！");
                 ShowMsgWhileWorking("");
             }
@@ -1141,6 +1202,19 @@ namespace SNSHelper_Win_Garden
             RecordFarmerWorkingLog(txtWorkingBoard.Text);
 
             StartCountDownWhileWorking();
+        }
+
+        private int GetMaxNeededSeedNum(List<GardenItem> gardenItemList)
+        {
+            int count = 0;
+            foreach (GardenItem gi in gardenItemList)
+            {
+                if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         private string GetFarmingSeedName(SNSHelper_Win_Garden.Entity.AccountSetting accountSetting, string rank)
@@ -1244,6 +1318,29 @@ namespace SNSHelper_Win_Garden
             mySeedsList[0].SeedItems.Add(si);
         }
 
+        private bool BuySeedForFarming(GardenHelper helper, ref List<MySeeds> mySeedsList, string seedName, int count)
+        {
+            ShowMsgWhileWorking(string.Format("没{0}种子了，去商店购买...", seedName));
+
+            string seedId = GetSeedID(seedName);
+            if (helper.BuySeed(count, seedId))
+            {
+                ShowMsgWhileWorking(string.Format("成功购买{1}个{0}种子！", seedName, count));
+                SeedItem si = new SeedItem();
+                si.Name = seedName;
+                si.SeedID = seedId;
+                si.Num = count;
+
+                AddSeedItemToMySeedsList(si, mySeedsList);
+                return true;
+            }
+            else
+            {
+                ShowMsgWhileWorking(string.Format("购买{0}种子失败！", seedName));
+                return false;
+            }
+        }
+
         private SeedItem GetSeedItemForFarming(GardenHelper helper, ref List<MySeeds> mySeedsList, string seedName)
         {
             if (mySeedsList == null)
@@ -1291,39 +1388,14 @@ namespace SNSHelper_Win_Garden
                 #endregion
             }
 
-            SeedItem etSeedItem = GetSeedItem(mySeedsList, seedName);
-            if (etSeedItem == null)
-            {
-                ShowMsgWhileWorking(string.Format("没{0}种子了，去商店购买...", seedName));
-
-                string seedId = GetSeedID(seedName);
-                if (helper.BuySeed(5, seedId))
-                {
-                    ShowMsgWhileWorking(string.Format("成功购买5个{0}种子！", seedName));
-                    SeedItem si = new SeedItem();
-                    si.Name = seedName;
-                    si.SeedID = seedId;
-                    si.Num = 5;
-
-                    AddSeedItemToMySeedsList(si, mySeedsList);
-
-                    etSeedItem = si;
-                }
-                else
-                {
-                    ShowMsgWhileWorking(string.Format("购买{0}种子失败！", seedName));
-                    return null;
-                }
-            }
-
-            return etSeedItem;
+            return GetSeedItem(mySeedsList, seedName);
         }
 
         #region Show message
 
         private void ShowMsg(string msg)
         {
-            if (txtWorkingBoard.Lines.Length > 3000)
+            if (txtWorkingBoard.Lines.Length > 1000)
             {
                 RecordFarmerWorkingLog(txtWorkingBoard.Text);
                 txtWorkingBoard.Clear();
@@ -1350,7 +1422,7 @@ namespace SNSHelper_Win_Garden
 
         #region Check new version & download new file
 
-        Thread updateThread;
+
         private void buttonItem5_Click(object sender, EventArgs e)
         {
             isAutoUpdate = false;
@@ -1378,7 +1450,7 @@ namespace SNSHelper_Win_Garden
             {
                 if (!isAutoUpdate)
                 {
-                    DevComponents.DotNetBar.MessageBoxEx.Show("检查更新失败，请稍候重试！", "提示");
+                    DevComponents.DotNetBar.MessageBoxEx.Show("检查更新失败，请稍候重试！或到高兴网检查更新！", "提示");
                 }
 
                 ChangeFormTitleInThread(originalTitle + "   检查更新失败，请稍候重试！");
@@ -1427,7 +1499,7 @@ namespace SNSHelper_Win_Garden
         }
 
         string originalTitle;
-        Thread downloadFileThread;
+
         private void BeginDownLoadFile(string filePath)
         {
             if (downloadFileThread == null)
@@ -1544,18 +1616,39 @@ namespace SNSHelper_Win_Garden
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (farmerWorkingThread != null)
+            if (farmerWorkingThread != null || downloadFileThread != null || updateThread != null || loadNetFriendThread != null)
             {
                 if (DevComponents.DotNetBar.MessageBoxEx.Show("农夫正在为你工作，你是否要退出本程序？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    farmerWorkingThread.Abort();
+                    if (farmerWorkingThread != null)
+                    {
+                        farmerWorkingThread.Abort();
+                        farmerWorkingThread = null;
+                    }
+
+                    if (downloadFileThread != null)
+                    {
+                        downloadFileThread.Abort();
+                        downloadFileThread = null;
+                    }
+
+                    if (updateThread != null)
+                    {
+                        updateThread.Abort();
+                        updateThread = null;
+                    }
+
+                    if (loadNetFriendThread != null)
+                    {
+                        loadNetFriendThread.Abort();
+                        loadNetFriendThread = null;
+                    }
                 }
                 else
                 {
                     e.Cancel = true;
                 }
             }
-
         }
 
         private void frmMain_Resize(object sender, EventArgs e)
@@ -1767,5 +1860,12 @@ namespace SNSHelper_Win_Garden
             frmCropsCustomSetting newfrm = new frmCropsCustomSetting();
             newfrm.ShowDialog();
         }
+
+        private void buttonItem7_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", Path.Combine(Application.StartupPath, "Log")); 
+        }
+
+
     }
 }

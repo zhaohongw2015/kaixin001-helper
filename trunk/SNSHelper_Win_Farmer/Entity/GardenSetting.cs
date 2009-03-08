@@ -148,6 +148,9 @@ namespace SNSHelper_Win_Garden.Entity
                     case "AutoHavest":
                         etAccountSetting.AutoHavest = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
                         break;
+                    case "AutoHavestInTime":
+                        etAccountSetting.AutoHavestInTime = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
+                        break;
                     case "FriendWaterLowLimit":
                         etAccountSetting.FriendWaterLowLimit = item.InnerText;
                         break;
@@ -286,6 +289,7 @@ namespace SNSHelper_Win_Garden.Entity
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoBuySeed", Convert.ToInt32(accountSetting.AutoBuySeed).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "Seed", accountSetting.Seed));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoHavest", Convert.ToInt32(accountSetting.AutoHavest).ToString()));
+            node.AppendChild(CreateElement(node.OwnerDocument, "AutoHavestInTime", Convert.ToInt32(accountSetting.AutoHavestInTime).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoGrass", Convert.ToInt32(accountSetting.AutoGrass).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoSell", Convert.ToInt32(accountSetting.AutoSell).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "IsUsingPrivateSetting", Convert.ToInt32(accountSetting.IsUsingPrivateSetting).ToString()));

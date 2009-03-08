@@ -3,14 +3,14 @@ using SNSHelper.Common;
 
 namespace SNSHelper.Kaixin001
 {
-    public static class Utility
+    public class Utility
     {
-        private static HttpHelper httpHelper = new HttpHelper();
-        private static CookieContainer cookieContainer = new CookieContainer();
+        private HttpHelper httpHelper = new HttpHelper();
+        private CookieContainer cookieContainer = new CookieContainer();
         /// <summary>
         /// Cookie
         /// </summary>
-        public static CookieContainer Cookies
+        public CookieContainer Cookies
         {
             get
             {
@@ -22,11 +22,11 @@ namespace SNSHelper.Kaixin001
             }
         }
 
-        private static bool isLogin = false;
+        private bool isLogin = false;
         /// <summary>
         /// 用户是否登录
         /// </summary>
-        public static bool IsLogin
+        public bool IsLogin
         {
             get
             {
@@ -34,7 +34,7 @@ namespace SNSHelper.Kaixin001
             }
         }
 
-        public static int NetworkDelay
+        public int NetworkDelay
         {
             get
             {
@@ -52,7 +52,7 @@ namespace SNSHelper.Kaixin001
         /// <param name="loginEmail">Email</param>
         /// <param name="loginPassword">密码</param>
         /// <returns></returns>
-        public static bool Login(string loginEmail, string loginPassword)
+        public bool Login(string loginEmail, string loginPassword)
         {
             string loginUrl = "http://www.kaixin001.com/login/login.php";
             string postData = string.Format("url=/home/&invisible_mode=0&email={0}&password={1}", loginEmail, loginPassword);
@@ -61,7 +61,7 @@ namespace SNSHelper.Kaixin001
             return isLogin = result.Contains("我的首页");
         }
 
-        public static void Logout()
+        public void Logout()
         {
             isLogin = false;
             string logoutUrl = "http://www.kaixin001.com/login/logout.php";
