@@ -270,6 +270,7 @@ namespace SNSHelper_Win_Garden
 
             ckxAutoHavest.Checked = true;
             ckxAutoHavestInTime.Checked = true;
+            ckxAutoStealInTime.Checked = true;
 
             ckxAutoGrass.Checked = true;
 
@@ -383,6 +384,7 @@ namespace SNSHelper_Win_Garden
 
             ckxAutoHavest.Checked = accountSetting.AutoHavest;
             ckxAutoHavestInTime.Checked = accountSetting.AutoHavestInTime;
+            ckxAutoStealInTime.Checked = accountSetting.AutoStealInTime;
 
             ckxAutoGrass.Checked = accountSetting.AutoGrass;
 
@@ -543,6 +545,7 @@ namespace SNSHelper_Win_Garden
 
             currentConfiguringAccountSetting.AutoHavest = ckxAutoHavest.Checked;
             currentConfiguringAccountSetting.AutoHavestInTime = ckxAutoHavestInTime.Checked;
+            currentConfiguringAccountSetting.AutoStealInTime = ckxAutoStealInTime.Checked;
 
             currentConfiguringAccountSetting.AutoGrass = ckxAutoGrass.Checked;
 

@@ -70,6 +70,29 @@ namespace SNSHelper_Win_Garden
             ShowWhatsNew();
 
             showInTimeMsgInThread = new MethodWithParmString(ShowInTimeMsg);
+
+            ShowContributory();
+        }
+
+        private void ShowContributory()
+        {
+            Dictionary<string, string> contributoryList = new Dictionary<string, string>();
+            contributoryList.Add("乐乐", "Jailu的女朋友。没有乐乐的支持和理解，就没有今天的农夫，鲜花和掌声都献给她吧！");
+            contributoryList.Add("高兴网", "http://www.gaoxinga.com: 花园农夫专属版块提供者，让农夫们有了交流的空间！");
+            contributoryList.Add("小冲", "无私升级“农夫交流群”QQ群，让农夫们拥有良好的即使交流平台！");
+            contributoryList.Add("Bluejacky", "为了让农夫有更好的测试环境，他特意、专门申请了系列帐号！");
+            contributoryList.Add("无名有姓", "老前辈，给农夫的开发提供了不少建设性意见！");
+            contributoryList.Add("tony2u", "第一个发现问题后，通过阅读农夫源码，并提出修改方案的朋友！");
+            contributoryList.Add("", "");
+            contributoryList.Add(" ", "");
+            contributoryList.Add("  ", "");
+            contributoryList.Add("   ", "");
+            contributoryList.Add("    ", "");
+
+            foreach (string key in contributoryList.Keys)
+            {
+                dgvContributory.Rows.Add(key, contributoryList[key]);
+            }
         }
 
         /// <summary>
@@ -486,6 +509,7 @@ namespace SNSHelper_Win_Garden
                                                                 GetCropStatusDesc(gi.CropsStatus),
                                                                 gi.Grass == "1" ? "长草了" : ""));
                         }
+
                         #endregion
 
                         #region 偷果实
@@ -494,12 +518,11 @@ namespace SNSHelper_Win_Garden
                         {
                             double minStealCropsPrice = GetSeedPrice(workingAccountSetting.StealCrops);
 
+                            minDT = DateTime.MaxValue;
                             foreach (GardenItem gi in friendGardenDetails.GarderItems)
                             {
                                 if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
                                 {
-                                    //ShowMsgWhileWorking(string.Format("正在偷取好友{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
-
                                     if (gi.Shared != "0")
                                     {
                                         ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
@@ -522,6 +545,29 @@ namespace SNSHelper_Win_Garden
                                         }
                                     }
                                 }
+
+                                if (gi.CropsStatus != "2" && Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                                {
+                                    temp = GetRipeTime(gi.Crops);
+                                    if (temp != DateTime.MaxValue)
+                                    {
+                                        if (temp < minDT)
+                                        {
+                                            minDT = temp;
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (minDT != DateTime.MaxValue && workingAccountSetting.AutoStealInTime)
+                            {
+                                InTimeItem o = new InTimeItem();
+                                o.IsSteal = true;
+                                o.ActiveTime = minDT;
+                                o.AccountSetting = workingAccountSetting;
+                                o.FUID = friendSetting.UID;
+
+                                AddInTimeObject(o);
                             }
                         }
 
@@ -1349,7 +1395,7 @@ namespace SNSHelper_Win_Garden
 
         private void buttonItem7_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", Path.Combine(Application.StartupPath, "Log")); 
+            System.Diagnostics.Process.Start("explorer.exe", Path.Combine(Application.StartupPath, "Log"));
         }
 
 

@@ -238,6 +238,19 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private bool autoStealInTime = false;
+        public bool AutoStealInTime
+        {
+            get
+            {
+                return autoStealInTime;
+            }
+            set
+            {
+                autoStealInTime = value;
+            }
+        }
+
         private List<FriendSetting> friendSettings = new List<FriendSetting>();
         public List<FriendSetting> FriendSettings
         {

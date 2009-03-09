@@ -29,8 +29,12 @@ namespace SNSHelper_Win_Garden
                     }
                     else
                     {
-                        // 及时偷窃
-                        ThreadPool.QueueUserWorkItem(StealInTime, inTimeItemList[i]);
+                        if (!inTimeItemList[i].IsRunning)
+                        {
+                            inTimeItemList[i].IsRunning = true;
+                            // 及时偷窃
+                            ThreadPool.QueueUserWorkItem(StealInTime, inTimeItemList[i]);
+                        }
                     }
                 }
             }
@@ -57,6 +61,7 @@ namespace SNSHelper_Win_Garden
 
                 DateTime minDT = DateTime.MaxValue;
                 DateTime temp;
+
                 #region 收获
                 foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
@@ -184,6 +189,94 @@ namespace SNSHelper_Win_Garden
             }
         }
 
+        private void StealInTime(object o)
+        {
+            InTimeItem inTimeObject = o as InTimeItem;
+
+            Utility _utility = new Utility();
+
+            if (_utility.Login(inTimeObject.LoginEmail, inTimeObject.LoginPsw))
+            {
+                GardenHelper helper = new GardenHelper(_utility);
+                helper.GotoFriendGarden(inTimeObject.FUID);
+
+                DateTime minDT = DateTime.MaxValue;
+                DateTime temp;
+
+            GetFriendGardenDetails:
+                #region 
+                bool isReadyRipe = false;
+                GardenDetails gardenDetails = helper.GetGardenDetails(inTimeObject.FUID);
+
+                double minStealCropsPrice = GetSeedPrice(inTimeObject.AccountSetting.StealCrops);
+
+                foreach (GardenItem gi in gardenDetails.GarderItems)
+                {
+                    if (gi.Crops.IndexOf("即将成熟") > 0)
+                    {
+                        isReadyRipe = true;
+                    }
+
+                    if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
+                    {
+                        if (gi.Shared != "0")
+                        {
+                            //ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+
+                            continue;
+                        }
+
+                        if (Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                        {
+                            HavestResult hr = helper.Havest(gi.FarmNum, inTimeObject.FUID, null);
+
+                            if (hr.Ret == "succ")
+                            {
+                                ShowInTimeMsgInThread(string.Format("{3}：从{4}的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail,gardenDetails.Account.Name));
+                            }
+                            else
+                            {
+                                ShowInTimeMsgInThread(hr.Reason);
+                            }
+                        }
+                    }
+
+                    if (gi.CropsStatus != "2" && Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                    {
+                        temp = GetRipeTime(gi.Crops);
+                        if (temp != DateTime.MaxValue)
+                        {
+                            if (temp < minDT)
+                            {
+                                minDT = temp;
+                            }
+                        }
+                    }
+                }
+
+                if (isReadyRipe)
+                {
+                    Thread.Sleep(10000);
+                    goto GetFriendGardenDetails;
+                }
+                else
+                {
+                    if (minDT != DateTime.MaxValue)
+                    {
+                        inTimeObject.ActiveTime = minDT;
+                        inTimeObject.IsRunning = false;
+
+                        AddInTimeObject(inTimeObject);
+                    }
+                    else
+                    {
+                        DeleteInTimeObject(inTimeObject);
+                    }
+                }
+                #endregion
+            }
+        }
+
         private DateTime GetRipeTime(string crops)
         {
             string pattern = @"距离收获：(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分?)?(?:(?<second>\d+)秒?)?";
@@ -211,16 +304,11 @@ namespace SNSHelper_Win_Garden
                         dt = dt.AddSeconds(Convert.ToDouble(match.Groups["second"].Value));
                     }
 
-                    return dt.AddMinutes(1);
+                    return dt.AddSeconds(30);
                 }
             }
 
             return DateTime.MaxValue;
-        }
-
-        private void StealInTime(object o)
-        {
-            InTimeItem inTimeObject = o as InTimeItem;
         }
 
         private void AddInTimeObject(InTimeItem inTimeObject)
@@ -229,11 +317,23 @@ namespace SNSHelper_Win_Garden
             {
                 for (int i = 0; i < inTimeItemList.Count; i++)
                 {
-                    if (inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
+                    if (string.IsNullOrEmpty(inTimeObject.FUID))
                     {
-                        inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
+                        if (inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
+                        {
+                            inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
 
-                        return;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        if (inTimeItemList[i].FUID == inTimeObject.FUID && inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
+                        {
+                            inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
+
+                            return;
+                        }
                     }
                 }
 
