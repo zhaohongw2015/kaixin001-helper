@@ -124,12 +124,14 @@
     <value>75</value>
   </metadata>
   <data name="txtWorkingBoard.Text" xml:space="preserve">
-    <value>一年一度的38妇女节到了，这里农夫向所用“38”们问好，祝美女们节日快乐！同时，也祝 乐乐 节日快乐！
+    <value>农夫官方网站：http://code.google.com/p/kaixin001-helper/
 
-农夫QQ交流群：17454750
-农夫官方网站：http://code.google.com/p/kaixin001-helper/
+农夫QQ交流群：17454750（感谢 小冲 同志对本群无私的升级）
+
 开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
-农夫交流论坛：http://www.gaoxinga.com/forum-32-1.html</value>
+
+农夫交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
   <metadata name="好友名.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -157,6 +159,12 @@
   </metadata>
   <metadata name="balloonTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>168, 17</value>
+  </metadata>
+  <metadata name="贡献者.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="贡献简介.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

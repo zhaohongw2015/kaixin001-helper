@@ -233,7 +233,7 @@ namespace SNSHelper.Kaixin001
         /// <param name="farmNum">土地编号（必须）</param>
         /// <param name="fuid">好友编号（可无）</param>
         /// <param name="seedId">种子编号（可无）</param>
-        /// <returns></returns>
+        /// <returns></returns><data><ret>fail</ret><reason>今天不能再偷了</reason></data>
         public HavestResult Havest(string farmNum, string fuid, string seedId)
         {
             string result = httpHelper.GetHtml(string.Format(havestUrl,
