@@ -10,35 +10,39 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        List<InTimeObject> inTimeObjectList = new List<InTimeObject>();
+        List<InTimeItem> inTimeItemList = new List<InTimeItem>();
 
         private void inTimeTimer_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < inTimeObjectList.Count; i++)
+            for (int i = 0; i < inTimeItemList.Count; i++)
             {
-                if (inTimeObjectList[i].ActiveTime <= DateTime.Now)
+                if (inTimeItemList[i].ActiveTime <= DateTime.Now)
                 {
-                    if (!inTimeObjectList[i].IsSteal)
+                    if (!inTimeItemList[i].IsSteal)
                     {
-                        if (!inTimeObjectList[i].IsRunning)
+                        if (!inTimeItemList[i].IsRunning)
                         {
-                            inTimeObjectList[i].IsRunning = true;
+                            inTimeItemList[i].IsRunning = true;
                             // 及时收获
-                            ThreadPool.QueueUserWorkItem(HavestInTime, inTimeObjectList[i]);
+                            ThreadPool.QueueUserWorkItem(HavestInTime, inTimeItemList[i]);
                         }
                     }
                     else
                     {
                         // 及时偷窃
-                        ThreadPool.QueueUserWorkItem(StealInTime, inTimeObjectList[i]);
+                        ThreadPool.QueueUserWorkItem(StealInTime, inTimeItemList[i]);
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// 第一时间收获
+        /// </summary>
+        /// <param name="o">InTimeItem对象</param>
         private void HavestInTime(object o)
         {
-            InTimeObject inTimeObject = o as InTimeObject;
+            InTimeItem inTimeObject = o as InTimeItem;
 
             Utility _utility = new Utility();
 
@@ -216,36 +220,36 @@ namespace SNSHelper_Win_Garden
 
         private void StealInTime(object o)
         {
-            InTimeObject inTimeObject = o as InTimeObject;
+            InTimeItem inTimeObject = o as InTimeItem;
         }
 
-        private void AddInTimeObject(InTimeObject inTimeObject)
+        private void AddInTimeObject(InTimeItem inTimeObject)
         {
-            lock (inTimeObjectList)
+            lock (inTimeItemList)
             {
-                for (int i = 0; i < inTimeObjectList.Count; i++)
+                for (int i = 0; i < inTimeItemList.Count; i++)
                 {
-                    if (inTimeObjectList[i].LoginEmail == inTimeObject.LoginEmail)
+                    if (inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
                     {
-                        inTimeObjectList[i].ActiveTime = inTimeObject.ActiveTime;
+                        inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
 
                         return;
                     }
                 }
 
-                inTimeObjectList.Add(inTimeObject);
+                inTimeItemList.Add(inTimeObject);
             }
         }
 
-        private void DeleteInTimeObject(InTimeObject inTimeObject)
+        private void DeleteInTimeObject(InTimeItem inTimeObject)
         {
-            lock (inTimeObjectList)
+            lock (inTimeItemList)
             {
-                for (int i = 0; i < inTimeObjectList.Count; i++)
+                for (int i = 0; i < inTimeItemList.Count; i++)
                 {
-                    if (inTimeObjectList[i].LoginEmail == inTimeObject.LoginEmail)
+                    if (inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
                     {
-                        inTimeObjectList.RemoveAt(i);
+                        inTimeItemList.RemoveAt(i);
 
                         return;
                     }
@@ -273,7 +277,7 @@ namespace SNSHelper_Win_Garden
             txtInTimeBoard.AppendText(msg);
         }
 
-        class InTimeObject
+        class InTimeItem
         {
             private SNSHelper_Win_Garden.Entity.AccountSetting accountSetting = new SNSHelper_Win_Garden.Entity.AccountSetting();
             public SNSHelper_Win_Garden.Entity.AccountSetting AccountSetting
