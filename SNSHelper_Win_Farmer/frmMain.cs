@@ -1398,6 +1398,9 @@ namespace SNSHelper_Win_Garden
             System.Diagnostics.Process.Start("explorer.exe", Path.Combine(Application.StartupPath, "Log"));
         }
 
-
+        private void biHeart_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", "http://store.taobao.com/shop/view_shop-9e64c485791636107415f115111c5b9a.htm");
+        }
     }
 }
