@@ -68,6 +68,12 @@
       <price>400</price>
     </item>
     <item>
+      <name>向日葵</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangrikui.swf</fruitpic>
+      <seedid>9</seedid>
+      <price>800</price>
+    </item>
+    <item>
       <name>西瓜</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xigua.swf</fruitpic>
       <seedid>13</seedid>
@@ -84,12 +90,6 @@
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/caomei.swf</fruitpic>
       <seedid>15</seedid>
       <price>600</price>
-    </item>
-    <item>
-      <name>向日葵</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangrikui.swf</fruitpic>
-      <seedid>9</seedid>
-      <price>1000</price>
     </item>
     <item>
       <name>菊花</name>

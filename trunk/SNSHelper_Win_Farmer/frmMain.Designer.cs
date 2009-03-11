@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevComponents.DotNetBar.DocumentDockContainer documentDockContainer1 = new DevComponents.DotNetBar.DocumentDockContainer();
-            DevComponents.DotNetBar.DocumentDockContainer documentDockContainer2 = new DevComponents.DotNetBar.DocumentDockContainer();
-            DevComponents.DotNetBar.DocumentDockContainer documentDockContainer3 = new DevComponents.DotNetBar.DocumentDockContainer();
-            DevComponents.DotNetBar.DocumentDockContainer documentDockContainer4 = new DevComponents.DotNetBar.DocumentDockContainer();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -56,17 +52,6 @@
             this.biHeart = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.txtWorkingBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.lblWorkingRemainingTime = new DevComponents.DotNetBar.LabelX();
-            this.lblNextWorkingTime = new DevComponents.DotNetBar.LabelX();
-            this.btnStop = new DevComponents.DotNetBar.ButtonX();
-            this.btnStart = new DevComponents.DotNetBar.ButtonX();
-            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.txtInTimeBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.contextMenuBar2 = new DevComponents.DotNetBar.ContextMenuBar();
@@ -80,9 +65,12 @@
             this.biSelectFullColumn = new DevComponents.DotNetBar.ButtonItem();
             this.biInvertSelectFullRow = new DevComponents.DotNetBar.ButtonItem();
             this.biInvertSelectFullColumn = new DevComponents.DotNetBar.ButtonItem();
+            this.biFriendUp = new DevComponents.DotNetBar.ButtonItem();
+            this.biFriendDown = new DevComponents.DotNetBar.ButtonItem();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.lblNetworkingStatus = new DevComponents.DotNetBar.LabelX();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.ckxIsCare = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ckxAutoStealInTime = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ckxAutoHavestInTime = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
@@ -143,11 +131,22 @@
             this.txtParkingInterval = new DevComponents.Editors.IntegerInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.txtWorkingBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.lblWorkingRemainingTime = new DevComponents.DotNetBar.LabelX();
+            this.lblNextWorkingTime = new DevComponents.DotNetBar.LabelX();
+            this.btnStop = new DevComponents.DotNetBar.ButtonX();
+            this.btnStart = new DevComponents.DotNetBar.ButtonX();
+            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.dgvContributory = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.贡献者 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.贡献简介 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.txtInTimeBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.balloonTip1 = new DevComponents.DotNetBar.BalloonTip();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -156,9 +155,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabControlPanel1.SuspendLayout();
-            this.panelEx1.SuspendLayout();
-            this.tabControlPanel3.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).BeginInit();
@@ -169,8 +165,11 @@
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).BeginInit();
+            this.tabControlPanel1.SuspendLayout();
+            this.panelEx1.SuspendLayout();
             this.tabControlPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContributory)).BeginInit();
+            this.tabControlPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dotNetBarManager1
@@ -201,7 +200,7 @@
             // 
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite4.DocumentDockContainer = documentDockContainer1;
+            this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite4.Location = new System.Drawing.Point(0, 661);
             this.dockSite4.Name = "dockSite4";
             this.dockSite4.Size = new System.Drawing.Size(602, 0);
@@ -212,7 +211,7 @@
             // 
             this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dockSite1.DocumentDockContainer = documentDockContainer2;
+            this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite1.Location = new System.Drawing.Point(0, 25);
             this.dockSite1.Name = "dockSite1";
             this.dockSite1.Size = new System.Drawing.Size(0, 636);
@@ -223,7 +222,7 @@
             // 
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite2.DocumentDockContainer = documentDockContainer3;
+            this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite2.Location = new System.Drawing.Point(602, 25);
             this.dockSite2.Name = "dockSite2";
             this.dockSite2.Size = new System.Drawing.Size(0, 636);
@@ -357,13 +356,14 @@
             this.biHeart.ImagePaddingHorizontal = 8;
             this.biHeart.Name = "biHeart";
             this.biHeart.Text = "爱心捐赠";
+            this.biHeart.Visible = false;
             this.biHeart.Click += new System.EventHandler(this.biHeart_Click);
             // 
             // dockSite3
             // 
             this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dockSite3.DocumentDockContainer = documentDockContainer4;
+            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite3.Location = new System.Drawing.Point(0, 25);
             this.dockSite3.Name = "dockSite3";
             this.dockSite3.Size = new System.Drawing.Size(602, 0);
@@ -374,10 +374,10 @@
             // 
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel4);
             this.tabControl1.Controls.Add(this.tabControlPanel1);
-            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
+            this.tabControl1.Controls.Add(this.tabControlPanel4);
+            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
@@ -392,150 +392,6 @@
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Tabs.Add(this.tabItem4);
             this.tabControl1.Text = "tabControl1";
-            // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Controls.Add(this.txtWorkingBoard);
-            this.tabControlPanel1.Controls.Add(this.panelEx1);
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 23);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(602, 613);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.tabItem1;
-            // 
-            // txtWorkingBoard
-            // 
-            this.txtWorkingBoard.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtWorkingBoard.Border.Class = "TextBoxBorder";
-            this.txtWorkingBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 32);
-            this.txtWorkingBoard.Multiline = true;
-            this.txtWorkingBoard.Name = "txtWorkingBoard";
-            this.txtWorkingBoard.ReadOnly = true;
-            this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWorkingBoard.Size = new System.Drawing.Size(600, 580);
-            this.txtWorkingBoard.TabIndex = 2;
-            this.txtWorkingBoard.Text = resources.GetString("txtWorkingBoard.Text");
-            // 
-            // panelEx1
-            // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.Controls.Add(this.lblWorkingRemainingTime);
-            this.panelEx1.Controls.Add(this.lblNextWorkingTime);
-            this.panelEx1.Controls.Add(this.btnStop);
-            this.panelEx1.Controls.Add(this.btnStart);
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEx1.Location = new System.Drawing.Point(1, 1);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(600, 31);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 1;
-            // 
-            // lblWorkingRemainingTime
-            // 
-            this.lblWorkingRemainingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblWorkingRemainingTime.ForeColor = System.Drawing.Color.Red;
-            this.lblWorkingRemainingTime.Location = new System.Drawing.Point(486, 4);
-            this.lblWorkingRemainingTime.Name = "lblWorkingRemainingTime";
-            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 23);
-            this.lblWorkingRemainingTime.TabIndex = 4;
-            this.lblWorkingRemainingTime.Text = "00:21:35";
-            this.lblWorkingRemainingTime.Visible = false;
-            // 
-            // lblNextWorkingTime
-            // 
-            this.lblNextWorkingTime.Location = new System.Drawing.Point(180, 4);
-            this.lblNextWorkingTime.Name = "lblNextWorkingTime";
-            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 23);
-            this.lblNextWorkingTime.TabIndex = 2;
-            this.lblNextWorkingTime.Text = "距下次工作(2009-03-03 14:00:00)还有：";
-            this.lblNextWorkingTime.Visible = false;
-            // 
-            // btnStop
-            // 
-            this.btnStop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(98, 4);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 23);
-            this.btnStop.TabIndex = 1;
-            this.btnStop.Text = "停止工作";
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-            // 
-            // btnStart
-            // 
-            this.btnStart.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStart.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStart.Location = new System.Drawing.Point(17, 4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "开始工作";
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // tabItem1
-            // 
-            this.tabItem1.AttachedControl = this.tabControlPanel1;
-            this.tabItem1.Name = "tabItem1";
-            this.tabItem1.Text = "花园情况";
-            // 
-            // tabControlPanel3
-            // 
-            this.tabControlPanel3.Controls.Add(this.txtInTimeBoard);
-            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 23);
-            this.tabControlPanel3.Name = "tabControlPanel3";
-            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(602, 613);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel3.Style.GradientAngle = 90;
-            this.tabControlPanel3.TabIndex = 3;
-            this.tabControlPanel3.TabItem = this.tabItem3;
-            // 
-            // txtInTimeBoard
-            // 
-            this.txtInTimeBoard.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtInTimeBoard.Border.Class = "TextBoxBorder";
-            this.txtInTimeBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtInTimeBoard.Location = new System.Drawing.Point(1, 1);
-            this.txtInTimeBoard.Multiline = true;
-            this.txtInTimeBoard.Name = "txtInTimeBoard";
-            this.txtInTimeBoard.ReadOnly = true;
-            this.txtInTimeBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInTimeBoard.Size = new System.Drawing.Size(600, 611);
-            this.txtInTimeBoard.TabIndex = 0;
-            // 
-            // tabItem3
-            // 
-            this.tabItem3.AttachedControl = this.tabControlPanel3;
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Text = "第一时间";
             // 
             // tabControlPanel2
             // 
@@ -657,7 +513,9 @@
             this.biSelectFullRow,
             this.biSelectFullColumn,
             this.biInvertSelectFullRow,
-            this.biInvertSelectFullColumn});
+            this.biInvertSelectFullColumn,
+            this.biFriendUp,
+            this.biFriendDown});
             this.biFriendList.Text = "好友列表";
             // 
             // biSelectFullRow
@@ -687,6 +545,20 @@
             this.biInvertSelectFullColumn.Name = "biInvertSelectFullColumn";
             this.biInvertSelectFullColumn.Text = "整列反选";
             this.biInvertSelectFullColumn.Click += new System.EventHandler(this.biInvertSelectFullColumn_Click);
+            // 
+            // biFriendUp
+            // 
+            this.biFriendUp.ImagePaddingHorizontal = 8;
+            this.biFriendUp.Name = "biFriendUp";
+            this.biFriendUp.Text = "上移";
+            this.biFriendUp.Click += new System.EventHandler(this.biFriendUp_Click);
+            // 
+            // biFriendDown
+            // 
+            this.biFriendDown.ImagePaddingHorizontal = 8;
+            this.biFriendDown.Name = "biFriendDown";
+            this.biFriendDown.Text = "下移";
+            this.biFriendDown.Click += new System.EventHandler(this.biFriendDown_Click);
             // 
             // groupPanel5
             // 
@@ -731,6 +603,7 @@
             // 
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.ckxIsCare);
             this.groupPanel4.Controls.Add(this.ckxAutoStealInTime);
             this.groupPanel4.Controls.Add(this.ckxAutoHavestInTime);
             this.groupPanel4.Controls.Add(this.labelX12);
@@ -756,7 +629,7 @@
             this.groupPanel4.Controls.Add(this.cbxIsOperation);
             this.groupPanel4.Location = new System.Drawing.Point(178, 65);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(394, 416);
+            this.groupPanel4.Size = new System.Drawing.Size(394, 430);
             // 
             // 
             // 
@@ -779,12 +652,21 @@
             this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel4.TabIndex = 4;
             // 
+            // ckxIsCare
+            // 
+            this.ckxIsCare.BackColor = System.Drawing.Color.Transparent;
+            this.ckxIsCare.Location = new System.Drawing.Point(19, 376);
+            this.ckxIsCare.Name = "ckxIsCare";
+            this.ckxIsCare.Size = new System.Drawing.Size(125, 25);
+            this.ckxIsCare.TabIndex = 46;
+            this.ckxIsCare.Text = "是否提防菜老伯";
+            // 
             // ckxAutoStealInTime
             // 
             this.ckxAutoStealInTime.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoStealInTime.Location = new System.Drawing.Point(19, 375);
+            this.ckxAutoStealInTime.Location = new System.Drawing.Point(262, 343);
             this.ckxAutoStealInTime.Name = "ckxAutoStealInTime";
-            this.ckxAutoStealInTime.Size = new System.Drawing.Size(201, 25);
+            this.ckxAutoStealInTime.Size = new System.Drawing.Size(123, 25);
             this.ckxAutoStealInTime.TabIndex = 45;
             this.ckxAutoStealInTime.Text = "是否第一时间偷盗";
             // 
@@ -867,7 +749,7 @@
             this.comboItem6,
             this.comboItem7,
             this.comboItem8});
-            this.cbxFriendWater.Location = new System.Drawing.Point(236, 4);
+            this.cbxFriendWater.Location = new System.Drawing.Point(235, 3);
             this.cbxFriendWater.Name = "cbxFriendWater";
             this.cbxFriendWater.Size = new System.Drawing.Size(54, 21);
             this.cbxFriendWater.TabIndex = 37;
@@ -895,7 +777,7 @@
             // labelX10
             // 
             this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            this.labelX10.Location = new System.Drawing.Point(108, 4);
+            this.labelX10.Location = new System.Drawing.Point(107, 3);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(123, 23);
             this.labelX10.TabIndex = 36;
@@ -1041,14 +923,14 @@
             this.浇水,
             this.捉虫,
             this.锄草});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFriendList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvFriendList.Location = new System.Drawing.Point(3, 33);
             this.dgvFriendList.MultiSelect = false;
@@ -1119,9 +1001,9 @@
             // 
             this.btnSaveAccount.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSaveAccount.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveAccount.Location = new System.Drawing.Point(241, 354);
+            this.btnSaveAccount.Location = new System.Drawing.Point(246, 374);
             this.btnSaveAccount.Name = "btnSaveAccount";
-            this.btnSaveAccount.Size = new System.Drawing.Size(109, 44);
+            this.btnSaveAccount.Size = new System.Drawing.Size(109, 47);
             this.btnSaveAccount.TabIndex = 5;
             this.btnSaveAccount.Text = "保存帐号设置";
             this.btnSaveAccount.Click += new System.EventHandler(this.btnSaveAccount_Click);
@@ -1132,7 +1014,7 @@
             this.cbxIsOperation.Checked = true;
             this.cbxIsOperation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxIsOperation.CheckValue = "Y";
-            this.cbxIsOperation.Location = new System.Drawing.Point(17, 4);
+            this.cbxIsOperation.Location = new System.Drawing.Point(4, 4);
             this.cbxIsOperation.Name = "cbxIsOperation";
             this.cbxIsOperation.Size = new System.Drawing.Size(76, 23);
             this.cbxIsOperation.TabIndex = 1;
@@ -1248,7 +1130,7 @@
             this.lsbAccount.Location = new System.Drawing.Point(10, 28);
             this.lsbAccount.MultiSelect = false;
             this.lsbAccount.Name = "lsbAccount";
-            this.lsbAccount.Size = new System.Drawing.Size(162, 453);
+            this.lsbAccount.Size = new System.Drawing.Size(162, 467);
             this.lsbAccount.TabIndex = 0;
             this.lsbAccount.UseCompatibleStateImageBehavior = false;
             this.lsbAccount.View = System.Windows.Forms.View.List;
@@ -1390,6 +1272,110 @@
             this.tabItem2.Name = "tabItem2";
             this.tabItem2.Text = "农夫设置";
             // 
+            // tabControlPanel1
+            // 
+            this.tabControlPanel1.Controls.Add(this.txtWorkingBoard);
+            this.tabControlPanel1.Controls.Add(this.panelEx1);
+            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 23);
+            this.tabControlPanel1.Name = "tabControlPanel1";
+            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel1.Size = new System.Drawing.Size(602, 613);
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel1.Style.GradientAngle = 90;
+            this.tabControlPanel1.TabIndex = 1;
+            this.tabControlPanel1.TabItem = this.tabItem1;
+            // 
+            // txtWorkingBoard
+            // 
+            this.txtWorkingBoard.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtWorkingBoard.Border.Class = "TextBoxBorder";
+            this.txtWorkingBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 32);
+            this.txtWorkingBoard.Multiline = true;
+            this.txtWorkingBoard.Name = "txtWorkingBoard";
+            this.txtWorkingBoard.ReadOnly = true;
+            this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtWorkingBoard.Size = new System.Drawing.Size(600, 580);
+            this.txtWorkingBoard.TabIndex = 2;
+            this.txtWorkingBoard.Text = resources.GetString("txtWorkingBoard.Text");
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx1.Controls.Add(this.lblWorkingRemainingTime);
+            this.panelEx1.Controls.Add(this.lblNextWorkingTime);
+            this.panelEx1.Controls.Add(this.btnStop);
+            this.panelEx1.Controls.Add(this.btnStart);
+            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEx1.Location = new System.Drawing.Point(1, 1);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(600, 31);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 1;
+            // 
+            // lblWorkingRemainingTime
+            // 
+            this.lblWorkingRemainingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblWorkingRemainingTime.ForeColor = System.Drawing.Color.Red;
+            this.lblWorkingRemainingTime.Location = new System.Drawing.Point(486, 4);
+            this.lblWorkingRemainingTime.Name = "lblWorkingRemainingTime";
+            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 23);
+            this.lblWorkingRemainingTime.TabIndex = 4;
+            this.lblWorkingRemainingTime.Text = "00:21:35";
+            this.lblWorkingRemainingTime.Visible = false;
+            // 
+            // lblNextWorkingTime
+            // 
+            this.lblNextWorkingTime.Location = new System.Drawing.Point(180, 4);
+            this.lblNextWorkingTime.Name = "lblNextWorkingTime";
+            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 23);
+            this.lblNextWorkingTime.TabIndex = 2;
+            this.lblNextWorkingTime.Text = "距下次工作(2009-03-03 14:00:00)还有：";
+            this.lblNextWorkingTime.Visible = false;
+            // 
+            // btnStop
+            // 
+            this.btnStop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStop.Enabled = false;
+            this.btnStop.Location = new System.Drawing.Point(98, 4);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(75, 23);
+            this.btnStop.TabIndex = 1;
+            this.btnStop.Text = "停止工作";
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStart.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStart.Location = new System.Drawing.Point(17, 4);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "开始工作";
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // tabItem1
+            // 
+            this.tabItem1.AttachedControl = this.tabControlPanel1;
+            this.tabItem1.Name = "tabItem1";
+            this.tabItem1.Text = "花园情况";
+            // 
             // tabControlPanel4
             // 
             this.tabControlPanel4.Controls.Add(this.dgvContributory);
@@ -1418,14 +1404,14 @@
             this.dgvContributory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.贡献者,
             this.贡献简介});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContributory.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContributory.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvContributory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvContributory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvContributory.Location = new System.Drawing.Point(1, 1);
@@ -1453,6 +1439,46 @@
             this.tabItem4.AttachedControl = this.tabControlPanel4;
             this.tabItem4.Name = "tabItem4";
             this.tabItem4.Text = "农夫卓越贡献者";
+            // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Controls.Add(this.txtInTimeBoard);
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 23);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(602, 613);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 3;
+            this.tabControlPanel3.TabItem = this.tabItem3;
+            // 
+            // txtInTimeBoard
+            // 
+            this.txtInTimeBoard.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtInTimeBoard.Border.Class = "TextBoxBorder";
+            this.txtInTimeBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtInTimeBoard.Location = new System.Drawing.Point(1, 1);
+            this.txtInTimeBoard.Multiline = true;
+            this.txtInTimeBoard.Name = "txtInTimeBoard";
+            this.txtInTimeBoard.ReadOnly = true;
+            this.txtInTimeBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInTimeBoard.Size = new System.Drawing.Size(600, 611);
+            this.txtInTimeBoard.TabIndex = 0;
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel3;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "第一时间";
             // 
             // countDownTimer
             // 
@@ -1488,7 +1514,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "开心网花园农夫 V1.0 Build20090310 -- By Jailu (高兴网出品)";
+            this.Text = "开心网花园农夫 V1.0 Build20090312 -- By Jailu (高兴网出品)";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
@@ -1496,9 +1522,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabControlPanel1.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
-            this.tabControlPanel3.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).EndInit();
@@ -1509,8 +1532,11 @@
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).EndInit();
+            this.tabControlPanel1.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
             this.tabControlPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContributory)).EndInit();
+            this.tabControlPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1633,5 +1659,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 贡献者;
         private System.Windows.Forms.DataGridViewTextBoxColumn 贡献简介;
         private DevComponents.DotNetBar.ButtonItem biHeart;
+        private DevComponents.DotNetBar.Controls.CheckBoxX ckxIsCare;
+        private DevComponents.DotNetBar.ButtonItem biFriendUp;
+        private DevComponents.DotNetBar.ButtonItem biFriendDown;
     }
 }

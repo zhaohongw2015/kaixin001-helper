@@ -132,6 +132,9 @@ namespace SNSHelper.Kaixin001.Entity.Garden
                     case "tcharms":
                         account.TCharms = item.InnerText;
                         break;
+                    case "careurl":
+                        account.CareUrl = item.InnerText;
+                        break;
                     case "setting":
                         LoadSetting(item);
                         break;

@@ -272,6 +272,8 @@ namespace SNSHelper_Win_Garden
             ckxAutoHavestInTime.Checked = true;
             ckxAutoStealInTime.Checked = true;
 
+            ckxIsCare.Checked = true;
+
             ckxAutoGrass.Checked = true;
 
             ckbAutoSell.Checked = true;
@@ -386,6 +388,8 @@ namespace SNSHelper_Win_Garden
             ckxAutoHavestInTime.Checked = accountSetting.AutoHavestInTime;
             ckxAutoStealInTime.Checked = accountSetting.AutoStealInTime;
 
+            ckxIsCare.Checked = accountSetting.IsCare;
+
             ckxAutoGrass.Checked = accountSetting.AutoGrass;
 
             ckbAutoSell.Checked = accountSetting.AutoSell;
@@ -456,6 +460,9 @@ namespace SNSHelper_Win_Garden
             gardenSetting.AccountSettings[index - 1] = temp;
 
             GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
+            InitAccountSetting();
+
+            currentConfiguringAccountSetting = null;
         }
 
         private void btiDown_Click(object sender, EventArgs e)
@@ -472,6 +479,8 @@ namespace SNSHelper_Win_Garden
 
             GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
 
+            currentConfiguringAccountSetting = null;
+            InitAccountSetting();
         }
 
         private void btnSaveGlobalSetting_Click(object sender, EventArgs e)
@@ -524,6 +533,7 @@ namespace SNSHelper_Win_Garden
             {
                 return;
             }
+
             currentConfiguringAccountSetting.LoginEmail = txtNewLoginEmail.Text;
             currentConfiguringAccountSetting.LoginPassword = txtNewLoginPwd.Text;
 
@@ -553,6 +563,8 @@ namespace SNSHelper_Win_Garden
 
             currentConfiguringAccountSetting.StealCrops = cbxStealCrops.Text;
 
+            currentConfiguringAccountSetting.IsCare = ckxIsCare.Checked;
+
             if (isNewAccountFlag)
             {
                 gardenSetting.AccountSettings.Add(currentConfiguringAccountSetting);
@@ -572,6 +584,32 @@ namespace SNSHelper_Win_Garden
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("帐号设置保存失败");
             }
+        }
+
+        private void biFriendUp_Click(object sender, EventArgs e)
+        {
+            int index = dgvFriendList.SelectedCells[0].RowIndex;
+
+            FriendSetting tempFS = currentConfiguringAccountSetting.FriendSettings[index];
+
+            dgvFriendList.Rows.RemoveAt(index);
+            dgvFriendList.Rows.Insert(index - 1, tempFS.Name, tempFS.UID, tempFS.Steal, tempFS.Plough, tempFS.Farm, tempFS.Water, tempFS.Vermin, tempFS.Grass);
+
+            currentConfiguringAccountSetting.FriendSettings[index] = currentConfiguringAccountSetting.FriendSettings[index - 1];
+            currentConfiguringAccountSetting.FriendSettings[index - 1] = tempFS;
+        }
+
+        private void biFriendDown_Click(object sender, EventArgs e)
+        {
+            int index = dgvFriendList.SelectedCells[0].RowIndex;
+
+            FriendSetting tempFS = currentConfiguringAccountSetting.FriendSettings[index];
+
+            dgvFriendList.Rows.RemoveAt(index);
+            dgvFriendList.Rows.Insert(index + 1, tempFS.Name, tempFS.UID, tempFS.Steal, tempFS.Plough, tempFS.Farm, tempFS.Water, tempFS.Vermin, tempFS.Grass);
+
+            currentConfiguringAccountSetting.FriendSettings[index] = currentConfiguringAccountSetting.FriendSettings[index + 1];
+            currentConfiguringAccountSetting.FriendSettings[index + 1] = tempFS;
         }
     }
 }
