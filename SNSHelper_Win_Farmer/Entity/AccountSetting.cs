@@ -251,6 +251,19 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private bool isCare = false;
+        public bool IsCare
+        {
+            get
+            {
+                return isCare;
+            }
+            set
+            {
+                isCare = value;
+            }
+        }
+
         private List<FriendSetting> friendSettings = new List<FriendSetting>();
         public List<FriendSetting> FriendSettings
         {

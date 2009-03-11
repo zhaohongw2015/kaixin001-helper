@@ -103,21 +103,24 @@ namespace SNSHelper_Win_Garden
 
                 #region 犁地
 
-                foreach (GardenItem gi in gardenDetails.GarderItems)
+                if (inTimeObject.AccountSetting.AutoPlough)
                 {
-                    if (gi.CropsStatus == "3" || gi.CropsStatus == "-1")
+                    foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
-                        if (gi.Shared == "0")
+                        if (gi.CropsStatus == "3" || gi.CropsStatus == "-1")
                         {
-                            if (helper.Plough(gi.FarmNum, null, null))
+                            if (gi.Shared == "0")
                             {
-                                ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地成功！", gi.FarmNum, inTimeObject.LoginEmail));
-                                gi.CropsStatus = "";
-                                gi.CropsId = "0";
-                            }
-                            else
-                            {
-                                ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                if (helper.Plough(gi.FarmNum, null, null))
+                                {
+                                    ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地成功！", gi.FarmNum, inTimeObject.LoginEmail));
+                                    gi.CropsStatus = "";
+                                    gi.CropsId = "0";
+                                }
+                                else
+                                {
+                                    ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                }
                             }
                         }
                     }
@@ -127,39 +130,42 @@ namespace SNSHelper_Win_Garden
 
                 #region 播种
 
-                List<MySeeds> mySeedsList = null;
-                foreach (GardenItem gi in gardenDetails.GarderItems)
+                if (inTimeObject.AccountSetting.AutoFarm)
                 {
-                    if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
+                    List<MySeeds> mySeedsList = null;
+                    foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
-                        string seedName = GetFarmingSeedName(inTimeObject.AccountSetting, gardenDetails.Account.Rank);
-                        SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
-
-                        if (si == null)
+                        if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
-                            if (!BuySeedForFarming(helper, ref mySeedsList, seedName, GetMaxNeededSeedNum(gardenDetails.GarderItems)))
+                            string seedName = GetFarmingSeedName(inTimeObject.AccountSetting, gardenDetails.Account.Rank);
+                            SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
+
+                            if (si == null)
                             {
-                                ShowMsgWhileWorking(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                if (!BuySeedForFarming(helper, ref mySeedsList, seedName, GetMaxNeededSeedNum(gardenDetails.GarderItems)))
+                                {
+                                    ShowMsgWhileWorking(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                }
                             }
-                        }
 
-                        si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
+                            si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
 
-                        if (si == null)
-                        {
-                            ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
-                        }
-                        else
-                        {
-                            FarmResult fr = helper.FarmSeed(gi.FarmNum, null, si.SeedID);
-                            if (fr.Ret == "succ")
+                            if (si == null)
                             {
-                                ShowInTimeMsgInThread(string.Format("{2}：{0}号农田，成功种植{1}！", gi.FarmNum, si.Name, inTimeObject.LoginEmail));
-                                si.Num--;
+                                ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
                             }
                             else
                             {
-                                ShowInTimeMsgInThread(string.Format("{3}：{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, si.Name, fr.ErrMsg, inTimeObject.LoginEmail));
+                                FarmResult fr = helper.FarmSeed(gi.FarmNum, null, si.SeedID);
+                                if (fr.Ret == "succ")
+                                {
+                                    ShowInTimeMsgInThread(string.Format("{2}：{0}号农田，成功种植{1}！", gi.FarmNum, si.Name, inTimeObject.LoginEmail));
+                                    si.Num--;
+                                }
+                                else
+                                {
+                                    ShowInTimeMsgInThread(string.Format("{3}：{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, si.Name, fr.ErrMsg, inTimeObject.LoginEmail));
+                                }
                             }
                         }
                     }
@@ -204,11 +210,19 @@ namespace SNSHelper_Win_Garden
                 DateTime temp;
 
             GetFriendGardenDetails:
-                #region 
+                #region
                 bool isReadyRipe = false;
                 GardenDetails gardenDetails = helper.GetGardenDetails(inTimeObject.FUID);
 
                 double minStealCropsPrice = GetSeedPrice(inTimeObject.AccountSetting.StealCrops);
+
+                if (string.IsNullOrEmpty(gardenDetails.Account.CareUrl))
+                {
+                    ShowInTimeMsgInThread(string.Format("{0} 的农田里有菜老伯，还是不偷了吧！", gardenDetails.Account.Name));
+                    DeleteInTimeObject(inTimeObject);
+
+                    return;
+                }
 
                 foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
@@ -232,7 +246,7 @@ namespace SNSHelper_Win_Garden
 
                             if (hr.Ret == "succ")
                             {
-                                ShowInTimeMsgInThread(string.Format("{3}：从{4}的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail,gardenDetails.Account.Name));
+                                ShowInTimeMsgInThread(string.Format("{3}：从{4}的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail, gardenDetails.Account.Name));
                             }
                             else
                             {

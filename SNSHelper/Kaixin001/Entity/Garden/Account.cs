@@ -150,6 +150,19 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             }
         }
 
+        private string careUrl = string.Empty;
+        public string CareUrl
+        {
+            get
+            {
+                return careUrl;
+            }
+            set
+            {
+                careUrl = value;
+            }
+        }
+
         private AccountSetting setting = new AccountSetting();
         /// <summary>
         /// 设置
