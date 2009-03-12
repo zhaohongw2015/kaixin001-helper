@@ -23,6 +23,12 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             catch (Exception e)
             {
                 errMsg = "错误编号：001．" + e.Message;
+
+                if (xml.Contains("你不是她好友，没有权限查看此内容"))
+                {
+                    errMsg = "1";
+                }
+
                 return;
             }
 

@@ -83,7 +83,7 @@ namespace SNSHelper_Win_Garden
             contributoryList.Add("Bluejacky", "为了让农夫有更好的测试环境，他特意、专门申请了系列帐号！");
             contributoryList.Add("无名有姓", "老前辈，给农夫的开发提供了不少建设性意见！");
             contributoryList.Add("tony2u", "第一个发现问题后，通过阅读农夫源码，并提出修改方案的朋友！");
-            contributoryList.Add("陈琥", "开心网ID：11018158。为农夫提供菜老伯测试数据！");
+            contributoryList.Add("农夫宝哥", "QQ：345543933。为农夫提供菜老伯测试数据！");
             contributoryList.Add("", "");
             contributoryList.Add(" ", "");
             contributoryList.Add("  ", "");
@@ -479,24 +479,35 @@ namespace SNSHelper_Win_Garden
                     {
 
                         ShowMsgWhileWorking("");
-                        ShowMsgWhileWorking(string.Format("农夫正在前往 {0} 的花园...", friendSetting.Name));
-                        switch (helper.GotoFriendGarden(friendSetting.UID))
-                        {
-                            case "1":
-                                ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
-                                workingAccountSetting.FriendSettings.Remove(friendSetting);
-                                GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
-                                i--;
-                                continue;
-                            case "2":
-                                continue;
-                            default:
-                                break;
-                        }
+                        //ShowMsgWhileWorking(string.Format("农夫正在前往 {0} 的花园...", friendSetting.Name));
+                        //switch (helper.GotoFriendGarden(friendSetting.UID))
+                        //{
+                        //    case "1":
+                        //        ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
+                        //        workingAccountSetting.FriendSettings.Remove(friendSetting);
+                        //        GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
+                        //        i--;
+                        //        continue;
+                        //    case "2":
+                        //        continue;
+                        //    default:
+                        //        break;
+                        //}
 
                         #region 读取好友花园信息
-                        ShowMsgWhileWorking("正在读取花园信息...");
+
+                        ShowMsgWhileWorking(string.Format("正在读取 {0} 花园信息...", friendSetting.Name));
                         GardenDetails friendGardenDetails = helper.GetGardenDetails(friendSetting.UID);
+
+                        if (friendGardenDetails.ErrMsg == "1")
+                        {
+                            ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
+                            workingAccountSetting.FriendSettings.Remove(friendSetting);
+                            GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
+                            i--;
+
+                            continue;
+                        }
 
                         ShowMsgWhileWorking("农田信息：");
                         foreach (GardenItem gi in friendGardenDetails.GarderItems)
@@ -515,47 +526,36 @@ namespace SNSHelper_Win_Garden
 
                         #region 偷果实
 
-                        if (string.IsNullOrEmpty(friendGardenDetails.Account.CareUrl))
+                        if (friendSetting.Steal)
                         {
-                            if (friendSetting.Steal)
-                            {
-                                double minStealCropsPrice = GetSeedPrice(workingAccountSetting.StealCrops);
+                            double minStealCropsPrice = GetSeedPrice(workingAccountSetting.StealCrops);
 
-                                minDT = DateTime.MaxValue;
-                                foreach (GardenItem gi in friendGardenDetails.GarderItems)
+                            minDT = DateTime.MaxValue;
+                            foreach (GardenItem gi in friendGardenDetails.GarderItems)
+                            {
+                                if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
                                 {
-                                    if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
+                                    if (gi.Shared != "0")
                                     {
-                                        if (gi.Shared != "0")
+                                        ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+
+                                        continue;
+                                    }
+
+                                    if (Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                                    {
+                                        if (friendGardenDetails.Account.CareUrl != "" && workingAccountSetting.IsCare)
                                         {
-                                            ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+                                            ShowMsgWhileWorking("");
+                                            ShowMsgWhileWorking(string.Format("{0} 的农田里有菜老伯，还是不偷了吧！", friendGardenDetails.Account.Name));
 
                                             continue;
                                         }
-
-                                        if (Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
-                                        {
-                                            HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
-
-                                            if (hr.Ret == "succ")
-                                            {
-                                                ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
-                                                gi.CropsStatus = "3";
-                                            }
-                                            else
-                                            {
-                                                ShowMsgWhileWorking(hr.Reason);
-                                            }
-                                        }
-                                    }
-
-                                    if (gi.CropsStatus == "2" && !gi.Crops.Contains(friendGardenDetails.Account.Name) && gi.Shared == "1")
-                                    {
                                         HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
 
                                         if (hr.Ret == "succ")
                                         {
-                                            ShowMsgWhileWorking(string.Format("从好友的{0}号爱心田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
+                                            ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
                                             gi.CropsStatus = "3";
                                         }
                                         else
@@ -563,37 +563,48 @@ namespace SNSHelper_Win_Garden
                                             ShowMsgWhileWorking(hr.Reason);
                                         }
                                     }
+                                }
 
-                                    if (gi.CropsStatus != "2" && Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                                if (gi.CropsStatus == "2" && gi.Farm.Contains(friendGardenDetails.Account.Name) && gi.Shared == "1")
+                                {
+                                    HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
+
+                                    if (hr.Ret == "succ")
                                     {
-                                        temp = GetRipeTime(gi.Crops);
-                                        if (temp != DateTime.MaxValue)
-                                        {
-                                            if (temp < minDT)
-                                            {
-                                                minDT = temp;
-                                            }
-                                        }
+                                        ShowMsgWhileWorking(string.Format("从好友的{0}号爱心田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
+                                        gi.CropsStatus = "3";
+                                    }
+                                    else
+                                    {
+                                        ShowMsgWhileWorking(hr.Reason);
                                     }
                                 }
 
-                                if (minDT != DateTime.MaxValue && workingAccountSetting.AutoStealInTime)
+                                if (gi.CropsStatus != "2" && Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
                                 {
-                                    InTimeItem o = new InTimeItem();
-                                    o.IsSteal = true;
-                                    o.ActiveTime = minDT;
-                                    o.AccountSetting = workingAccountSetting;
-                                    o.FUID = friendSetting.UID;
-
-                                    AddInTimeObject(o);
+                                    temp = GetRipeTime(gi.Crops);
+                                    if (temp != DateTime.MaxValue)
+                                    {
+                                        if (temp < minDT)
+                                        {
+                                            minDT = temp;
+                                        }
+                                    }
                                 }
                             }
+
+                            if (minDT != DateTime.MaxValue && workingAccountSetting.AutoStealInTime)
+                            {
+                                InTimeItem o = new InTimeItem();
+                                o.IsSteal = true;
+                                o.ActiveTime = minDT;
+                                o.AccountSetting = workingAccountSetting;
+                                o.FUID = friendSetting.UID;
+
+                                AddInTimeObject(o);
+                            }
                         }
-                        else
-                        {
-                            ShowMsgWhileWorking("");
-                            ShowMsgWhileWorking(string.Format("{0} 的农田里有菜老伯，还是不偷了吧！", friendGardenDetails.Account.Name));
-                        }
+
 
                         #endregion
 
