@@ -62,12 +62,6 @@
       <price>300</price>
     </item>
     <item>
-      <name>香蕉</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangjiao.swf</fruitpic>
-      <seedid>12</seedid>
-      <price>400</price>
-    </item>
-    <item>
       <name>向日葵</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangrikui.swf</fruitpic>
       <seedid>9</seedid>
@@ -80,10 +74,22 @@
       <price>500</price>
     </item>
     <item>
+      <name>香蕉</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xiangjiao.swf</fruitpic>
+      <seedid>12</seedid>
+      <price>400</price>
+    </item>
+    <item>
       <name>玫瑰</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/meiguihua.swf</fruitpic>
       <seedid>14</seedid>
       <price>1500</price>
+    </item>
+    <item>
+      <name>仙人掌</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xianrenzhang.swf</fruitpic>
+      <seedid>26</seedid>
+      <price>800</price>
     </item>
     <item>
       <name>草莓</name>
@@ -93,9 +99,9 @@
     </item>
     <item>
       <name>菊花</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/juhua.swf</fruitpic>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/juhua1.swf</fruitpic>
       <seedid>16</seedid>
-      <price>2000</price>
+      <price>1800</price>
     </item>
     <item>
       <name>人参果</name>

@@ -204,7 +204,7 @@ namespace SNSHelper_Win_Garden
             if (_utility.Login(inTimeObject.LoginEmail, inTimeObject.LoginPsw))
             {
                 GardenHelper helper = new GardenHelper(_utility);
-                helper.GotoFriendGarden(inTimeObject.FUID);
+                helper.GotoMyGarden();
 
                 DateTime minDT = DateTime.MaxValue;
                 DateTime temp;
@@ -214,9 +214,17 @@ namespace SNSHelper_Win_Garden
                 bool isReadyRipe = false;
                 GardenDetails gardenDetails = helper.GetGardenDetails(inTimeObject.FUID);
 
+                if (gardenDetails.ErrMsg == "1")
+                {
+                    ShowInTimeMsgInThread(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", gardenDetails.Account.Name));
+                    DeleteInTimeObject(inTimeObject);
+
+                    return;
+                }
+
                 double minStealCropsPrice = GetSeedPrice(inTimeObject.AccountSetting.StealCrops);
 
-                if (string.IsNullOrEmpty(gardenDetails.Account.CareUrl))
+                if (!string.IsNullOrEmpty(gardenDetails.Account.CareUrl) && inTimeObject.AccountSetting.IsCare)
                 {
                     ShowInTimeMsgInThread(string.Format("{0} 的农田里有菜老伯，还是不偷了吧！", gardenDetails.Account.Name));
                     DeleteInTimeObject(inTimeObject);
@@ -419,6 +427,7 @@ namespace SNSHelper_Win_Garden
                     accountSetting.Seed = value.Seed;
                     accountSetting.StealCrops = value.StealCrops;
                     accountSetting.WaterLowLimit = value.WaterLowLimit;
+                    accountSetting.IsCare = value.IsCare;
                 }
             }
 
