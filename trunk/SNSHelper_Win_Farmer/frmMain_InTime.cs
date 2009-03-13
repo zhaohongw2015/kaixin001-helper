@@ -258,7 +258,7 @@ namespace SNSHelper_Win_Garden
                             }
                             else
                             {
-                                ShowInTimeMsgInThread(hr.Reason);
+                                ShowInTimeMsgInThread(string.Format("{0}：从{1}的{2}号农田上偷取失败。原因：{3}", inTimeObject.LoginEmail, gardenDetails.Account.Name, gi.FarmNum, hr.Reason));
                             }
                         }
                     }

@@ -41,7 +41,13 @@ namespace SNSHelper_Win_Garden
         private void ShowGlobalSettings()
         {
             txtParkingInterval.Value = gardenSetting.GlobalSetting.WorkingInterval;
-            txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000 <= txtNetDelay.MinValue ? txtNetDelay.MinValue : gardenSetting.GlobalSetting.NetworkDelay / 1000;
+
+            if (gardenSetting.GlobalSetting.NetworkDelay <= txtNetDelay.MinValue * 1000)
+            {
+                gardenSetting.GlobalSetting.NetworkDelay = txtNetDelay.MinValue * 1000;
+            }
+
+            txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000;
         }
 
         private void btnNewAccount_Click(object sender, EventArgs e)
