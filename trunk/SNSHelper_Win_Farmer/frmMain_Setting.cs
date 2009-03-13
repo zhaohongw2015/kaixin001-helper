@@ -41,7 +41,7 @@ namespace SNSHelper_Win_Garden
         private void ShowGlobalSettings()
         {
             txtParkingInterval.Value = gardenSetting.GlobalSetting.WorkingInterval;
-            txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000;
+            txtNetDelay.Value = gardenSetting.GlobalSetting.NetworkDelay / 1000 <= txtNetDelay.MinValue ? txtNetDelay.MinValue : gardenSetting.GlobalSetting.NetworkDelay / 1000;
         }
 
         private void btnNewAccount_Click(object sender, EventArgs e)
@@ -185,7 +185,7 @@ namespace SNSHelper_Win_Garden
                 return;
             }
 
-            GardenHelper helper = new GardenHelper(utility);
+            GardenHelper helper = new GardenHelper(utility, gardenSetting.GlobalSetting.NetworkDelay);
 
             Dictionary<string, string> friends = helper.GetGardenFriend();
 

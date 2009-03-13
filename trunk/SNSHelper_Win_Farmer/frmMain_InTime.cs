@@ -52,7 +52,7 @@ namespace SNSHelper_Win_Garden
 
             if (_utility.Login(inTimeObject.LoginEmail, inTimeObject.LoginPsw))
             {
-                GardenHelper helper = new GardenHelper(_utility);
+                GardenHelper helper = new GardenHelper(_utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
 
             GetGardenDetails:
@@ -203,7 +203,7 @@ namespace SNSHelper_Win_Garden
 
             if (_utility.Login(inTimeObject.LoginEmail, inTimeObject.LoginPsw))
             {
-                GardenHelper helper = new GardenHelper(_utility);
+                GardenHelper helper = new GardenHelper(_utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
 
                 DateTime minDT = DateTime.MaxValue;

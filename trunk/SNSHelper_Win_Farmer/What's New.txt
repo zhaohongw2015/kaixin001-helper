@@ -6,6 +6,8 @@ Kaixin001.Farmer.V1.0.Build20090313 What's New:
 
 2. 修正常规任务和第一时间中误判菜老伯的Bug
 
+3. 修正网络延迟参数无效的Bug
+
 
 Kaixin001.Farmer.V1.0.Build20090312 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
