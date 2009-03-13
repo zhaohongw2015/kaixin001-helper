@@ -37,11 +37,12 @@ namespace SNSHelper.Kaixin001
 
         Utility _utility;
 
-        public GardenHelper(Utility utility)
+        public GardenHelper(Utility utility, int delay)
         {
             AppID = "1062";
             _utility = utility;
             httpHelper = new HttpHelper(_utility.Cookies);
+            httpHelper.NetworkDelay = delay;
         }
 
         #region Go one's garden

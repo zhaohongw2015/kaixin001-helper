@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090312";
+        string currentBuildVersion = "20090313";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -202,7 +202,7 @@ namespace SNSHelper_Win_Garden
                 }
 
                 ShowMsgWhileWorking("登录成功！正在进入我的花园...");
-                GardenHelper helper = new GardenHelper(utility);
+                GardenHelper helper = new GardenHelper(utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
 
                 #region 显示花园信息

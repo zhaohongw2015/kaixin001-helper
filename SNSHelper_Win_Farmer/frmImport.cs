@@ -105,7 +105,7 @@ namespace SNSHelper_Win_Garden
                         continue;
                     }
 
-                    helper = new GardenHelper(utility);
+                    helper = new GardenHelper(utility, gardenSetting.GlobalSetting.NetworkDelay);
 
                     ShowMsgWhileImporting("登录成功！正在加载好友数据...\r\n");
                     Dictionary<string, string> friendList = helper.GetGardenFriend();
