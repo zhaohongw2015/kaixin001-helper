@@ -68,6 +68,12 @@
       <price>800</price>
     </item>
     <item>
+      <name>菠菜</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/bocai.swf</fruitpic>
+      <seedid>27</seedid>
+      <price>250</price>
+    </item>
+    <item>
       <name>西瓜</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xigua.swf</fruitpic>
       <seedid>13</seedid>
@@ -102,6 +108,18 @@
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/juhua1.swf</fruitpic>
       <seedid>16</seedid>
       <price>1800</price>
+    </item>
+    <item>
+      <name>南瓜</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/nangua.swf</fruitpic>
+      <seedid>28</seedid>
+      <price>700</price>
+    </item>
+    <item>
+      <name>神秘玫瑰</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/meigui_by.swf</fruitpic>
+      <seedid>17</seedid>
+      <price>4000</price>
     </item>
     <item>
       <name>人参果</name>

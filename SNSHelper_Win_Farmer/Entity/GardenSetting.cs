@@ -172,6 +172,12 @@ namespace SNSHelper_Win_Garden.Entity
                     case "StealCrops":
                         etAccountSetting.StealCrops = item.InnerText;
                         break;
+                    case "AutoHavestHeartField":
+                        etAccountSetting.AutoHavestHeartField = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
+                        break;
+                    case "HeartCrops":
+                        etAccountSetting.HeartCrops = item.InnerText;
+                        break;
                     case "FriendSettings":
                         etAccountSetting.FriendSettings = LoadFriendSettings(item);
                         break;
@@ -302,6 +308,8 @@ namespace SNSHelper_Win_Garden.Entity
             node.AppendChild(CreateElement(node.OwnerDocument, "IsUsingPrivateSetting", Convert.ToInt32(accountSetting.IsUsingPrivateSetting).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "IsCare", Convert.ToInt32(accountSetting.IsCare).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "StealCrops", accountSetting.StealCrops));
+            node.AppendChild(CreateElement(node.OwnerDocument, "HeartCrops", accountSetting.HeartCrops));
+            node.AppendChild(CreateElement(node.OwnerDocument, "AutoHavestHeartField", Convert.ToInt32(accountSetting.AutoHavestHeartField).ToString()));
 
             XmlNode newFriendSettingsNode = node.OwnerDocument.CreateElement("FriendSettings");
             SaveFriendSettings(newFriendSettingsNode, accountSetting.FriendSettings);

@@ -135,7 +135,7 @@ namespace SNSHelper.Common
                 return GetHtml(url, cookieContainer);
             }
 
-            Thread.Sleep(delay);
+            Thread.Sleep(delay + GetDynamicDelay());
 
             currentTry ++;
 
@@ -192,7 +192,7 @@ namespace SNSHelper.Common
         /// <returns></returns>
         public string GetHtml(string url, CookieContainer cookieContainer)
         {
-            Thread.Sleep(delay);
+            Thread.Sleep(delay + GetDynamicDelay());
 
             currentTry++;
 
@@ -254,6 +254,15 @@ namespace SNSHelper.Common
         public string GetHtml(string url, string postData, bool isPost)
         {
             return GetHtml(url, postData, isPost, cc);
+        }
+
+        /// <summary>
+        /// 获取一个随机延迟
+        /// </summary>
+        /// <returns></returns>
+        private int GetDynamicDelay()
+        {
+            return new Random(DateTime.Now.Millisecond).Next(2000);
         }
         #endregion
     }

@@ -82,7 +82,7 @@ namespace SNSHelper_Win_Garden
 
         private void ShowSeedMVPInCombox()
         {
-            foreach (SeedMVP item in SeedMVPs.SeedMVPList)
+            foreach (SeedMVP item in SeedMVPHelper.SeedMVPList)
             {
                 switch (item.Rank)
                 {
@@ -139,23 +139,23 @@ namespace SNSHelper_Win_Garden
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SeedMVPs.SetSeedMVP("1", ckxCrops1.Text);
-            SeedMVPs.SetSeedMVP("2", ckxCrops2.Text);
-            SeedMVPs.SetSeedMVP("3", ckxCrops3.Text);
-            SeedMVPs.SetSeedMVP("4", ckxCrops4.Text);
-            SeedMVPs.SetSeedMVP("5", ckxCrops5.Text);
-            SeedMVPs.SetSeedMVP("6", ckxCrops6.Text);
-            SeedMVPs.SetSeedMVP("7", ckxCrops7.Text);
-            SeedMVPs.SetSeedMVP("8", ckxCrops8.Text);
-            SeedMVPs.SetSeedMVP("9", ckxCrops9.Text);
-            SeedMVPs.SetSeedMVP("10", ckxCrops10.Text);
-            SeedMVPs.SetSeedMVP("11", ckxCrops11.Text);
-            SeedMVPs.SetSeedMVP("12", ckxCrops12.Text);
-            SeedMVPs.SetSeedMVP("13", ckxCrops13.Text);
-            SeedMVPs.SetSeedMVP("14", ckxCrops14.Text);
-            SeedMVPs.SetSeedMVP("15", ckxCrops15.Text);
+            SeedMVPHelper.SetSeedMVP("1", ckxCrops1.Text);
+            SeedMVPHelper.SetSeedMVP("2", ckxCrops2.Text);
+            SeedMVPHelper.SetSeedMVP("3", ckxCrops3.Text);
+            SeedMVPHelper.SetSeedMVP("4", ckxCrops4.Text);
+            SeedMVPHelper.SetSeedMVP("5", ckxCrops5.Text);
+            SeedMVPHelper.SetSeedMVP("6", ckxCrops6.Text);
+            SeedMVPHelper.SetSeedMVP("7", ckxCrops7.Text);
+            SeedMVPHelper.SetSeedMVP("8", ckxCrops8.Text);
+            SeedMVPHelper.SetSeedMVP("9", ckxCrops9.Text);
+            SeedMVPHelper.SetSeedMVP("10", ckxCrops10.Text);
+            SeedMVPHelper.SetSeedMVP("11", ckxCrops11.Text);
+            SeedMVPHelper.SetSeedMVP("12", ckxCrops12.Text);
+            SeedMVPHelper.SetSeedMVP("13", ckxCrops13.Text);
+            SeedMVPHelper.SetSeedMVP("14", ckxCrops14.Text);
+            SeedMVPHelper.SetSeedMVP("15", ckxCrops15.Text);
 
-            if (SeedMVPs.SaveSeedMVPs())
+            if (SeedMVPHelper.SaveSeedMVPs())
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show(this, "保存成功！", "提示");
                 this.Close();

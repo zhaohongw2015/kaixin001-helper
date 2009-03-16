@@ -85,13 +85,13 @@ namespace SNSHelper_Win_Garden
             return string.Empty;
         }
 
-        private double GetSeedPrice(string seedName)
+        private int GetCropsPrice(string cropsName)
         {
-            foreach (SeedItem item in seedData.SeedItems)
+            foreach (CropsIncome item in CropsIncomeHelper.CropsIncomeList)
             {
-                if (item.Name.Equals(seedName))
+                if (item.Name.Equals(cropsName))
                 {
-                    return item.Price;
+                    return item.UnitPrice;
                 }
             }
 
@@ -114,6 +114,7 @@ namespace SNSHelper_Win_Garden
             {
                 cbxCrops.Items.Add(item.Name);
                 cbxStealCrops.Items.Add(item.Name);
+                cbxHeartCrops.Items.Add(item.Name);
             }
         }
 
@@ -283,6 +284,10 @@ namespace SNSHelper_Win_Garden
             ckxAutoGrass.Checked = true;
 
             ckbAutoSell.Checked = true;
+
+            ckxAutoHavestHeartField.Checked = true;
+
+            cbxHeartCrops.SelectedIndex = 0;
         }
 
         private void ckxAutoFarm_CheckedChanged(object sender, EventArgs e)
@@ -401,6 +406,17 @@ namespace SNSHelper_Win_Garden
             ckbAutoSell.Checked = accountSetting.AutoSell;
 
             cbxStealCrops.Text = accountSetting.StealCrops;
+
+            ckxAutoHavestHeartField.Checked = accountSetting.AutoHavestHeartField;
+
+            if (string.IsNullOrEmpty(accountSetting.HeartCrops))
+            {
+                cbxHeartCrops.SelectedIndex = 0;
+            }
+            else
+            {
+                cbxHeartCrops.Text = accountSetting.HeartCrops;
+            }
 
             currentConfiguringAccountSetting = accountSetting;
             isNewAccountFlag = false;
@@ -571,10 +587,21 @@ namespace SNSHelper_Win_Garden
 
             currentConfiguringAccountSetting.IsCare = ckxIsCare.Checked;
 
+            currentConfiguringAccountSetting.AutoHavestHeartField = ckxAutoHavestHeartField.Checked;
+
+            currentConfiguringAccountSetting.HeartCrops = cbxHeartCrops.Text;
+
             if (isNewAccountFlag)
             {
                 gardenSetting.AccountSettings.Add(currentConfiguringAccountSetting);
             }
+
+            if (ckxUseToAll.Checked && DevComponents.DotNetBar.MessageBoxEx.Show(this, "你确定要把这次的配置运用到所有帐号吗？", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                UseToAll(currentConfiguringAccountSetting);
+            }
+
+            ckxUseToAll.Checked = false;
 
             if (GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting))
             {
@@ -589,6 +616,32 @@ namespace SNSHelper_Win_Garden
             else
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("帐号设置保存失败");
+            }
+        }
+
+        private void UseToAll(SNSHelper_Win_Garden.Entity.AccountSetting accountSetting)
+        {
+            foreach (SNSHelper_Win_Garden.Entity.AccountSetting item in gardenSetting.AccountSettings)
+            {
+                item.AutoBuySeed = accountSetting.AutoBuySeed;
+                item.AutoFarm = accountSetting.AutoFarm;
+                item.AutoGrass = accountSetting.AutoGrass;
+                item.AutoHavest = accountSetting.AutoHavest;
+                item.AutoHavestInTime = accountSetting.AutoHavestInTime;
+                item.AutoPlough = accountSetting.AutoPlough;
+                item.AutoSell = accountSetting.AutoSell;
+                item.AutoVermin = accountSetting.AutoVermin;
+                item.AutoWater = accountSetting.AutoWater;
+                item.Crops = accountSetting.Crops;
+                item.IsOperate = accountSetting.IsOperate;
+                item.IsUsingPrivateSetting = accountSetting.IsUsingPrivateSetting;
+                item.Seed = accountSetting.Seed;
+                item.StealCrops = accountSetting.StealCrops;
+                item.WaterLowLimit = accountSetting.WaterLowLimit;
+                item.IsCare = accountSetting.IsCare;
+                item.AutoHavestHeartField = accountSetting.AutoHavestHeartField;
+                item.HeartCrops = accountSetting.HeartCrops;
+                item.AutoStealInTime = accountSetting.AutoStealInTime;
             }
         }
 
