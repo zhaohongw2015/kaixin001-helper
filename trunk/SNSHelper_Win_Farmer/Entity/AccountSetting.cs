@@ -264,6 +264,32 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private string heartCrops = string.Empty;
+        public string HeartCrops
+        {
+            get
+            {
+                return heartCrops;
+            }
+            set
+            {
+                heartCrops = value;
+            }
+        }
+
+        private bool autoHavestHeartField = false;
+        public bool AutoHavestHeartField
+        {
+            get
+            {
+                return autoHavestHeartField;
+            }
+            set
+            {
+                autoHavestHeartField = value;
+            }
+        }
+
         private List<FriendSetting> friendSettings = new List<FriendSetting>();
         public List<FriendSetting> FriendSettings
         {

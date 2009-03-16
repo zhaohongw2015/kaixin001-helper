@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090313";
+        string currentBuildVersion = "20090317";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -72,6 +72,8 @@ namespace SNSHelper_Win_Garden
             showInTimeMsgInThread = new MethodWithParmString(ShowInTimeMsg);
 
             ShowContributory();
+
+            updateSummaryInThread = new MethodWithObject(UpdateSummary);
         }
 
         private void ShowContributory()
@@ -84,7 +86,7 @@ namespace SNSHelper_Win_Garden
             contributoryList.Add("无名有姓", "老前辈，给农夫的开发提供了不少建设性意见！");
             contributoryList.Add("tony2u", "第一个发现问题后，通过阅读农夫源码，并提出修改方案的朋友！");
             contributoryList.Add("农夫宝哥", "QQ：345543933。为农夫提供菜老伯测试数据！");
-            contributoryList.Add("", "");
+            contributoryList.Add("农夫测试人员", "监工老财、小马、越夜越寂寞、叶落随风、我爱我家");
             contributoryList.Add(" ", "");
             contributoryList.Add("  ", "");
             contributoryList.Add("   ", "");
@@ -105,8 +107,8 @@ namespace SNSHelper_Win_Garden
 
             if (File.Exists(whatsNewFilePath))
             {
-                txtWorkingBoard.AppendText("\r\n");
-                txtWorkingBoard.AppendText(File.ReadAllText(whatsNewFilePath));
+                txtWhatsNew.AppendText("\r\n");
+                txtWhatsNew.AppendText(File.ReadAllText(whatsNewFilePath));
             }
         }
 
@@ -231,14 +233,17 @@ namespace SNSHelper_Win_Garden
                                                         GetCropStatusDesc(gi.CropsStatus),
                                                         gi.Grass == "1" ? "长草了" : ""));
 
-                    if (gi.CropsStatus != "2")
+                    if (gi.CropsStatus != "2" && workingAccountSetting.AutoHavestInTime)
                     {
-                        temp = GetRipeTime(gi.Crops);
-                        if (temp != DateTime.MaxValue)
+                        if ((gi.Shared == "0" && workingAccountSetting.AutoHavest) || (gi.Shared == "1" && workingAccountSetting.AutoHavestHeartField))
                         {
-                            if (temp < minDT)
+                            temp = GetRipeTime(gi.Crops, gi.SeedId);
+                            if (temp != DateTime.MaxValue)
                             {
-                                minDT = temp;
+                                if (temp < minDT)
+                                {
+                                    minDT = temp;
+                                }
                             }
                         }
                     }
@@ -294,13 +299,12 @@ namespace SNSHelper_Win_Garden
 
                 #region 收获
 
-                if (workingAccountSetting.AutoHavest)
+                foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
-                    foreach (GardenItem gi in gardenDetails.GarderItems)
+                    if (gi.CropsStatus == "2")
                     {
-                        if (gi.CropsStatus == "2")
+                        if ((gi.Shared == "0" && workingAccountSetting.AutoHavest) || (gi.Shared == "1" && workingAccountSetting.AutoHavestHeartField))
                         {
-                            //ShowMsgWhileWorking(string.Format("正在收割{0}号农田上的{1}...", gi.FarmNum, GetSeedName(gi.SeedId)));
                             HavestResult hr = helper.Havest(gi.FarmNum, null, null);
 
                             if (hr.Ret == "succ")
@@ -427,7 +431,7 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
-                            string seedName = GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank);
+                            string seedName = GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank, false);
                             SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
 
                             if (si == null)
@@ -471,6 +475,8 @@ namespace SNSHelper_Win_Garden
 
                 bool canFarmHeartFarm = true;
 
+                Summary summary = GetSummary(gardenDetails.Account.Name);
+
                 for (int i = 0; i < workingAccountSetting.FriendSettings.Count; i++)
                 {
                     FriendSetting friendSetting = workingAccountSetting.FriendSettings[i];
@@ -495,6 +501,9 @@ namespace SNSHelper_Win_Garden
                         //}
 
                         #region 读取好友花园信息
+
+                        ShowMsgWhileWorking(string.Format("正在进入 {0} 的花园...", friendSetting.Name));
+                        helper.GotoFriendGarden(friendSetting.UID);
 
                         ShowMsgWhileWorking(string.Format("正在读取 {0} 花园信息...", friendSetting.Name));
                         GardenDetails friendGardenDetails = helper.GetGardenDetails(friendSetting.UID);
@@ -528,21 +537,38 @@ namespace SNSHelper_Win_Garden
 
                         if (friendSetting.Steal)
                         {
-                            double minStealCropsPrice = GetSeedPrice(workingAccountSetting.StealCrops);
+                            int minStealCropsPrice = GetCropsPrice(workingAccountSetting.StealCrops);
 
                             minDT = DateTime.MaxValue;
                             foreach (GardenItem gi in friendGardenDetails.GarderItems)
                             {
-                                if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
+                                if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && (gi.Shared == "0" || gi.Shared == "2"))
                                 {
                                     if (gi.Shared != "0")
                                     {
-                                        ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+                                        if (gi.Farm.Contains(gardenDetails.Account.Name))
+                                        {
+                                            HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
+
+                                            if (hr.Ret == "succ")
+                                            {
+                                                ShowMsgWhileWorking(string.Format("从好友的{0}号爱心田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
+                                                gi.CropsStatus = "3";
+                                            }
+                                            else
+                                            {
+                                                ShowMsgWhileWorking(hr.Reason);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+                                        }
 
                                         continue;
                                     }
 
-                                    if (Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                                    if (GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
                                     {
                                         if (friendGardenDetails.Account.CareUrl != "" && workingAccountSetting.IsCare)
                                         {
@@ -557,6 +583,9 @@ namespace SNSHelper_Win_Garden
                                         {
                                             ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
                                             gi.CropsStatus = "3";
+
+                                            summary.StealTimes++;
+                                            summary.StealedCropsNo += Convert.ToInt32(hr.Num);
                                         }
                                         else
                                         {
@@ -580,9 +609,9 @@ namespace SNSHelper_Win_Garden
                                     }
                                 }
 
-                                if (gi.CropsStatus != "2" && Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                                if (gi.CropsStatus != "2" && GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice && workingAccountSetting.AutoStealInTime)
                                 {
-                                    temp = GetRipeTime(gi.Crops);
+                                    temp = GetRipeTime(gi.Crops, gi.SeedId);
                                     if (temp != DateTime.MaxValue)
                                     {
                                         if (temp < minDT)
@@ -619,6 +648,8 @@ namespace SNSHelper_Win_Garden
                                     if (helper.WaterFarm(gi.FarmNum, friendSetting.UID, null))
                                     {
                                         ShowMsgWhileWorking(string.Format("{0}号农田，浇水成功！", gi.FarmNum));
+
+                                        summary.WaterTimes++;
                                     }
                                     else
                                     {
@@ -644,6 +675,8 @@ namespace SNSHelper_Win_Garden
                                     if (helper.AntiVermin(gi.FarmNum, friendSetting.UID, null))
                                     {
                                         ShowMsgWhileWorking(string.Format("{0}号农田，捉到{1}条虫子！", gi.FarmNum, gi.Vermin));
+
+                                        summary.VerminTimes++;
                                     }
                                     else
                                     {
@@ -693,7 +726,7 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (gi.CropsId == "0" && gi.Shared == "1" && gi.Status == "1" && canFarmHeartFarm)
                                 {
-                                    string seedName = GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank);
+                                    string seedName = GetFarmingSeedName(workingAccountSetting, gardenDetails.Account.Rank, true);
                                     SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
 
                                     if (si == null)
@@ -743,6 +776,8 @@ namespace SNSHelper_Win_Garden
                                     if (helper.AntiGrass(gi.FarmNum, friendSetting.UID, null))
                                     {
                                         ShowMsgWhileWorking(string.Format("{0}号农田，锄草成功！", gi.FarmNum));
+
+                                        summary.GrassTimes++;
                                     }
                                     else
                                     {
@@ -756,6 +791,8 @@ namespace SNSHelper_Win_Garden
                         #endregion
                     }
                 }
+
+                UpdateSummaryInThread(summary);
 
                 #endregion
 
@@ -784,14 +821,19 @@ namespace SNSHelper_Win_Garden
             return count;
         }
 
-        private string GetFarmingSeedName(SNSHelper_Win_Garden.Entity.AccountSetting accountSetting, string rank)
+        private string GetFarmingSeedName(SNSHelper_Win_Garden.Entity.AccountSetting accountSetting, string rank, bool isHeart)
         {
             if (accountSetting.IsUsingPrivateSetting)
             {
+                if (isHeart)
+                {
+                    return accountSetting.HeartCrops;
+                }
+
                 return accountSetting.Crops;
             }
 
-            string seedName = SeedMVPs.GetSeedName(rank);
+            string seedName = SeedMVPHelper.GetSeedName(rank);
 
             if (string.IsNullOrEmpty(seedName))
             {
@@ -1015,9 +1057,10 @@ namespace SNSHelper_Win_Garden
 
             if (string.IsNullOrEmpty(autoUpdateHtml))
             {
+
                 if (!isAutoUpdateFlag)
                 {
-                    DevComponents.DotNetBar.MessageBoxEx.Show("检查更新失败，请稍候重试！或到高兴网检查更新！", "提示");
+                    DevComponents.DotNetBar.MessageBoxEx.Show("检查更新失败，请稍候重试或到高兴网检查更新！", "提示");
                 }
 
                 ChangeFormTitleInThread(originalTitle + "   检查更新失败，请稍候重试！");
@@ -1439,6 +1482,11 @@ namespace SNSHelper_Win_Garden
         private void biHeart_Click(object sender, EventArgs e)
         {
             //Process.Start("explorer.exe", "http://store.taobao.com/shop/view_shop-9e64c485791636107415f115111c5b9a.htm");
+        }
+
+        private void biHelp_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", "http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html");
         }
     }
 }

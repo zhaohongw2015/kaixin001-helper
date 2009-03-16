@@ -5,6 +5,7 @@ using System.Threading;
 using SNSHelper.Kaixin001;
 using SNSHelper.Kaixin001.Entity.Garden;
 using System.Text.RegularExpressions;
+using SNSHelper_Win_Garden.Entity;
 
 namespace SNSHelper_Win_Garden
 {
@@ -65,31 +66,36 @@ namespace SNSHelper_Win_Garden
                 #region 收获
                 foreach (GardenItem gi in gardenDetails.GarderItems)
                 {
-
                     if (gi.CropsStatus == "2")
                     {
-                        HavestResult hr = helper.Havest(gi.FarmNum, null, null);
+                        if ((gi.Shared == "0" && inTimeObject.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeObject.AccountSetting.AutoHavestHeartField))
+                        {
+                            HavestResult hr = helper.Havest(gi.FarmNum, null, null);
 
-                        if (hr.Ret == "succ")
-                        {
-                            ShowInTimeMsgInThread(string.Format("{3}：从{0}号农田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail));
-                            gi.CropsStatus = "3";
-                        }
-                        else
-                        {
-                            ShowInTimeMsgInThread(hr.Reason);
+                            if (hr.Ret == "succ")
+                            {
+                                ShowInTimeMsgInThread(string.Format("{3}：从{0}号农田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail));
+                                gi.CropsStatus = "3";
+                            }
+                            else
+                            {
+                                ShowInTimeMsgInThread(hr.Reason);
+                            }
                         }
                     }
 
 
                     if (gi.CropsStatus != "2")
                     {
-                        temp = GetRipeTime(gi.Crops);
-                        if (temp != DateTime.MaxValue)
+                        if ((gi.Shared == "0" && inTimeObject.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeObject.AccountSetting.AutoHavestHeartField))
                         {
-                            if (temp < minDT)
+                            temp = GetRipeTime(gi.Crops, gi.SeedId);
+                            if (temp != DateTime.MaxValue)
                             {
-                                minDT = temp;
+                                if (temp < minDT)
+                                {
+                                    minDT = temp;
+                                }
                             }
                         }
                     }
@@ -137,7 +143,7 @@ namespace SNSHelper_Win_Garden
                     {
                         if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
-                            string seedName = GetFarmingSeedName(inTimeObject.AccountSetting, gardenDetails.Account.Rank);
+                            string seedName = GetFarmingSeedName(inTimeObject.AccountSetting, gardenDetails.Account.Rank, false);
                             SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
 
                             if (si == null)
@@ -214,6 +220,8 @@ namespace SNSHelper_Win_Garden
                 bool isReadyRipe = false;
                 GardenDetails gardenDetails = helper.GetGardenDetails(inTimeObject.FUID);
 
+                Summary summary = GetSummary(gardenDetails.Account.Name);
+
                 if (gardenDetails.ErrMsg == "1")
                 {
                     ShowInTimeMsgInThread(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", gardenDetails.Account.Name));
@@ -222,7 +230,7 @@ namespace SNSHelper_Win_Garden
                     return;
                 }
 
-                double minStealCropsPrice = GetSeedPrice(inTimeObject.AccountSetting.StealCrops);
+                int minStealCropsPrice = GetCropsPrice(inTimeObject.AccountSetting.StealCrops);
 
                 if (!string.IsNullOrEmpty(gardenDetails.Account.CareUrl) && inTimeObject.AccountSetting.IsCare)
                 {
@@ -248,13 +256,16 @@ namespace SNSHelper_Win_Garden
                             continue;
                         }
 
-                        if (Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                        if (GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
                         {
                             HavestResult hr = helper.Havest(gi.FarmNum, inTimeObject.FUID, null);
 
                             if (hr.Ret == "succ")
                             {
                                 ShowInTimeMsgInThread(string.Format("{3}：从{4}的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail, gardenDetails.Account.Name));
+
+                                summary.StealTimes++;
+                                summary.StealedCropsNo += Convert.ToInt32(hr.Num);
                             }
                             else
                             {
@@ -263,9 +274,9 @@ namespace SNSHelper_Win_Garden
                         }
                     }
 
-                    if (gi.CropsStatus != "2" && Convert.ToDouble(GetSeedPrice(GetSeedName(gi.SeedId))) >= minStealCropsPrice)
+                    if (gi.CropsStatus != "2" && GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
                     {
-                        temp = GetRipeTime(gi.Crops);
+                        temp = GetRipeTime(gi.Crops, gi.SeedId);
                         if (temp != DateTime.MaxValue)
                         {
                             if (temp < minDT)
@@ -295,11 +306,14 @@ namespace SNSHelper_Win_Garden
                         DeleteInTimeObject(inTimeObject);
                     }
                 }
+
+                UpdateSummaryInThread(summary);
+
                 #endregion
             }
         }
 
-        private DateTime GetRipeTime(string crops)
+        private DateTime GetRipeTime(string crops, string seedId)
         {
             string pattern = @"距离收获：(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分?)?(?:(?<second>\d+)秒?)?";
             Regex reg = new Regex(pattern);
@@ -326,7 +340,7 @@ namespace SNSHelper_Win_Garden
                         dt = dt.AddSeconds(Convert.ToDouble(match.Groups["second"].Value));
                     }
 
-                    return dt.AddSeconds(30);
+                    return dt.AddSeconds(30).AddHours(CropsIncomeHelper.GetCropsIncome(GetSeedName(seedId)).UnitPrice);
                 }
             }
 
@@ -396,6 +410,12 @@ namespace SNSHelper_Win_Garden
 
         private void ShowInTimeMsg(string msg)
         {
+            if (txtInTimeBoard.Lines.Length > 1000)
+            {
+                RecordFarmerWorkingLog(txtInTimeBoard.Text);
+                txtInTimeBoard.Clear();
+            }
+
             txtInTimeBoard.AppendText(msg);
         }
 

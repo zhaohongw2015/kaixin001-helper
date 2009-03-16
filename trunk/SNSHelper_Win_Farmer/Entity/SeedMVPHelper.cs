@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace SNSHelper_Win_Garden.Entity
 {
-    public class SeedMVPs
+    public class SeedMVPHelper
     {
         private static List<SeedMVP> seedMVPList;
         public static List<SeedMVP> SeedMVPList
