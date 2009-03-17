@@ -104,7 +104,7 @@ namespace SNSHelper.Kaixin001.Entity.Garden
 
         private string shared = string.Empty;
         /// <summary>
-        /// 好友种植状态
+        /// 好友种植状态（0：私家地；1：爱心地；2：爱心地已成熟？）
         /// </summary>
         public string Shared
         {

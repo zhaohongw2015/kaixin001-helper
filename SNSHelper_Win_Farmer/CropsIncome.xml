@@ -106,7 +106,7 @@
     <Name>菊花</Name>
     <GrowthCycle>68</GrowthCycle>
     <UnitPrice>1200</UnitPrice>
-    <Theftproof>1</Theftproof>
+    <Theftproof>4</Theftproof>
   </Crop>
   <Crop>
     <Name>南瓜</Name>
@@ -118,13 +118,13 @@
     <Name>神秘玫瑰</Name>
     <GrowthCycle>80</GrowthCycle>
     <UnitPrice>4000</UnitPrice>
-    <Theftproof>1</Theftproof>
+    <Theftproof>4</Theftproof>
   </Crop>
   <Crop>
     <Name>人参果</Name>
     <GrowthCycle>360</GrowthCycle>
     <UnitPrice>15000</UnitPrice>
-    <Theftproof>1</Theftproof>
+    <Theftproof>4</Theftproof>
   </Crop>
   <Crop>
     <Name>牡丹</Name>
@@ -148,19 +148,19 @@
     <Name>冬虫夏草</Name>
     <GrowthCycle>480</GrowthCycle>
     <UnitPrice>20000</UnitPrice>
-    <Theftproof>2</Theftproof>
+    <Theftproof>8</Theftproof>
   </Crop>
   <Crop>
     <Name>雪莲</Name>
     <GrowthCycle>600</GrowthCycle>
     <UnitPrice>25000</UnitPrice>
-    <Theftproof>2</Theftproof>
+    <Theftproof>8</Theftproof>
   </Crop>
   <Crop>
     <Name>灵芝</Name>
     <GrowthCycle>720</GrowthCycle>
     <UnitPrice>70000</UnitPrice>
-    <Theftproof>2</Theftproof>
+    <Theftproof>8</Theftproof>
   </Crop>
   <Crop>
     <Name>人参</Name>

@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090317b";
+        string currentBuildVersion = "20090318";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -70,6 +70,7 @@ namespace SNSHelper_Win_Garden
             ShowWhatsNew();
 
             showInTimeMsgInThread = new MethodWithParmString(ShowInTimeMsg);
+            showInTimeNoticeInThread = new MethodWithParmString(ShowInTimeNotice);
 
             ShowContributory();
 
@@ -167,6 +168,14 @@ namespace SNSHelper_Win_Garden
                     lblNextWorkingTime.Visible = false;
                 }
             }
+            else
+            {
+                btnStop.Enabled = false;
+                btnStart.Enabled = true;
+                lblWorkingRemainingTime.Visible = false;
+                countDownTimer.Enabled = false;
+                lblNextWorkingTime.Visible = false;
+            }
         }
 
         private void ShowCurrentAccoutFarmerWorkingFor(string email)
@@ -249,14 +258,16 @@ namespace SNSHelper_Win_Garden
                     }
                 }
 
-                if (minDT != DateTime.MaxValue && workingAccountSetting.AutoHavestInTime)
+                if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120) && workingAccountSetting.AutoHavestInTime)
                 {
                     InTimeItem o = new InTimeItem();
                     o.IsSteal = false;
                     o.ActiveTime = minDT;
                     o.AccountSetting = workingAccountSetting;
+                    o.Name = gardenDetails.Account.Name;
 
                     AddInTimeObject(o);
+                    ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss")));
                 }
                 #endregion
 
@@ -537,11 +548,92 @@ namespace SNSHelper_Win_Garden
 
                         if (friendSetting.Steal)
                         {
+                            // 若好友的花园里有菜老伯，且用户启用了“提防菜老伯”功能，则跳过偷取该好友的步骤
+                            if (friendGardenDetails.Account.CareUrl != "" && workingAccountSetting.IsCare)
+                            {
+                                ShowMsgWhileWorking("");
+                                ShowMsgWhileWorking(string.Format("{0} 的农田里有菜老伯，还是不偷了吧！", friendGardenDetails.Account.Name));
+
+                                continue;
+                            }
+
                             int minStealCropsPrice = GetCropsPrice(workingAccountSetting.StealCrops);
 
                             minDT = DateTime.MaxValue;
                             foreach (GardenItem gi in friendGardenDetails.GarderItems)
                             {
+                                // 若农田上的作物已成熟并且未偷过
+                                if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过"))
+                                {
+                                    // 若农田是自家田
+                                    if (gi.Shared == "0")
+                                    {
+                                        // 若作物的售出价高于用户定义的价格，则偷
+                                        if (GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
+                                        {
+                                            HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
+
+                                            if (hr.Ret == "succ")
+                                            {
+                                                ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
+                                                gi.CropsStatus = "3";
+
+                                                summary.StealTimes++;
+                                                summary.StealedCropsNo += Convert.ToInt32(hr.Num);
+                                            }
+                                            else
+                                            {
+                                                ShowMsgWhileWorking(string.Format("从好友的{0}号农田上偷取果实失败：{1}", gi.FarmNum, hr.Reason));
+                                            }
+                                        }
+                                    }
+                                    else if (gi.Shared == "2")  // 若是爱心田
+                                    {
+                                        // 若该爱心田上的作物是用户种的，则执行收获操作
+                                        if (gi.Farm.Contains(gardenDetails.Account.Name))
+                                        {
+                                            HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
+
+                                            if (hr.Ret == "succ")
+                                            {
+                                                ShowMsgWhileWorking(string.Format("从好友的{0}号爱心田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName));
+                                                gi.CropsStatus = "3";
+                                            }
+                                            else
+                                            {
+                                                ShowMsgWhileWorking(hr.Reason);
+                                            }
+                                        }
+                                        else  // 若该爱心田上的作物不是用户种的，则提示
+                                        {
+                                            ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
+                                        }
+                                    }
+                                }
+                                else if (gi.CropsStatus == "1")  // 若农田上的作物未成熟
+                                {
+                                    // 若用户启动了“第一时间偷”功能
+                                    if (workingAccountSetting.AutoStealInTime)
+                                    {
+                                        // 若农作物的价格高于用户设置的偷取下限
+                                        if (GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
+                                        {
+                                            temp = GetRipeTime(gi.Crops, gi.SeedId, true);
+                                            if (temp != DateTime.MaxValue)
+                                            {
+                                                if (temp < minDT)
+                                                {
+                                                    minDT = temp;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                #region
+
+                                /*
+                                // 若农田上的作物已成熟、为透过 
                                 if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && (gi.Shared == "0" || gi.Shared == "2"))
                                 {
                                     if (gi.Shared != "0")
@@ -577,6 +669,7 @@ namespace SNSHelper_Win_Garden
 
                                             continue;
                                         }
+
                                         HavestResult hr = helper.Havest(gi.FarmNum, friendSetting.UID, null);
 
                                         if (hr.Ret == "succ")
@@ -620,17 +713,23 @@ namespace SNSHelper_Win_Garden
                                         }
                                     }
                                 }
+                                */
+
+                                #endregion
                             }
 
-                            if (minDT != DateTime.MaxValue && workingAccountSetting.AutoStealInTime)
+                            // 若作物成熟的时间小于农夫的运行周期加两个小时，且用户启动了“第一时间偷取”功能
+                            if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120) && workingAccountSetting.AutoStealInTime)
                             {
                                 InTimeItem o = new InTimeItem();
                                 o.IsSteal = true;
                                 o.ActiveTime = minDT;
                                 o.AccountSetting = workingAccountSetting;
                                 o.FUID = friendSetting.UID;
+                                o.Name = gardenDetails.Account.Name;
 
                                 AddInTimeObject(o);
+                                ShowInTimeNoticeInThread(string.Format("{0}: 预计{2}花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss"), friendGardenDetails.Account.Name));
                             }
                         }
 
