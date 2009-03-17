@@ -283,7 +283,7 @@ namespace SNSHelper_Win_Garden
 
             ckxAutoGrass.Checked = true;
 
-            ckbAutoSell.Checked = true;
+            ckbAutoSell.Checked = false;
 
             ckxAutoHavestHeartField.Checked = true;
 
