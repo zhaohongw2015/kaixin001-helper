@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090317";
+        string currentBuildVersion = "20090317b";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -159,14 +159,14 @@ namespace SNSHelper_Win_Garden
 
                     ShowMsg(string.Format("\r\n[{0}] 操作被暂停！", DateTime.Now.ToString("HH:mm:ss")));
                     RecordFarmerWorkingLog(txtWorkingBoard.Text);
+
+                    btnStop.Enabled = false;
+                    btnStart.Enabled = true;
+                    lblWorkingRemainingTime.Visible = false;
+                    countDownTimer.Enabled = false;
+                    lblNextWorkingTime.Visible = false;
                 }
             }
-
-            btnStop.Enabled = false;
-            btnStart.Enabled = true;
-            lblWorkingRemainingTime.Visible = false;
-            countDownTimer.Enabled = false;
-            lblNextWorkingTime.Visible = false;
         }
 
         private void ShowCurrentAccoutFarmerWorkingFor(string email)
@@ -237,7 +237,7 @@ namespace SNSHelper_Win_Garden
                     {
                         if ((gi.Shared == "0" && workingAccountSetting.AutoHavest) || (gi.Shared == "1" && workingAccountSetting.AutoHavestHeartField))
                         {
-                            temp = GetRipeTime(gi.Crops, gi.SeedId);
+                            temp = GetRipeTime(gi.Crops, gi.SeedId, false);
                             if (temp != DateTime.MaxValue)
                             {
                                 if (temp < minDT)
@@ -611,7 +611,7 @@ namespace SNSHelper_Win_Garden
 
                                 if (gi.CropsStatus != "2" && GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice && workingAccountSetting.AutoStealInTime)
                                 {
-                                    temp = GetRipeTime(gi.Crops, gi.SeedId);
+                                    temp = GetRipeTime(gi.Crops, gi.SeedId, true);
                                     if (temp != DateTime.MaxValue)
                                     {
                                         if (temp < minDT)

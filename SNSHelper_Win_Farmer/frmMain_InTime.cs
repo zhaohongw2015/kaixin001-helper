@@ -89,7 +89,7 @@ namespace SNSHelper_Win_Garden
                     {
                         if ((gi.Shared == "0" && inTimeObject.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeObject.AccountSetting.AutoHavestHeartField))
                         {
-                            temp = GetRipeTime(gi.Crops, gi.SeedId);
+                            temp = GetRipeTime(gi.Crops, gi.SeedId, false);
                             if (temp != DateTime.MaxValue)
                             {
                                 if (temp < minDT)
@@ -276,7 +276,7 @@ namespace SNSHelper_Win_Garden
 
                     if (gi.CropsStatus != "2" && GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
                     {
-                        temp = GetRipeTime(gi.Crops, gi.SeedId);
+                        temp = GetRipeTime(gi.Crops, gi.SeedId, true);
                         if (temp != DateTime.MaxValue)
                         {
                             if (temp < minDT)
@@ -313,7 +313,7 @@ namespace SNSHelper_Win_Garden
             }
         }
 
-        private DateTime GetRipeTime(string crops, string seedId)
+        private DateTime GetRipeTime(string crops, string seedId, bool isSteal)
         {
             string pattern = @"距离收获：(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分?)?(?:(?<second>\d+)秒?)?";
             Regex reg = new Regex(pattern);
@@ -340,7 +340,14 @@ namespace SNSHelper_Win_Garden
                         dt = dt.AddSeconds(Convert.ToDouble(match.Groups["second"].Value));
                     }
 
-                    return dt.AddSeconds(30).AddHours(CropsIncomeHelper.GetCropsIncome(GetSeedName(seedId)).UnitPrice);
+                    if (isSteal)
+                    {
+                        return dt.AddSeconds(30).AddHours(CropsIncomeHelper.GetCropsIncome(GetSeedName(seedId)).GrowthCycle);
+                    }
+                    else
+                    {
+                        return dt.AddSeconds(30);
+                    }
                 }
             }
 
