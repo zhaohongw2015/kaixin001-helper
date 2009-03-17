@@ -186,12 +186,13 @@ namespace SNSHelper_Win_Garden
                 }
                 else
                 {
-                    if (minDT != DateTime.MaxValue)
+                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120))
                     {
                         inTimeObject.ActiveTime = minDT;
                         inTimeObject.IsRunning = false;
 
                         AddInTimeObject(inTimeObject);
+                        ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss")));
                     }
                     else
                     {
@@ -294,12 +295,13 @@ namespace SNSHelper_Win_Garden
                 }
                 else
                 {
-                    if (minDT != DateTime.MaxValue)
+                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120))
                     {
                         inTimeObject.ActiveTime = minDT;
                         inTimeObject.IsRunning = false;
 
                         AddInTimeObject(inTimeObject);
+                        ShowInTimeNoticeInThread(string.Format("{0}: 预计{2}花园{1}有果实成熟", inTimeObject.Name, minDT.ToString("MM-dd HH:mm:ss"), gardenDetails.Account.Name));
                     }
                     else
                     {
@@ -342,7 +344,7 @@ namespace SNSHelper_Win_Garden
 
                     if (isSteal)
                     {
-                        return dt.AddSeconds(30).AddHours(CropsIncomeHelper.GetCropsIncome(GetSeedName(seedId)).GrowthCycle);
+                        return dt.AddSeconds(30).AddHours(CropsIncomeHelper.GetCropsIncome(GetSeedName(seedId)).Theftproof);
                     }
                     else
                     {
@@ -366,7 +368,7 @@ namespace SNSHelper_Win_Garden
                         {
                             inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
 
-                            return;
+                            break;
                         }
                     }
                     else
@@ -375,7 +377,7 @@ namespace SNSHelper_Win_Garden
                         {
                             inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
 
-                            return;
+                            break;
                         }
                     }
                 }
@@ -419,11 +421,37 @@ namespace SNSHelper_Win_Garden
         {
             if (txtInTimeBoard.Lines.Length > 1000)
             {
-                RecordFarmerWorkingLog(txtInTimeBoard.Text);
+                //RecordFarmerWorkingLog(txtInTimeBoard.Text);
                 txtInTimeBoard.Clear();
             }
 
             txtInTimeBoard.AppendText(msg);
+        }
+
+        MethodWithParmString showInTimeNoticeInThread;
+        private void ShowInTimeNoticeInThread(string msg)
+        {
+            if (string.IsNullOrEmpty(msg))
+            {
+                msg = "\r\n";
+            }
+            else
+            {
+                msg = string.Format("{0}\r\n", msg);
+            }
+
+            this.Invoke(showInTimeNoticeInThread, new object[] { msg });
+        }
+
+        private void ShowInTimeNotice(string msg)
+        {
+            if (txtInTimeNotice.Lines.Length > 1000)
+            {
+                //RecordFarmerWorkingLog(txtInTimeBoard.Text);
+                txtInTimeNotice.Clear();
+            }
+
+            txtInTimeNotice.AppendText(msg);
         }
 
         class InTimeItem
@@ -455,6 +483,19 @@ namespace SNSHelper_Win_Garden
                     accountSetting.StealCrops = value.StealCrops;
                     accountSetting.WaterLowLimit = value.WaterLowLimit;
                     accountSetting.IsCare = value.IsCare;
+                }
+            }
+
+            private string name = string.Empty;
+            public string Name
+            {
+                get
+                {
+                    return name;
+                }
+                set
+                {
+                    name = value;
                 }
             }
 
