@@ -2,6 +2,12 @@
 <data>
   <seed>
     <item>
+      <name>水稻</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/shuidao.swf</fruitpic>
+      <seedid>36</seedid>
+      <price>20</price>
+    </item>
+    <item>
       <name>胡萝卜</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/huluobo.swf</fruitpic>
       <seedid>1</seedid>
@@ -56,6 +62,12 @@
       <price>200</price>
     </item>
     <item>
+      <name>菠菜</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/bocai.swf</fruitpic>
+      <seedid>27</seedid>
+      <price>250</price>
+    </item>
+    <item>
       <name>番茄</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/fanqie.swf</fruitpic>
       <seedid>11</seedid>
@@ -68,16 +80,10 @@
       <price>800</price>
     </item>
     <item>
-      <name>菠菜</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/bocai.swf</fruitpic>
-      <seedid>27</seedid>
-      <price>250</price>
-    </item>
-    <item>
-      <name>西瓜</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xigua.swf</fruitpic>
-      <seedid>13</seedid>
-      <price>500</price>
+      <name>桃子</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/taozi.swf</fruitpic>
+      <seedid>37</seedid>
+      <price>300</price>
     </item>
     <item>
       <name>香蕉</name>
@@ -86,22 +92,28 @@
       <price>400</price>
     </item>
     <item>
+      <name>西瓜</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xigua.swf</fruitpic>
+      <seedid>13</seedid>
+      <price>500</price>
+    </item>
+    <item>
       <name>玫瑰</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/meiguihua.swf</fruitpic>
       <seedid>14</seedid>
       <price>1500</price>
     </item>
     <item>
-      <name>仙人掌</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xianrenzhang.swf</fruitpic>
-      <seedid>26</seedid>
-      <price>800</price>
-    </item>
-    <item>
       <name>草莓</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/caomei.swf</fruitpic>
       <seedid>15</seedid>
       <price>600</price>
+    </item>
+    <item>
+      <name>仙人掌</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xianrenzhang.swf</fruitpic>
+      <seedid>26</seedid>
+      <price>800</price>
     </item>
     <item>
       <name>菊花</name>

@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Crops>
   <Crop>
+    <Name>水稻</Name>
+    <GrowthCycle>20</GrowthCycle>
+    <UnitPrice>60</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
     <Name>胡萝卜</Name>
     <GrowthCycle>12</GrowthCycle>
     <UnitPrice>35</UnitPrice>
@@ -70,6 +76,12 @@
     <Name>菠菜</Name>
     <GrowthCycle>28</GrowthCycle>
     <UnitPrice>130</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
+    <Name>桃子</Name>
+    <GrowthCycle>36</GrowthCycle>
+    <UnitPrice>200</UnitPrice>
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>

@@ -69,7 +69,7 @@ namespace SNSHelper.Kaixin001
             }
             else
             {
-                if (html.Contains("你不是她好友，没有权限查看此内容！"))
+                if (html.Contains("你不是她好友，没有权限查看此内容！") || html.Contains("你不是他好友，没有权限查看此内容！"))
                 {
                     return "1";
                 }
