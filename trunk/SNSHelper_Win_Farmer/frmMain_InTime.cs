@@ -11,30 +11,30 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
-        List<InTimeItem> inTimeItemList = new List<InTimeItem>();
+        List<InTimeOperateItem> inTimeOperateItemList = new List<InTimeOperateItem>();
 
         private void inTimeTimer_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < inTimeItemList.Count; i++)
+            for (int i = 0; i < inTimeOperateItemList.Count; i++)
             {
-                if (inTimeItemList[i].ActiveTime <= DateTime.Now)
+                if (inTimeOperateItemList[i].ActionTime <= DateTime.Now)
                 {
-                    if (!inTimeItemList[i].IsSteal)
+                    if (!inTimeOperateItemList[i].IsSteal)
                     {
-                        if (!inTimeItemList[i].IsRunning)
+                        if (!inTimeOperateItemList[i].IsRunning)
                         {
-                            inTimeItemList[i].IsRunning = true;
+                            inTimeOperateItemList[i].IsRunning = true;
                             // 及时收获
-                            ThreadPool.QueueUserWorkItem(HavestInTime, inTimeItemList[i]);
+                            ThreadPool.QueueUserWorkItem(HavestInTime, inTimeOperateItemList[i]);
                         }
                     }
                     else
                     {
-                        if (!inTimeItemList[i].IsRunning)
+                        if (!inTimeOperateItemList[i].IsRunning)
                         {
-                            inTimeItemList[i].IsRunning = true;
+                            inTimeOperateItemList[i].IsRunning = true;
                             // 及时偷窃
-                            ThreadPool.QueueUserWorkItem(StealInTime, inTimeItemList[i]);
+                            ThreadPool.QueueUserWorkItem(StealInTime, inTimeOperateItemList[i]);
                         }
                     }
                 }
@@ -47,11 +47,11 @@ namespace SNSHelper_Win_Garden
         /// <param name="o">InTimeItem对象</param>
         private void HavestInTime(object o)
         {
-            InTimeItem inTimeObject = o as InTimeItem;
+            InTimeOperateItem inTimeOperateItem = o as InTimeOperateItem;
 
             Utility _utility = new Utility();
 
-            if (_utility.Login(inTimeObject.LoginEmail, inTimeObject.LoginPsw))
+            if (_utility.Login(inTimeOperateItem.LoginEmail, inTimeOperateItem.LoginPsw))
             {
                 GardenHelper helper = new GardenHelper(_utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
@@ -68,26 +68,25 @@ namespace SNSHelper_Win_Garden
                 {
                     if (gi.CropsStatus == "2")
                     {
-                        if ((gi.Shared == "0" && inTimeObject.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeObject.AccountSetting.AutoHavestHeartField))
+                        if ((gi.Shared == "0" && inTimeOperateItem.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeOperateItem.AccountSetting.AutoHavestHeartField))
                         {
                             HavestResult hr = helper.Havest(gi.FarmNum, null, null);
 
                             if (hr.Ret == "succ")
                             {
-                                ShowInTimeMsgInThread(string.Format("{3}：从{0}号农田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail));
+                                ShowInTimeMsgInThread(string.Format("{3}：从{0}号农田上收获{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeOperateItem.LoginEmail));
                                 gi.CropsStatus = "3";
                             }
                             else
                             {
-                                ShowInTimeMsgInThread(hr.Reason);
+                                ShowInTimeMsgInThread(string.Format("{2}：从{0}号农田上收获{1}失败！{3}", gi.FarmNum, hr.SeedName, inTimeOperateItem.LoginEmail, hr.Reason));
                             }
                         }
                     }
 
-
                     if (gi.CropsStatus != "2")
                     {
-                        if ((gi.Shared == "0" && inTimeObject.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeObject.AccountSetting.AutoHavestHeartField))
+                        if ((gi.Shared == "0" && inTimeOperateItem.AccountSetting.AutoHavest) || (gi.Shared == "1" && inTimeOperateItem.AccountSetting.AutoHavestHeartField))
                         {
                             temp = GetRipeTime(gi.Crops, gi.SeedId, false);
                             if (temp != DateTime.MaxValue)
@@ -109,7 +108,7 @@ namespace SNSHelper_Win_Garden
 
                 #region 犁地
 
-                if (inTimeObject.AccountSetting.AutoPlough)
+                if (inTimeOperateItem.AccountSetting.AutoPlough)
                 {
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
@@ -119,13 +118,13 @@ namespace SNSHelper_Win_Garden
                             {
                                 if (helper.Plough(gi.FarmNum, null, null))
                                 {
-                                    ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地成功！", gi.FarmNum, inTimeObject.LoginEmail));
+                                    ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地成功！", gi.FarmNum, inTimeOperateItem.LoginEmail));
                                     gi.CropsStatus = "";
                                     gi.CropsId = "0";
                                 }
                                 else
                                 {
-                                    ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                    ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，犁地失败！！！", gi.FarmNum, inTimeOperateItem.LoginEmail));
                                 }
                             }
                         }
@@ -136,21 +135,21 @@ namespace SNSHelper_Win_Garden
 
                 #region 播种
 
-                if (inTimeObject.AccountSetting.AutoFarm)
+                if (inTimeOperateItem.AccountSetting.AutoFarm)
                 {
                     List<MySeeds> mySeedsList = null;
                     foreach (GardenItem gi in gardenDetails.GarderItems)
                     {
                         if (gi.CropsId == "0" && gi.Shared == "0" && gi.Status == "1")
                         {
-                            string seedName = GetFarmingSeedName(inTimeObject.AccountSetting, gardenDetails.Account.Rank, false);
+                            string seedName = GetFarmingSeedName(inTimeOperateItem.AccountSetting, gardenDetails.Account.Rank, false);
                             SeedItem si = GetSeedItemForFarming(helper, ref mySeedsList, seedName);
 
                             if (si == null)
                             {
                                 if (!BuySeedForFarming(helper, ref mySeedsList, seedName, GetMaxNeededSeedNum(gardenDetails.GarderItems)))
                                 {
-                                    ShowMsgWhileWorking(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                    ShowMsgWhileWorking(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeOperateItem.LoginEmail));
                                 }
                             }
 
@@ -158,19 +157,19 @@ namespace SNSHelper_Win_Garden
 
                             if (si == null)
                             {
-                                ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeObject.LoginEmail));
+                                ShowInTimeMsgInThread(string.Format("{1}：{0}号农田，种植失败！！！", gi.FarmNum, inTimeOperateItem.LoginEmail));
                             }
                             else
                             {
                                 FarmResult fr = helper.FarmSeed(gi.FarmNum, null, si.SeedID);
                                 if (fr.Ret == "succ")
                                 {
-                                    ShowInTimeMsgInThread(string.Format("{2}：{0}号农田，成功种植{1}！", gi.FarmNum, si.Name, inTimeObject.LoginEmail));
+                                    ShowInTimeMsgInThread(string.Format("{2}：{0}号农田，成功种植{1}！", gi.FarmNum, si.Name, inTimeOperateItem.LoginEmail));
                                     si.Num--;
                                 }
                                 else
                                 {
-                                    ShowInTimeMsgInThread(string.Format("{3}：{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, si.Name, fr.ErrMsg, inTimeObject.LoginEmail));
+                                    ShowInTimeMsgInThread(string.Format("{3}：{0}号农田，种植{1}失败！！！{2}", gi.FarmNum, si.Name, fr.ErrMsg, inTimeOperateItem.LoginEmail));
                                 }
                             }
                         }
@@ -186,17 +185,17 @@ namespace SNSHelper_Win_Garden
                 }
                 else
                 {
-                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120))
+                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720))
                     {
-                        inTimeObject.ActiveTime = minDT;
-                        inTimeObject.IsRunning = false;
+                        inTimeOperateItem.ActionTime = minDT;
+                        inTimeOperateItem.IsRunning = false;
 
-                        AddInTimeObject(inTimeObject);
-                        ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss")));
+                        AddInTimeOperateItem(inTimeOperateItem);
+                        ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园[{1}]有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM.dd HH:mm:ss")));
                     }
                     else
                     {
-                        DeleteInTimeObject(inTimeObject);
+                        DeleteInTimeObject(inTimeOperateItem);
                     }
                 }
             }
@@ -204,11 +203,11 @@ namespace SNSHelper_Win_Garden
 
         private void StealInTime(object o)
         {
-            InTimeItem inTimeObject = o as InTimeItem;
+            InTimeOperateItem inTimeOperateItem = o as InTimeOperateItem;
 
             Utility _utility = new Utility();
 
-            if (_utility.Login(inTimeObject.LoginEmail, inTimeObject.LoginPsw))
+            if (_utility.Login(inTimeOperateItem.LoginEmail, inTimeOperateItem.LoginPsw))
             {
                 GardenHelper helper = new GardenHelper(_utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
@@ -219,24 +218,24 @@ namespace SNSHelper_Win_Garden
             GetFriendGardenDetails:
                 #region
                 bool isReadyRipe = false;
-                GardenDetails gardenDetails = helper.GetGardenDetails(inTimeObject.FUID);
+                GardenDetails gardenDetails = helper.GetGardenDetails(inTimeOperateItem.FUID);
 
-                Summary summary = GetSummary(gardenDetails.Account.Name);
+                Summary summary = GetSummary(inTimeOperateItem.Name);
 
                 if (gardenDetails.ErrMsg == "1")
                 {
                     ShowInTimeMsgInThread(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", gardenDetails.Account.Name));
-                    DeleteInTimeObject(inTimeObject);
+                    DeleteInTimeObject(inTimeOperateItem);
 
                     return;
                 }
 
-                int minStealCropsPrice = GetCropsPrice(inTimeObject.AccountSetting.StealCrops);
+                int minStealCropsPrice = GetCropsPrice(inTimeOperateItem.AccountSetting.StealCrops);
 
-                if (!string.IsNullOrEmpty(gardenDetails.Account.CareUrl) && inTimeObject.AccountSetting.IsCare)
+                if (!string.IsNullOrEmpty(gardenDetails.Account.CareUrl) && inTimeOperateItem.AccountSetting.IsCare)
                 {
                     ShowInTimeMsgInThread(string.Format("{0} 的农田里有菜老伯，还是不偷了吧！", gardenDetails.Account.Name));
-                    DeleteInTimeObject(inTimeObject);
+                    DeleteInTimeObject(inTimeOperateItem);
 
                     return;
                 }
@@ -250,27 +249,20 @@ namespace SNSHelper_Win_Garden
 
                     if (gi.CropsStatus == "2" && !gi.Crops.Contains("已偷过") && gi.Shared == "0")
                     {
-                        if (gi.Shared != "0")
-                        {
-                            //ShowMsgWhileWorking(string.Format("{0}号农田，共种地不能偷！", gi.FarmNum));
-
-                            continue;
-                        }
-
                         if (GetCropsPrice(GetSeedName(gi.SeedId)) >= minStealCropsPrice)
                         {
-                            HavestResult hr = helper.Havest(gi.FarmNum, inTimeObject.FUID, null);
+                            HavestResult hr = helper.Havest(gi.FarmNum, inTimeOperateItem.FUID, null);
 
                             if (hr.Ret == "succ")
                             {
-                                ShowInTimeMsgInThread(string.Format("{3}：从{4}的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeObject.LoginEmail, gardenDetails.Account.Name));
+                                ShowInTimeMsgInThread(string.Format("{3}：从{4}的{0}号农田上偷取{1}个{2}！", gi.FarmNum, hr.Num, hr.SeedName, inTimeOperateItem.LoginEmail, gardenDetails.Account.Name));
 
                                 summary.StealTimes++;
                                 summary.StealedCropsNo += Convert.ToInt32(hr.Num);
                             }
                             else
                             {
-                                ShowInTimeMsgInThread(string.Format("{0}：从{1}的{2}号农田上偷取失败。原因：{3}", inTimeObject.LoginEmail, gardenDetails.Account.Name, gi.FarmNum, hr.Reason));
+                                ShowInTimeMsgInThread(string.Format("{0}：从{1}的{2}号农田上偷取失败。原因：{3}", inTimeOperateItem.LoginEmail, gardenDetails.Account.Name, gi.FarmNum, hr.Reason));
                             }
                         }
                     }
@@ -295,17 +287,17 @@ namespace SNSHelper_Win_Garden
                 }
                 else
                 {
-                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120))
+                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720))
                     {
-                        inTimeObject.ActiveTime = minDT;
-                        inTimeObject.IsRunning = false;
+                        inTimeOperateItem.ActionTime = minDT;
+                        inTimeOperateItem.IsRunning = false;
 
-                        AddInTimeObject(inTimeObject);
-                        ShowInTimeNoticeInThread(string.Format("{0}: 预计{2}花园{1}有果实成熟", inTimeObject.Name, minDT.ToString("MM-dd HH:mm:ss"), gardenDetails.Account.Name));
+                        AddInTimeOperateItem(inTimeOperateItem);
+                        ShowInTimeNoticeInThread(string.Format("{0}: 预计{2}花园{1}有果实成熟", inTimeOperateItem.Name, minDT.ToString("MM-dd HH:mm:ss"), gardenDetails.Account.Name));
                     }
                     else
                     {
-                        DeleteInTimeObject(inTimeObject);
+                        DeleteInTimeObject(inTimeOperateItem);
                     }
                 }
 
@@ -356,45 +348,48 @@ namespace SNSHelper_Win_Garden
             return DateTime.MaxValue;
         }
 
-        private void AddInTimeObject(InTimeItem inTimeObject)
+        private void AddInTimeOperateItem(InTimeOperateItem inTimeOperateItem)
         {
-            lock (inTimeItemList)
+            lock (inTimeOperateItemList)
             {
-                for (int i = 0; i < inTimeItemList.Count; i++)
+                for (int i = 0; i < inTimeOperateItemList.Count; i++)
                 {
-                    if (string.IsNullOrEmpty(inTimeObject.FUID))
+                    // 若第一时间操作不是“偷”
+                    if (!inTimeOperateItem.IsSteal)
                     {
-                        if (inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
+                        // 若操作所属帐号相同
+                        if (inTimeOperateItemList[i].LoginEmail == inTimeOperateItem.LoginEmail)
                         {
-                            inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
+                            inTimeOperateItemList[i].ActionTime = inTimeOperateItem.ActionTime;
 
-                            break;
+                            return;
                         }
                     }
                     else
                     {
-                        if (inTimeItemList[i].FUID == inTimeObject.FUID && inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
+                        // 若操作所属帐号相同；好友ID相同
+                        if (inTimeOperateItemList[i].LoginEmail == inTimeOperateItem.LoginEmail && inTimeOperateItemList[i].FUID == inTimeOperateItem.FUID)
                         {
-                            inTimeItemList[i].ActiveTime = inTimeObject.ActiveTime;
+                            inTimeOperateItemList[i].ActionTime = inTimeOperateItem.ActionTime;
 
-                            break;
+                            return;
                         }
                     }
                 }
 
-                inTimeItemList.Add(inTimeObject);
+                inTimeOperateItemList.Add(inTimeOperateItem);
             }
         }
 
-        private void DeleteInTimeObject(InTimeItem inTimeObject)
+        private void DeleteInTimeObject(InTimeOperateItem inTimeObject)
         {
-            lock (inTimeItemList)
+            lock (inTimeOperateItemList)
             {
-                for (int i = 0; i < inTimeItemList.Count; i++)
+                for (int i = 0; i < inTimeOperateItemList.Count; i++)
                 {
-                    if (inTimeItemList[i].LoginEmail == inTimeObject.LoginEmail)
+                    if (inTimeOperateItemList[i].LoginEmail == inTimeObject.LoginEmail)
                     {
-                        inTimeItemList.RemoveAt(i);
+                        inTimeOperateItemList.RemoveAt(i);
 
                         return;
                     }
@@ -454,7 +449,7 @@ namespace SNSHelper_Win_Garden
             txtInTimeNotice.AppendText(msg);
         }
 
-        class InTimeItem
+        class InTimeOperateItem
         {
             private SNSHelper_Win_Garden.Entity.AccountSetting accountSetting = new SNSHelper_Win_Garden.Entity.AccountSetting();
             public SNSHelper_Win_Garden.Entity.AccountSetting AccountSetting
@@ -541,16 +536,16 @@ namespace SNSHelper_Win_Garden
                 }
             }
 
-            private DateTime activeTime = DateTime.Now;
-            public DateTime ActiveTime
+            private DateTime actionTime = DateTime.Now;
+            public DateTime ActionTime
             {
                 get
                 {
-                    return activeTime;
+                    return actionTime;
                 }
                 set
                 {
-                    activeTime = value;
+                    actionTime = value;
                 }
             }
 

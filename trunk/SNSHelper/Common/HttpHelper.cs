@@ -262,7 +262,8 @@ namespace SNSHelper.Common
         /// <returns></returns>
         private int GetDynamicDelay()
         {
-            return new Random(DateTime.Now.Millisecond).Next(2000);
+            return 0;
+            //return new Random(DateTime.Now.Millisecond).Next(2000);
         }
         #endregion
     }

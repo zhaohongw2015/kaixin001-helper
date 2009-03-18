@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090318";
+        string currentBuildVersion = "20090319";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -82,12 +82,12 @@ namespace SNSHelper_Win_Garden
             Dictionary<string, string> contributoryList = new Dictionary<string, string>();
             contributoryList.Add("乐乐", "Jailu的女朋友。没有乐乐的支持和理解，就没有今天的农夫，鲜花和掌声都献给她吧！");
             contributoryList.Add("高兴网", "http://www.gaoxinga.com: 花园农夫专属版块提供者，让农夫们有了交流的空间！");
-            contributoryList.Add("小冲", "无私升级“农夫交流群”QQ群，让农夫们拥有良好的即使交流平台！");
+            contributoryList.Add("小冲", "无私提供超级群，让农夫们拥有良好的即使交流平台！");
             contributoryList.Add("Bluejacky", "为了让农夫有更好的测试环境，他特意、专门申请了系列帐号！");
             contributoryList.Add("无名有姓", "老前辈，给农夫的开发提供了不少建设性意见！");
             contributoryList.Add("tony2u", "第一个发现问题后，通过阅读农夫源码，并提出修改方案的朋友！");
             contributoryList.Add("农夫宝哥", "QQ：345543933。为农夫提供菜老伯测试数据！");
-            contributoryList.Add("农夫测试人员", "监工老财、小马、越夜越寂寞、叶落随风、我爱我家");
+            contributoryList.Add("农夫测试人员", "监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享(QQ:120350693)");
             contributoryList.Add(" ", "");
             contributoryList.Add("  ", "");
             contributoryList.Add("   ", "");
@@ -258,16 +258,16 @@ namespace SNSHelper_Win_Garden
                     }
                 }
 
-                if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120) && workingAccountSetting.AutoHavestInTime)
+                if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720) && workingAccountSetting.AutoHavestInTime)
                 {
-                    InTimeItem o = new InTimeItem();
+                    InTimeOperateItem o = new InTimeOperateItem();
                     o.IsSteal = false;
-                    o.ActiveTime = minDT;
+                    o.ActionTime = minDT;
                     o.AccountSetting = workingAccountSetting;
                     o.Name = gardenDetails.Account.Name;
 
-                    AddInTimeObject(o);
-                    ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss")));
+                    AddInTimeOperateItem(o);
+                    ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园[{1}]有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM.dd HH:mm:ss")));
                 }
                 #endregion
 
@@ -488,6 +488,8 @@ namespace SNSHelper_Win_Garden
 
                 Summary summary = GetSummary(gardenDetails.Account.Name);
 
+                int minStealCropsPrice = GetCropsPrice(workingAccountSetting.StealCrops);
+
                 for (int i = 0; i < workingAccountSetting.FriendSettings.Count; i++)
                 {
                     FriendSetting friendSetting = workingAccountSetting.FriendSettings[i];
@@ -496,30 +498,13 @@ namespace SNSHelper_Win_Garden
                     {
 
                         ShowMsgWhileWorking("");
-                        //ShowMsgWhileWorking(string.Format("农夫正在前往 {0} 的花园...", friendSetting.Name));
-                        //switch (helper.GotoFriendGarden(friendSetting.UID))
-                        //{
-                        //    case "1":
-                        //        ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
-                        //        workingAccountSetting.FriendSettings.Remove(friendSetting);
-                        //        GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
-                        //        i--;
-                        //        continue;
-                        //    case "2":
-                        //        continue;
-                        //    default:
-                        //        break;
-                        //}
 
                         #region 读取好友花园信息
 
                         ShowMsgWhileWorking(string.Format("正在进入 {0} 的花园...", friendSetting.Name));
                         helper.GotoFriendGarden(friendSetting.UID);
 
-                        ShowMsgWhileWorking(string.Format("正在读取 {0} 花园信息...", friendSetting.Name));
-                        GardenDetails friendGardenDetails = helper.GetGardenDetails(friendSetting.UID);
-
-                        if (friendGardenDetails.ErrMsg == "1")
+                        if (helper.GotoFriendGarden(friendSetting.UID) == "1")
                         {
                             ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
                             workingAccountSetting.FriendSettings.Remove(friendSetting);
@@ -528,6 +513,9 @@ namespace SNSHelper_Win_Garden
 
                             continue;
                         }
+
+                        ShowMsgWhileWorking(string.Format("正在读取 {0} 花园信息...", friendSetting.Name));
+                        GardenDetails friendGardenDetails = helper.GetGardenDetails(friendSetting.UID);
 
                         ShowMsgWhileWorking("农田信息：");
                         foreach (GardenItem gi in friendGardenDetails.GarderItems)
@@ -556,8 +544,6 @@ namespace SNSHelper_Win_Garden
 
                                 continue;
                             }
-
-                            int minStealCropsPrice = GetCropsPrice(workingAccountSetting.StealCrops);
 
                             minDT = DateTime.MaxValue;
                             foreach (GardenItem gi in friendGardenDetails.GarderItems)
@@ -719,16 +705,16 @@ namespace SNSHelper_Win_Garden
                             }
 
                             // 若作物成熟的时间小于农夫的运行周期加两个小时，且用户启动了“第一时间偷取”功能
-                            if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 120) && workingAccountSetting.AutoStealInTime)
+                            if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720) && workingAccountSetting.AutoStealInTime)
                             {
-                                InTimeItem o = new InTimeItem();
+                                InTimeOperateItem o = new InTimeOperateItem();
                                 o.IsSteal = true;
-                                o.ActiveTime = minDT;
+                                o.ActionTime = minDT;
                                 o.AccountSetting = workingAccountSetting;
                                 o.FUID = friendSetting.UID;
                                 o.Name = gardenDetails.Account.Name;
 
-                                AddInTimeObject(o);
+                                AddInTimeOperateItem(o);
                                 ShowInTimeNoticeInThread(string.Format("{0}: 预计{2}花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss"), friendGardenDetails.Account.Name));
                             }
                         }
