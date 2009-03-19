@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRunConfiguration name="本地测试运行" id="1e666b1f-cba2-4a2f-b6bb-39b0cc22edce" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
-  <Description>这是本地测试运行的默认测试运行配置。</Description>
-  <TestTypeSpecific />
-</TestRunConfiguration>

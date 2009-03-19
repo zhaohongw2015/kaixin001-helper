@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <ret>succ</ret>
+  <name>水稻</name>
+  <userrank>6</userrank>
+  <rank>1</rank>
+  <mhours>20</mhours>
+  <price>20</price>
+  <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/shuidao.swf</fruitpic>
+  <fruit_minnum>10</fruit_minnum>
+  <fruit_maxnum>30</fruit_maxnum>
+  <fruit_minprice>20</fruit_minprice>
+  <fruit_maxprice>100</fruit_maxprice>
+  <antistealdays>0</antistealdays>
+  <fruitprice>60</fruitprice>
+  <nocash>0</nocash>
+</data>
