@@ -123,6 +123,84 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>75</value>
   </metadata>
+  <data name="txtWorkingBoard.Text" xml:space="preserve">
+    <value>农夫提醒您：为了防止被开心BAN，请尽量不要用多个外挂同时操作一个帐号！
+
+农夫官方网站：http://code.google.com/p/kaixin001-helper/
+
+农夫指定交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
+
+农夫指定QQ交流群：10398877（新群。再次感谢 小冲 同志为农夫提供超级群）
+
+开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
+
+真诚感谢农夫测试人员：监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享</value>
+  </data>
+  <data name="txtWhatsNew.Text" xml:space="preserve">
+    <value>农夫提醒您：为了防止被开心BAN，请尽量不要用多个外挂同时操作一个帐号！
+
+农夫官方网站：http://code.google.com/p/kaixin001-helper/
+
+农夫指定交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
+
+农夫指定QQ交流群：10398877（新群。再次感谢 小冲 同志为农夫提供超级群）
+
+开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
+
+真诚感谢农夫测试人员：监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享
+</value>
+  </data>
+  <metadata name="好友名.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="偷果实.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="犁地.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="播种.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="浇水.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="捉虫.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="锄草.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="balloonTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>168, 17</value>
+  </metadata>
+  <metadata name="贡献者.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="贡献简介.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="帐号.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="偷盗次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="偷盗总量.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="浇水次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="捉虫次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="锄草次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1256,89 +1334,6 @@
         ///wAB///////////////////wH///////8=
 </value>
   </data>
-  <data name="txtWorkingBoard.Text" xml:space="preserve">
-    <value>农夫提醒您：为了防止被开心BAN，请尽量不要用多个外挂同时操作一个帐号！
-
-农夫官方网站：http://code.google.com/p/kaixin001-helper/
-
-农夫指定交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
-
-农夫指定QQ交流群：10398877（新群。再次感谢 小冲 同志为农夫提供超级群）
-
-开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
-
-真诚感谢农夫测试人员：监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享
-
-内测版仅限于测试群内交流，禁止外泄！</value>
-  </data>
-  <data name="txtWhatsNew.Text" xml:space="preserve">
-    <value>农夫提醒您：为了防止被开心BAN，请尽量不要用多个外挂同时操作一个帐号！
-
-农夫官方网站：http://code.google.com/p/kaixin001-helper/
-
-农夫指定交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
-
-农夫指定QQ交流群：10398877（新群。再次感谢 小冲 同志为农夫提供超级群）
-
-开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
-
-真诚感谢农夫测试人员：监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享
-</value>
-  </data>
-  <metadata name="好友名.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="UID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="偷果实.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="犁地.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="播种.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="浇水.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="捉虫.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="锄草.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="balloonTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 17</value>
-  </metadata>
-  <metadata name="balloonTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 17</value>
-  </metadata>
-  <metadata name="贡献者.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="贡献简介.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="帐号.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="偷盗次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="偷盗总量.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="浇水次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="捉虫次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="锄草次数.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="countDownTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>288, 17</value>
   </metadata>
