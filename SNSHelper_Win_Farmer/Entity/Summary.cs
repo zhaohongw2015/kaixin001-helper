@@ -10,8 +10,9 @@ namespace SNSHelper_Win_Garden.Entity
         {
         }
 
-        public Summary(string name)
+        public Summary(string uid, string name)
         {
+            this.uid = uid;
             this.name = name;
         }
 
@@ -25,6 +26,32 @@ namespace SNSHelper_Win_Garden.Entity
             set
             {
                 name = value;
+            }
+        }
+
+        private string uid = string.Empty;
+        public string UID
+        {
+            get
+            {
+                return uid;
+            }
+            set
+            {
+                uid = value;
+            }
+        }
+
+        private string email = string.Empty;
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
             }
         }
 

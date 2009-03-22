@@ -46,6 +46,24 @@ namespace SNSHelper.Kaixin001
             }
         }
 
+        private string uid = string.Empty;
+        public string UID
+        {
+            get
+            {
+                return uid;
+            }
+        }
+
+        private string name = string.Empty;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+
         /// <summary>
         /// 登录开心网
         /// </summary>
@@ -57,6 +75,9 @@ namespace SNSHelper.Kaixin001
             string loginUrl = "http://www.kaixin001.com/login/login.php";
             string postData = string.Format("url=/home/&invisible_mode=0&email={0}&password={1}", loginEmail, loginPassword);
             string result = httpHelper.GetHtml(loginUrl, postData, true, cookieContainer);
+
+            uid = ContentHelper.GetMidString(result, "我的开心网ID:", "\">");
+            name = ContentHelper.GetMidString(result, "<b class=\"f14\">", "</b>");
 
             return isLogin = result.Contains("我的首页");
         }

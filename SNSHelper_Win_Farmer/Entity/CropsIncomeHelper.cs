@@ -79,5 +79,47 @@ namespace SNSHelper_Win_Garden.Entity
                 cropsIncomeList.Add(cropsIncome);
             }
         }
+
+        public static bool SaveCropsIncome(string filePath, List<CropsIncome> list)
+        {
+            string xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?><Crops></Crops>";
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml);
+
+            foreach (CropsIncome item in list)
+            {
+                SaveCropIncome(doc.DocumentElement, item);
+            }
+
+            try
+            {
+                doc.Save(Path.Combine(filePath, "CropsIncome.xml"));
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        private static void SaveCropIncome(XmlNode node, CropsIncome item)
+        {
+            XmlNode cropNode = node.OwnerDocument.CreateElement("Crop");
+            cropNode.AppendChild(CreateElement(node.OwnerDocument, "Name", item.Name));
+            cropNode.AppendChild(CreateElement(node.OwnerDocument, "GrowthCycle", item.GrowthCycle.ToString()));
+            cropNode.AppendChild(CreateElement(node.OwnerDocument, "UnitPrice", item.UnitPrice.ToString()));
+            cropNode.AppendChild(CreateElement(node.OwnerDocument, "Theftproof", item.Theftproof.ToString()));
+
+            node.AppendChild(cropNode);
+        }
+
+        private static XmlElement CreateElement(XmlDocument doc, string elementName, string innerText)
+        {
+            XmlElement xmlElement = doc.CreateElement(elementName);
+            xmlElement.InnerText = innerText;
+
+            return xmlElement;
+        }
     }
 }

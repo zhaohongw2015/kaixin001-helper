@@ -30,6 +30,32 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        private string uid = string.Empty;
+        public string UID
+        {
+            get
+            {
+                return uid;
+            }
+            set
+            {
+                uid = value;
+            }
+        }
+
+        private string name = string.Empty;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
         private bool isOperate = false;
         public bool IsOperate
         {

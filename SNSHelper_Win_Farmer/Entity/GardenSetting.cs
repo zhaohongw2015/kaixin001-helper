@@ -118,6 +118,12 @@ namespace SNSHelper_Win_Garden.Entity
                     case "LoginPassword":
                         etAccountSetting.LoginPassword = item.InnerText;
                         break;
+                    case "UID":
+                        etAccountSetting.UID = item.InnerText;
+                        break;
+                    case "Name":
+                        etAccountSetting.Name = item.InnerText;
+                        break;
                     case "IsOperate":
                         etAccountSetting.IsOperate = Convert.ToBoolean(Convert.ToInt32(item.InnerText));
                         break;
@@ -290,6 +296,8 @@ namespace SNSHelper_Win_Garden.Entity
         {
             node.AppendChild(CreateElement(node.OwnerDocument, "LoginEmail", accountSetting.LoginEmail));
             node.AppendChild(CreateElement(node.OwnerDocument, "LoginPassword", accountSetting.LoginPassword));
+            node.AppendChild(CreateElement(node.OwnerDocument, "UID", accountSetting.UID));
+            node.AppendChild(CreateElement(node.OwnerDocument, "Name", accountSetting.Name));
             node.AppendChild(CreateElement(node.OwnerDocument, "IsOperate", Convert.ToInt32(accountSetting.IsOperate).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "AutoFarm", Convert.ToInt32(accountSetting.AutoFarm).ToString()));
             node.AppendChild(CreateElement(node.OwnerDocument, "Crops", accountSetting.Crops));

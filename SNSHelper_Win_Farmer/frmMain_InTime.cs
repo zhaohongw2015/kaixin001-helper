@@ -56,7 +56,12 @@ namespace SNSHelper_Win_Garden
                 GardenHelper helper = new GardenHelper(_utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
 
+                int tryTimes = 0;
+
             GetGardenDetails:
+
+                tryTimes++;
+
                 bool isReadyRipe = false;
                 GardenDetails gardenDetails = helper.GetGardenDetails(null);
 
@@ -178,26 +183,30 @@ namespace SNSHelper_Win_Garden
 
                 #endregion
 
-                if (isReadyRipe)
+                if (isReadyRipe && tryTimes <= 10)
                 {
                     Thread.Sleep(10000);
                     goto GetGardenDetails;
                 }
+
+                if (tryTimes >= 10)
+                {
+                    ShowInTimeMsgInThread("尝试次数过多，农夫自动放弃该操作！");
+                }
+
+                if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720))
+                {
+                    inTimeOperateItem.ActionTime = minDT;
+                    inTimeOperateItem.IsRunning = false;
+
+                    AddInTimeOperateItem(inTimeOperateItem);
+                    ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园[{1}]有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM.dd HH:mm:ss")));
+                }
                 else
                 {
-                    if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720))
-                    {
-                        inTimeOperateItem.ActionTime = minDT;
-                        inTimeOperateItem.IsRunning = false;
-
-                        AddInTimeOperateItem(inTimeOperateItem);
-                        ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园[{1}]有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM.dd HH:mm:ss")));
-                    }
-                    else
-                    {
-                        DeleteInTimeObject(inTimeOperateItem);
-                    }
+                    DeleteInTimeObject(inTimeOperateItem);
                 }
+
             }
         }
 
@@ -214,14 +223,18 @@ namespace SNSHelper_Win_Garden
 
                 DateTime minDT = DateTime.MaxValue;
                 DateTime temp;
+                int tryTimes = 0;
 
             GetFriendGardenDetails:
+
+                tryTimes++;
+
                 #region
                 bool isReadyRipe = false;
                 GardenDetails gardenDetails = helper.GetGardenDetails(inTimeOperateItem.FUID);
 
                 ShowInTimeMsgInThread(string.Format("已获取 {0} 的花园数据！", gardenDetails.Account.Name));
-                Summary summary = GetSummary(inTimeOperateItem.Name);
+                Summary summary = GetSummary(inTimeOperateItem.UID, inTimeOperateItem.Name);
 
                 if (gardenDetails.ErrMsg == "1")
                 {
@@ -280,6 +293,7 @@ namespace SNSHelper_Win_Garden
 
                                         summary.StealTimes++;
                                         summary.StealedCropsNo += Convert.ToInt32(hr.Num);
+                                        UpdateSummaryInThread(summary);
                                     }
                                     else
                                     {
@@ -331,11 +345,16 @@ namespace SNSHelper_Win_Garden
                     }
                 }
 
-                if (isReadyRipe)
+                if (isReadyRipe && tryTimes <= 10)
                 {
                     ShowInTimeMsgInThread(string.Format("{0} 花园里的果实就要成熟了，5秒钟后再次尝试偷取！", gardenDetails.Account.Name));
                     Thread.Sleep(5000);
                     goto GetFriendGardenDetails;
+                }
+
+                if (tryTimes >= 10)
+                {
+                    ShowInTimeMsgInThread("尝试次数过多，农夫自动放弃该操作！");
                 }
 
                 // 若作物成熟的时间小于农夫的运行周期加两个小时，且用户启动了“第一时间偷取”功能
@@ -438,8 +457,6 @@ namespace SNSHelper_Win_Garden
                 //    }
                 //}
                 #endregion
-
-                UpdateSummaryInThread(summary);
 
                 #endregion
             }
@@ -653,19 +670,6 @@ namespace SNSHelper_Win_Garden
                 }
             }
 
-            private string name = string.Empty;
-            public string Name
-            {
-                get
-                {
-                    return name;
-                }
-                set
-                {
-                    name = value;
-                }
-            }
-
             public string LoginEmail
             {
                 get
@@ -679,6 +683,32 @@ namespace SNSHelper_Win_Garden
                 get
                 {
                     return accountSetting.LoginPassword;
+                }
+            }
+
+            private string name = string.Empty;
+            public string Name
+            {
+                get
+                {
+                    return name;
+                }
+                set
+                {
+                    name = value;
+                }
+            }
+
+            private string uid = string.Empty;
+            public string UID
+            {
+                get
+                {
+                    return uid;
+                }
+                set
+                {
+                    uid = value;
                 }
             }
 

@@ -21,7 +21,7 @@ namespace SNSHelper_Win_Garden
         private void frmCropsCustomSetting_Load(object sender, EventArgs e)
         {
             string xml = File.ReadAllText(Path.Combine(Application.StartupPath, "SeedData.xml"));
-            xml = xml.Replace("<?xml version=\"1.0\" encoding=\"utf-8\" ?>", "");
+            xml = xml.Replace("<?xml version=\"1.0\" encoding=\"utf-8\" ?>", "").Replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
 
             SeedData seedData = new SeedData(xml);
             BindSeedCombox(seedData);

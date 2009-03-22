@@ -60,6 +60,7 @@
     <Compile Include="Kaixin001\Entity\Garden\MySeeds.cs" />
     <Compile Include="Kaixin001\Entity\Garden\SeedData.cs" />
     <Compile Include="Kaixin001\Entity\Garden\SeedItem.cs" />
+    <Compile Include="Kaixin001\Entity\Garden\SeedItemInStore.cs" />
     <Compile Include="Kaixin001\Entity\Garden\SellResult.cs" />
     <Compile Include="Kaixin001\Entity\Parking\AppHelperBase.cs" />
     <Compile Include="Kaixin001\Entity\Parking\CarInfo.cs" />

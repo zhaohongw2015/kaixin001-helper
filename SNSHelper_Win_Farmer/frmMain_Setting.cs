@@ -106,7 +106,7 @@ namespace SNSHelper_Win_Garden
         private void ShowSeedData()
         {
             string xml = File.ReadAllText(Path.Combine(Application.StartupPath, "SeedData.xml"), Encoding.UTF8);
-            xml = xml.Replace("<?xml version=\"1.0\" encoding=\"utf-8\" ?>", "");
+            xml = xml.Replace("<?xml version=\"1.0\" encoding=\"utf-8\" ?>", "").Replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
 
             seedData = new SeedData(xml);
 
@@ -126,15 +126,15 @@ namespace SNSHelper_Win_Garden
 
         private void btnLoadFriend_Click(object sender, EventArgs e)
         {
-            //if (farmerWorkingThread != null)
-            //{
-            //    DevComponents.DotNetBar.MessageBoxEx.Show("农夫定时任务正在运行，暂时不能进行账户导入工作！", "提示");
-            //    return;
-            //}
             if (string.IsNullOrEmpty(txtNewLoginEmail.Text.Trim()) || string.IsNullOrEmpty(txtNewLoginPwd.Text.Trim()))
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("请输入完整的帐号信息！");
                 return;
+            }
+
+            if (isNewAccountFlag)
+            {
+                currentConfiguringAccountSetting = new SNSHelper_Win_Garden.Entity.AccountSetting();
             }
 
             BeginGetNetFriend();
@@ -193,6 +193,8 @@ namespace SNSHelper_Win_Garden
             }
 
             GardenHelper helper = new GardenHelper(utility, gardenSetting.GlobalSetting.NetworkDelay);
+            currentConfiguringAccountSetting.UID = utility.UID;
+            currentConfiguringAccountSetting.Name = utility.Name;
 
             Dictionary<string, string> friends = helper.GetGardenFriend();
 
@@ -215,6 +217,7 @@ namespace SNSHelper_Win_Garden
                 currentConfiguringAccountSetting = new SNSHelper_Win_Garden.Entity.AccountSetting();
             }
 
+            // 把本地的好友数据和网络上最新的好友数据对比，若本地不存在，则添加
             foreach (string uid in friends.Keys)
             {
                 if (GetFriendSetting(currentConfiguringAccountSetting.FriendSettings, uid) == null)
@@ -224,6 +227,16 @@ namespace SNSHelper_Win_Garden
                     etFriendSetting.Name = friends[uid];
 
                     currentConfiguringAccountSetting.FriendSettings.Add(etFriendSetting);
+                }
+            }
+
+            // 把本地的好友数据和网络上最新的好友数据对比，若网络上不存在，则移除
+            for (int i = 0; i < currentConfiguringAccountSetting.FriendSettings.Count; i++)
+            {
+                if (!friends.ContainsKey(currentConfiguringAccountSetting.FriendSettings[i].UID))
+                {
+                    currentConfiguringAccountSetting.FriendSettings.RemoveAt(i);
+                    i--;
                 }
             }
 
