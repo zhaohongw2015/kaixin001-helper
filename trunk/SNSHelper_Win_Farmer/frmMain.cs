@@ -11,6 +11,7 @@ using SNSHelper.Common;
 using SNSHelper.Kaixin001;
 using SNSHelper.Kaixin001.Entity.Garden;
 using SNSHelper_Win_Garden.Entity;
+using SNSHelper_Win_Garden.Helper;
 
 namespace SNSHelper_Win_Garden
 {
@@ -19,7 +20,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090320";
+        string currentBuildVersion = "20090322b";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -88,7 +89,7 @@ namespace SNSHelper_Win_Garden
             contributoryList.Add("tony2u", "第一个发现问题后，通过阅读农夫源码，并提出修改方案的朋友！");
             contributoryList.Add("农夫宝哥", "QQ：345543933。为农夫提供菜老伯测试数据！");
             contributoryList.Add("农夫测试人员", "监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享");
-            contributoryList.Add(" ", "");
+            contributoryList.Add("农夫交流群管理团队", "小冲、立飞、我爱我家");
             contributoryList.Add("  ", "");
             contributoryList.Add("   ", "");
             contributoryList.Add("    ", "");
@@ -216,6 +217,14 @@ namespace SNSHelper_Win_Garden
                 GardenHelper helper = new GardenHelper(utility, gardenSetting.GlobalSetting.NetworkDelay);
                 helper.GotoMyGarden();
 
+                if (string.IsNullOrEmpty(workingAccountSetting.UID) || string.IsNullOrEmpty(workingAccountSetting.Name))
+                {
+                    workingAccountSetting.UID = utility.UID;
+                    workingAccountSetting.Name = utility.Name;
+
+                    GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
+                }
+
                 #region 显示花园信息
                 ShowMsgWhileWorking("正在读取花园信息...");
                 GardenDetails gardenDetails = helper.GetGardenDetails(null);
@@ -261,10 +270,11 @@ namespace SNSHelper_Win_Garden
                 if (minDT <= DateTime.Now.AddMinutes(gardenSetting.GlobalSetting.WorkingInterval + 720) && workingAccountSetting.AutoHavestInTime)
                 {
                     InTimeOperateItem o = new InTimeOperateItem();
+                    o.UID = workingAccountSetting.UID;
+                    o.Name = gardenDetails.Account.Name;
+                    o.AccountSetting = workingAccountSetting;
                     o.IsSteal = false;
                     o.ActionTime = minDT;
-                    o.AccountSetting = workingAccountSetting;
-                    o.Name = gardenDetails.Account.Name;
 
                     AddInTimeOperateItem(o);
                     ShowInTimeNoticeInThread(string.Format("{0}: 预计自家花园[{1}]有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM.dd HH:mm:ss")));
@@ -486,7 +496,8 @@ namespace SNSHelper_Win_Garden
 
                 bool canFarmHeartFarm = true;
 
-                Summary summary = GetSummary(gardenDetails.Account.Name);
+                Summary summary = GetSummary(workingAccountSetting.UID, workingAccountSetting.Name);
+                UpdateSummaryInThread(summary);
 
                 int minStealCropsPrice = GetCropsPrice(workingAccountSetting.StealCrops);
 
@@ -584,6 +595,8 @@ namespace SNSHelper_Win_Garden
 
                                                     summary.StealTimes++;
                                                     summary.StealedCropsNo += Convert.ToInt32(hr.Num);
+
+                                                    UpdateSummaryInThread(summary);
                                                 }
                                                 else
                                                 {
@@ -644,6 +657,7 @@ namespace SNSHelper_Win_Garden
                                 o.AccountSetting = workingAccountSetting;
                                 o.FUID = friendSetting.UID;
                                 o.Name = gardenDetails.Account.Name;
+                                o.UID = workingAccountSetting.UID;
 
                                 AddInTimeOperateItem(o);
                                 ShowInTimeNoticeInThread(string.Format("{0}: 预计{2}花园{1}有果实成熟", gardenDetails.Account.Name, minDT.ToString("MM-dd HH:mm:ss"), friendGardenDetails.Account.Name));
@@ -666,6 +680,7 @@ namespace SNSHelper_Win_Garden
                                         ShowMsgWhileWorking(string.Format("{0}号农田，浇水成功！", gi.FarmNum));
 
                                         summary.WaterTimes++;
+                                        UpdateSummaryInThread(summary);
                                     }
                                     else
                                     {
@@ -693,6 +708,7 @@ namespace SNSHelper_Win_Garden
                                         ShowMsgWhileWorking(string.Format("{0}号农田，捉到{1}条虫子！", gi.FarmNum, gi.Vermin));
 
                                         summary.VerminTimes++;
+                                        UpdateSummaryInThread(summary);
                                     }
                                     else
                                     {
@@ -794,6 +810,7 @@ namespace SNSHelper_Win_Garden
                                         ShowMsgWhileWorking(string.Format("{0}号农田，锄草成功！", gi.FarmNum));
 
                                         summary.GrassTimes++;
+                                        UpdateSummaryInThread(summary);
                                     }
                                     else
                                     {
@@ -807,8 +824,6 @@ namespace SNSHelper_Win_Garden
                         #endregion
                     }
                 }
-
-                UpdateSummaryInThread(summary);
 
                 #endregion
 
@@ -1512,6 +1527,123 @@ namespace SNSHelper_Win_Garden
                 DevComponents.DotNetBar.MessageBoxEx.Show(this, "您还没有添加任何帐号，无法启动种子库在线更新！", "提示");
 
                 return;
+            }
+
+            if (farmerWorkingThread != null)
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show(this, "农夫常规任务正在运行，为了避免不必要的错误，请先停止常规任务！", "提示");
+
+                return;
+            }
+
+            tabControl1.SelectedTabIndex = 0;
+            bar1.Enabled = false;
+            btnStart.Enabled = false;
+
+            txtWorkingBoard.Clear();
+            stopUpdateSeedData = new MethodInvoker(StopUpdateSeedData);
+            if (showMsgWhileWorking == null)
+            {
+                showMsgWhileWorking = new MethodWithParmString(ShowMsg);
+            }
+
+            updateSeedDataThread = new Thread(BeginUpdateSeedData);
+            updateSeedDataThread.Start();
+        }
+
+        Thread updateSeedDataThread;
+        private void BeginUpdateSeedData()
+        {
+            SNSHelper_Win_Garden.Entity.AccountSetting accountSetting = gardenSetting.AccountSettings[0];
+
+            ShowMsgWhileWorking("农夫正在更新您的种子库信息！");
+            ShowMsgWhileWorking("正在登录...");
+            Utility _utility = new Utility();
+            if (!_utility.Login(accountSetting.LoginEmail, accountSetting.LoginPassword))
+            {
+                ShowMsgWhileWorking("登录失败！");
+                ShowMsgWhileWorking("更新种子库失败！");
+
+                StopUpdateSeedDataInThread();
+            }
+
+            ShowMsgWhileWorking("正在进入花园...");
+            GardenHelper helper = new GardenHelper(_utility, gardenSetting.GlobalSetting.NetworkDelay);
+            helper.GotoMyGarden();
+
+            ShowMsgWhileWorking("正在获取商店种子列表...");
+            seedData = helper.GetSeedData();
+
+            List<SeedItemInStore> seedItemInStoreList = new List<SeedItemInStore>();
+            if (seedData != null)
+            {
+                foreach (SeedItem item in seedData.SeedItems)
+                {
+                    ShowMsgWhileWorking(string.Format("正在获取 {0} 的相关数据...", item.Name));
+                    seedItemInStoreList.Add(helper.GetSeedItemInStore(item.SeedID));
+                }
+            }
+
+            if (SaveSeedData(seedItemInStoreList))
+            {
+                ShowMsgWhileWorking("种子库更新操作成功！");
+            }
+            else
+            {
+                ShowMsgWhileWorking("种子库更新操作失败！");
+            }
+            StopUpdateSeedDataInThread();
+        }
+
+        private bool SaveSeedData(List<SeedItemInStore> seedItemInStoreList)
+        {
+            SeedData newSeedData = new SeedData();
+            CropsIncomeHelper.CropsIncomeList = new List<CropsIncome>();
+
+            foreach (SeedItemInStore item in seedItemInStoreList)
+            {
+                SeedItem si = new SeedItem();
+                si.SeedID = GetSeedID(item.Name);
+                si.Name = item.Name;
+                si.FruitPic = item.FruitPic;
+                si.Price = Convert.ToDouble(item.Price);
+
+                newSeedData.SeedItems.Add(si);
+
+                CropsIncome ci = new CropsIncome();
+                ci.Name = item.Name;
+                ci.GrowthCycle = Convert.ToInt32(item.MHours);
+                ci.Theftproof = Convert.ToInt32(item.AntiStealDays);
+                ci.UnitPrice = Convert.ToInt32(item.FruitPrice);
+
+                CropsIncomeHelper.CropsIncomeList.Add(ci);
+            }
+
+            return SeedDataHelper.SaveSeedData(Application.StartupPath, seedData) && CropsIncomeHelper.SaveCropsIncome(Application.StartupPath, CropsIncomeHelper.CropsIncomeList);
+        }
+
+        MethodInvoker stopUpdateSeedData;
+        private void StopUpdateSeedDataInThread()
+        {
+            this.Invoke(stopUpdateSeedData);
+            updateSeedDataThread = null;
+        }
+
+        private void StopUpdateSeedData()
+        {
+            bar1.Enabled = true;
+            btnStart.Enabled = true;
+
+            stopUpdateSeedData = null;
+
+            cbxCrops.Items.Clear();
+            cbxStealCrops.Items.Clear();
+            cbxHeartCrops.Items.Clear();
+            foreach (SeedItem item in seedData.SeedItems)
+            {
+                cbxCrops.Items.Add(item.Name);
+                cbxStealCrops.Items.Add(item.Name);
+                cbxHeartCrops.Items.Add(item.Name);
             }
         }
     }

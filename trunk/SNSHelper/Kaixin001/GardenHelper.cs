@@ -15,12 +15,13 @@ namespace SNSHelper.Kaixin001
 
         #region Urls
 
-        private string houseIndexUrl = "http://www.kaixin001.com/app/app.php?aid=1062&url=index.php";
+        private string houseIndexUrl = "http://www.kaixin001.com/~house/index.php?_lgmode=pri&t=85";
         private string houseFriendUrl = "http://www.kaixin001.com/house/mystay_dialog.php?verify=";
 
         private string gardenIndexUrl = "http://www.kaixin001.com/~house/garden/index.php";
         private string gardenDetailsUrl = "http://www.kaixin001.com/house/garden/getconf.php?verify={0}&fuid={1}&r=0.5507916617207229";
         private string seedListUrl = "http://www.kaixin001.com/house/garden/seedlist.php?verify={0}&r=0.4371907408349216";
+        private string seedInfoUrl = "http://www.kaixin001.com/house/garden/seedinfo.php?verify={0}&seedid={1}";
         private string waterUrl = "http://www.kaixin001.com/house/garden/water.php?verify={0}&seedid={1}&fuid={2}&farmnum={3}";
         private string buySeedUrl = "http://www.kaixin001.com/house/garden/buyseed.php?verify={0}&num={1}&seedid={2}";
         private string getMySeedsUrl = "http://www.kaixin001.com/house/garden/myseedlist.php?verify={0}&page={1}&r=0.357555715367198";
@@ -52,7 +53,8 @@ namespace SNSHelper.Kaixin001
         /// </summary>
         public void GotoMyGarden()
         {
-            verifyCode = ContentHelper.GetMidString(httpHelper.GetHtml(gardenIndexUrl), "var g_verify = \"", "\";");
+            string html = httpHelper.GetHtml(gardenIndexUrl);
+            verifyCode = ContentHelper.GetMidString(html, "g_verify = \"", "\";");
         }
 
         /// <summary>
@@ -88,11 +90,16 @@ namespace SNSHelper.Kaixin001
         /// <returns>fuid, name</returns>
         public Dictionary<string, string> GetGardenFriend()
         {
-            string html = httpHelper.GetHtml(houseIndexUrl);
+            //string html = httpHelper.GetHtml(houseIndexUrl);
 
-            string vc = ContentHelper.GetMidString(html, "var g_verify = \"", "\";");
+            //string vc = ContentHelper.GetMidString(html, "g_verify = \"", "\";");
 
-            html = httpHelper.GetHtml(houseFriendUrl + vc);
+            if (string.IsNullOrEmpty(verifyCode))
+            {
+                GotoMyGarden();
+            }
+
+            string html = httpHelper.GetHtml(houseFriendUrl + verifyCode);
 
             Dictionary<string, string> friends = new Dictionary<string, string>();
 
@@ -138,6 +145,11 @@ namespace SNSHelper.Kaixin001
             }
 
             return new SeedData(httpHelper.GetHtml(string.Format(seedListUrl, verifyCode)));
+        }
+
+        public SeedItemInStore GetSeedItemInStore(string seedId)
+        {
+            return new SeedItemInStore(httpHelper.GetHtml(string.Format(seedInfoUrl, verifyCode, seedId)));
         }
 
         /// <summary>

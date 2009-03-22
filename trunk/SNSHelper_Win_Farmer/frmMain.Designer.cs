@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -68,6 +68,11 @@
             this.tabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
             this.txtWhatsNew = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tabItem5 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtInTimeNotice = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtInTimeBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.contextMenuBar2 = new DevComponents.DotNetBar.ContextMenuBar();
@@ -151,16 +156,6 @@
             this.txtParkingInterval = new DevComponents.Editors.IntegerInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
-            this.dgvContributory = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.贡献者 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.贡献简介 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtInTimeNotice = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtInTimeBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
             this.dgvSummary = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.帐号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -170,6 +165,11 @@
             this.捉虫次数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.锄草次数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
+            this.dgvContributory = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.贡献者 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.贡献简介 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
             this.balloonTip1 = new DevComponents.DotNetBar.BalloonTip();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -181,6 +181,10 @@
             this.tabControlPanel1.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.tabControlPanel5.SuspendLayout();
+            this.tabControlPanel3.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).BeginInit();
@@ -191,14 +195,10 @@
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).BeginInit();
-            this.tabControlPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContributory)).BeginInit();
-            this.tabControlPanel3.SuspendLayout();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             this.tabControlPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSummary)).BeginInit();
+            this.tabControlPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContributory)).BeginInit();
             this.SuspendLayout();
             // 
             // dotNetBarManager1
@@ -230,7 +230,7 @@
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(0, 610);
+            this.dockSite4.Location = new System.Drawing.Point(0, 661);
             this.dockSite4.Name = "dockSite4";
             this.dockSite4.Size = new System.Drawing.Size(602, 0);
             this.dockSite4.TabIndex = 3;
@@ -243,7 +243,7 @@
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite1.Location = new System.Drawing.Point(0, 25);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 585);
+            this.dockSite1.Size = new System.Drawing.Size(0, 636);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -254,7 +254,7 @@
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite2.Location = new System.Drawing.Point(602, 25);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 585);
+            this.dockSite2.Size = new System.Drawing.Size(0, 636);
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
@@ -262,7 +262,7 @@
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(0, 610);
+            this.dockSite8.Location = new System.Drawing.Point(0, 661);
             this.dockSite8.Name = "dockSite8";
             this.dockSite8.Size = new System.Drawing.Size(602, 0);
             this.dockSite8.TabIndex = 7;
@@ -274,7 +274,7 @@
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite5.Location = new System.Drawing.Point(0, 25);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 585);
+            this.dockSite5.Size = new System.Drawing.Size(0, 636);
             this.dockSite5.TabIndex = 4;
             this.dockSite5.TabStop = false;
             // 
@@ -284,7 +284,7 @@
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite6.Location = new System.Drawing.Point(602, 25);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 585);
+            this.dockSite6.Size = new System.Drawing.Size(0, 636);
             this.dockSite6.TabIndex = 5;
             this.dockSite6.TabStop = false;
             // 
@@ -359,7 +359,6 @@
             this.buttonItem8,
             this.buttonItem9});
             this.buttonItem4.Text = "系统(&S)";
-            this.buttonItem4.Visible = false;
             // 
             // biUpdateSeedData
             // 
@@ -373,12 +372,14 @@
             this.buttonItem8.ImagePaddingHorizontal = 8;
             this.buttonItem8.Name = "buttonItem8";
             this.buttonItem8.Text = "全局设置";
+            this.buttonItem8.Visible = false;
             // 
             // buttonItem9
             // 
             this.buttonItem9.ImagePaddingHorizontal = 8;
             this.buttonItem9.Name = "buttonItem9";
             this.buttonItem9.Text = "代理设置";
+            this.buttonItem9.Visible = false;
             // 
             // buttonItem2
             // 
@@ -435,18 +436,18 @@
             // 
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.tabControlPanel5);
-            this.tabControl1.Controls.Add(this.tabControlPanel2);
-            this.tabControl1.Controls.Add(this.tabControlPanel4);
+            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.tabControlPanel3);
+            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel6);
+            this.tabControl1.Controls.Add(this.tabControlPanel4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.tabControl1.SelectedTabIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(602, 585);
+            this.tabControl1.Size = new System.Drawing.Size(602, 636);
             this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Office2007Document;
             this.tabControl1.TabIndex = 8;
             this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
@@ -462,10 +463,10 @@
             this.tabControlPanel1.Controls.Add(this.txtWorkingBoard);
             this.tabControlPanel1.Controls.Add(this.panelEx1);
             this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(602, 560);
+            this.tabControlPanel1.Size = new System.Drawing.Size(602, 613);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -484,12 +485,12 @@
             // 
             this.txtWorkingBoard.Border.Class = "TextBoxBorder";
             this.txtWorkingBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 30);
+            this.txtWorkingBoard.Location = new System.Drawing.Point(1, 32);
             this.txtWorkingBoard.Multiline = true;
             this.txtWorkingBoard.Name = "txtWorkingBoard";
             this.txtWorkingBoard.ReadOnly = true;
             this.txtWorkingBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWorkingBoard.Size = new System.Drawing.Size(600, 529);
+            this.txtWorkingBoard.Size = new System.Drawing.Size(600, 580);
             this.txtWorkingBoard.TabIndex = 2;
             this.txtWorkingBoard.Text = resources.GetString("txtWorkingBoard.Text");
             // 
@@ -503,7 +504,7 @@
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEx1.Location = new System.Drawing.Point(1, 1);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(600, 29);
+            this.panelEx1.Size = new System.Drawing.Size(600, 31);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -518,7 +519,7 @@
             this.lblWorkingRemainingTime.ForeColor = System.Drawing.Color.Red;
             this.lblWorkingRemainingTime.Location = new System.Drawing.Point(486, 4);
             this.lblWorkingRemainingTime.Name = "lblWorkingRemainingTime";
-            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 21);
+            this.lblWorkingRemainingTime.Size = new System.Drawing.Size(65, 23);
             this.lblWorkingRemainingTime.TabIndex = 4;
             this.lblWorkingRemainingTime.Text = "00:21:35";
             this.lblWorkingRemainingTime.Visible = false;
@@ -527,7 +528,7 @@
             // 
             this.lblNextWorkingTime.Location = new System.Drawing.Point(180, 4);
             this.lblNextWorkingTime.Name = "lblNextWorkingTime";
-            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 21);
+            this.lblNextWorkingTime.Size = new System.Drawing.Size(267, 23);
             this.lblNextWorkingTime.TabIndex = 2;
             this.lblNextWorkingTime.Text = "距下次工作(2009-03-03 14:00:00)还有：";
             this.lblNextWorkingTime.Visible = false;
@@ -539,7 +540,7 @@
             this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(98, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 21);
+            this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "停止工作";
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
@@ -550,7 +551,7 @@
             this.btnStart.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnStart.Location = new System.Drawing.Point(17, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 21);
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "开始工作";
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -565,10 +566,10 @@
             // 
             this.tabControlPanel5.Controls.Add(this.txtWhatsNew);
             this.tabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel5.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel5.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanel5.Name = "tabControlPanel5";
             this.tabControlPanel5.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel5.Size = new System.Drawing.Size(602, 560);
+            this.tabControlPanel5.Size = new System.Drawing.Size(602, 613);
             this.tabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -592,7 +593,7 @@
             this.txtWhatsNew.Name = "txtWhatsNew";
             this.txtWhatsNew.ReadOnly = true;
             this.txtWhatsNew.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWhatsNew.Size = new System.Drawing.Size(600, 558);
+            this.txtWhatsNew.Size = new System.Drawing.Size(600, 611);
             this.txtWhatsNew.TabIndex = 0;
             this.txtWhatsNew.Text = resources.GetString("txtWhatsNew.Text");
             // 
@@ -602,15 +603,88 @@
             this.tabItem5.Name = "tabItem5";
             this.tabItem5.Text = "更新历史";
             // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Controls.Add(this.splitContainer1);
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 23);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(602, 613);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 3;
+            this.tabControlPanel3.TabItem = this.tabItem3;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtInTimeNotice);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.txtInTimeBoard);
+            this.splitContainer1.Size = new System.Drawing.Size(600, 611);
+            this.splitContainer1.SplitterDistance = 218;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // txtInTimeNotice
+            // 
+            this.txtInTimeNotice.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtInTimeNotice.Border.Class = "TextBoxBorder";
+            this.txtInTimeNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtInTimeNotice.Location = new System.Drawing.Point(0, 0);
+            this.txtInTimeNotice.Multiline = true;
+            this.txtInTimeNotice.Name = "txtInTimeNotice";
+            this.txtInTimeNotice.ReadOnly = true;
+            this.txtInTimeNotice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInTimeNotice.Size = new System.Drawing.Size(218, 611);
+            this.txtInTimeNotice.TabIndex = 1;
+            // 
+            // txtInTimeBoard
+            // 
+            this.txtInTimeBoard.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtInTimeBoard.Border.Class = "TextBoxBorder";
+            this.txtInTimeBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtInTimeBoard.Location = new System.Drawing.Point(0, 0);
+            this.txtInTimeBoard.Multiline = true;
+            this.txtInTimeBoard.Name = "txtInTimeBoard";
+            this.txtInTimeBoard.ReadOnly = true;
+            this.txtInTimeBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInTimeBoard.Size = new System.Drawing.Size(378, 611);
+            this.txtInTimeBoard.TabIndex = 0;
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel3;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "第一时间";
+            // 
             // tabControlPanel2
             // 
             this.tabControlPanel2.Controls.Add(this.groupPanel2);
             this.tabControlPanel2.Controls.Add(this.groupPanel1);
             this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(602, 560);
+            this.tabControlPanel2.Size = new System.Drawing.Size(602, 613);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -632,9 +706,9 @@
             this.groupPanel2.Controls.Add(this.btnNewAccount);
             this.groupPanel2.Controls.Add(this.labelX7);
             this.groupPanel2.Controls.Add(this.lsbAccount);
-            this.groupPanel2.Location = new System.Drawing.Point(9, 67);
+            this.groupPanel2.Location = new System.Drawing.Point(9, 73);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(581, 487);
+            this.groupPanel2.Size = new System.Drawing.Size(581, 528);
             // 
             // 
             // 
@@ -663,7 +737,7 @@
             this.contextMenuBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.biAccountList,
             this.biFriendList});
-            this.contextMenuBar2.Location = new System.Drawing.Point(24, 174);
+            this.contextMenuBar2.Location = new System.Drawing.Point(24, 189);
             this.contextMenuBar2.Name = "contextMenuBar2";
             this.contextMenuBar2.Size = new System.Drawing.Size(108, 47);
             this.contextMenuBar2.Stretch = true;
@@ -774,9 +848,9 @@
             this.groupPanel5.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel5.Controls.Add(this.lblNetworkingStatus);
-            this.groupPanel5.Location = new System.Drawing.Point(210, 11);
+            this.groupPanel5.Location = new System.Drawing.Point(210, 12);
             this.groupPanel5.Name = "groupPanel5";
-            this.groupPanel5.Size = new System.Drawing.Size(207, 60);
+            this.groupPanel5.Size = new System.Drawing.Size(207, 65);
             // 
             // 
             // 
@@ -803,9 +877,9 @@
             // lblNetworkingStatus
             // 
             this.lblNetworkingStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblNetworkingStatus.Location = new System.Drawing.Point(6, 16);
+            this.lblNetworkingStatus.Location = new System.Drawing.Point(6, 17);
             this.lblNetworkingStatus.Name = "lblNetworkingStatus";
-            this.lblNetworkingStatus.Size = new System.Drawing.Size(192, 23);
+            this.lblNetworkingStatus.Size = new System.Drawing.Size(192, 25);
             this.lblNetworkingStatus.TabIndex = 5;
             // 
             // groupPanel4
@@ -840,9 +914,9 @@
             this.groupPanel4.Controls.Add(this.dgvFriendList);
             this.groupPanel4.Controls.Add(this.btnSaveAccount);
             this.groupPanel4.Controls.Add(this.cbxIsOperation);
-            this.groupPanel4.Location = new System.Drawing.Point(178, 60);
+            this.groupPanel4.Location = new System.Drawing.Point(178, 65);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(394, 397);
+            this.groupPanel4.Size = new System.Drawing.Size(394, 430);
             // 
             // 
             // 
@@ -868,9 +942,9 @@
             // ckxUseToAll
             // 
             this.ckxUseToAll.BackColor = System.Drawing.Color.Transparent;
-            this.ckxUseToAll.Location = new System.Drawing.Point(180, 360);
+            this.ckxUseToAll.Location = new System.Drawing.Point(180, 390);
             this.ckxUseToAll.Name = "ckxUseToAll";
-            this.ckxUseToAll.Size = new System.Drawing.Size(87, 23);
+            this.ckxUseToAll.Size = new System.Drawing.Size(87, 25);
             this.ckxUseToAll.TabIndex = 50;
             this.ckxUseToAll.Text = "运用到所有";
             this.ckxUseToAll.TextColor = System.Drawing.Color.Red;
@@ -878,9 +952,9 @@
             // ckxAutoHavestHeartField
             // 
             this.ckxAutoHavestHeartField.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoHavestHeartField.Location = new System.Drawing.Point(64, 306);
+            this.ckxAutoHavestHeartField.Location = new System.Drawing.Point(64, 332);
             this.ckxAutoHavestHeartField.Name = "ckxAutoHavestHeartField";
-            this.ckxAutoHavestHeartField.Size = new System.Drawing.Size(98, 23);
+            this.ckxAutoHavestHeartField.Size = new System.Drawing.Size(98, 25);
             this.ckxAutoHavestHeartField.TabIndex = 49;
             this.ckxAutoHavestHeartField.Text = "收获爱心地";
             // 
@@ -891,7 +965,7 @@
             this.cbxHeartCrops.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxHeartCrops.FormattingEnabled = true;
             this.cbxHeartCrops.ItemHeight = 15;
-            this.cbxHeartCrops.Location = new System.Drawing.Point(230, 247);
+            this.cbxHeartCrops.Location = new System.Drawing.Point(230, 268);
             this.cbxHeartCrops.Name = "cbxHeartCrops";
             this.cbxHeartCrops.Size = new System.Drawing.Size(82, 21);
             this.cbxHeartCrops.TabIndex = 48;
@@ -899,45 +973,45 @@
             // labelX13
             // 
             this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            this.labelX13.Location = new System.Drawing.Point(190, 249);
+            this.labelX13.Location = new System.Drawing.Point(190, 270);
             this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(45, 21);
+            this.labelX13.Size = new System.Drawing.Size(45, 23);
             this.labelX13.TabIndex = 47;
             this.labelX13.Text = "爱心：";
             // 
             // ckxIsCare
             // 
             this.ckxIsCare.BackColor = System.Drawing.Color.Transparent;
-            this.ckxIsCare.Location = new System.Drawing.Point(13, 360);
+            this.ckxIsCare.Location = new System.Drawing.Point(13, 390);
             this.ckxIsCare.Name = "ckxIsCare";
-            this.ckxIsCare.Size = new System.Drawing.Size(93, 23);
+            this.ckxIsCare.Size = new System.Drawing.Size(93, 25);
             this.ckxIsCare.TabIndex = 46;
             this.ckxIsCare.Text = "提防菜老伯";
             // 
             // ckxAutoStealInTime
             // 
             this.ckxAutoStealInTime.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoStealInTime.Location = new System.Drawing.Point(272, 306);
+            this.ckxAutoStealInTime.Location = new System.Drawing.Point(272, 332);
             this.ckxAutoStealInTime.Name = "ckxAutoStealInTime";
-            this.ckxAutoStealInTime.Size = new System.Drawing.Size(99, 23);
+            this.ckxAutoStealInTime.Size = new System.Drawing.Size(99, 25);
             this.ckxAutoStealInTime.TabIndex = 45;
             this.ckxAutoStealInTime.Text = "第一时间偷盗";
             // 
             // ckxAutoHavestInTime
             // 
             this.ckxAutoHavestInTime.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoHavestInTime.Location = new System.Drawing.Point(160, 306);
+            this.ckxAutoHavestInTime.Location = new System.Drawing.Point(160, 332);
             this.ckxAutoHavestInTime.Name = "ckxAutoHavestInTime";
-            this.ckxAutoHavestInTime.Size = new System.Drawing.Size(103, 23);
+            this.ckxAutoHavestInTime.Size = new System.Drawing.Size(103, 25);
             this.ckxAutoHavestInTime.TabIndex = 44;
             this.ckxAutoHavestInTime.Text = "第一时间收获";
             // 
             // labelX12
             // 
             this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            this.labelX12.Location = new System.Drawing.Point(271, 332);
+            this.labelX12.Location = new System.Drawing.Point(271, 360);
             this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(64, 21);
+            this.labelX12.Size = new System.Drawing.Size(64, 23);
             this.labelX12.TabIndex = 43;
             this.labelX12.Text = "及以上";
             // 
@@ -948,7 +1022,7 @@
             this.cbxStealCrops.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStealCrops.FormattingEnabled = true;
             this.cbxStealCrops.ItemHeight = 15;
-            this.cbxStealCrops.Location = new System.Drawing.Point(191, 333);
+            this.cbxStealCrops.Location = new System.Drawing.Point(191, 361);
             this.cbxStealCrops.Name = "cbxStealCrops";
             this.cbxStealCrops.Size = new System.Drawing.Size(76, 21);
             this.cbxStealCrops.TabIndex = 42;
@@ -956,36 +1030,36 @@
             // labelX11
             // 
             this.labelX11.BackColor = System.Drawing.Color.Transparent;
-            this.labelX11.Location = new System.Drawing.Point(133, 333);
+            this.labelX11.Location = new System.Drawing.Point(133, 361);
             this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(64, 21);
+            this.labelX11.Size = new System.Drawing.Size(64, 23);
             this.labelX11.TabIndex = 41;
             this.labelX11.Text = "只偷取：";
             // 
             // ckxIsUsingPrivateSetting
             // 
             this.ckxIsUsingPrivateSetting.BackColor = System.Drawing.Color.Transparent;
-            this.ckxIsUsingPrivateSetting.Location = new System.Drawing.Point(312, 247);
+            this.ckxIsUsingPrivateSetting.Location = new System.Drawing.Point(312, 268);
             this.ckxIsUsingPrivateSetting.Name = "ckxIsUsingPrivateSetting";
-            this.ckxIsUsingPrivateSetting.Size = new System.Drawing.Size(78, 23);
+            this.ckxIsUsingPrivateSetting.Size = new System.Drawing.Size(78, 25);
             this.ckxIsUsingPrivateSetting.TabIndex = 40;
             this.ckxIsUsingPrivateSetting.Text = "以此为准";
             // 
             // ckbAutoSell
             // 
             this.ckbAutoSell.BackColor = System.Drawing.Color.Transparent;
-            this.ckbAutoSell.Location = new System.Drawing.Point(69, 332);
+            this.ckbAutoSell.Location = new System.Drawing.Point(69, 360);
             this.ckbAutoSell.Name = "ckbAutoSell";
-            this.ckbAutoSell.Size = new System.Drawing.Size(79, 23);
+            this.ckbAutoSell.Size = new System.Drawing.Size(79, 25);
             this.ckbAutoSell.TabIndex = 39;
             this.ckbAutoSell.Text = "出售";
             // 
             // ckxAutoGrass
             // 
             this.ckxAutoGrass.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoGrass.Location = new System.Drawing.Point(253, 274);
+            this.ckxAutoGrass.Location = new System.Drawing.Point(253, 297);
             this.ckxAutoGrass.Name = "ckxAutoGrass";
-            this.ckxAutoGrass.Size = new System.Drawing.Size(53, 23);
+            this.ckxAutoGrass.Size = new System.Drawing.Size(53, 25);
             this.ckxAutoGrass.TabIndex = 38;
             this.ckxAutoGrass.Text = "锄草";
             // 
@@ -1032,34 +1106,34 @@
             this.labelX10.BackColor = System.Drawing.Color.Transparent;
             this.labelX10.Location = new System.Drawing.Point(107, 3);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(123, 21);
+            this.labelX10.Size = new System.Drawing.Size(123, 23);
             this.labelX10.TabIndex = 36;
             this.labelX10.Text = "好友花园浇水下限：";
             // 
             // ckxAutoHavest
             // 
             this.ckxAutoHavest.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoHavest.Location = new System.Drawing.Point(8, 306);
+            this.ckxAutoHavest.Location = new System.Drawing.Point(8, 332);
             this.ckxAutoHavest.Name = "ckxAutoHavest";
-            this.ckxAutoHavest.Size = new System.Drawing.Size(63, 23);
+            this.ckxAutoHavest.Size = new System.Drawing.Size(63, 25);
             this.ckxAutoHavest.TabIndex = 35;
             this.ckxAutoHavest.Text = "收获";
             // 
             // ckxAutoBuySeed
             // 
             this.ckxAutoBuySeed.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoBuySeed.Location = new System.Drawing.Point(10, 332);
+            this.ckxAutoBuySeed.Location = new System.Drawing.Point(10, 360);
             this.ckxAutoBuySeed.Name = "ckxAutoBuySeed";
-            this.ckxAutoBuySeed.Size = new System.Drawing.Size(64, 23);
+            this.ckxAutoBuySeed.Size = new System.Drawing.Size(64, 25);
             this.ckxAutoBuySeed.TabIndex = 34;
             this.ckxAutoBuySeed.Text = "购买";
             // 
             // ckxAutoPlough
             // 
             this.ckxAutoPlough.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoPlough.Location = new System.Drawing.Point(312, 274);
+            this.ckxAutoPlough.Location = new System.Drawing.Point(312, 297);
             this.ckxAutoPlough.Name = "ckxAutoPlough";
-            this.ckxAutoPlough.Size = new System.Drawing.Size(60, 23);
+            this.ckxAutoPlough.Size = new System.Drawing.Size(60, 25);
             this.ckxAutoPlough.TabIndex = 33;
             this.ckxAutoPlough.Text = "犁地";
             // 
@@ -1070,7 +1144,7 @@
             this.cbxCrops.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCrops.FormattingEnabled = true;
             this.cbxCrops.ItemHeight = 15;
-            this.cbxCrops.Location = new System.Drawing.Point(101, 248);
+            this.cbxCrops.Location = new System.Drawing.Point(101, 269);
             this.cbxCrops.Name = "cbxCrops";
             this.cbxCrops.Size = new System.Drawing.Size(83, 21);
             this.cbxCrops.TabIndex = 32;
@@ -1078,18 +1152,18 @@
             // labelX4
             // 
             this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            this.labelX4.Location = new System.Drawing.Point(61, 250);
+            this.labelX4.Location = new System.Drawing.Point(61, 271);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(45, 21);
+            this.labelX4.Size = new System.Drawing.Size(45, 23);
             this.labelX4.TabIndex = 31;
             this.labelX4.Text = "自家：";
             // 
             // ckxAutoFarm
             // 
             this.ckxAutoFarm.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoFarm.Location = new System.Drawing.Point(8, 250);
+            this.ckxAutoFarm.Location = new System.Drawing.Point(8, 271);
             this.ckxAutoFarm.Name = "ckxAutoFarm";
-            this.ckxAutoFarm.Size = new System.Drawing.Size(63, 23);
+            this.ckxAutoFarm.Size = new System.Drawing.Size(63, 25);
             this.ckxAutoFarm.TabIndex = 30;
             this.ckxAutoFarm.Text = "播种";
             this.ckxAutoFarm.CheckedChanged += new System.EventHandler(this.ckxAutoFarm_CheckedChanged);
@@ -1097,9 +1171,9 @@
             // ckxAutoVermin
             // 
             this.ckxAutoVermin.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoVermin.Location = new System.Drawing.Point(193, 275);
+            this.ckxAutoVermin.Location = new System.Drawing.Point(193, 298);
             this.ckxAutoVermin.Name = "ckxAutoVermin";
-            this.ckxAutoVermin.Size = new System.Drawing.Size(62, 23);
+            this.ckxAutoVermin.Size = new System.Drawing.Size(62, 25);
             this.ckxAutoVermin.TabIndex = 29;
             this.ckxAutoVermin.Text = "捉虫";
             // 
@@ -1116,7 +1190,7 @@
             this.comboItem11,
             this.comboItem12,
             this.comboItem13});
-            this.cbxWater.Location = new System.Drawing.Point(127, 278);
+            this.cbxWater.Location = new System.Drawing.Point(127, 301);
             this.cbxWater.Name = "cbxWater";
             this.cbxWater.Size = new System.Drawing.Size(54, 21);
             this.cbxWater.TabIndex = 28;
@@ -1144,18 +1218,18 @@
             // labelX1
             // 
             this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            this.labelX1.Location = new System.Drawing.Point(64, 278);
+            this.labelX1.Location = new System.Drawing.Point(64, 301);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(72, 21);
+            this.labelX1.Size = new System.Drawing.Size(72, 23);
             this.labelX1.TabIndex = 22;
             this.labelX1.Text = "浇水下限：";
             // 
             // ckxAutoWater
             // 
             this.ckxAutoWater.BackColor = System.Drawing.Color.Transparent;
-            this.ckxAutoWater.Location = new System.Drawing.Point(10, 278);
+            this.ckxAutoWater.Location = new System.Drawing.Point(10, 301);
             this.ckxAutoWater.Name = "ckxAutoWater";
-            this.ckxAutoWater.Size = new System.Drawing.Size(48, 23);
+            this.ckxAutoWater.Size = new System.Drawing.Size(48, 25);
             this.ckxAutoWater.TabIndex = 20;
             this.ckxAutoWater.Text = "浇水";
             this.ckxAutoWater.CheckedChanged += new System.EventHandler(this.ckxAutoWater_CheckedChanged);
@@ -1176,21 +1250,21 @@
             this.浇水,
             this.捉虫,
             this.锄草});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFriendList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvFriendList.Location = new System.Drawing.Point(3, 30);
+            this.dgvFriendList.Location = new System.Drawing.Point(3, 33);
             this.dgvFriendList.MultiSelect = false;
             this.dgvFriendList.Name = "dgvFriendList";
             this.dgvFriendList.RowTemplate.Height = 23;
             this.dgvFriendList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvFriendList.Size = new System.Drawing.Size(382, 211);
+            this.dgvFriendList.Size = new System.Drawing.Size(382, 229);
             this.dgvFriendList.TabIndex = 18;
             this.dgvFriendList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvFriendList_MouseClick);
             this.dgvFriendList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFriendList_CellEndEdit);
@@ -1254,9 +1328,9 @@
             // 
             this.btnSaveAccount.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSaveAccount.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveAccount.Location = new System.Drawing.Point(272, 360);
+            this.btnSaveAccount.Location = new System.Drawing.Point(272, 390);
             this.btnSaveAccount.Name = "btnSaveAccount";
-            this.btnSaveAccount.Size = new System.Drawing.Size(109, 28);
+            this.btnSaveAccount.Size = new System.Drawing.Size(109, 30);
             this.btnSaveAccount.TabIndex = 5;
             this.btnSaveAccount.Text = "保存帐号设置";
             this.btnSaveAccount.Click += new System.EventHandler(this.btnSaveAccount_Click);
@@ -1269,7 +1343,7 @@
             this.cbxIsOperation.CheckValue = "Y";
             this.cbxIsOperation.Location = new System.Drawing.Point(4, 4);
             this.cbxIsOperation.Name = "cbxIsOperation";
-            this.cbxIsOperation.Size = new System.Drawing.Size(76, 21);
+            this.cbxIsOperation.Size = new System.Drawing.Size(76, 23);
             this.cbxIsOperation.TabIndex = 1;
             this.cbxIsOperation.Text = "是否操作";
             // 
@@ -1284,7 +1358,7 @@
             this.groupPanel3.Controls.Add(this.labelX8);
             this.groupPanel3.Location = new System.Drawing.Point(178, 3);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(394, 50);
+            this.groupPanel3.Size = new System.Drawing.Size(394, 54);
             // 
             // 
             // 
@@ -1311,45 +1385,45 @@
             // 
             this.btnLoadFriend.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnLoadFriend.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLoadFriend.Location = new System.Drawing.Point(246, 7);
+            this.btnLoadFriend.Location = new System.Drawing.Point(246, 8);
             this.btnLoadFriend.Name = "btnLoadFriend";
-            this.btnLoadFriend.Size = new System.Drawing.Size(89, 33);
+            this.btnLoadFriend.Size = new System.Drawing.Size(89, 36);
             this.btnLoadFriend.TabIndex = 5;
             this.btnLoadFriend.Text = "加载好友信息";
             this.btnLoadFriend.Click += new System.EventHandler(this.btnLoadFriend_Click);
             // 
             // txtNewLoginPwd
             // 
-            this.txtNewLoginPwd.Location = new System.Drawing.Point(57, 26);
+            this.txtNewLoginPwd.Location = new System.Drawing.Point(57, 28);
             this.txtNewLoginPwd.Name = "txtNewLoginPwd";
             this.txtNewLoginPwd.PasswordChar = '*';
-            this.txtNewLoginPwd.Size = new System.Drawing.Size(145, 14);
+            this.txtNewLoginPwd.Size = new System.Drawing.Size(145, 13);
             this.txtNewLoginPwd.TabIndex = 4;
             this.txtNewLoginPwd.WatermarkText = "请输入密码...";
             // 
             // labelX9
             // 
             this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            this.labelX9.Location = new System.Drawing.Point(17, 26);
+            this.labelX9.Location = new System.Drawing.Point(17, 28);
             this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(45, 21);
+            this.labelX9.Size = new System.Drawing.Size(45, 23);
             this.labelX9.TabIndex = 3;
             this.labelX9.Text = "密码：";
             // 
             // txtNewLoginEmail
             // 
-            this.txtNewLoginEmail.Location = new System.Drawing.Point(57, 6);
+            this.txtNewLoginEmail.Location = new System.Drawing.Point(57, 7);
             this.txtNewLoginEmail.Name = "txtNewLoginEmail";
-            this.txtNewLoginEmail.Size = new System.Drawing.Size(145, 14);
+            this.txtNewLoginEmail.Size = new System.Drawing.Size(145, 13);
             this.txtNewLoginEmail.TabIndex = 2;
             this.txtNewLoginEmail.WatermarkText = "请输入帐号...";
             // 
             // labelX8
             // 
             this.labelX8.BackColor = System.Drawing.Color.Transparent;
-            this.labelX8.Location = new System.Drawing.Point(17, 7);
+            this.labelX8.Location = new System.Drawing.Point(17, 8);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(45, 21);
+            this.labelX8.Size = new System.Drawing.Size(45, 23);
             this.labelX8.TabIndex = 1;
             this.labelX8.Text = "帐号：";
             // 
@@ -1359,7 +1433,7 @@
             this.btnNewAccount.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnNewAccount.Location = new System.Drawing.Point(113, 1);
             this.btnNewAccount.Name = "btnNewAccount";
-            this.btnNewAccount.Size = new System.Drawing.Size(55, 21);
+            this.btnNewAccount.Size = new System.Drawing.Size(55, 23);
             this.btnNewAccount.TabIndex = 2;
             this.btnNewAccount.Text = "新建帐号";
             this.btnNewAccount.Click += new System.EventHandler(this.btnNewAccount_Click);
@@ -1369,7 +1443,7 @@
             this.labelX7.BackColor = System.Drawing.Color.Transparent;
             this.labelX7.Location = new System.Drawing.Point(9, 3);
             this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(98, 21);
+            this.labelX7.Size = new System.Drawing.Size(98, 23);
             this.labelX7.TabIndex = 1;
             this.labelX7.Text = "双击选择帐号↓";
             // 
@@ -1380,10 +1454,10 @@
             // 
             this.lsbAccount.Border.Class = "ListViewBorder";
             this.lsbAccount.FullRowSelect = true;
-            this.lsbAccount.Location = new System.Drawing.Point(10, 26);
+            this.lsbAccount.Location = new System.Drawing.Point(10, 28);
             this.lsbAccount.MultiSelect = false;
             this.lsbAccount.Name = "lsbAccount";
-            this.lsbAccount.Size = new System.Drawing.Size(162, 431);
+            this.lsbAccount.Size = new System.Drawing.Size(162, 467);
             this.lsbAccount.TabIndex = 0;
             this.lsbAccount.UseCompatibleStateImageBehavior = false;
             this.lsbAccount.View = System.Windows.Forms.View.List;
@@ -1403,7 +1477,7 @@
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Location = new System.Drawing.Point(9, 4);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(581, 56);
+            this.groupPanel1.Size = new System.Drawing.Size(581, 61);
             // 
             // 
             // 
@@ -1431,9 +1505,9 @@
             // 
             this.btnCropsCustomSetting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCropsCustomSetting.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCropsCustomSetting.Location = new System.Drawing.Point(457, 6);
+            this.btnCropsCustomSetting.Location = new System.Drawing.Point(457, 7);
             this.btnCropsCustomSetting.Name = "btnCropsCustomSetting";
-            this.btnCropsCustomSetting.Size = new System.Drawing.Size(109, 21);
+            this.btnCropsCustomSetting.Size = new System.Drawing.Size(109, 23);
             this.btnCropsCustomSetting.TabIndex = 7;
             this.btnCropsCustomSetting.Text = "自定义播种农作物";
             this.btnCropsCustomSetting.Click += new System.EventHandler(this.btnCropsCustomSetting_Click);
@@ -1444,9 +1518,9 @@
             this.balloonTip1.SetBalloonCaption(this.btnSaveGlobalSetting, null);
             this.balloonTip1.SetBalloonText(this.btnSaveGlobalSetting, "你修改了全局设置吗？别忘了点我！");
             this.btnSaveGlobalSetting.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveGlobalSetting.Location = new System.Drawing.Point(371, 6);
+            this.btnSaveGlobalSetting.Location = new System.Drawing.Point(371, 7);
             this.btnSaveGlobalSetting.Name = "btnSaveGlobalSetting";
-            this.btnSaveGlobalSetting.Size = new System.Drawing.Size(75, 21);
+            this.btnSaveGlobalSetting.Size = new System.Drawing.Size(75, 23);
             this.btnSaveGlobalSetting.TabIndex = 6;
             this.btnSaveGlobalSetting.Text = "保存设置";
             this.btnSaveGlobalSetting.Click += new System.EventHandler(this.btnSaveGlobalSetting_Click);
@@ -1454,9 +1528,9 @@
             // labelX5
             // 
             this.labelX5.BackColor = System.Drawing.Color.Transparent;
-            this.labelX5.Location = new System.Drawing.Point(329, 7);
+            this.labelX5.Location = new System.Drawing.Point(329, 8);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(33, 21);
+            this.labelX5.Size = new System.Drawing.Size(33, 23);
             this.labelX5.TabIndex = 5;
             this.labelX5.Text = "(秒)";
             // 
@@ -1466,30 +1540,30 @@
             // 
             // 
             this.txtNetDelay.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtNetDelay.Location = new System.Drawing.Point(268, 7);
+            this.txtNetDelay.Location = new System.Drawing.Point(268, 8);
             this.txtNetDelay.MaxValue = 30;
             this.txtNetDelay.MinValue = 3;
             this.txtNetDelay.Name = "txtNetDelay";
             this.txtNetDelay.ShowUpDown = true;
-            this.txtNetDelay.Size = new System.Drawing.Size(55, 21);
+            this.txtNetDelay.Size = new System.Drawing.Size(55, 20);
             this.txtNetDelay.TabIndex = 4;
             this.txtNetDelay.Value = 3;
             // 
             // labelX6
             // 
             this.labelX6.BackColor = System.Drawing.Color.Transparent;
-            this.labelX6.Location = new System.Drawing.Point(200, 7);
+            this.labelX6.Location = new System.Drawing.Point(200, 8);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(72, 21);
+            this.labelX6.Size = new System.Drawing.Size(72, 23);
             this.labelX6.TabIndex = 3;
             this.labelX6.Text = "网络延迟：";
             // 
             // labelX3
             // 
             this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            this.labelX3.Location = new System.Drawing.Point(144, 8);
+            this.labelX3.Location = new System.Drawing.Point(144, 9);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(52, 21);
+            this.labelX3.Size = new System.Drawing.Size(52, 23);
             this.labelX3.TabIndex = 2;
             this.labelX3.Text = "(分钟)";
             // 
@@ -1501,21 +1575,21 @@
             this.txtParkingInterval.BackgroundStyle.Class = "DateTimeInputBackground";
             this.balloonTip1.SetBalloonCaption(this.txtParkingInterval, null);
             this.balloonTip1.SetBalloonText(this.txtParkingInterval, "简单的说就是设置农夫多久工作一次了");
-            this.txtParkingInterval.Location = new System.Drawing.Point(82, 8);
+            this.txtParkingInterval.Location = new System.Drawing.Point(82, 9);
             this.txtParkingInterval.MaxValue = 720;
             this.txtParkingInterval.MinValue = 0;
             this.txtParkingInterval.Name = "txtParkingInterval";
             this.txtParkingInterval.ShowUpDown = true;
-            this.txtParkingInterval.Size = new System.Drawing.Size(55, 21);
+            this.txtParkingInterval.Size = new System.Drawing.Size(55, 20);
             this.txtParkingInterval.TabIndex = 1;
             this.txtParkingInterval.Value = 60;
             // 
             // labelX2
             // 
             this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            this.labelX2.Location = new System.Drawing.Point(14, 8);
+            this.labelX2.Location = new System.Drawing.Point(14, 9);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 21);
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "工作周期：";
             // 
@@ -1525,151 +1599,14 @@
             this.tabItem2.Name = "tabItem2";
             this.tabItem2.Text = "农夫设置";
             // 
-            // tabControlPanel4
-            // 
-            this.tabControlPanel4.Controls.Add(this.dgvContributory);
-            this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel4.Location = new System.Drawing.Point(0, 25);
-            this.tabControlPanel4.Name = "tabControlPanel4";
-            this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel4.Size = new System.Drawing.Size(602, 560);
-            this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel4.Style.GradientAngle = 90;
-            this.tabControlPanel4.TabIndex = 4;
-            this.tabControlPanel4.TabItem = this.tabItem4;
-            // 
-            // dgvContributory
-            // 
-            this.dgvContributory.AllowUserToAddRows = false;
-            this.dgvContributory.AllowUserToDeleteRows = false;
-            this.dgvContributory.AllowUserToResizeColumns = false;
-            this.dgvContributory.AllowUserToResizeRows = false;
-            this.dgvContributory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContributory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.贡献者,
-            this.贡献简介});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContributory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvContributory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvContributory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvContributory.Location = new System.Drawing.Point(1, 1);
-            this.dgvContributory.Name = "dgvContributory";
-            this.dgvContributory.ReadOnly = true;
-            this.dgvContributory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvContributory.Size = new System.Drawing.Size(600, 558);
-            this.dgvContributory.TabIndex = 0;
-            // 
-            // 贡献者
-            // 
-            this.贡献者.HeaderText = "贡献者/组织";
-            this.贡献者.Name = "贡献者";
-            this.贡献者.ReadOnly = true;
-            // 
-            // 贡献简介
-            // 
-            this.贡献简介.HeaderText = "贡献情况";
-            this.贡献简介.Name = "贡献简介";
-            this.贡献简介.ReadOnly = true;
-            this.贡献简介.Width = 480;
-            // 
-            // tabItem4
-            // 
-            this.tabItem4.AttachedControl = this.tabControlPanel4;
-            this.tabItem4.Name = "tabItem4";
-            this.tabItem4.Text = "卓越贡献";
-            // 
-            // tabControlPanel3
-            // 
-            this.tabControlPanel3.Controls.Add(this.splitContainer1);
-            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 25);
-            this.tabControlPanel3.Name = "tabControlPanel3";
-            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(602, 560);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel3.Style.GradientAngle = 90;
-            this.tabControlPanel3.TabIndex = 3;
-            this.tabControlPanel3.TabItem = this.tabItem3;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.txtInTimeNotice);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.txtInTimeBoard);
-            this.splitContainer1.Size = new System.Drawing.Size(600, 558);
-            this.splitContainer1.SplitterDistance = 218;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // txtInTimeNotice
-            // 
-            this.txtInTimeNotice.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtInTimeNotice.Border.Class = "TextBoxBorder";
-            this.txtInTimeNotice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtInTimeNotice.Location = new System.Drawing.Point(0, 0);
-            this.txtInTimeNotice.Multiline = true;
-            this.txtInTimeNotice.Name = "txtInTimeNotice";
-            this.txtInTimeNotice.ReadOnly = true;
-            this.txtInTimeNotice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInTimeNotice.Size = new System.Drawing.Size(218, 558);
-            this.txtInTimeNotice.TabIndex = 1;
-            // 
-            // txtInTimeBoard
-            // 
-            this.txtInTimeBoard.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtInTimeBoard.Border.Class = "TextBoxBorder";
-            this.txtInTimeBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtInTimeBoard.Location = new System.Drawing.Point(0, 0);
-            this.txtInTimeBoard.Multiline = true;
-            this.txtInTimeBoard.Name = "txtInTimeBoard";
-            this.txtInTimeBoard.ReadOnly = true;
-            this.txtInTimeBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInTimeBoard.Size = new System.Drawing.Size(378, 558);
-            this.txtInTimeBoard.TabIndex = 0;
-            // 
-            // tabItem3
-            // 
-            this.tabItem3.AttachedControl = this.tabControlPanel3;
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Text = "第一时间";
-            // 
             // tabControlPanel6
             // 
             this.tabControlPanel6.Controls.Add(this.dgvSummary);
             this.tabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel6.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel6.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanel6.Name = "tabControlPanel6";
             this.tabControlPanel6.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel6.Size = new System.Drawing.Size(602, 560);
+            this.tabControlPanel6.Size = new System.Drawing.Size(602, 613);
             this.tabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1693,20 +1630,20 @@
             this.浇水次数,
             this.捉虫次数,
             this.锄草次数});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSummary.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSummary.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSummary.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvSummary.Location = new System.Drawing.Point(1, 1);
             this.dgvSummary.Name = "dgvSummary";
             this.dgvSummary.ReadOnly = true;
-            this.dgvSummary.Size = new System.Drawing.Size(600, 558);
+            this.dgvSummary.Size = new System.Drawing.Size(600, 611);
             this.dgvSummary.TabIndex = 0;
             // 
             // 帐号
@@ -1714,6 +1651,7 @@
             this.帐号.HeaderText = "帐号";
             this.帐号.Name = "帐号";
             this.帐号.ReadOnly = true;
+            this.帐号.Width = 140;
             // 
             // 偷盗次数
             // 
@@ -1756,6 +1694,70 @@
             this.tabItem6.Name = "tabItem6";
             this.tabItem6.Text = "数据统计";
             // 
+            // tabControlPanel4
+            // 
+            this.tabControlPanel4.Controls.Add(this.dgvContributory);
+            this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel4.Location = new System.Drawing.Point(0, 23);
+            this.tabControlPanel4.Name = "tabControlPanel4";
+            this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel4.Size = new System.Drawing.Size(602, 613);
+            this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel4.Style.GradientAngle = 90;
+            this.tabControlPanel4.TabIndex = 4;
+            this.tabControlPanel4.TabItem = this.tabItem4;
+            // 
+            // dgvContributory
+            // 
+            this.dgvContributory.AllowUserToAddRows = false;
+            this.dgvContributory.AllowUserToDeleteRows = false;
+            this.dgvContributory.AllowUserToResizeColumns = false;
+            this.dgvContributory.AllowUserToResizeRows = false;
+            this.dgvContributory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContributory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.贡献者,
+            this.贡献简介});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContributory.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvContributory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvContributory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvContributory.Location = new System.Drawing.Point(1, 1);
+            this.dgvContributory.Name = "dgvContributory";
+            this.dgvContributory.ReadOnly = true;
+            this.dgvContributory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvContributory.Size = new System.Drawing.Size(600, 611);
+            this.dgvContributory.TabIndex = 0;
+            // 
+            // 贡献者
+            // 
+            this.贡献者.HeaderText = "贡献者/组织";
+            this.贡献者.Name = "贡献者";
+            this.贡献者.ReadOnly = true;
+            // 
+            // 贡献简介
+            // 
+            this.贡献简介.HeaderText = "贡献情况";
+            this.贡献简介.Name = "贡献简介";
+            this.贡献简介.ReadOnly = true;
+            this.贡献简介.Width = 480;
+            // 
+            // tabItem4
+            // 
+            this.tabItem4.AttachedControl = this.tabControlPanel4;
+            this.tabItem4.Name = "tabItem4";
+            this.tabItem4.Text = "卓越贡献";
+            // 
             // countDownTimer
             // 
             this.countDownTimer.Interval = 1000;
@@ -1775,9 +1777,9 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 610);
+            this.ClientSize = new System.Drawing.Size(602, 661);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
@@ -1790,7 +1792,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "开心网花园农夫 V1.0 Build20090320 -- By Jailu (高兴网出品)";
+            this.Text = "开心网花园农夫 V1.0 Build20090323 -- By Jailu (高兴网出品)";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
@@ -1801,6 +1803,10 @@
             this.tabControlPanel1.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
             this.tabControlPanel5.ResumeLayout(false);
+            this.tabControlPanel3.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).EndInit();
@@ -1811,14 +1817,10 @@
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).EndInit();
-            this.tabControlPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContributory)).EndInit();
-            this.tabControlPanel3.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.ResumeLayout(false);
             this.tabControlPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSummary)).EndInit();
+            this.tabControlPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContributory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1954,17 +1956,17 @@
         private DevComponents.DotNetBar.TabItem tabItem6;
         private DevComponents.DotNetBar.Controls.CheckBoxX ckxUseToAll;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvSummary;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 帐号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 偷盗次数;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 偷盗总量;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 浇水次数;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 捉虫次数;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 锄草次数;
         private DevComponents.DotNetBar.Controls.TextBoxX txtInTimeNotice;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem biUpdateSeedData;
         private DevComponents.DotNetBar.ButtonItem buttonItem8;
         private DevComponents.DotNetBar.ButtonItem buttonItem9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 帐号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 偷盗次数;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 偷盗总量;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 浇水次数;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 捉虫次数;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 锄草次数;
     }
 }

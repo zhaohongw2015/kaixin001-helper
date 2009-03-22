@@ -2,12 +2,6 @@
 <data>
   <seed>
     <item>
-      <name>水稻</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/shuidao.swf</fruitpic>
-      <seedid>36</seedid>
-      <price>20</price>
-    </item>
-    <item>
       <name>胡萝卜</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/huluobo.swf</fruitpic>
       <seedid>1</seedid>
@@ -48,6 +42,12 @@
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/yumi.swf</fruitpic>
       <seedid>7</seedid>
       <price>150</price>
+    </item>
+    <item>
+      <name>茉莉花</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/moli.swf</fruitpic>
+      <seedid>38</seedid>
+      <price>300</price>
     </item>
     <item>
       <name>豆角</name>

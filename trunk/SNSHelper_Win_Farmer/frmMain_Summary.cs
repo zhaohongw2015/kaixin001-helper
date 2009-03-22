@@ -18,7 +18,7 @@ namespace SNSHelper_Win_Garden
 
             foreach (Summary item in summaryList)
             {
-                if (item.Name == summary.Name)
+                if (item.UID == summary.UID)
                 {
                     isContained = true;
                     item.StealTimes = summary.StealTimes;
@@ -29,7 +29,7 @@ namespace SNSHelper_Win_Garden
 
                     foreach (DataGridViewRow dr in dgvSummary.Rows)
                     {
-                        if (dr.Cells[0].Value.ToString() == summary.Name)
+                        if (dr.Cells[0].Value.ToString() == string.Format("{0} ({1})", summary.Name, summary.UID))
                         {
                             dr.Cells[1].Value = summary.StealTimes;
                             dr.Cells[2].Value = summary.StealedCropsNo;
@@ -48,7 +48,7 @@ namespace SNSHelper_Win_Garden
                 summaryList.Add(summary);
             }
 
-            dgvSummary.Rows.Add(summary.Name, summary.StealTimes, summary.StealedCropsNo, summary.WaterTimes, summary.VerminTimes, summary.GrassTimes);
+            dgvSummary.Rows.Add(string.Format("{0} ({1})", summary.Name, summary.UID), summary.StealTimes, summary.StealedCropsNo, summary.WaterTimes, summary.VerminTimes, summary.GrassTimes);
         }
 
         delegate void MethodWithObject(object o);
@@ -58,17 +58,17 @@ namespace SNSHelper_Win_Garden
             this.Invoke(updateSummaryInThread, new object[] { summary });
         }
 
-        public Summary GetSummary(string name)
+        public Summary GetSummary(string uid, string name)
         {
             foreach (Summary item in summaryList)
             {
-                if (item.Name == name)
+                if (item.UID == uid)
                 {
                     return item;
                 }
             }
 
-            Summary summary = new Summary(name);
+            Summary summary = new Summary(uid, name);
             summaryList.Add(summary);
             return summary;
         }
