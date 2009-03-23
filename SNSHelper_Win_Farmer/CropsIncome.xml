@@ -186,4 +186,10 @@
     <UnitPrice>120000</UnitPrice>
     <Theftproof>3</Theftproof>
   </Crop>
+  <Crop>
+    <Name>爱情果</Name>
+    <GrowthCycle>40</GrowthCycle>
+    <UnitPrice>10000</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
 </Crops>
