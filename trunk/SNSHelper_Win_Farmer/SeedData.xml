@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <seed>
+    <item>
+      <name>水稻</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/shuidao.swf</fruitpic>
+      <seedid>36</seedid>
+      <price>20</price>
+    </item>
     <item>
       <name>胡萝卜</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/huluobo.swf</fruitpic>
@@ -143,7 +149,7 @@
       <name>牡丹</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/mudan.swf</fruitpic>
       <seedid>19</seedid>
-      <price>3000</price>
+      <price>4000</price>
     </item>
     <item>
       <name>百合</name>
