@@ -20,7 +20,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090322b";
+        string currentBuildVersion = "20090323";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -1644,6 +1644,14 @@ namespace SNSHelper_Win_Garden
                 cbxCrops.Items.Add(item.Name);
                 cbxStealCrops.Items.Add(item.Name);
                 cbxHeartCrops.Items.Add(item.Name);
+            }
+        }
+
+        private void 官方交流论坛会员火热抢注中_Click(object sender, EventArgs e)
+        {
+            if (DevComponents.DotNetBar.MessageBoxEx.Show(this, "论坛初建，开放1000个免邀请注册名额，有需要的朋友请抓紧！\r\n是否立即前往官方交流论坛抢注会员？迟了就没了哦^_^", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Process.Start("explorer.exe", "http://bbs.jailu.cn");
             }
         }
     }

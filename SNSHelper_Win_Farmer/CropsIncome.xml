@@ -49,6 +49,12 @@
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
+    <Name>茉莉花</Name>
+    <GrowthCycle>32</GrowthCycle>
+    <UnitPrice>250</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
     <Name>豆角</Name>
     <GrowthCycle>24</GrowthCycle>
     <UnitPrice>120</UnitPrice>
@@ -58,6 +64,12 @@
     <Name>茄子</Name>
     <GrowthCycle>28</GrowthCycle>
     <UnitPrice>140</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
+    <Name>菠菜</Name>
+    <GrowthCycle>28</GrowthCycle>
+    <UnitPrice>130</UnitPrice>
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
@@ -73,21 +85,9 @@
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
-    <Name>菠菜</Name>
-    <GrowthCycle>28</GrowthCycle>
-    <UnitPrice>130</UnitPrice>
-    <Theftproof>0</Theftproof>
-  </Crop>
-  <Crop>
     <Name>桃子</Name>
     <GrowthCycle>36</GrowthCycle>
     <UnitPrice>200</UnitPrice>
-    <Theftproof>0</Theftproof>
-  </Crop>
-  <Crop>
-    <Name>西瓜</Name>
-    <GrowthCycle>40</GrowthCycle>
-    <UnitPrice>300</UnitPrice>
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
@@ -97,21 +97,27 @@
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
+    <Name>西瓜</Name>
+    <GrowthCycle>40</GrowthCycle>
+    <UnitPrice>300</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
     <Name>玫瑰</Name>
     <GrowthCycle>72</GrowthCycle>
     <UnitPrice>1000</UnitPrice>
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
-    <Name>仙人掌</Name>
-    <GrowthCycle>32</GrowthCycle>
-    <UnitPrice>500</UnitPrice>
-    <Theftproof>0</Theftproof>
-  </Crop>
-  <Crop>
     <Name>草莓</Name>
     <GrowthCycle>40</GrowthCycle>
     <UnitPrice>400</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
+    <Name>仙人掌</Name>
+    <GrowthCycle>32</GrowthCycle>
+    <UnitPrice>500</UnitPrice>
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
@@ -129,19 +135,19 @@
   <Crop>
     <Name>神秘玫瑰</Name>
     <GrowthCycle>80</GrowthCycle>
-    <UnitPrice>4000</UnitPrice>
+    <UnitPrice>7000</UnitPrice>
     <Theftproof>4</Theftproof>
   </Crop>
   <Crop>
     <Name>人参果</Name>
-    <GrowthCycle>360</GrowthCycle>
-    <UnitPrice>15000</UnitPrice>
-    <Theftproof>4</Theftproof>
+    <GrowthCycle>48</GrowthCycle>
+    <UnitPrice>4000</UnitPrice>
+    <Theftproof>2</Theftproof>
   </Crop>
   <Crop>
     <Name>牡丹</Name>
-    <GrowthCycle>240</GrowthCycle>
-    <UnitPrice>6000</UnitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <UnitPrice>2200</UnitPrice>
     <Theftproof>1</Theftproof>
   </Crop>
   <Crop>
