@@ -59,9 +59,117 @@ namespace SNSHelper_Win_Garden
 
         #region Show Seed Data
 
+        List<SeedItem> specialSeeds = new List<SeedItem>();
+        List<CropsIncome> specialCropsIncomes = new List<CropsIncome>();
+
+        private void AddSpecialSeed()
+        {
+            SeedItem siHuang = new SeedItem();
+            siHuang.Name = "黄玫瑰";
+            siHuang.Price = 4000;
+            siHuang.SeedID = "35";
+            specialSeeds.Add(siHuang);
+
+            SeedItem siFen = new SeedItem();
+            siFen.Name = "粉玫瑰";
+            siFen.Price = 4000;
+            siFen.SeedID = "34";
+            specialSeeds.Add(siFen);
+
+            SeedItem siBai = new SeedItem();
+            siBai.Name = "白玫瑰";
+            siBai.Price = 4000;
+            siBai.SeedID = "33";
+            specialSeeds.Add(siBai);
+
+            SeedItem siShuangse = new SeedItem();
+            siShuangse.Name = "双色玫瑰";
+            siShuangse.Price = 4000;
+            siShuangse.SeedID = "32";
+            specialSeeds.Add(siShuangse);
+
+            SeedItem siLan = new SeedItem();
+            siLan.Name = "蓝色妖姬";
+            siLan.Price = 4000;
+            siLan.SeedID = "31";
+            specialSeeds.Add(siLan);
+
+            SeedItem siHei = new SeedItem();
+            siHei.Name = "黑玫瑰";
+            siHei.Price = 4000;
+            siHei.SeedID = "30";
+            specialSeeds.Add(siHei);
+
+            SeedItem siLv = new SeedItem();
+            siLv.Name = "绿玫瑰";
+            siLv.Price = 4000;
+            siLv.SeedID = "29";
+            specialSeeds.Add(siLv);
+        }
+
+        private void AddSpecialCropsIncome()
+        {
+            CropsIncome ciHuang = new CropsIncome();
+            ciHuang.GrowthCycle = 80;
+            ciHuang.Name = "黄玫瑰";
+            ciHuang.Theftproof = 4;
+            ciHuang.UnitPrice = 4050;
+            specialCropsIncomes.Add(ciHuang);
+
+            CropsIncome ciFen = new CropsIncome();
+            ciFen.GrowthCycle = 80;
+            ciFen.Name = "粉玫瑰";
+            ciFen.Theftproof = 4;
+            ciFen.UnitPrice = 4500;
+            specialCropsIncomes.Add(ciFen);
+
+            CropsIncome ciBai = new CropsIncome();
+            ciBai.GrowthCycle = 80;
+            ciBai.Name = "白玫瑰";
+            ciBai.Theftproof = 4;
+            ciBai.UnitPrice = 5000;
+            specialCropsIncomes.Add(ciBai);
+
+            CropsIncome ciShuangse = new CropsIncome();
+            ciShuangse.GrowthCycle = 80;
+            ciShuangse.Name = "双色玫瑰";
+            ciShuangse.Theftproof = 4;
+            ciShuangse.UnitPrice = 5500;
+            specialCropsIncomes.Add(ciShuangse);
+
+            CropsIncome ciLan = new CropsIncome();
+            ciLan.GrowthCycle = 80;
+            ciLan.Name = "蓝色妖姬";
+            ciLan.Theftproof = 4;
+            ciLan.UnitPrice = 6000;
+            specialCropsIncomes.Add(ciLan);
+
+            CropsIncome ciHei = new CropsIncome();
+            ciHei.GrowthCycle = 80;
+            ciHei.Name = "黑玫瑰";
+            ciHei.Theftproof = 4;
+            ciHei.UnitPrice = 6000;
+            specialCropsIncomes.Add(ciHei);
+
+            CropsIncome ciLv = new CropsIncome();
+            ciLv.GrowthCycle = 80;
+            ciLv.Name = "绿玫瑰";
+            ciLv.Theftproof = 4;
+            ciLv.UnitPrice = 10050;
+            specialCropsIncomes.Add(ciLv);
+        }
+
         private string GetSeedName(string seedId)
         {
             foreach (SeedItem item in seedData.SeedItems)
+            {
+                if (item.SeedID.Equals(seedId))
+                {
+                    return item.Name;
+                }
+            }
+
+            foreach (SeedItem item in specialSeeds)
             {
                 if (item.SeedID.Equals(seedId))
                 {
@@ -82,12 +190,28 @@ namespace SNSHelper_Win_Garden
                 }
             }
 
+            foreach (SeedItem item in specialSeeds)
+            {
+                if (item.Name.Equals(seedName))
+                {
+                    return item.SeedID;
+                }
+            }
+
             return string.Empty;
         }
 
         private int GetCropsPrice(string cropsName)
         {
             foreach (CropsIncome item in CropsIncomeHelper.CropsIncomeList)
+            {
+                if (item.Name.Equals(cropsName))
+                {
+                    return item.UnitPrice;
+                }
+            }
+
+            foreach (CropsIncome item in specialCropsIncomes)
             {
                 if (item.Name.Equals(cropsName))
                 {

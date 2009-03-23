@@ -187,6 +187,12 @@
       <seedid>25</seedid>
       <price>15000</price>
     </item>
+    <item>
+      <name>爱情果</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/love.png</fruitpic>
+      <seedid>39</seedid>
+      <price>0</price>
+    </item>
   </seed>
   <ret>succ</ret>
 </data>

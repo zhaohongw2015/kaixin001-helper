@@ -76,6 +76,9 @@ namespace SNSHelper_Win_Garden
             ShowContributory();
 
             updateSummaryInThread = new MethodWithObject(UpdateSummary);
+
+            AddSpecialSeed();
+            AddSpecialCropsIncome();
         }
 
         private void ShowContributory()
