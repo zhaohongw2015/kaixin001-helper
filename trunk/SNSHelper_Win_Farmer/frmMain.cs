@@ -20,7 +20,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090324";
+        string currentBuildVersion = "20090325";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
@@ -234,7 +234,7 @@ namespace SNSHelper_Win_Garden
 
                 if (!string.IsNullOrEmpty(gardenDetails.ErrMsg))
                 {
-                    ShowMsgWhileWorking("读取花园信息失败！！！");
+                    ShowMsgWhileWorking("读取花园信息失败：" + gardenDetails.ErrMsg);
                     ShowMsgWhileWorking("");
 
                     continue;
@@ -516,15 +516,21 @@ namespace SNSHelper_Win_Garden
                         #region 读取好友花园信息
 
                         ShowMsgWhileWorking(string.Format("正在进入 {0} 的花园...", friendSetting.Name));
-                        helper.GotoFriendGarden(friendSetting.UID);
+                        string html = helper.GotoFriendGarden(friendSetting.UID);
 
-                        if (helper.GotoFriendGarden(friendSetting.UID) == "1")
+                        if (html == "1")
                         {
                             ShowMsgWhileWorking(string.Format("你和 {0} 已不再是好友，农夫已从配置中移除该好友！", friendSetting.Name));
                             workingAccountSetting.FriendSettings.Remove(friendSetting);
                             GardenSetting.SaveGardenSetting(Application.StartupPath, gardenSetting);
                             i--;
 
+                            continue;
+                        }
+
+                        if (html.Contains("他还没有添加本组件"))
+                        {
+                            ShowMsgWhileWorking(string.Format("{0} 已经移除了买房子组件！", friendSetting.Name));
                             continue;
                         }
 
@@ -1652,10 +1658,7 @@ namespace SNSHelper_Win_Garden
 
         private void 官方交流论坛会员火热抢注中_Click(object sender, EventArgs e)
         {
-            if (DevComponents.DotNetBar.MessageBoxEx.Show(this, "论坛初建，开放1000个免邀请注册名额，不到一天就已被抢注完毕！现开启邀请注册及不定时免邀请注册，请大家关注！", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Process.Start("explorer.exe", "http://bbs.jailu.cn");
-            }
+            Process.Start("explorer.exe", "http://bbs.jailu.cn");
         }
     }
 }

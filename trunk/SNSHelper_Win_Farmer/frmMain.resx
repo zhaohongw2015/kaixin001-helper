@@ -124,36 +124,34 @@
     <value>75</value>
   </metadata>
   <data name="txtWorkingBoard.Text" xml:space="preserve">
-    <value>农夫提醒您：为了防止被开心BAN，请尽量不要用多个外挂同时操作一个帐号！
+    <value>
+《花园农夫》建议你认真阅读以下文字：
 
-农夫2.0正在开发中，你最希望在2.0中看到哪些功能呢？欢迎你来到农夫交流论坛中提出你的建议！
+1. 《花园农夫》官方免责声明：《花园农夫》仅限于技术交流，下载试用的朋友，请在下载本软件24小时内删除；《花园农夫》作为一款开源软件，源代码在Google Code上公开，若被用于不法之途或商业经营，《花园农夫》开发团队不承担任何责任；《花园农夫》若侵害到他人利益，请立即与《花园农夫》开发团队联系！
 
-农夫官方网站：http://code.google.com/p/kaixin001-helper/
-农夫官方交流论坛：http://bbs.jailu.cn（论坛初建，暂开放1000个免邀请注册名额，有需要的朋友请抓紧！）
-农夫指定交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
+2. 《花园农夫》官方技术交流论坛：http://bbs.jailu.cn；
+    《花园农夫》在Google Code上：http://code.google.com/p/kaixin001-helper/
+    《花园农夫》开发团队联系方式：kaixinfarmer@163.com
 
-农夫指定QQ交流群：10398877（再次感谢 小冲 同志为农夫提供超级群。PS：本群正在整顿中，目前谢绝新成员入群）
+3. 《花园农夫》合作交流论坛：http://www.gaoxinga.com
 
-开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
+4. 《花园农夫》开发预览：经过20天的持续更新，《农夫1.0》将暂告一个段落，农夫的开发团队将着手进行《农夫2.0》的开发，欢迎朋友们到交流论坛上(http:/bbs.jailu.cn)和农夫开发团队进行面对面交流。《农夫2.0》发布之前：农夫开发团队将不对《农夫1.0》增加任何新功能；若《农夫1.0》出现重大bug，农夫开发团队将在第一时间发布补丁包，供朋友们交流。
 
-真诚感谢农夫测试人员：监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享
-
-官方声明：本软件只用于交流，如果被用于不法之处或商业经营，责任自负。软件若侵害到他人利益，请立即与本人联系，本人将立即停止开发。</value>
+</value>
   </data>
   <data name="txtWhatsNew.Text" xml:space="preserve">
-    <value>农夫提醒您：为了防止被开心BAN，请尽量不要用多个外挂同时操作一个帐号！
+    <value>
+《花园农夫》建议你认真阅读以下文字：
 
-农夫2.0正在开发中，你最希望在2.0中看到哪些功能呢？欢迎你来到农夫交流论坛中提出你的建议！
+1. 《花园农夫》官方免责声明：《花园农夫》仅限于技术交流，下载试用的朋友，请在下载本软件24小时内删除；《花园农夫》作为一款开源软件，源代码在Google Code上公开，若被用于不法之途或商业经营，《花园农夫》开发团队不承担任何责任；《花园农夫》若侵害到他人利益，请立即与《花园农夫》开发团队联系！
 
-农夫官方网站：http://code.google.com/p/kaixin001-helper/
-农夫官方交流论坛：http://bbs.jailu.cn（论坛初建，暂开放1000个免邀请注册名额，有需要的朋友请抓紧！）
-农夫指定交流论坛：http://www.gaoxinga.com/forum-32-1.html（感谢 高兴网 开设农夫专版，供农夫们交流）
+2. 《花园农夫》官方技术交流论坛：http://bbs.jailu.cn；
+    《花园农夫》在Google Code上：http://code.google.com/p/kaixin001-helper/
+    《花园农夫》开发团队联系方式：kaixinfarmer@163.com
 
-农夫指定QQ交流群：10398877（再次感谢 小冲 同志为农夫提供超级群。PS：本群正在整顿中，目前谢绝新成员入群）
+3. 《花园农夫》合作交流论坛：http://www.gaoxinga.com
 
-开心农夫使用手册、帮助手册(Online)：http://www.cnblogs.com/jailu/archive/2009/03/06/Farmer_Helper.html
-
-真诚感谢农夫测试人员：监工老财、小马、越夜越寂寞、叶落随风、我爱我家、吴子享
+4. 《花园农夫》开发预览：经过20天的持续更新，《农夫1.0》将暂告一个段落，农夫的开发团队将着手进行《农夫2.0》的开发，欢迎朋友们到交流论坛上(http:/bbs.jailu.cn)和农夫开发团队进行面对面交流。《农夫2.0》发布之前：农夫开发团队将不对《农夫1.0》增加任何新功能；若《农夫1.0》出现重大bug，农夫开发团队将在第一时间发布补丁包，供朋友们交流。
 </value>
   </data>
   <metadata name="好友名.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

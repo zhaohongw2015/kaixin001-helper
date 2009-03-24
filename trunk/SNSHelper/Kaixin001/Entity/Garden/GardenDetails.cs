@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using SNSHelper.Common;
+using System.Text.RegularExpressions;
 
 namespace SNSHelper.Kaixin001.Entity.Garden
 {
@@ -13,7 +15,7 @@ namespace SNSHelper.Kaixin001.Entity.Garden
 
         public GardenDetails(string xml)
         {
-            xml = "<?xml version=\"1.0\" encoding=\"gb2312\" ?>" + xml;
+            xml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" + xml;
 
             XmlDocument doc = new XmlDocument();
             try
@@ -22,14 +24,23 @@ namespace SNSHelper.Kaixin001.Entity.Garden
             }
             catch (Exception e)
             {
-                errMsg = "错误编号：001．" + e.Message;
-
-                if (xml.Contains("你不是她好友，没有权限查看此内容"))
+                try
                 {
-                    errMsg = "1";
+                    string parten = "<setting>(.*?)</setting>";
+                    xml = Regex.Replace(xml, parten, "<setting><water></water><vermin></vermin><steal></steal><farm></farm></setting>");
+                    doc.LoadXml(xml);
                 }
+                catch (Exception ex)
+                {
+                    errMsg = "错误编号：001．" + ex.Message;
 
-                return;
+                    if (xml.Contains("你不是她好友，没有权限查看此内容"))
+                    {
+                        errMsg = "1";
+                    }
+
+                    return;
+                }
             }
 
             if (doc.DocumentElement.SelectSingleNode("account") != null)
