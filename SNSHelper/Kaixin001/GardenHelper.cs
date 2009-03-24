@@ -79,7 +79,7 @@ namespace SNSHelper.Kaixin001
 
             verifyCode = ContentHelper.GetMidString(html, "var g_verify = \"", "\";");
 
-            return string.Empty;
+            return html;
         }
 
         #endregion
