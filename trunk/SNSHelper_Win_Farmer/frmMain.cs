@@ -20,7 +20,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 农夫的当前版本
         /// </summary>
-        string currentBuildVersion = "20090325";
+        string currentBuildVersion = "20090330";
 
         /// <summary>
         /// 标记是否自动检查更新正在运行
