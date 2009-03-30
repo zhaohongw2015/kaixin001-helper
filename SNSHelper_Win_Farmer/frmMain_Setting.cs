@@ -105,6 +105,54 @@ namespace SNSHelper_Win_Garden
             siLv.Price = 4000;
             siLv.SeedID = "29";
             specialSeeds.Add(siLv);
+
+            SeedItem seed1 = new SeedItem();
+            seed1.Name = "爱情果";
+            seed1.Price = 0;
+            seed1.SeedID = "39";
+            specialSeeds.Add(seed1);
+
+            SeedItem seed2 = new SeedItem();
+            seed2.Name = "杨梅";
+            seed2.Price = 400;
+            seed2.SeedID = "40";
+            specialSeeds.Add(seed2);
+
+            SeedItem seed3 = new SeedItem();
+            seed3.Name = "苹果";
+            seed3.Price = 400;
+            seed3.SeedID = "41";
+            specialSeeds.Add(seed3);
+
+            SeedItem seed4 = new SeedItem();
+            seed4.Name = "绿郁金香";
+            seed4.Price = 5000;
+            seed4.SeedID = "44";
+            specialSeeds.Add(seed4);
+
+            SeedItem seed5 = new SeedItem();
+            seed5.Name = "粉郁金香";
+            seed5.Price = 5000;
+            seed5.SeedID = "45";
+            specialSeeds.Add(seed5);
+
+            SeedItem seed6 = new SeedItem();
+            seed6.Name = "白郁金香";
+            seed6.Price = 5000;
+            seed6.SeedID = "46";
+            specialSeeds.Add(seed6);
+
+            SeedItem seed7 = new SeedItem();
+            seed7.Name = "红郁金香";
+            seed7.Price = 5000;
+            seed7.SeedID = "47";
+            specialSeeds.Add(seed7);
+
+            SeedItem seed8 = new SeedItem();
+            seed8.Name = "黑郁金香";
+            seed8.Price = 5000;
+            seed8.SeedID = "43";
+            specialSeeds.Add(seed8);
         }
 
         private void AddSpecialCropsIncome()
@@ -157,6 +205,62 @@ namespace SNSHelper_Win_Garden
             ciLv.Theftproof = 4;
             ciLv.UnitPrice = 10050;
             specialCropsIncomes.Add(ciLv);
+
+            CropsIncome ci1 = new CropsIncome();
+            ci1.GrowthCycle = 40;
+            ci1.Name = "爱情果";
+            ci1.Theftproof = 0;
+            ci1.UnitPrice = 10000;
+            specialCropsIncomes.Add(ci1);
+
+            CropsIncome ci2 = new CropsIncome();
+            ci2.GrowthCycle = 36;
+            ci2.Name = "杨梅";
+            ci2.Theftproof = 0;
+            ci2.UnitPrice = 450;
+            specialCropsIncomes.Add(ci2);
+
+            CropsIncome ci3 = new CropsIncome();
+            ci3.GrowthCycle = 36;
+            ci3.Name = "苹果";
+            ci3.Theftproof = 0;
+            ci3.UnitPrice = 450;
+            specialCropsIncomes.Add(ci3);
+
+            CropsIncome ci4 = new CropsIncome();
+            ci4.GrowthCycle = 52;
+            ci4.Name = "黑郁金香";
+            ci4.Theftproof = 2;
+            ci4.UnitPrice = 7000;
+            specialCropsIncomes.Add(ci4);
+
+            CropsIncome ci5 = new CropsIncome();
+            ci5.GrowthCycle = 52;
+            ci5.Name = "绿郁金香";
+            ci5.Theftproof = 2;
+            ci5.UnitPrice = 6000;
+            specialCropsIncomes.Add(ci5);
+
+            CropsIncome ci6 = new CropsIncome();
+            ci6.GrowthCycle = 52;
+            ci6.Name = "粉郁金香";
+            ci6.Theftproof = 2;
+            ci6.UnitPrice = 3000;
+            specialCropsIncomes.Add(ci6);
+
+            CropsIncome ci7 = new CropsIncome();
+            ci7.GrowthCycle = 52;
+            ci7.Name = "白郁金香";
+            ci7.Theftproof = 2;
+            ci7.UnitPrice = 2800;
+            specialCropsIncomes.Add(ci7);
+
+            CropsIncome ci8 = new CropsIncome();
+            ci8.GrowthCycle = 52;
+            ci8.Name = "红郁金香";
+            ci8.Theftproof = 2;
+            ci8.UnitPrice = 2500;
+            specialCropsIncomes.Add(ci8);
         }
 
         private string GetSeedName(string seedId)

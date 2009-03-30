@@ -97,6 +97,12 @@
     <Theftproof>0</Theftproof>
   </Crop>
   <Crop>
+    <Name>杨梅</Name>
+    <GrowthCycle>36</GrowthCycle>
+    <UnitPrice>450</UnitPrice>
+    <Theftproof>0</Theftproof>
+  </Crop>
+  <Crop>
     <Name>西瓜</Name>
     <GrowthCycle>40</GrowthCycle>
     <UnitPrice>300</UnitPrice>
@@ -151,15 +157,15 @@
     <Theftproof>1</Theftproof>
   </Crop>
   <Crop>
-    <Name>百合</Name>
-    <GrowthCycle>288</GrowthCycle>
-    <UnitPrice>8000</UnitPrice>
+    <Name>郁金香</Name>
+    <GrowthCycle>52</GrowthCycle>
+    <UnitPrice>5200</UnitPrice>
     <Theftproof>1</Theftproof>
   </Crop>
   <Crop>
-    <Name>郁金香</Name>
-    <GrowthCycle>360</GrowthCycle>
-    <UnitPrice>9000</UnitPrice>
+    <Name>百合</Name>
+    <GrowthCycle>288</GrowthCycle>
+    <UnitPrice>8000</UnitPrice>
     <Theftproof>1</Theftproof>
   </Crop>
   <Crop>

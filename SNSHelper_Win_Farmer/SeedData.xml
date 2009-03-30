@@ -98,6 +98,12 @@
       <price>400</price>
     </item>
     <item>
+      <name>杨梅</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/yangmei.swf</fruitpic>
+      <seedid>40</seedid>
+      <price>400</price>
+    </item>
+    <item>
       <name>西瓜</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/xigua.swf</fruitpic>
       <seedid>13</seedid>
@@ -147,21 +153,21 @@
     </item>
     <item>
       <name>牡丹</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/mudan.swf</fruitpic>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/mudan_0.swf</fruitpic>
       <seedid>19</seedid>
       <price>4000</price>
+    </item>
+    <item>
+      <name>郁金香</name>
+      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop1/yujinxiang_red.swf</fruitpic>
+      <seedid>42</seedid>
+      <price>5000</price>
     </item>
     <item>
       <name>百合</name>
       <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/baihe.swf</fruitpic>
       <seedid>20</seedid>
       <price>4000</price>
-    </item>
-    <item>
-      <name>郁金香</name>
-      <fruitpic>http://img.kaixin001.com.cn//i2/house/garden/crop/yujinxiang.swf</fruitpic>
-      <seedid>21</seedid>
-      <price>5000</price>
     </item>
     <item>
       <name>冬虫夏草</name>
