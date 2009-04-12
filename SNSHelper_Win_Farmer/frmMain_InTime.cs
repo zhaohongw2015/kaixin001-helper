@@ -464,7 +464,7 @@ namespace SNSHelper_Win_Garden
 
         private DateTime GetRipeTime(string crops, string seedId, bool isSteal)
         {
-            string pattern = @"距离收获：(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分?)?(?:(?<second>\d+)秒?)?";
+            string pattern = @"距离收获：(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分)?(?:(?<second>\d+)秒)?";
             Regex reg = new Regex(pattern);
             MatchCollection mc = reg.Matches(crops);
             foreach (Match match in mc)
@@ -505,7 +505,7 @@ namespace SNSHelper_Win_Garden
 
         private DateTime GetReadyRipeTime(string crops)
         {
-            string pattern = @"再过(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分?)?(?:(?<second>\d+)秒?)?可偷";
+            string pattern = @"再过(?:(?<day>\d+)天)?(?:(?<hour>\d+)小时)?(?:(?<minute>\d+)分)?(?:(?<second>\d+)秒)?可偷";
             Regex reg = new Regex(pattern);
             MatchCollection mc = reg.Matches(crops);
             foreach (Match match in mc)
