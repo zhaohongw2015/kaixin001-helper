@@ -7,10 +7,11 @@ namespace SNSHelper_Win_Garden.Entity
         {
         }
 
-        public FriendSetting(string nickName, string uid)
+        public FriendSetting(string nickName, string uid, string scenemoney)
         {
             this.nickName = nickName;
             this.uid = uid;
+            this.scenemoney = scenemoney;
             allowedPark = true;
             allowedPost = true;
             parkPriority = int.MaxValue;
@@ -93,6 +94,23 @@ namespace SNSHelper_Win_Garden.Entity
             }
         }
 
+        string scenemoney = "10";
+        /// <summary>
+        /// 停车收入
+        /// </summary>
+        public string Scenemoney
+        {
+            get
+            {
+                return scenemoney;
+            }
+            set
+            {
+                scenemoney = value;
+            }
+        }
+
+
         bool isFull = false;
         public bool IsFull
         {
@@ -105,5 +123,7 @@ namespace SNSHelper_Win_Garden.Entity
                 isFull = value;
             }
         }
+
+        
     }
 }

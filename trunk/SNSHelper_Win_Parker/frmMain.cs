@@ -15,6 +15,14 @@ namespace SNSHelper_Win_Garden
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
+
+        /// <summary>
+        /// 助手的当前版本
+        /// </summary>
+        string currentBuildVersion = "20090413内测版";
+        
+        
+        
         public frmMain()
         {
             InitializeComponent();
@@ -32,17 +40,38 @@ namespace SNSHelper_Win_Garden
 
         private bool isStart = false;
 
+        private Utility utility = new Utility();
+
         #region 窗体其他事件
         private void frmMain_Load(object sender, EventArgs e)
         {
+
+            this.Text = "开心网争车位助手 V1.0 " + currentBuildVersion + " --By Jailu";
+            ShowWhatsNew(); 
             LoadConfig();
 
             contextMenuBar2.SetContextMenuEx(lsbAccount, biAccountList);
+            contextMenuBar2.SetContextMenuEx(dgvFriendList, biFriendList);
 
-            _dgtShowParkingMsg = new dgtShowParkingMsg(this.ShowParkingMsg);
-            _dgtShowCurrentParkingAccount = new dgtShowCurrentParkingAccount(ShowCurrentParkingAccount);
+            _dgtShowParkingMsg = new dgtShowParkingMsg(this.ShowParkingMsg);//显示停车信息
+            _dgtShowCurrentParkingAccount = new dgtShowCurrentParkingAccount(ShowCurrentParkingAccount);//显示当前账号
+            _dgtdftStaParkinfo = new dftStaParkinfo(parkerSta);//统计账号停车信息
+            //BeginCheckNewVersion();
+        }
 
-            BeginCheckNewVersion();
+
+        /// <summary>
+        /// 显示更新记录
+        /// </summary>
+        private void ShowWhatsNew()
+        {
+            string whatsNewFilePath = Path.Combine(Application.StartupPath, "What's New.txt");
+
+            if (File.Exists(whatsNewFilePath))
+            {
+                txtWhatsNew.AppendText("\r\n");
+                txtWhatsNew.AppendText(File.ReadAllText(whatsNewFilePath));
+            }
         }
 
         /// <summary>
@@ -52,9 +81,8 @@ namespace SNSHelper_Win_Garden
         {
             CarMarketHelper.LoadCarList();
             ConfigHelper.LoadConfig();
-
             parkingTimer.Interval = ConfigHelper.GlobalSetting.ParkInterval * 60000;
-            Utility.NetworkDelay = ConfigHelper.GlobalSetting.NetworkDelay;
+            utility.NetworkDelay = ConfigHelper.GlobalSetting.NetworkDelay;
 
             ShowConfigData();
         }
@@ -71,6 +99,8 @@ namespace SNSHelper_Win_Garden
             {
                 lsbAccount.Items.Add(new ListViewItem(ConfigHelper.AccountSettings[i].LoginEmail));
             }
+
+            labelAccCount.Text = string.Format("总共{0}个账号信息",lsbAccount.Items.Count.ToString());
         }
 
         private void frmMain_Resize(object sender, EventArgs e)
@@ -214,9 +244,11 @@ namespace SNSHelper_Win_Garden
         private delegate void dgtShowParkingMsg(string msg);
         private delegate void dgtShowCurrentParkingAccount();
         private delegate void dgtBeginCountDown();
+        private delegate void dftStaParkinfo(ParkerStaInfo parkStaInfo);
 
         dgtShowParkingMsg _dgtShowParkingMsg;
-        dgtShowCurrentParkingAccount _dgtShowCurrentParkingAccount; 
+        dgtShowCurrentParkingAccount _dgtShowCurrentParkingAccount;
+        dftStaParkinfo _dgtdftStaParkinfo;
 
         #endregion
 
@@ -270,6 +302,11 @@ namespace SNSHelper_Win_Garden
         /// <param name="msg">停车信息</param>
         private void ShowParkingMsg(string msg)
         {
+            if (txtPartResultBoard.Lines.Length > 1000)
+            {
+                RecordLog(txtPartResultBoard.Text);
+                txtPartResultBoard.Clear();
+            }
             txtPartResultBoard.AppendText(msg);
         }
 
@@ -313,6 +350,18 @@ namespace SNSHelper_Win_Garden
             }
 
             this.Invoke(_dgtShowParkingMsg, new object[] { msg });
+        }
+
+
+        /// <summary>
+        ///  统计账号信息
+        /// </summary>
+        /// <param name="parkStaInfo">一个账号停车结果信息表</param>
+        private void StaParkinginfo(ParkerStaInfo parkStaInfo)
+        {
+
+
+            this.Invoke(_dgtdftStaParkinfo, new object[] { parkStaInfo });
         } 
 
         #endregion
@@ -333,64 +382,103 @@ namespace SNSHelper_Win_Garden
             for (int i = 0; i < ConfigHelper.AccountSettings.Count; i++)
             {
                 currentParkingAccount = ConfigHelper.AccountSettings[i];
-
-                ShowCurrentParkingAccountWhileParking();
-
-                ShowParkingMsgWhileParking(string.Format("\r\n正在加载帐号{0}的配置信息！", currentParkingAccount.LoginEmail));
-
-                if (!currentParkingAccount.IsOperation)
+                //账号停车统计信息
+                try
                 {
-                    ShowParkingMsgWhileParking(string.Format("根据配置信息，帐号({0})不操作！", currentParkingAccount.LoginEmail));
+                    ParkerStaInfo parkerStaInfo = new ParkerStaInfo();
 
+                    ShowCurrentParkingAccountWhileParking();
+
+                    ShowParkingMsgWhileParking(string.Format("\r\n正在加载帐号{0}的配置信息！", currentParkingAccount.LoginEmail));
+
+                    if (!currentParkingAccount.IsOperation)
+                    {
+                        ShowParkingMsgWhileParking(string.Format("根据配置信息，帐号({0})不操作！", currentParkingAccount.LoginEmail));
+
+                        continue;
+                    }
+
+                    ShowParkingMsgWhileParking("开始登录...");
+
+                    if (utility.Login(currentParkingAccount.LoginEmail, currentParkingAccount.LoginPwd))
+                    {
+                        ShowParkingMsgWhileParking("登录成功！正在获取玩家争车位相关数据...");
+                    }
+                    else
+                    {
+                        ShowParkingMsgWhileParking(string.Format("登录失败！请检查帐号({0})配置的登录信息！", currentParkingAccount.LoginEmail));
+                        AddParkingFailedMsg(string.Format("登录失败！请检查帐号({0})配置的登录信息！", currentParkingAccount.LoginEmail));
+
+                        continue;
+                    }
+
+                    ParkingHelper helper = new ParkingHelper(utility);
+                    ShowParkingMsgWhileParking("玩家争车位相关数据获取完毕！");
+
+                    ShowParkerDetails(helper.Parker, helper.CarList);
+                    ShowCarDetails(currentParkingAccount.LoginEmail, helper.CarList);
+                    ShowFriendParkDetails(currentParkingAccount.LoginEmail, helper.ParkerFriendList);
+
+                    // 停车操作
+                    ParkCars(helper);
+
+                    // 贴条操作
+                    DoPost(helper);
+
+                    // 高级操作
+                    DoAdvanceOpt(helper, currentCash);
+
+                    // 显示本次停车盈利情况
+                    ShowParkingMsgWhileParking(string.Format("当前现金变为{0}元，本次停车共盈利{1}元！", currentCash, currentCash - Convert.ToDouble(helper.Parker.Cash)));
+
+
+                    //账号停车收益情况
+                    AddParkingIncomedMsg(string.Format("帐号({0})({4})：当前现金为{1},本次停车共盈利{2}元！,总共{3}辆车", currentParkingAccount.LoginEmail, currentCash, currentCash - Convert.ToDouble(helper.Parker.Cash), helper.CarList.Count.ToString(), helper.Parker.RealName));
+
+                    double dCarCountPrice = 0;
+                    foreach (CarInfo c in helper.CarList)
+                    {
+                        dCarCountPrice = dCarCountPrice + Convert.ToDouble(c.Price);
+                    }
+                    
+                    //账号停车统计信息
+                    parkerStaInfo.RealName = helper.Parker.RealName;
+                    parkerStaInfo.UId = helper.Parker.UID;
+                    parkerStaInfo.Cashcount = currentCash;
+                    parkerStaInfo.Carcount = helper.CarList.Count;
+                    parkerStaInfo.CarCountPrice = dCarCountPrice;
+
+                    StaParkinginfo(parkerStaInfo);
+
+                    ShowParkingMsgWhileParking("开始退出！");
+                    utility.Logout();
+                    ShowParkingMsgWhileParking("退出成功！");
+                }
+                catch (Exception e)
+                {
+                    
+                    AddParkingFailedMsg(string.Format("Exception:帐号({0})停车失败！，错误信息：{1}", currentParkingAccount.LoginEmail,e.Message));
                     continue;
                 }
-
-                ShowParkingMsgWhileParking("\r\n开始登录...");
-
-                if (Utility.Login(currentParkingAccount.LoginEmail, currentParkingAccount.LoginPwd))
-                {
-                    ShowParkingMsgWhileParking("登录成功！正在获取玩家争车位相关数据...");
-                }
-                else
-                {
-                    ShowParkingMsgWhileParking(string.Format("登录失败！请检查帐号({0})配置的登录信息！", currentParkingAccount.LoginEmail));
-                    AddParkingFailedMsg(string.Format("登录失败！请检查帐号({0})配置的登录信息！", currentParkingAccount.LoginEmail));
-
-                    continue;
-                }
-
-                ParkingHelper helper = new ParkingHelper();
-                ShowParkingMsgWhileParking("玩家争车位相关数据获取完毕！");
-
-                ShowParkerDetails(helper.Parker, helper.CarList);
-                ShowCarDetails(currentParkingAccount.LoginEmail, helper.CarList);
-                ShowFriendParkDetails(currentParkingAccount.LoginEmail, helper.ParkerFriendList);
-
-                // 停车操作
-                ParkCars(helper);
-
-                // 贴条操作
-                DoPost(helper);
-
-                // 显示本次停车盈利情况
-                ShowParkingMsgWhileParking(string.Format("\r\n当前现金变为{0}元，本次停车共盈利{1}元！", currentCash, currentCash - Convert.ToDouble(helper.Parker.Cash)));
-
-                // 高级操作
-                DoAdvanceOpt(helper, currentCash);
-
-                ShowParkingMsgWhileParking("\r\n开始退出！");
-                Utility.Logout();
-                ShowParkingMsgWhileParking("退出成功！");
             }
 
-            ShowParkingMsgWhileParking("停车操作完成！\r\n");
+            ShowParkingMsgWhileParking("停车操作完成！");
+            
+            //显示汇总信息
+            ShowParkingMsgWhileParking(parkedIncomeMsg);
 
+            //显示停车失败信息
             ShowParkingMsgWhileParking(parkedFailedMsg);
-            parkedFailedMsg = new List<string>();
+            ShowParkingMsgWhileParking(string.Format("停车失败总共{0}个账号！", parkedFailedMsg.Count.ToString()));
+            
+            parkedIncomeMsg.Clear();
+            parkedFailedMsg.Clear();
 
             RecordLog(txtPartResultBoard.Text);
 
             BeginCountDown();
+
+           
 
             parkingThread = null;
         }
@@ -401,7 +489,7 @@ namespace SNSHelper_Win_Garden
 
         private void DoAdvanceOpt(ParkingHelper helper, double currentCash)
         {
-            ShowParkingMsgWhileParking("\r\n开始执行高级操作：");
+            ShowParkingMsgWhileParking("开始执行高级操作：");
 
             if (currentParkingAccount.AdvanceSettings.AutoUpdateFreePark)
             {
@@ -524,8 +612,8 @@ namespace SNSHelper_Win_Garden
                     ShowParkingMsgWhileParking("购买新车操作完成！");
                     ShowParkingMsgWhileParking("");
                     ShowParkingMsgWhileParking("系统正在为您的新车停车：");
-                    helper = new ParkingHelper();
-                    ParkCars(helper);
+                    //helper = new ParkingHelper(utility);
+                   // ParkCars(helper);
                     ShowParkingMsgWhileParking("");
                 }
             }
@@ -548,6 +636,11 @@ namespace SNSHelper_Win_Garden
 
         #region 日志
 
+
+        /// <summary>
+        /// 写日志
+        /// </summary>
+        /// <param name="log"></param>
         private void RecordLog(string log)
         {
             string path = string.Format("{0}\\Log", Application.StartupPath);
@@ -557,13 +650,33 @@ namespace SNSHelper_Win_Garden
                 Directory.CreateDirectory(path);
             }
 
+            //删除前一天的log文件
+            if (Directory.Exists(path))
+            {
+                DirectoryInfo dir = new DirectoryInfo(path);
+
+                foreach (FileInfo fl in dir.GetFiles())
+                {
+                    if (fl.CreationTime < DateTime.Now.AddDays(-1))
+                    {
+                        try
+                        {
+                            fl.Delete();
+                        }
+                        catch {
+                            continue;
+                        }
+                    }
+                }
+            }
+
             StreamWriter sw = File.CreateText(string.Format("{0}\\{1}.log", path, DateTime.Now.ToString("争车位： yyyy-MM-dd HH：mm：ss")));
 
             sw.Write(log);
             sw.Flush();
-
             sw.Dispose();
         }
+
 
         #endregion
 
@@ -619,7 +732,7 @@ namespace SNSHelper_Win_Garden
         /// <param name="helper"></param>
         private void DoPost(ParkingHelper helper)
         {
-            ShowParkingMsgWhileParking("\r\n开始贴条：");
+            ShowParkingMsgWhileParking("开始贴条：");
 
             PostResult result;
             for (int i = 0; i < helper.ParkingList.Count; i++)
@@ -663,8 +776,35 @@ namespace SNSHelper_Win_Garden
         }
 
         #endregion
+        
+        #endregion
+
+        #region 账号统计
+        private void parkerSta(ParkerStaInfo parkerStainfo)
+        {
+            Boolean bExits = false;
+            foreach (DataGridViewRow dr in parkStaGridViewX1.Rows)
+            {
+                if (dr.Cells[1].Value.ToString() == parkerStainfo.UId.ToString())
+                {
+                    dr.Cells[2].Value = parkerStainfo.Cashcount.ToString();
+                    dr.Cells[3].Value = parkerStainfo.Carcount.ToString();
+                    dr.Cells[3].Value = (parkerStainfo.Cashcount+parkerStainfo.CarCountPrice).ToString();
+                    bExits = true;
+                }
+
+            }
+            if (!bExits)
+            {
+                parkStaGridViewX1.Rows.Add(parkerStainfo.RealName, parkerStainfo.UId.ToString(), parkerStainfo.Cashcount.ToString(), parkerStainfo.Carcount.ToString(), (parkerStainfo.Cashcount + parkerStainfo.CarCountPrice).ToString());
+
+            }
+
+            
+        }
 
         #endregion
+
 
         #region AutoUpdate
 
@@ -772,5 +912,16 @@ namespace SNSHelper_Win_Garden
         }
 
         #endregion
+
+        private void 官方交流论坛会员限量火热抢注中_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", "http://bbs.jailu.cn");
+        }
+
+       
+       
+       
+       
+             
     }
 }

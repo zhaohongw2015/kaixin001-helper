@@ -13,11 +13,13 @@ namespace SNSHelper_Win_Garden
         private ParkResult currentParkResult = new ParkResult();
         private string lastParkedUID = string.Empty;
         private List<string> parkedFailedMsg = new List<string>();
+        private List<string> parkedIncomeMsg = new List<string>();
+        private List<ParkerStaInfo> parkedStaInfos = new List<ParkerStaInfo>();
         double currentCash = 0;
 
         private void ParkCars(ParkingHelper helper)
         {
-            ShowParkingMsgWhileParking("\r\n开始停车：");
+            ShowParkingMsgWhileParking("开始停车：");
 
             currentCash = Convert.ToDouble(helper.Parker.Cash);
 
@@ -112,6 +114,11 @@ namespace SNSHelper_Win_Garden
             parkedFailedMsg.Add(failedMsg);
         }
 
+        private void AddParkingIncomedMsg(string ImcomeMsg)
+        {
+            parkedIncomeMsg.Add(ImcomeMsg);
+        }
+
         private void ResetParkerFriend(ParkingHelper helper)
         {
             List<ParkerFriendInfo> temp = new List<ParkerFriendInfo>();
@@ -154,7 +161,7 @@ namespace SNSHelper_Win_Garden
             FriendSetting temp;
             for (int i = 0; i < newNetFriendList.Count; i++)
             {
-                temp = new FriendSetting(newNetFriendList[i].RealName, newNetFriendList[i].UId);
+                    temp = new FriendSetting(newNetFriendList[i].RealName, newNetFriendList[i].UId, newNetFriendList[i].SceneMoney);
                 accountSetting.FriendSettings.Add(temp);
                 accountSetting.CanParkFriendList.Add(temp);
             }
