@@ -68,7 +68,7 @@ namespace SNSHelper_Win_Garden.Helper
         public static bool SaveConfig()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml("<?xml version=\"1.0\" encoding=\"utf-8\" ?><Settings><GlobalSetting><ParkInterval></ParkInterval><NetworkDelay></NetworkDelay></GlobalSetting><AccountSettings>  </AccountSettings></Settings>");
+            xmlDoc.LoadXml("<?xml version=\"1.0\" encoding=\"utf-8\" ?><Settings><GlobalSetting><ParkInterval></ParkInterval><NetworkDelay></NetworkDelay></GlobalSetting><AccountSettings></AccountSettings></Settings>");
 
             AddGlobalSetting(xmlDoc.DocumentElement);
             AddAccountSettings(xmlDoc.DocumentElement);
@@ -152,11 +152,27 @@ namespace SNSHelper_Win_Garden.Helper
         private static FriendSetting LoadFriendSetting(XmlNode node)
         {
             FriendSetting friendSetting = new FriendSetting();
+
+            Boolean bExits = false;
+
+            foreach(XmlNode childnode in node.ChildNodes )
+            {
+                if (childnode.Name.Equals("SceneMoney"))
+                {
+                    bExits = true;
+                    break;
+                }
+            }
+            if (!bExits)
+            {
+                node.AppendChild(CreateElement(node.OwnerDocument, "SceneMoney", "10"));
+            }
+
             friendSetting.UID = node["UID"].InnerText;
             friendSetting.NickName = node["NickName"].InnerText;
             friendSetting.AllowedPark = Convert.ToBoolean(node["AllowedPark"].InnerText);
-            friendSetting.AllowedPost = Convert.ToBoolean(node["AllowedPost"].InnerText);
-
+            friendSetting.AllowedPost = Convert.ToBoolean(node["AllowedPost"].InnerText);            
+            friendSetting.Scenemoney  = node["SceneMoney"].InnerText;
             friendSetting.ParkPriority = string.IsNullOrEmpty(node["ParkPriority"].InnerText) ? 0 : Convert.ToInt32(node["ParkPriority"].InnerText);
             // Fix Issue 2
             if (friendSetting.ParkPriority == 0)
@@ -242,7 +258,7 @@ namespace SNSHelper_Win_Garden.Helper
                 friendElement.AppendChild(CreateElement(friendSettingsElement.OwnerDocument, "AllowedPark", friendSettingList[i].AllowedPark.ToString()));
                 friendElement.AppendChild(CreateElement(friendSettingsElement.OwnerDocument, "AllowedPost", friendSettingList[i].AllowedPost.ToString()));
                 friendElement.AppendChild(CreateElement(friendSettingsElement.OwnerDocument, "ParkPriority", friendSettingList[i].ParkPriority.ToString()));
-
+                friendElement.AppendChild(CreateElement(friendSettingsElement.OwnerDocument, "SceneMoney", friendSettingList[i].Scenemoney));
                 friendSettingsElement.AppendChild(friendElement);
             }
         }
@@ -256,6 +272,13 @@ namespace SNSHelper_Win_Garden.Helper
             advanceSettingsElement.AppendChild(CreateElement(advanceSettingsElement.OwnerDocument, "AutoUpdateCar", advanceSettings.AutoUpdateCar.ToString()));
             advanceSettingsElement.AppendChild(CreateElement(advanceSettingsElement.OwnerDocument, "AutoUpdateCarType", advanceSettings.AutoUpdateCarType));
         }
+
+       
+        /// <summary>
+        /// 按照用户设置的优先顺序重新排序
+        /// </summary>
+        /// <param name="friendSettingList"></param>
+        /// <returns></returns>
 
         private static List<FriendSetting> ShortFriendSettings(List<FriendSetting> friendSettingList)
         {

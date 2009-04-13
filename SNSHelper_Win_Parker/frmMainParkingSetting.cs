@@ -14,6 +14,7 @@ namespace SNSHelper_Win_Garden
         private bool isNewAccount = true;
         private AccountSetting ps_currentAccountSetting = new AccountSetting();
         private Thread loadFriendDataThread;
+        private Thread loadAllFriendDataThread;
 
         #region 委托声明
 
@@ -29,11 +30,11 @@ namespace SNSHelper_Win_Garden
         {
             ConfigHelper.GlobalSetting.NetworkDelay = txtNetDelay.Value * 1000;
             ConfigHelper.GlobalSetting.ParkInterval = txtParkingInterval.Value;
-
+            Utility utility = new Utility();
             if (ConfigHelper.SaveConfig())
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show("保存成功");
-                Utility.NetworkDelay = ConfigHelper.GlobalSetting.NetworkDelay;
+                utility.NetworkDelay = ConfigHelper.GlobalSetting.NetworkDelay;
                 parkingTimer.Interval = ConfigHelper.GlobalSetting.ParkInterval * 60000;
             }
             else
@@ -45,6 +46,7 @@ namespace SNSHelper_Win_Garden
         private void lsbAccount_DoubleClick(object sender, EventArgs e)
         {
             ShowAccountSetting();
+            labelFriendCount.Text = string.Format("{0}总共{1}位好友", this.ps_currentAccountSetting.LoginEmail,dgvFriendList.Rows.Count.ToString());
         }
 
         private void btnLoadFriend_Click(object sender, EventArgs e)
@@ -56,6 +58,17 @@ namespace SNSHelper_Win_Garden
             }
 
             BeginToGetFriendData();
+        }
+
+        private void btnLoadAllFriend_Click(object sender, EventArgs e)
+        {
+            if (this.lsbAccount.Items.Count<=0) 
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show("请输入帐号信息！");
+                return;
+            }
+
+            BeginToGetAllFriendData();
         }
 
         private void dgvFriendList_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -149,21 +162,178 @@ namespace SNSHelper_Win_Garden
             if (lsbAccount.SelectedItems[0].Index == 0)
             {
                 btiUp.Enabled = false;
+                bTop.Enabled = false;
             }
             else
             {
                 btiUp.Enabled = true;
+                bTop.Enabled = true;
             }
 
             if (lsbAccount.SelectedItems[0].Index == lsbAccount.Items.Count -1)
             {
                 btiDown.Enabled = false;
+                bbutton.Enabled = false;
             }
             else
             {
                 btiDown.Enabled = true;
+                bbutton.Enabled = true;
             }
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void biFriendList_PopupOpen(object sender, DevComponents.DotNetBar.PopupOpenEventArgs e)
+        {
+            if (dgvFriendList.RowCount <= 0 || dgvFriendList.SelectedCells[0].RowIndex <0)
+            {
+                e.Cancel=true; 
+                return;
+            }
+
+            if (!(dgvFriendList.SelectedCells[0].ColumnIndex == 2 || dgvFriendList.SelectedCells[0].ColumnIndex == 3))
+            {
+                biInvertSelectFullColumn.Enabled = false;
+                biSelectFullColumn.Enabled = false;
+
+            }
+            else
+            {
+                biInvertSelectFullColumn.Enabled = true;
+                biSelectFullColumn.Enabled = true;
+
+            }
+
+            int index = dgvFriendList.SelectedCells[0].RowIndex;
+            if (index == 0)
+            {
+                biFriendUp.Enabled = false;
+
+            }
+            else
+            {
+                biFriendUp.Enabled = true;
+
+            }
+
+            if (index == dgvFriendList.Rows.Count - 1)
+            {
+                biFriendDown.Enabled = false;
+            }
+            else
+            {
+                biFriendDown.Enabled = true;
+ 
+            }
+
+        }
+
+        private void biSelectFullColumn_Click(object sender, EventArgs e)
+        {
+            if (dgvFriendList.SelectedCells.Count == 0)
+            {
+                return;
+            }
+
+            int columnIndex = dgvFriendList.SelectedCells[0].ColumnIndex;
+
+            
+
+            for (int i = 0; i < dgvFriendList.Rows.Count; i++)
+            {
+                dgvFriendList.Rows[i].Cells[columnIndex].Value = true;
+
+                switch (columnIndex)
+                {
+                    case 2:
+                        ps_currentAccountSetting.FriendSettings[i].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+                        break;
+                    case 3:
+                        ps_currentAccountSetting.FriendSettings[i].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void biInvertSelectFullColumn_Click(object sender, EventArgs e)
+        {
+            if (dgvFriendList.SelectedCells.Count == 0)
+            {
+                return;
+            }
+
+            int columnIndex = dgvFriendList.SelectedCells[0].ColumnIndex;
+
+            for (int i = 0; i < dgvFriendList.Rows.Count; i++)
+            {
+                dgvFriendList.Rows[i].Cells[columnIndex].Value = !Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+
+                switch (columnIndex)
+                {
+                    case 2:
+                        ps_currentAccountSetting.FriendSettings[i].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+                        break;
+                    case 3:
+                        ps_currentAccountSetting.FriendSettings[i].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void biFriendUp_Click(object sender, EventArgs e)
+        {
+            int index = dgvFriendList.SelectedCells[0].RowIndex;
+
+            FriendSetting tempFS = ps_currentAccountSetting.FriendSettings[index];
+
+            dgvFriendList.Rows.RemoveAt(index);
+            dgvFriendList.Rows.Insert(index - 1, tempFS.NickName, tempFS.UID, tempFS.AllowedPark, tempFS.AllowedPost, tempFS.Scenemoney.ToString(), tempFS.ParkPriority.ToString());
+
+            ps_currentAccountSetting.FriendSettings[index] = ps_currentAccountSetting.FriendSettings[index - 1];
+            ps_currentAccountSetting.FriendSettings[index - 1] = tempFS;
+        }
+
+        private void biFriendDown_Click(object sender, EventArgs e)
+        {
+            int index = dgvFriendList.SelectedCells[0].RowIndex;
+
+            FriendSetting tempFS = ps_currentAccountSetting.FriendSettings[index];
+
+            dgvFriendList.Rows.RemoveAt(index);
+            dgvFriendList.Rows.Insert(index + 1, tempFS.NickName, tempFS.UID, tempFS.AllowedPark, tempFS.AllowedPost, tempFS.Scenemoney.ToString(), tempFS.ParkPriority.ToString());
+
+            ps_currentAccountSetting.FriendSettings[index] = ps_currentAccountSetting.FriendSettings[index + 1];
+            ps_currentAccountSetting.FriendSettings[index + 1] = tempFS;
+        }
+
+
+        private void bTop_Click(object sender, EventArgs e)
+        {
+            int index = lsbAccount.SelectedItems[0].Index;
+            if (index == 0) return;
+            ListViewItem lvi = lsbAccount.Items[index];
+            lsbAccount.Items.RemoveAt(index);
+            lsbAccount.Items.Insert(0, lvi);
+            lsbAccount.Refresh();
+
+            AccountSetting temp = ConfigHelper.AccountSettings[index];
+            ConfigHelper.AccountSettings[index] = ConfigHelper.AccountSettings[index - 1];
+            ConfigHelper.AccountSettings[0] = temp;
+
+            ConfigHelper.SaveConfig();
+
+        }
+
+        
 
         private void btiUp_Click(object sender, EventArgs e)
         {
@@ -172,6 +342,7 @@ namespace SNSHelper_Win_Garden
             ListViewItem lvi = lsbAccount.Items[index];
             lsbAccount.Items.RemoveAt(index);
             lsbAccount.Items.Insert(index - 1, lvi);
+            lsbAccount.Refresh();
 
             AccountSetting temp = ConfigHelper.AccountSettings[index];
             ConfigHelper.AccountSettings[index] = ConfigHelper.AccountSettings[index - 1];
@@ -194,6 +365,23 @@ namespace SNSHelper_Win_Garden
 
             ConfigHelper.SaveConfig();
 
+        }
+
+        private void bbutton_Click(object sender, EventArgs e)
+        {
+            int index = lsbAccount.SelectedItems[0].Index;
+            if (index == lsbAccount.Items.Count - 1) return;
+
+            ListViewItem lvi = lsbAccount.Items[index];
+            lsbAccount.Items.RemoveAt(index);
+            lsbAccount.Items.Add(lvi);
+            lsbAccount.Refresh();
+
+            AccountSetting temp = ConfigHelper.AccountSettings[index];
+            ConfigHelper.AccountSettings[index] = ConfigHelper.AccountSettings[index+1];
+            ConfigHelper.AccountSettings[lsbAccount.Items.Count - 1] = temp;
+
+            ConfigHelper.SaveConfig();
         }
 
         private void cbxBuyCar_CheckedChanged(object sender, EventArgs e)
@@ -274,13 +462,15 @@ namespace SNSHelper_Win_Garden
             dgvFriendList.Rows.Clear();
             for (int i = 0; i < ps_currentAccountSetting.FriendSettings.Count; i++)
             {
+                
+                
                 if (ps_currentAccountSetting.FriendSettings[i].ParkPriority == int.MaxValue)
                 {
-                    dgvFriendList.Rows.Add(ps_currentAccountSetting.FriendSettings[i].NickName, ps_currentAccountSetting.FriendSettings[i].UID, ps_currentAccountSetting.FriendSettings[i].AllowedPark, ps_currentAccountSetting.FriendSettings[i].AllowedPost);
+                    dgvFriendList.Rows.Add(ps_currentAccountSetting.FriendSettings[i].NickName, ps_currentAccountSetting.FriendSettings[i].UID, ps_currentAccountSetting.FriendSettings[i].AllowedPark, ps_currentAccountSetting.FriendSettings[i].AllowedPost, ps_currentAccountSetting.FriendSettings[i].Scenemoney.ToString());
                 }
                 else
                 {
-                    dgvFriendList.Rows.Add(ps_currentAccountSetting.FriendSettings[i].NickName, ps_currentAccountSetting.FriendSettings[i].UID, ps_currentAccountSetting.FriendSettings[i].AllowedPark, ps_currentAccountSetting.FriendSettings[i].AllowedPost, ps_currentAccountSetting.FriendSettings[i].ParkPriority.ToString());
+                    dgvFriendList.Rows.Add(ps_currentAccountSetting.FriendSettings[i].NickName, ps_currentAccountSetting.FriendSettings[i].UID, ps_currentAccountSetting.FriendSettings[i].AllowedPark, ps_currentAccountSetting.FriendSettings[i].AllowedPost,ps_currentAccountSetting.FriendSettings[i].Scenemoney.ToString(), ps_currentAccountSetting.FriendSettings[i].ParkPriority.ToString());
 
                 }
             }
@@ -297,6 +487,18 @@ namespace SNSHelper_Win_Garden
             loadFriendDataThread.Start();
         }
 
+
+        private void BeginToGetAllFriendData()
+        {
+            dgvFriendList.ScrollBars = ScrollBars.None;
+            groupPanel2.Enabled = false;
+            groupPanel5.Visible = true;
+            ShowNetworkingStatus_InitFriend("正在登录...");
+
+            loadAllFriendDataThread = new Thread(ShowIniAllFriendDetails);
+            loadAllFriendDataThread.Start();
+        }
+
         private void StopGetFriendData()
         {
             dgvFriendList.ScrollBars = ScrollBars.Both;
@@ -308,7 +510,22 @@ namespace SNSHelper_Win_Garden
         {
             for (int i = 0; i < ps_currentAccountSetting.FriendSettings.Count; i++)
             {
-                if (ps_currentAccountSetting.FriendSettings[i].NickName.Equals(friend.RealName))
+                if (ps_currentAccountSetting.FriendSettings[i].UID.Equals(friend.UId))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+        private bool IsIncludedInAccountSettingFriendSettingList(AccountSetting currentAccountSetting, ParkerFriendInfo friend)
+        {
+
+            for (int i = 0; i < currentAccountSetting.FriendSettings.Count; i++)
+            {
+                if (currentAccountSetting.FriendSettings[i].UID.Equals(friend.UId))
                 {
                     return true;
                 }
@@ -351,9 +568,35 @@ namespace SNSHelper_Win_Garden
             {
                 if (!IsIncludedInCurrentFriendSettingList(friendList[i]))
                 {
-                    ps_currentAccountSetting.FriendSettings.Add(new FriendSetting(friendList[i].RealName, friendList[i].UId));
+                    ps_currentAccountSetting.FriendSettings.Add(new FriendSetting(friendList[i].RealName, friendList[i].UId,friendList[i].SceneMoney));
                 }
             }
+
+            for (int i = 0; i < friendList.Count; i++)//更新最新的停车位的收入
+            {
+                for (int j = 0; j < ps_currentAccountSetting.FriendSettings.Count; j++)
+                {
+                    if (ps_currentAccountSetting.FriendSettings[j].UID.Equals(friendList[i].UId))
+                    {
+                        ps_currentAccountSetting.FriendSettings[j].Scenemoney = friendList[i].SceneMoney;
+                        break;
+                    }
+
+
+
+                }
+            }
+
+
+            //高级车位优先停车
+            for (int i = 0; i < ps_currentAccountSetting.FriendSettings.Count; i++)
+            {
+                if ((Convert.ToInt32(ps_currentAccountSetting.FriendSettings[i].Scenemoney) > 10) && (ps_currentAccountSetting.FriendSettings[i].ParkPriority == int.MaxValue))
+                {
+                    ps_currentAccountSetting.FriendSettings[i].ParkPriority = 21 - Convert.ToInt32(ps_currentAccountSetting.FriendSettings[i].Scenemoney);
+                }
+            }
+
 
             ShowCurrentFriendList();
 
@@ -368,8 +611,7 @@ namespace SNSHelper_Win_Garden
         private void ShowIniFriendDetails()
         {
             dgtShowNetworkingStatus_InitFriend snsif = new dgtShowNetworkingStatus_InitFriend(ShowNetworkingStatus_InitFriend);
-
-            if (Utility.Login(txtNewLoginEmail.Text, txtNewLoginPwd.Text))
+            if (utility.Login(txtNewLoginEmail.Text, txtNewLoginPwd.Text))
             {
                 this.BeginInvoke(snsif, new object[] { "登录成功！正在获取好友数据..." });
             }
@@ -383,13 +625,83 @@ namespace SNSHelper_Win_Garden
                 return;
             }
 
-            ParkingHelper helper = new ParkingHelper();
+            ParkingHelper helper = new ParkingHelper(utility);
 
             this.BeginInvoke(snsif, new object[] { "好友数据获取完毕！正在退出..." });
-            Utility.Logout();
+            utility.Logout();
 
             dgtBindParkerFriend bpf = new dgtBindParkerFriend(ShowParkerFriendFromNet);
             this.BeginInvoke(bpf, new object[] { helper.ParkerFriendList });
+        }
+
+
+        private void ShowIniAllFriendDetails()
+        {
+            dgtShowNetworkingStatus_InitFriend snsif = new dgtShowNetworkingStatus_InitFriend(ShowNetworkingStatus_InitFriend);
+            for (int i = 0; i < ConfigHelper.AccountSettings.Count; i++)
+            {
+                if (utility.Login(ConfigHelper.AccountSettings[i].LoginEmail, ConfigHelper.AccountSettings[i].LoginPwd))
+                {
+                    this.BeginInvoke(snsif, new object[] { string.Format("{0}登录成功！正在获取好友数据...", ConfigHelper.AccountSettings[i].LoginEmail) });
+                }
+                else
+                {
+                    DevComponents.DotNetBar.MessageBoxEx.Show(string.Format("{0}登录失败！", ConfigHelper.AccountSettings[i].LoginEmail));
+                    continue;
+
+                }
+
+                ParkingHelper helper = new ParkingHelper(utility);
+
+              
+                utility.Logout();
+
+                //更新本地的账号好友信息
+                for (int j = 0; j < ConfigHelper.AccountSettings[i].FriendSettings.Count; j++)
+                {
+                    if (!IsIncludedInNetFriendList(ConfigHelper.AccountSettings[i].FriendSettings[j], helper.ParkerFriendList))
+                    {
+                        ConfigHelper.AccountSettings[i].FriendSettings.RemoveAt(j);
+                        j--;
+                    }
+                }
+
+                for (int j = 0; j < helper.ParkerFriendList.Count; j++)
+                {
+                    if (!IsIncludedInAccountSettingFriendSettingList(ConfigHelper.AccountSettings[i], helper.ParkerFriendList[j]))
+                    {
+                        ConfigHelper.AccountSettings[i].FriendSettings.Add(new FriendSetting(helper.ParkerFriendList[j].RealName, helper.ParkerFriendList[j].UId, helper.ParkerFriendList[j].SceneMoney));
+                    }
+                }
+
+                for (int j = 0; j < helper.ParkerFriendList.Count; j++)//更新最新的停车位的收入
+                {
+                    for (int k = 0; k < ConfigHelper.AccountSettings[i].FriendSettings.Count; k++)
+                    {
+                        if (ConfigHelper.AccountSettings[i].FriendSettings[k].UID.Equals(helper.ParkerFriendList[j].UId))
+                        {
+                            ConfigHelper.AccountSettings[i].FriendSettings[k].Scenemoney = helper.ParkerFriendList[j].SceneMoney;
+                            break;
+                        }
+
+                    }
+                }
+
+                //更新好友信息中默认的停车优先顺序
+
+                for (int j = 0; j < ConfigHelper.AccountSettings[i].FriendSettings.Count; j++)
+                {
+                    if ((Convert.ToInt32(ConfigHelper.AccountSettings[i].FriendSettings[j].Scenemoney) > 10) && (ConfigHelper.AccountSettings[i].FriendSettings[j].ParkPriority == int.MaxValue))
+                    {
+                        ConfigHelper.AccountSettings[i].FriendSettings[j].ParkPriority = 21 - Convert.ToInt32(ConfigHelper.AccountSettings[i].FriendSettings[j].Scenemoney);
+                    }
+                }
+
+                this.BeginInvoke(snsif, new object[] { string.Format("{0}好友数据获取完毕！正在退出...", ConfigHelper.AccountSettings[i].LoginEmail) });
+            }
+            this.BeginInvoke(snsif, new object[] { "所有账号好友数据获取完毕！正在退出..." });
+            dgtStopGetFriendData dgtstop = new dgtStopGetFriendData(StopGetFriendData);
+            this.BeginInvoke(dgtstop);
         }
 
         private void ClearAccountField()

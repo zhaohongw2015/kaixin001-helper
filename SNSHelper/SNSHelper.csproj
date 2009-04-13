@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1DEDEBEF-24F9-43E2-9180-96E165C21B4E}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -12,6 +12,14 @@
     <AssemblyName>SNSHelper</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,6 +76,7 @@
     <Compile Include="Kaixin001\Entity\Parking\EntityBase.cs" />
     <Compile Include="Kaixin001\Entity\Parking\ErrorInfo.cs" />
     <Compile Include="Kaixin001\Entity\Parking\ParkerFriendInfo.cs" />
+    <Compile Include="Kaixin001\Entity\Parking\ParkerStaInfo.cs" />
     <Compile Include="Kaixin001\Entity\Parking\ParkingInfo.cs" />
     <Compile Include="Kaixin001\Entity\Parking\ParkerInfo.cs" />
     <Compile Include="Kaixin001\Entity\Parking\ParkResult.cs" />
