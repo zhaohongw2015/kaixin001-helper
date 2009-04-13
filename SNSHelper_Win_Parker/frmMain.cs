@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 助手的当前版本
         /// </summary>
-        string currentBuildVersion = "20090413内测版";
+        string currentBuildVersion = "20090414内测版";
         
         
         
