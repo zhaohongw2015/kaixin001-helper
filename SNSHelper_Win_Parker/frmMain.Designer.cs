@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
@@ -53,6 +53,7 @@
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.lblNetworkingStatus = new DevComponents.DotNetBar.LabelX();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtKey = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelAccCount = new DevComponents.DotNetBar.LabelX();
             this.labelFriendCount = new DevComponents.DotNetBar.LabelX();
             this.cbxColor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -108,6 +109,15 @@
             this.txtParkingInterval = new DevComponents.Editors.IntegerInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.parkStaGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.AccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carcount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CarPriceCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cash = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalProperty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.txtPartResultBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
@@ -116,9 +126,6 @@
             this.btnStopParking = new DevComponents.DotNetBar.ButtonX();
             this.btnStartParking = new DevComponents.DotNetBar.ButtonX();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.parkStaGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.txtWhatsNew = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tabHistory = new DevComponents.DotNetBar.TabItem(this.components);
@@ -144,11 +151,6 @@
             this.parkingTimer = new System.Windows.Forms.Timer(this.components);
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.账号姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.用户ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carcash = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carcount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.总资产 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
@@ -164,10 +166,10 @@
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).BeginInit();
-            this.tabControlPanel1.SuspendLayout();
-            this.panelEx1.SuspendLayout();
             this.tabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parkStaGridViewX1)).BeginInit();
+            this.tabControlPanel1.SuspendLayout();
+            this.panelEx1.SuspendLayout();
             this.tabControlPanel4.SuspendLayout();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -177,9 +179,9 @@
             // 
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel1);
+            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
@@ -406,6 +408,7 @@
             // 
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.txtKey);
             this.groupPanel4.Controls.Add(this.labelAccCount);
             this.groupPanel4.Controls.Add(this.labelFriendCount);
             this.groupPanel4.Controls.Add(this.cbxColor);
@@ -449,6 +452,19 @@
             this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel4.TabIndex = 4;
+            // 
+            // txtKey
+            // 
+            // 
+            // 
+            // 
+            this.txtKey.Border.Class = "TextBoxBorder";
+            this.txtKey.Location = new System.Drawing.Point(343, 59);
+            this.txtKey.Name = "txtKey";
+            this.txtKey.Size = new System.Drawing.Size(161, 21);
+            this.txtKey.TabIndex = 30;
+            this.txtKey.WatermarkText = "请输入好友名或ID";
+            this.txtKey.TextChanged += new System.EventHandler(this.txtKey_TextChanged);
             // 
             // labelAccCount
             // 
@@ -575,14 +591,14 @@
             this.dgvFriendList.AllowUserToDeleteRows = false;
             this.dgvFriendList.AllowUserToResizeColumns = false;
             this.dgvFriendList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFriendList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFriendList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFriendList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFriendList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.好友名,
@@ -591,14 +607,14 @@
             this.贴条,
             this.scenemoney,
             this.优先级});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFriendList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFriendList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvFriendList.Location = new System.Drawing.Point(4, 84);
             this.dgvFriendList.MultiSelect = false;
@@ -607,6 +623,7 @@
             this.dgvFriendList.Size = new System.Drawing.Size(504, 303);
             this.dgvFriendList.TabIndex = 18;
             this.dgvFriendList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFriendList_CellEndEdit);
+            this.dgvFriendList.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvFriendList_DataError);
             // 
             // 好友名
             // 
@@ -1062,6 +1079,106 @@
             this.tabItem2.Name = "tabItem2";
             this.tabItem2.Text = "停车设置";
             // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Controls.Add(this.parkStaGridViewX1);
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(754, 552);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 3;
+            this.tabControlPanel3.TabItem = this.tabItem3;
+            // 
+            // parkStaGridViewX1
+            // 
+            this.parkStaGridViewX1.AllowUserToAddRows = false;
+            this.parkStaGridViewX1.AllowUserToDeleteRows = false;
+            this.parkStaGridViewX1.AllowUserToResizeColumns = false;
+            this.parkStaGridViewX1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.parkStaGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.parkStaGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.parkStaGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AccountName,
+            this.UserId,
+            this.carcount,
+            this.CarPriceCount,
+            this.cash,
+            this.TotalProperty});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.parkStaGridViewX1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.parkStaGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.parkStaGridViewX1.Location = new System.Drawing.Point(4, 4);
+            this.parkStaGridViewX1.MultiSelect = false;
+            this.parkStaGridViewX1.Name = "parkStaGridViewX1";
+            this.parkStaGridViewX1.RowTemplate.Height = 23;
+            this.parkStaGridViewX1.Size = new System.Drawing.Size(746, 548);
+            this.parkStaGridViewX1.TabIndex = 19;
+            // 
+            // AccountName
+            // 
+            this.AccountName.HeaderText = "账号姓名";
+            this.AccountName.Name = "AccountName";
+            this.AccountName.ReadOnly = true;
+            this.AccountName.Width = 155;
+            // 
+            // UserId
+            // 
+            this.UserId.HeaderText = "用户ID";
+            this.UserId.Name = "UserId";
+            this.UserId.ReadOnly = true;
+            // 
+            // carcount
+            // 
+            this.carcount.HeaderText = "车辆总数";
+            this.carcount.Name = "carcount";
+            this.carcount.ReadOnly = true;
+            // 
+            // CarPriceCount
+            // 
+            this.CarPriceCount.HeaderText = "车辆总价值(元)";
+            this.CarPriceCount.Name = "CarPriceCount";
+            this.CarPriceCount.ReadOnly = true;
+            this.CarPriceCount.Width = 120;
+            // 
+            // cash
+            // 
+            this.cash.HeaderText = "现金(元)";
+            this.cash.Name = "cash";
+            this.cash.ReadOnly = true;
+            // 
+            // TotalProperty
+            // 
+            this.TotalProperty.HeaderText = "总资产(元)";
+            this.TotalProperty.Name = "TotalProperty";
+            this.TotalProperty.ReadOnly = true;
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel3;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "统计信息";
+            // 
             // tabControlPanel1
             // 
             this.tabControlPanel1.Controls.Add(this.txtPartResultBoard);
@@ -1164,67 +1281,6 @@
             this.tabItem1.AttachedControl = this.tabControlPanel1;
             this.tabItem1.Name = "tabItem1";
             this.tabItem1.Text = "停车情况";
-            // 
-            // tabControlPanel3
-            // 
-            this.tabControlPanel3.Controls.Add(this.parkStaGridViewX1);
-            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 25);
-            this.tabControlPanel3.Name = "tabControlPanel3";
-            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(754, 552);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel3.Style.GradientAngle = 90;
-            this.tabControlPanel3.TabIndex = 3;
-            this.tabControlPanel3.TabItem = this.tabItem3;
-            // 
-            // parkStaGridViewX1
-            // 
-            this.parkStaGridViewX1.AllowUserToAddRows = false;
-            this.parkStaGridViewX1.AllowUserToDeleteRows = false;
-            this.parkStaGridViewX1.AllowUserToResizeColumns = false;
-            this.parkStaGridViewX1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.parkStaGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.parkStaGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.parkStaGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.账号姓名,
-            this.用户ID,
-            this.carcash,
-            this.carcount,
-            this.总资产});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.parkStaGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.parkStaGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.parkStaGridViewX1.Location = new System.Drawing.Point(4, 4);
-            this.parkStaGridViewX1.MultiSelect = false;
-            this.parkStaGridViewX1.Name = "parkStaGridViewX1";
-            this.parkStaGridViewX1.RowTemplate.Height = 23;
-            this.parkStaGridViewX1.Size = new System.Drawing.Size(732, 536);
-            this.parkStaGridViewX1.TabIndex = 19;
-            // 
-            // tabItem3
-            // 
-            this.tabItem3.AttachedControl = this.tabControlPanel3;
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Text = "统计信息";
             // 
             // tabControlPanel4
             // 
@@ -1474,37 +1530,6 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
-            // 账号姓名
-            // 
-            this.账号姓名.HeaderText = "账号姓名";
-            this.账号姓名.Name = "账号姓名";
-            this.账号姓名.ReadOnly = true;
-            this.账号姓名.Width = 150;
-            // 
-            // 用户ID
-            // 
-            this.用户ID.HeaderText = "用户ID";
-            this.用户ID.Name = "用户ID";
-            this.用户ID.ReadOnly = true;
-            // 
-            // carcash
-            // 
-            this.carcash.HeaderText = "现金(元)";
-            this.carcash.Name = "carcash";
-            this.carcash.ReadOnly = true;
-            // 
-            // carcount
-            // 
-            this.carcount.HeaderText = "车辆总数";
-            this.carcount.Name = "carcount";
-            this.carcount.ReadOnly = true;
-            // 
-            // 总资产
-            // 
-            this.总资产.HeaderText = "总资产(元)";
-            this.总资产.Name = "总资产";
-            this.总资产.ReadOnly = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1543,10 +1568,10 @@
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtNetDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).EndInit();
-            this.tabControlPanel1.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
             this.tabControlPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.parkStaGridViewX1)).EndInit();
+            this.tabControlPanel1.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
             this.tabControlPanel4.ResumeLayout(false);
             this.dockSite7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
@@ -1666,10 +1691,12 @@
         private DevComponents.DotNetBar.ButtonItem biInvertSelectFullColumn;
         private DevComponents.DotNetBar.ButtonItem biFriendUp;
         private DevComponents.DotNetBar.ButtonItem biFriendDown;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 账号姓名;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 用户ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carcash;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccountName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
         private System.Windows.Forms.DataGridViewTextBoxColumn carcount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 总资产;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CarPriceCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cash;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalProperty;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtKey;
     }
 }

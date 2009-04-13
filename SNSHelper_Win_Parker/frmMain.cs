@@ -779,33 +779,6 @@ namespace SNSHelper_Win_Garden
         
         #endregion
 
-        #region 账号统计
-        private void parkerSta(ParkerStaInfo parkerStainfo)
-        {
-            Boolean bExits = false;
-            foreach (DataGridViewRow dr in parkStaGridViewX1.Rows)
-            {
-                if (dr.Cells[1].Value.ToString() == parkerStainfo.UId.ToString())
-                {
-                    dr.Cells[2].Value = parkerStainfo.Cashcount.ToString();
-                    dr.Cells[3].Value = parkerStainfo.Carcount.ToString();
-                    dr.Cells[3].Value = (parkerStainfo.Cashcount+parkerStainfo.CarCountPrice).ToString();
-                    bExits = true;
-                }
-
-            }
-            if (!bExits)
-            {
-                parkStaGridViewX1.Rows.Add(parkerStainfo.RealName, parkerStainfo.UId.ToString(), parkerStainfo.Cashcount.ToString(), parkerStainfo.Carcount.ToString(), (parkerStainfo.Cashcount + parkerStainfo.CarCountPrice).ToString());
-
-            }
-
-            
-        }
-
-        #endregion
-
-
         #region AutoUpdate
 
         string latestFile = "Kaixin001.Helper.V1.0.Beta1.patch001.zip";
@@ -918,10 +891,11 @@ namespace SNSHelper_Win_Garden
             Process.Start("explorer.exe", "http://bbs.jailu.cn");
         }
 
-       
-       
-       
-       
-             
+        private void dgvFriendList_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            return;
+        }
+
+                
     }
 }

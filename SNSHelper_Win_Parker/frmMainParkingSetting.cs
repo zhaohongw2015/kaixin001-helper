@@ -119,6 +119,7 @@ namespace SNSHelper_Win_Garden
                     lsbAccount.Items.Add(txtNewLoginEmail.Text);
                     isNewAccount = false;
                 }
+                labelAccCount.Text = string.Format("总共{0}个账号信息", lsbAccount.Items.Count.ToString());
             }
             else
             {
@@ -323,11 +324,10 @@ namespace SNSHelper_Win_Garden
             ListViewItem lvi = lsbAccount.Items[index];
             lsbAccount.Items.RemoveAt(index);
             lsbAccount.Items.Insert(0, lvi);
-            lsbAccount.Refresh();
 
             AccountSetting temp = ConfigHelper.AccountSettings[index];
-            ConfigHelper.AccountSettings[index] = ConfigHelper.AccountSettings[index - 1];
-            ConfigHelper.AccountSettings[0] = temp;
+            ConfigHelper.AccountSettings.RemoveAt(index);
+            ConfigHelper.AccountSettings.Insert(0,temp);
 
             ConfigHelper.SaveConfig();
 
@@ -375,11 +375,10 @@ namespace SNSHelper_Win_Garden
             ListViewItem lvi = lsbAccount.Items[index];
             lsbAccount.Items.RemoveAt(index);
             lsbAccount.Items.Add(lvi);
-            lsbAccount.Refresh();
 
             AccountSetting temp = ConfigHelper.AccountSettings[index];
-            ConfigHelper.AccountSettings[index] = ConfigHelper.AccountSettings[index+1];
-            ConfigHelper.AccountSettings[lsbAccount.Items.Count - 1] = temp;
+            ConfigHelper.AccountSettings.RemoveAt(index);
+            ConfigHelper.AccountSettings.Add(temp);
 
             ConfigHelper.SaveConfig();
         }
@@ -396,6 +395,33 @@ namespace SNSHelper_Win_Garden
             cbxUpdateType.Enabled = cbxCarAutoUpdate.Checked;
         }
 
+        #endregion
+
+        #region 好友列表相关
+        bool filter = false;
+        private void txtKey_TextChanged(object sender, EventArgs e)
+        {
+            filter = !string.IsNullOrEmpty(txtKey.Text);
+
+            if (!filter)
+            {
+                ShowFriendSettings(ps_currentAccountSetting.FriendSettings);
+            }
+            else
+            {
+                ShowFriendSettings(ps_currentAccountSetting.FriendSettings.FindAll(delegate(FriendSetting fs) { return fs.NickName.Contains(txtKey.Text) || fs.UID.Contains(txtKey.Text); }));
+            }
+        }
+
+        private void ShowFriendSettings(List<FriendSetting> friendSettings)
+        {
+            dgvFriendList.Rows.Clear();
+
+            foreach (FriendSetting item in friendSettings)
+            {
+                dgvFriendList.Rows.Add(item.NickName, item.UID, item.AllowedPark, item.AllowedPost, item.Scenemoney.ToString(), item.ParkPriority.ToString());
+            }
+        }
         #endregion
 
         #region 其他
@@ -447,6 +473,7 @@ namespace SNSHelper_Win_Garden
                 if (ConfigHelper.SaveConfig())
                 {
                     DevComponents.DotNetBar.MessageBoxEx.Show("删除帐号成功");
+                    labelAccCount.Text = string.Format("总共{0}个账号信息", lsbAccount.Items.Count.ToString());
                 }
                 else
                 {
