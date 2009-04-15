@@ -35,6 +35,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.txtPartResultBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.lblParkingRemainingTime = new DevComponents.DotNetBar.LabelX();
+            this.lblNextParkingTime = new DevComponents.DotNetBar.LabelX();
+            this.btnStopParking = new DevComponents.DotNetBar.ButtonX();
+            this.btnStartParking = new DevComponents.DotNetBar.ButtonX();
+            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.contextMenuBar2 = new DevComponents.DotNetBar.ContextMenuBar();
@@ -118,14 +126,6 @@
             this.cash = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalProperty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.txtPartResultBoard = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.lblParkingRemainingTime = new DevComponents.DotNetBar.LabelX();
-            this.lblNextParkingTime = new DevComponents.DotNetBar.LabelX();
-            this.btnStopParking = new DevComponents.DotNetBar.ButtonX();
-            this.btnStartParking = new DevComponents.DotNetBar.ButtonX();
-            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.txtWhatsNew = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tabHistory = new DevComponents.DotNetBar.TabItem(this.components);
@@ -153,6 +153,8 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabControlPanel1.SuspendLayout();
+            this.panelEx1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).BeginInit();
@@ -168,8 +170,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).BeginInit();
             this.tabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parkStaGridViewX1)).BeginInit();
-            this.tabControlPanel1.SuspendLayout();
-            this.panelEx1.SuspendLayout();
             this.tabControlPanel4.SuspendLayout();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -197,6 +197,109 @@
             this.tabControl1.Tabs.Add(this.tabItem3);
             this.tabControl1.Tabs.Add(this.tabHistory);
             this.tabControl1.Text = "tabControl1";
+            // 
+            // tabControlPanel1
+            // 
+            this.tabControlPanel1.Controls.Add(this.txtPartResultBoard);
+            this.tabControlPanel1.Controls.Add(this.panelEx1);
+            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
+            this.tabControlPanel1.Name = "tabControlPanel1";
+            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel1.Size = new System.Drawing.Size(754, 552);
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
+            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel1.Style.GradientAngle = 90;
+            this.tabControlPanel1.TabIndex = 1;
+            this.tabControlPanel1.TabItem = this.tabItem1;
+            // 
+            // txtPartResultBoard
+            // 
+            this.txtPartResultBoard.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtPartResultBoard.Border.Class = "TextBoxBorder";
+            this.txtPartResultBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPartResultBoard.Location = new System.Drawing.Point(1, 30);
+            this.txtPartResultBoard.Multiline = true;
+            this.txtPartResultBoard.Name = "txtPartResultBoard";
+            this.txtPartResultBoard.ReadOnly = true;
+            this.txtPartResultBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPartResultBoard.Size = new System.Drawing.Size(752, 521);
+            this.txtPartResultBoard.TabIndex = 1;
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx1.Controls.Add(this.lblParkingRemainingTime);
+            this.panelEx1.Controls.Add(this.lblNextParkingTime);
+            this.panelEx1.Controls.Add(this.btnStopParking);
+            this.panelEx1.Controls.Add(this.btnStartParking);
+            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEx1.Location = new System.Drawing.Point(1, 1);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(752, 29);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 0;
+            // 
+            // lblParkingRemainingTime
+            // 
+            this.lblParkingRemainingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblParkingRemainingTime.ForeColor = System.Drawing.Color.Red;
+            this.lblParkingRemainingTime.Location = new System.Drawing.Point(462, 4);
+            this.lblParkingRemainingTime.Name = "lblParkingRemainingTime";
+            this.lblParkingRemainingTime.Size = new System.Drawing.Size(65, 21);
+            this.lblParkingRemainingTime.TabIndex = 3;
+            this.lblParkingRemainingTime.Text = "00:21:35";
+            this.lblParkingRemainingTime.Visible = false;
+            // 
+            // lblNextParkingTime
+            // 
+            this.lblNextParkingTime.Location = new System.Drawing.Point(192, 5);
+            this.lblNextParkingTime.Name = "lblNextParkingTime";
+            this.lblNextParkingTime.Size = new System.Drawing.Size(263, 21);
+            this.lblNextParkingTime.TabIndex = 2;
+            this.lblNextParkingTime.Text = "距下次停车(2008-12-15 18:18:18)还有";
+            this.lblNextParkingTime.Visible = false;
+            // 
+            // btnStopParking
+            // 
+            this.btnStopParking.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStopParking.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStopParking.Enabled = false;
+            this.btnStopParking.Location = new System.Drawing.Point(104, 4);
+            this.btnStopParking.Name = "btnStopParking";
+            this.btnStopParking.Size = new System.Drawing.Size(75, 21);
+            this.btnStopParking.TabIndex = 1;
+            this.btnStopParking.Text = "停止停车";
+            this.btnStopParking.Click += new System.EventHandler(this.btnStopPark_Click);
+            // 
+            // btnStartParking
+            // 
+            this.btnStartParking.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStartParking.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStartParking.Location = new System.Drawing.Point(15, 4);
+            this.btnStartParking.Name = "btnStartParking";
+            this.btnStartParking.Size = new System.Drawing.Size(75, 21);
+            this.btnStartParking.TabIndex = 0;
+            this.btnStartParking.Text = "开始停车";
+            this.btnStartParking.Click += new System.EventHandler(this.btnStartPark_Click);
+            // 
+            // tabItem1
+            // 
+            this.tabItem1.AttachedControl = this.tabControlPanel1;
+            this.tabItem1.Name = "tabItem1";
+            this.tabItem1.Text = "停车情况";
             // 
             // tabControlPanel2
             // 
@@ -1179,109 +1282,6 @@
             this.tabItem3.Name = "tabItem3";
             this.tabItem3.Text = "统计信息";
             // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Controls.Add(this.txtPartResultBoard);
-            this.tabControlPanel1.Controls.Add(this.panelEx1);
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 25);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(754, 552);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.tabItem1;
-            // 
-            // txtPartResultBoard
-            // 
-            this.txtPartResultBoard.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtPartResultBoard.Border.Class = "TextBoxBorder";
-            this.txtPartResultBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPartResultBoard.Location = new System.Drawing.Point(1, 30);
-            this.txtPartResultBoard.Multiline = true;
-            this.txtPartResultBoard.Name = "txtPartResultBoard";
-            this.txtPartResultBoard.ReadOnly = true;
-            this.txtPartResultBoard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPartResultBoard.Size = new System.Drawing.Size(752, 521);
-            this.txtPartResultBoard.TabIndex = 1;
-            // 
-            // panelEx1
-            // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.Controls.Add(this.lblParkingRemainingTime);
-            this.panelEx1.Controls.Add(this.lblNextParkingTime);
-            this.panelEx1.Controls.Add(this.btnStopParking);
-            this.panelEx1.Controls.Add(this.btnStartParking);
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEx1.Location = new System.Drawing.Point(1, 1);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(752, 29);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 0;
-            // 
-            // lblParkingRemainingTime
-            // 
-            this.lblParkingRemainingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblParkingRemainingTime.ForeColor = System.Drawing.Color.Red;
-            this.lblParkingRemainingTime.Location = new System.Drawing.Point(462, 4);
-            this.lblParkingRemainingTime.Name = "lblParkingRemainingTime";
-            this.lblParkingRemainingTime.Size = new System.Drawing.Size(65, 21);
-            this.lblParkingRemainingTime.TabIndex = 3;
-            this.lblParkingRemainingTime.Text = "00:21:35";
-            this.lblParkingRemainingTime.Visible = false;
-            // 
-            // lblNextParkingTime
-            // 
-            this.lblNextParkingTime.Location = new System.Drawing.Point(192, 5);
-            this.lblNextParkingTime.Name = "lblNextParkingTime";
-            this.lblNextParkingTime.Size = new System.Drawing.Size(263, 21);
-            this.lblNextParkingTime.TabIndex = 2;
-            this.lblNextParkingTime.Text = "距下次停车(2008-12-15 18:18:18)还有";
-            this.lblNextParkingTime.Visible = false;
-            // 
-            // btnStopParking
-            // 
-            this.btnStopParking.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStopParking.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStopParking.Enabled = false;
-            this.btnStopParking.Location = new System.Drawing.Point(104, 4);
-            this.btnStopParking.Name = "btnStopParking";
-            this.btnStopParking.Size = new System.Drawing.Size(75, 21);
-            this.btnStopParking.TabIndex = 1;
-            this.btnStopParking.Text = "停止停车";
-            this.btnStopParking.Click += new System.EventHandler(this.btnStopPark_Click);
-            // 
-            // btnStartParking
-            // 
-            this.btnStartParking.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStartParking.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStartParking.Location = new System.Drawing.Point(15, 4);
-            this.btnStartParking.Name = "btnStartParking";
-            this.btnStartParking.Size = new System.Drawing.Size(75, 21);
-            this.btnStartParking.TabIndex = 0;
-            this.btnStartParking.Text = "开始停车";
-            this.btnStartParking.Click += new System.EventHandler(this.btnStartPark_Click);
-            // 
-            // tabItem1
-            // 
-            this.tabItem1.AttachedControl = this.tabControlPanel1;
-            this.tabItem1.Name = "tabItem1";
-            this.tabItem1.Text = "停车情况";
-            // 
             // tabControlPanel4
             // 
             this.tabControlPanel4.Controls.Add(this.txtWhatsNew);
@@ -1555,6 +1555,8 @@
             this.Resize += new System.EventHandler(this.frmMain_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabControlPanel1.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar2)).EndInit();
@@ -1570,8 +1572,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtParkingInterval)).EndInit();
             this.tabControlPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.parkStaGridViewX1)).EndInit();
-            this.tabControlPanel1.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
             this.tabControlPanel4.ResumeLayout(false);
             this.dockSite7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();

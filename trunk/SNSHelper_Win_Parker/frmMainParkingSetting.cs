@@ -73,21 +73,33 @@ namespace SNSHelper_Win_Garden
 
         private void dgvFriendList_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+                   
+            int iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
             switch (e.ColumnIndex)
             {
                 case 2: // 是否停车
                     ps_currentAccountSetting.FriendSettings[e.RowIndex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                    ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[e.RowIndex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
                     break;
                 case 3: // 是否贴条
                     ps_currentAccountSetting.FriendSettings[e.RowIndex].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                    ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[e.RowIndex].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
                     break;
                 case 4: // 优先级
                     ps_currentAccountSetting.FriendSettings[e.RowIndex].ParkPriority = Convert.ToInt32(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                    // Fix Issue 2
+                    ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[e.RowIndex].ParkPriority = Convert.ToInt32(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+    
+                // Fix Issue 2
                     if (ps_currentAccountSetting.FriendSettings[e.RowIndex].ParkPriority == 0)
                     {
                         ps_currentAccountSetting.FriendSettings[e.RowIndex].ParkPriority = int.MaxValue;
                     }
+
+                    if (ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[e.RowIndex].ParkPriority == 0)
+                    {
+                        ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[e.RowIndex].ParkPriority = int.MaxValue;
+                    }
+
                     break;
                 default:
                     break;
@@ -290,6 +302,7 @@ namespace SNSHelper_Win_Garden
             }
         }
 
+
         private void biFriendUp_Click(object sender, EventArgs e)
         {
             int index = dgvFriendList.SelectedCells[0].RowIndex;
@@ -316,6 +329,7 @@ namespace SNSHelper_Win_Garden
             ps_currentAccountSetting.FriendSettings[index + 1] = tempFS;
         }
 
+        
 
         private void bTop_Click(object sender, EventArgs e)
         {
