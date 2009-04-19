@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using SNSHelper.Kaixin001;
 using SNSHelper.Kaixin001.Entity.Parking;
-using SNSHelper_Win_Garden.Entity;
-using SNSHelper_Win_Garden.Helper;
+using SNSHelper_Win_Parker.Entity;
+using SNSHelper_Win_Parker.Helper;
 
-namespace SNSHelper_Win_Garden
+namespace SNSHelper_Win_Parker
 {
     public partial class frmMain
     {

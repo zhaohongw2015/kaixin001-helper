@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SNSHelper_Win_Garden.Entity
+namespace SNSHelper_Win_Parker.Entity
 {
     public class AccountSetting
     {
