@@ -1,4 +1,4 @@
-﻿namespace SNSHelper_Win_Garden
+﻿namespace SNSHelper_Win_Parker
 {
     partial class frmAbout
     {

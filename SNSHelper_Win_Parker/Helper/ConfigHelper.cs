@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using SNSHelper_Win_Garden.Entity;
+using SNSHelper_Win_Parker.Entity;
 
-namespace SNSHelper_Win_Garden.Helper
+namespace SNSHelper_Win_Parker.Helper
 {
     public class ConfigHelper
     {
@@ -73,9 +73,10 @@ namespace SNSHelper_Win_Garden.Helper
             AddGlobalSetting(xmlDoc.DocumentElement);
             AddAccountSettings(xmlDoc.DocumentElement);
 
+            String sXmlFile = Application.StartupPath + "\\data.xml";
             try
             {
-                xmlDoc.Save("data.xml");
+                xmlDoc.Save(sXmlFile);
 
                 return true;
             }
@@ -171,9 +172,9 @@ namespace SNSHelper_Win_Garden.Helper
             friendSetting.UID = node["UID"].InnerText;
             friendSetting.NickName = node["NickName"].InnerText;
             friendSetting.AllowedPark = Convert.ToBoolean(node["AllowedPark"].InnerText);
-            friendSetting.AllowedPost = Convert.ToBoolean(node["AllowedPost"].InnerText);            
+            friendSetting.AllowedPost = Convert.ToBoolean(node["AllowedPost"].InnerText);
+            friendSetting.ParkPriority = string.IsNullOrEmpty(node["ParkPriority"].InnerText) ? 0 : Convert.ToInt32(node["ParkPriority"].InnerText);           
             friendSetting.Scenemoney  = node["SceneMoney"].InnerText;
-            friendSetting.ParkPriority = string.IsNullOrEmpty(node["ParkPriority"].InnerText) ? 0 : Convert.ToInt32(node["ParkPriority"].InnerText);
             // Fix Issue 2
             if (friendSetting.ParkPriority == 0)
             {

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace SNSHelper_Win_Garden
+namespace SNSHelper_Win_Parker
 {
     public partial class frmAbout : DevComponents.DotNetBar.Office2007Form
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SNSHelper_Win_Garden
+namespace SNSHelper_Win_Parker
 {
     static class Program
     {

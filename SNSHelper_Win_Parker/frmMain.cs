@@ -8,10 +8,10 @@ using System.Windows.Forms;
 using SNSHelper.Common;
 using SNSHelper.Kaixin001;
 using SNSHelper.Kaixin001.Entity.Parking;
-using SNSHelper_Win_Garden.Entity;
-using SNSHelper_Win_Garden.Helper;
+using SNSHelper_Win_Parker.Entity;
+using SNSHelper_Win_Parker.Helper;
 
-namespace SNSHelper_Win_Garden
+namespace SNSHelper_Win_Parker
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007Form
     {
@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Garden
         /// <summary>
         /// 助手的当前版本
         /// </summary>
-        string currentBuildVersion = "20090414内测版";
+        string currentBuildVersion = "正式版 0419修正版";
         
         
         
@@ -46,7 +46,7 @@ namespace SNSHelper_Win_Garden
         private void frmMain_Load(object sender, EventArgs e)
         {
 
-            this.Text = "开心网争车位助手 V1.0 " + currentBuildVersion + " --By Jailu";
+            this.Text = "开心网争车位助手V1.0 " + currentBuildVersion + " --By Jailu";
             ShowWhatsNew(); 
             LoadConfig();
 
@@ -896,8 +896,55 @@ namespace SNSHelper_Win_Garden
             return;
         }
 
-       
-       
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            if (parkingThread != null)
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show(this, "停车任务正在运行，请停止后再执行导入操作！", "提示");
+
+                return;
+            }
+
+            frmImport newfrm = new frmImport();
+            newfrm.ShowDialog();
+            InitSetting();
+        }
+
+        private void InitSetting()
+        {
+            
+           
+            InitAccountSetting();
+
+            ShowAccountInList(ConfigHelper.AccountSettings);
+        }
+
+        /// <summary>
+        /// 初始化帐号设置
+        /// </summary>
+        private void InitAccountSetting()
+        {
+            txtNewLoginEmail.Clear();
+            txtNewLoginPwd.Clear();
+
+            dgvFriendList.Rows.Clear();
+        }
+
+        /// <summary>
+        /// 在帐号列表中显示已添加到帐号
+        /// </summary>
+        /// <param name="accountSettings"></param>
+        private void ShowAccountInList(List<SNSHelper_Win_Parker.Entity.AccountSetting> accountSettings)
+        {
+            lsbAccount.Items.Clear();
+
+            for (int i = 0; i < accountSettings.Count; i++)
+            {
+                lsbAccount.Items.Add(accountSettings[i].LoginEmail);
+            }
+            ConfigHelper.SaveConfig();
+            labelAccCount.Text = string.Format("总共{0}个账号信息", lsbAccount.Items.Count.ToString());
+        }
 
                 
     }

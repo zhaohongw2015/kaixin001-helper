@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
-using SNSHelper_Win_Garden.Entity;
+using SNSHelper_Win_Parker.Entity;
 
-namespace SNSHelper_Win_Garden.Helper
+namespace SNSHelper_Win_Parker.Helper
 {
     public class CarMarketHelper
     {
