@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Parker
         /// <summary>
         /// 助手的当前版本
         /// </summary>
-        string currentBuildVersion = "正式版 0419修正版";
+        string currentBuildVersion = "正式版 0421修正版";
         
         
         
@@ -425,15 +425,136 @@ namespace SNSHelper_Win_Parker
                     // 贴条操作
                     DoPost(helper);
 
-                    // 高级操作
-                    DoAdvanceOpt(helper, currentCash);
-
                     // 显示本次停车盈利情况
                     ShowParkingMsgWhileParking(string.Format("当前现金变为{0}元，本次停车共盈利{1}元！", currentCash, currentCash - Convert.ToDouble(helper.Parker.Cash)));
 
 
+                    // 高级操作
+                    // DoAdvanceOpt(helper, currentCash);
+                    #region     高级操作
+                    ShowParkingMsgWhileParking("开始执行高级操作：");
+                    Boolean bUpdate = false;
+                    if (currentParkingAccount.AdvanceSettings.AutoUpdateFreePark)
+                    {
+                        for (int j = 0; j < helper.ParkingList.Count; i++)
+                        {
+                            if (helper.ParkingList[j].IsParkFree)
+                            {
+                                bUpdate = true;
+                                if (helper.IsCardExsit("15"))
+                                {
+                                    ShowParkingMsgWhileParking("我的道具中已存在车位变更卡，可直接使用！");
+                                }
+                                else
+                                {
+                                    ShowParkingMsgWhileParking("我的道具中不存在车位变更卡，需先购买！");
+
+                                    if (currentCash < 30000)
+                                    {
+                                        ShowParkingMsgWhileParking(string.Format("升级免费车位需花费30000，当期现金({0})不足！", currentCash));
+                                        break;
+                                    }
+
+                                    if (helper.BuyCard("15"))
+                                    {
+                                        currentCash -= 30000;
+                                        ShowParkingMsgWhileParking("购买车位变更卡成功！");
+                                    }
+                                    else
+                                    {
+                                        ShowParkingMsgWhileParking("购买车位变更卡失败！");
+                                        break;
+                                    }
+                                }
+
+                                if (helper.UseCard("15"))
+                                {
+                                    ShowParkingMsgWhileParking("升级免费车位成功！");
+                                    continue;
+                                }
+                                else
+                                {
+                                    ShowParkingMsgWhileParking("升级免费车位失败！");
+                                    break;
+                                }
+                            }
+                        }
+                        if (!bUpdate)
+                           ShowParkingMsgWhileParking("不存在免费车位，无需升级！");
+                    }
+                    else
+                    {
+                        ShowParkingMsgWhileParking("无需升级免费车位！");
+                    }
+
+                    if (currentParkingAccount.AdvanceSettings.AutoBuyCar)
+                    {
+                        int currentCarCount = helper.CarList.Count;
+                        if (currentParkingAccount.AdvanceSettings.MaxCarNo <= currentCarCount)
+                        {
+                            ShowParkingMsgWhileParking("您拥有的车辆数以大于或等于配置的最大车辆数，无需自动买车！");
+                        }
+                        else
+                        {
+                            bool isBuyedNewCar = false;
+                            for (int j = 0; j < CarMarketHelper.CarList.Count; j++)
+                            {
+                                if (currentCash < CarMarketHelper.CarList[j].Price || currentParkingAccount.AdvanceSettings.MaxCarNo <= currentCarCount)
+                                {
+                                    break;
+                                }
+
+                                if (CarMarketHelper.CarList[j].Price <= 70000)
+                                {
+                                    if (IsCarExist(helper.CarList, CarMarketHelper.CarList[j].Name))
+                                    {
+                                        continue;
+                                    }
+                                }
+
+                                ShowParkingMsgWhileParking(string.Format("系统正在为你购买新车：{0}！", CarMarketHelper.CarList[j].Name));
+
+                                SNSHelper.Kaixin001.Enum.CarColor color = SNSHelper.Kaixin001.Enum.CarColor.None;
+                                if (currentParkingAccount.AdvanceSettings.Color == 0)
+                                {
+                                    Random ran = new Random(DateTime.Now.Millisecond);
+                                    color = (SNSHelper.Kaixin001.Enum.CarColor)ran.Next(1, 7);
+                                }
+                                else
+                                {
+                                    color = (SNSHelper.Kaixin001.Enum.CarColor)currentParkingAccount.AdvanceSettings.Color;
+                                }
+
+                                if (helper.BuyCar(CarMarketHelper.CarList[j].ID, color))
+                                {
+                                    isBuyedNewCar = true;
+                                    currentCarCount++;
+                                    ShowParkingMsgWhileParking(string.Format("购买新车 {0} 成功！", CarMarketHelper.CarList[j].Name));
+                                    currentCash -= CarMarketHelper.CarList[j].Price;
+                                }
+                            }
+
+                            if (isBuyedNewCar)
+                            {
+                                ShowParkingMsgWhileParking("购买新车操作完成！");
+                                ShowParkingMsgWhileParking("");
+                                ShowParkingMsgWhileParking("系统正在为您的新车停车：");
+                                helper = new ParkingHelper(utility);
+                                ParkCars(helper);
+                                ShowParkingMsgWhileParking("");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        ShowParkingMsgWhileParking("无需自动买车！");
+                    }
+
+                    ShowParkingMsgWhileParking("高级操作完成！");
+                    #endregion
+                    
                     //账号停车收益情况
-                    AddParkingIncomedMsg(string.Format("帐号({0})({4})：当前现金为{1},本次停车共盈利{2}元！,总共{3}辆车", currentParkingAccount.LoginEmail, currentCash, currentCash - Convert.ToDouble(helper.Parker.Cash), helper.CarList.Count.ToString(), helper.Parker.RealName));
+                    AddParkingIncomedMsg(string.Format("帐号({0})({1})：当前现金为{2},总共{3}辆车", currentParkingAccount.LoginEmail,helper.Parker.RealName,currentCash, helper.CarList.Count.ToString()));
 
                     double dCarCountPrice = 0;
                     foreach (CarInfo c in helper.CarList)
@@ -457,7 +578,7 @@ namespace SNSHelper_Win_Parker
                 catch (Exception e)
                 {
                     
-                    AddParkingFailedMsg(string.Format("Exception:帐号({0})停车失败！，错误信息：{1}", currentParkingAccount.LoginEmail,e.Message));
+                    AddParkingFailedMsg(string.Format("Exception:帐号({0})停车失败！错误信息：{1}", currentParkingAccount.LoginEmail,e.Message));
                     continue;
                 }
             }
@@ -612,8 +733,8 @@ namespace SNSHelper_Win_Parker
                     ShowParkingMsgWhileParking("购买新车操作完成！");
                     ShowParkingMsgWhileParking("");
                     ShowParkingMsgWhileParking("系统正在为您的新车停车：");
-                    //helper = new ParkingHelper(utility);
-                   // ParkCars(helper);
+                    helper = new ParkingHelper(utility);
+                    ParkCars(helper);
                     ShowParkingMsgWhileParking("");
                 }
             }

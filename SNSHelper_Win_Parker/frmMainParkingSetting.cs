@@ -73,8 +73,11 @@ namespace SNSHelper_Win_Parker
 
         private void dgvFriendList_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-                   
-            int iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
+
+            int iAccountIndex = 0;
+
+            if (!isNewAccount)
+                iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
 
             String sCurrentUid = dgvFriendList.Rows[e.RowIndex].Cells[1].Value.ToString();
 
@@ -93,11 +96,13 @@ namespace SNSHelper_Win_Parker
             {
                 case 2: // 是否停车
                     ps_currentAccountSetting.FriendSettings[iCurrentIndex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                    ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentIndex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                    if (!isNewAccount)
+                     ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentIndex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
                     break;
                 case 3: // 是否贴条
                     ps_currentAccountSetting.FriendSettings[iCurrentIndex].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                    ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentIndex].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                    if (!isNewAccount)
+                      ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentIndex].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
                     break;
                 case 5: // 优先级
                     ps_currentAccountSetting.FriendSettings[iCurrentIndex].ParkPriority = Convert.ToInt32(dgvFriendList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
@@ -107,7 +112,8 @@ namespace SNSHelper_Win_Parker
                     {
                         ps_currentAccountSetting.FriendSettings[iCurrentIndex].ParkPriority = int.MaxValue;
                     }
-                    ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentIndex].ParkPriority = ps_currentAccountSetting.FriendSettings[iCurrentIndex].ParkPriority;
+                    if (!isNewAccount)
+                       ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentIndex].ParkPriority = ps_currentAccountSetting.FriendSettings[iCurrentIndex].ParkPriority;
                     break;
                 default:
                     break;
@@ -159,6 +165,7 @@ namespace SNSHelper_Win_Parker
                 if (isNewAccount)
                 {
                     lsbAccount.Items.Add(txtNewLoginEmail.Text);
+                    lsbAccount.Items[lsbAccount.Items.Count - 1].Selected =true;
                     isNewAccount = false;
                 }
                 labelAccCount.Text = string.Format("总共{0}个账号信息", lsbAccount.Items.Count.ToString());
@@ -283,7 +290,10 @@ namespace SNSHelper_Win_Parker
                 return;
             }
 
-            int iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
+            int iAccountIndex = 0;
+
+             if (!isNewAccount)
+                 iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
 
             int columnIndex = dgvFriendList.SelectedCells[0].ColumnIndex;
 
@@ -297,11 +307,13 @@ namespace SNSHelper_Win_Parker
                 {
                     case 2:
                         ps_currentAccountSetting.FriendSettings[i].AllowedPark = true;
-                        ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[i].AllowedPark = true;
+                        if (!isNewAccount)
+                          ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[i].AllowedPark = true;
                         break;
                     case 3:
                         ps_currentAccountSetting.FriendSettings[i].AllowedPost = true;
-                        ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[i].AllowedPost = true;
+                        if (!isNewAccount)
+                          ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[i].AllowedPost = true;
                         break;
                     default:
                         break;
@@ -320,8 +332,10 @@ namespace SNSHelper_Win_Parker
 
             if (!(columnIndex == 2 || columnIndex == 3)) return;
 
-            int iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
+            int iAccountIndex = 0;
 
+            if (!isNewAccount)
+                 iAccountIndex = this.lsbAccount.SelectedItems[0].Index;
             int iCurrentInex = 0;
             String sUid = "";
 
@@ -343,11 +357,13 @@ namespace SNSHelper_Win_Parker
                 {
                     case 2:
                         ps_currentAccountSetting.FriendSettings[iCurrentInex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
-                        ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentInex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+                        if (!isNewAccount)
+                           ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentInex].AllowedPark = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
                         break;
                     case 3:
                         ps_currentAccountSetting.FriendSettings[iCurrentInex].AllowedPost = Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
-                        ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentInex].AllowedPost= Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
+                        if (!isNewAccount)
+                           ConfigHelper.AccountSettings[iAccountIndex].FriendSettings[iCurrentInex].AllowedPost= Convert.ToBoolean(dgvFriendList.Rows[i].Cells[columnIndex].Value);
                         break;
                     default:
                         break;
@@ -365,8 +381,8 @@ namespace SNSHelper_Win_Parker
             dgvFriendList.Rows.RemoveAt(index);
             dgvFriendList.Rows.Insert(index - 1, tempFS.NickName, tempFS.UID, tempFS.AllowedPark, tempFS.AllowedPost, tempFS.Scenemoney.ToString(), tempFS.ParkPriority.ToString());
 
-            ps_currentAccountSetting.FriendSettings[index] = ps_currentAccountSetting.FriendSettings[index - 1];
-            ps_currentAccountSetting.FriendSettings[index - 1] = tempFS;
+            //ps_currentAccountSetting.FriendSettings[index] = ps_currentAccountSetting.FriendSettings[index - 1];
+            //ps_currentAccountSetting.FriendSettings[index - 1] = tempFS;
         }
 
         private void biFriendDown_Click(object sender, EventArgs e)
@@ -378,11 +394,52 @@ namespace SNSHelper_Win_Parker
             dgvFriendList.Rows.RemoveAt(index);
             dgvFriendList.Rows.Insert(index + 1, tempFS.NickName, tempFS.UID, tempFS.AllowedPark, tempFS.AllowedPost, tempFS.Scenemoney.ToString(), tempFS.ParkPriority.ToString());
 
-            ps_currentAccountSetting.FriendSettings[index] = ps_currentAccountSetting.FriendSettings[index + 1];
-            ps_currentAccountSetting.FriendSettings[index + 1] = tempFS;
+            //ps_currentAccountSetting.FriendSettings[index] = ps_currentAccountSetting.FriendSettings[index + 1];
+            //ps_currentAccountSetting.FriendSettings[index + 1] = tempFS;
+        }        
+
+       
+        private void cbxBuyCar_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMaxCarNo.Enabled = cbxBuyCar.Checked;
+            txtMaxCarNo.Value = 0;
         }
 
-        
+        private void cbxCarAutoUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+
+            cbxUpdateType.Enabled = cbxCarAutoUpdate.Checked;
+        }
+
+        #endregion
+
+        #region 好友列表相关
+
+        bool filter = false;
+
+        private void txtKey_TextChanged(object sender, EventArgs e)
+        {
+            filter = !string.IsNullOrEmpty(txtKey.Text);
+
+            if (!filter)
+            {
+                ShowFriendSettings(ps_currentAccountSetting.FriendSettings);
+            }
+            else
+            {
+                ShowFriendSettings(ps_currentAccountSetting.FriendSettings.FindAll(delegate(FriendSetting fs) { return fs.NickName.Contains(txtKey.Text) || fs.UID.Contains(txtKey.Text); }));
+            }
+        }
+
+        private void ShowFriendSettings(List<FriendSetting> friendSettings)
+        {
+            dgvFriendList.Rows.Clear();
+
+            foreach (FriendSetting item in friendSettings)
+            {
+                dgvFriendList.Rows.Add(item.NickName, item.UID, item.AllowedPark, item.AllowedPost, item.Scenemoney.ToString(), item.ParkPriority.ToString());
+            }
+        }
 
         private void bTop_Click(object sender, EventArgs e)
         {
@@ -394,13 +451,13 @@ namespace SNSHelper_Win_Parker
 
             AccountSetting temp = ConfigHelper.AccountSettings[index];
             ConfigHelper.AccountSettings.RemoveAt(index);
-            ConfigHelper.AccountSettings.Insert(0,temp);
+            ConfigHelper.AccountSettings.Insert(0, temp);
 
             ConfigHelper.SaveConfig();
 
         }
 
-        
+
 
         private void btiUp_Click(object sender, EventArgs e)
         {
@@ -450,45 +507,8 @@ namespace SNSHelper_Win_Parker
             ConfigHelper.SaveConfig();
         }
 
-        private void cbxBuyCar_CheckedChanged(object sender, EventArgs e)
-        {
-            txtMaxCarNo.Enabled = cbxBuyCar.Checked;
-            txtMaxCarNo.Value = 0;
-        }
 
-        private void cbxCarAutoUpdate_CheckedChanged(object sender, EventArgs e)
-        {
 
-            cbxUpdateType.Enabled = cbxCarAutoUpdate.Checked;
-        }
-
-        #endregion
-
-        #region 好友列表相关
-        bool filter = false;
-        private void txtKey_TextChanged(object sender, EventArgs e)
-        {
-            filter = !string.IsNullOrEmpty(txtKey.Text);
-
-            if (!filter)
-            {
-                ShowFriendSettings(ps_currentAccountSetting.FriendSettings);
-            }
-            else
-            {
-                ShowFriendSettings(ps_currentAccountSetting.FriendSettings.FindAll(delegate(FriendSetting fs) { return fs.NickName.Contains(txtKey.Text) || fs.UID.Contains(txtKey.Text); }));
-            }
-        }
-
-        private void ShowFriendSettings(List<FriendSetting> friendSettings)
-        {
-            dgvFriendList.Rows.Clear();
-
-            foreach (FriendSetting item in friendSettings)
-            {
-                dgvFriendList.Rows.Add(item.NickName, item.UID, item.AllowedPark, item.AllowedPost, item.Scenemoney.ToString(), item.ParkPriority.ToString());
-            }
-        }
         #endregion
 
         #region 其他
