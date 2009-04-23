@@ -19,7 +19,7 @@ namespace SNSHelper_Win_Parker
         /// <summary>
         /// 助手的当前版本
         /// </summary>
-        string currentBuildVersion = "正式版 0421修正版";
+        string currentBuildVersion = "正式版 0422修正版";
         
         
         
@@ -389,7 +389,7 @@ namespace SNSHelper_Win_Parker
 
                     ShowCurrentParkingAccountWhileParking();
 
-                    ShowParkingMsgWhileParking(string.Format("\r\n正在加载帐号{0}的配置信息！", currentParkingAccount.LoginEmail));
+                    ShowParkingMsgWhileParking(string.Format("{1}/{2}\r\n正在加载帐号{0}的配置信息！", currentParkingAccount.LoginEmail, i + 1, ConfigHelper.AccountSettings.Count));
 
                     if (!currentParkingAccount.IsOperation)
                     {
@@ -436,7 +436,7 @@ namespace SNSHelper_Win_Parker
                     Boolean bUpdate = false;
                     if (currentParkingAccount.AdvanceSettings.AutoUpdateFreePark)
                     {
-                        for (int j = 0; j < helper.ParkingList.Count; i++)
+                        for (int j = 0; j < helper.ParkingList.Count; j++)
                         {
                             if (helper.ParkingList[j].IsParkFree)
                             {

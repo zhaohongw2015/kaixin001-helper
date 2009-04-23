@@ -47,7 +47,7 @@ namespace SNSHelper_Win_Parker
                 if (helper.CarList.Count != parkedCarIDList.Count)
                 {
                     ShowParkingMsgWhileParking("停车失败！");
-                    AddParkingFailedMsg(string.Format("{0} 停车失败！失败的原因可能是：根据配置文件，所有能停车的好友车位都已停满！已停车{1}辆", currentParkingAccount.LoginEmail, parkedCarIDList.Count));
+                    AddParkingFailedMsg(string.Format("{0} 停车失败！\r\n失败的原因可能是：根据配置文件，所有能停车的好友车位都已停满！已停车{1}辆", currentParkingAccount.LoginEmail, parkedCarIDList.Count));
 
                     return;
                 }
