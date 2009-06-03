@@ -4,16 +4,24 @@
     <last>20090604</last>
     <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090528.zip</file>
     <size>1276901</size>
-    <name>花园农夫V2.0 64特别版</name>
+    <name>花园农夫V2.0 64Jailu特别版</name>
     <publisheddate>2009-06-04</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.64特别版 What's New:
+Kaixin001.Framer.V2.0.6月4日特别版 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 新增果实赠送功能
 
-2. 牧场：新增对胡萝卜相关的支持
+2. “花园动态”改名为“常规动态”；“及时动态”拆分为“花园及时”和“牧场及时”
+
+3. 花园：修正农夫种植人参等特殊果实失败后直接跳过不再种植爱心地的Bug
+
+4. 花园：修正农夫不偷取何首乌的Bug
+
+5. 牧场：新增对胡萝卜相关的支持
+
+6. 接Google通知，修改农夫自动更新方案
       ]]>
     </whatsnew>
   </version>
