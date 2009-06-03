@@ -1,3 +1,3 @@
-string last = "20090528";
-string file = "kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090528.zip";
-string size = "1276901";
+string last = "2009060401";
+string file = "kaixin001-helper.googlecode.com/files/Farmer_V2.0_2009060401.zip";
+string size = "1279657";
