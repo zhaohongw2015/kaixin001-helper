@@ -3,16 +3,16 @@
   <file>
     <name>CommonSeed</name>
     <path>http://</path>
-    <publisheddate>2009-06-06 14:30:21</publisheddate>
+    <date>2009-06-06 14:30:21</date>
   </file>
   <file>
     <name>SpecialSeed</name>
     <path>http://</path>
-    <publisheddate>2009-06-06 14:30:21</publisheddate>
+    <date>2009-06-06 14:30:21</date>
   </file>
   <file>
     <name>Animals</name>
     <path>http://</path>
-    <publisheddate>2009-06-06 14:30:21</publisheddate>
+    <date>2009-06-06 14:30:21</date>
   </file>
 </files>
