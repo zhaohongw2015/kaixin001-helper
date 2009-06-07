@@ -493,6 +493,30 @@
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
+    <ID>90</ID>
+    <Name>荔枝</Name>
+    <Rank>5</Rank>
+    <SeedPrice>800</SeedPrice>
+    <FruitPrice>600</FruitPrice>
+    <GrowthCycle>36</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>6</MinNum>
+    <MaxNum>14</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>91</ID>
+    <Name>火龙果</Name>
+    <Rank>5</Rank>
+    <SeedPrice>1000</SeedPrice>
+    <FruitPrice>650</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>6</MinNum>
+    <MaxNum>14</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
     <ID>89</ID>
     <Name>兰花</Name>
     <Rank>5</Rank>
