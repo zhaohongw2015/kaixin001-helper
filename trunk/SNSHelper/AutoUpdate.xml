@@ -1,41 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>2009060401</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_2009060401.zip</file>
-    <size>1279657</size>
-    <name>花园农夫V2.0 20090604</name>
-    <publisheddate>2009-06-04</publisheddate>
+    <last>20090608</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090608.zip</file>
+    <size>1282789</size>
+    <name>花园农夫V2.0 20090608</name>
+    <publisheddate>2009-06-08</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090604 What's New:
+Kaixin001.Framer.V2.0.20090608 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增果实赠送功能
+1. 花园：修复输入偷取下限后，偷取列表未能智能选中的Bug
 
-2. “花园动态”改名为“常规动态”；“及时动态”拆分为“花园及时”和“牧场及时”
+2. 全局：修复点击“帮助”--“检查更新”后农夫崩溃退出的Bug
 
-3. 花园：修正农夫种植人参等特殊果实失败后直接跳过不再种植爱心地的Bug
+3. 牧场：调整牧场第一时间逻辑，大幅度提高第一时间偷窃的及时性、准确性
 
-4. 花园：修正农夫不偷取何首乌的Bug
+4. 全局：新增网络请求次数统计（目前仅统计单次农夫发出网络请求的次数）
 
-5. 牧场：新增对胡萝卜相关的支持
+5. 全局：新增从农夫服务器更新植物、动物信息的功能
 
-6. 修正更新植物/动物后，关闭窗体时的错误提示
+6. 全局：新增“停止工作”按钮，方便用户随时停止农夫常规任务进行其他操作
 
-7. 接Google通知，修改农夫自动更新方案
+7. 全局：新增“N分钟后开始工作”按钮，位置“工具”--“N分钟后开始工作”
+
+8. 全局：新增“花园预报”“牧场预报”自动按时间顺序排序的功能
+
+9. 全局：新增“其他设置”窗口，位置：“工具”--“其他设置”
       ]]>
     </whatsnew>
   </version>
   <ads>
-    <ad>
-      <title>
-        新版农夫预计8号上午10点论坛首发
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-24474-1-1.html
-      </url>
-    </ad>
     <ad>
       <title>
         你最希望新版农夫具有哪些功能，快来投票吧
