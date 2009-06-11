@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090609</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090609.zip</file>
-    <size>1282901</size>
-    <name>花园农夫V2.0 20090609</name>
-    <publisheddate>2009-06-09</publisheddate>
+    <last>20090611</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090611.zip</file>
+    <size>1284699</size>
+    <name>花园农夫V2.0 20090611</name>
+    <publisheddate>2009-06-11</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090609 What's New:
+Kaixin001.Framer.V2.0.20090611 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园：修复开心网代码变动导致农夫花园部分无法使用的Bug
+1. 全局：针对登陆开心网时出现的验证码做了处理，增加手动输入验证码对话框
 
-2. 全局：数据统计明细中加入牧场相关
+2. 全局：移除“数据统计”中的“请求次数”
+
+3. 全局：修改部分代码，尝试解决假死问题
       ]]>
     </whatsnew>
   </version>
