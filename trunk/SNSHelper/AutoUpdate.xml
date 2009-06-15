@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090611</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_2009061101.zip</file>
-    <size>1284699</size>
-    <name>花园农夫V2.0 20090611</name>
-    <publisheddate>2009-06-11</publisheddate>
+    <last>20090615</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090615.zip</file>
+    <size>1285501</size>
+    <name>花园农夫V2.0 20090615</name>
+    <publisheddate>2009-06-15</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090611 What's New:
+Kaixin001.Framer.V2.0.20090615 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局：针对登陆开心网时出现的验证码做了处理，增加手动输入验证码对话框
+1. 牧场：新增“好友生产受控于偷取列表”配置项，有效减少请求服务器的次数。若偷取列表中不包含鸡蛋，农夫将不帮未配种的芦花母鸡生产；若偷取列表中不包含柴鸡蛋，农夫将不帮已配置的芦花母鸡生产。
 
-2. 全局：移除“数据统计”中的“请求次数”
+2. 牧场：调整部分代码，进一步减少请求服务器的次数。
 
-3. 全局：修改部分代码，尝试解决假死问题
+3. 全局：暂时取消“从开心网更新动物信息”功能
       ]]>
     </whatsnew>
   </version>
