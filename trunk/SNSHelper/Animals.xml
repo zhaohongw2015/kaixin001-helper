@@ -22,6 +22,7 @@
     <PMinNum>8</PMinNum>
     <PMaxNum>12</PMaxNum>
     <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
   </Animal>
   <Animal>
     <AID>5</AID>
@@ -45,6 +46,7 @@
     <PMinNum>4</PMinNum>
     <PMaxNum>8</PMaxNum>
     <GName>胡萝卜</GName>
+    <CanBuy>1</CanBuy>
   </Animal>
   <Animal>
     <AID>2</AID>
@@ -68,6 +70,7 @@
     <PMinNum>4</PMinNum>
     <PMaxNum>8</PMaxNum>
     <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
   </Animal>
   <Animal>
     <AID>6</AID>
@@ -91,6 +94,7 @@
     <PMinNum>4</PMinNum>
     <PMaxNum>8</PMaxNum>
     <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
   </Animal>
   <Animal>
     <AID>3</AID>
@@ -114,6 +118,7 @@
     <PMinNum>4</PMinNum>
     <PMaxNum>8</PMaxNum>
     <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
   </Animal>
   <Animal>
     <AID>4</AID>
@@ -137,6 +142,7 @@
     <PMinNum>10</PMinNum>
     <PMaxNum>14</PMaxNum>
     <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
   </Animal>
   <Animal>
     <AID>9</AID>
@@ -155,10 +161,59 @@
     <BPPrice>100</BPPrice>
     <Rank>4</Rank>
     <ARank>2</ARank>
-    <PHour>72</PHour>
+    <PHour>8</PHour>
     <PDayNum>3</PDayNum>
     <PMinNum>6</PMinNum>
     <PMaxNum>10</PMaxNum>
     <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+  </Animal>
+  <Animal>
+    <AID>10</AID>
+    <TName>小灰兔</TName>
+    <Name>小灰兔幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>20</MHours>
+    <Grass>1</Grass>
+    <Price>500</Price>
+    <MName>整灰兔</MName>
+    <MPrice>1800</MPrice>
+    <PHours>72</PHours>
+    <PName>灰兔仔</PName>
+    <PPrice>400</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>1</Rank>
+    <ARank>1</ARank>
+    <PHour>6</PHour>
+    <PDayNum>3</PDayNum>
+    <PMinNum>4</PMinNum>
+    <PMaxNum>8</PMaxNum>
+    <GName>胡萝卜</GName>
+    <CanBuy>0</CanBuy>
+  </Animal>
+  <Animal>
+    <AID>11</AID>
+    <TName>小粉兔</TName>
+    <Name>小粉兔幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>20</MHours>
+    <Grass>1</Grass>
+    <Price>500</Price>
+    <MName>整粉兔</MName>
+    <MPrice>2000</MPrice>
+    <PHours>72</PHours>
+    <PName>粉兔仔</PName>
+    <PPrice>500</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>1</Rank>
+    <ARank>1</ARank>
+    <PHour>6</PHour>
+    <PDayNum>3</PDayNum>
+    <PMinNum>4</PMinNum>
+    <PMaxNum>8</PMaxNum>
+    <GName>胡萝卜</GName>
+    <CanBuy>0</CanBuy>
   </Animal>
 </Animals>
