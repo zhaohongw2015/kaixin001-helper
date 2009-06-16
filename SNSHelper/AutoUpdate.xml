@@ -1,39 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090615</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090615.zip</file>
-    <size>1285501</size>
-    <name>花园农夫V2.0 20090615</name>
-    <publisheddate>2009-06-15</publisheddate>
+    <last>20090617</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090617.zip</file>
+    <size>1285485</size>
+    <name>花园农夫V2.0 20090617</name>
+    <publisheddate>2009-06-17</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090615 What's New:
+Kaixin001.Framer.V2.0.20090617 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 牧场：新增“好友生产受控于偷取列表”配置项，有效减少请求服务器的次数。若偷取列表中不包含鸡蛋，农夫将不帮未配种的芦花母鸡生产；若偷取列表中不包含柴鸡蛋，农夫将不帮已配置的芦花母鸡生产。
+1. 全局：取消防假死版农夫的日志输出，原农夫目录下的日志文件请手动删除
 
-2. 牧场：调整部分代码，进一步减少请求服务器的次数。
-
-3. 全局：暂时取消“从开心网更新动物信息”功能
+2. 牧场：新增“小灰兔幼仔”“小粉兔幼仔”
       ]]>
     </whatsnew>
   </version>
   <ads>
     <ad>
       <title>
-        [6月16日] 花园魅力每增加1500即可兑换一次道具
+        [6月17日] 牧场新增“小灰兔幼仔”“小粉兔幼仔”，请从农夫服务器下载更新动物信息
       </title>
       <url>
-        http://bbs.snsfun.com/thread-28182-1-1.html
+        http://bbs.snsfun.com
       </url>
     </ad>
     <ad>
       <title>
-        [6月13日] 帮好友浇水功能修改，请修改好友浇水下限为2
+        [6月16日] 花园魅力每增加1500即可兑换一次道具
       </title>
       <url>
-        http://bbs.snsfun.com/thread-26958-1-1.html
+        http://bbs.snsfun.com/thread-28182-1-1.html
       </url>
     </ad>
     <ad>
