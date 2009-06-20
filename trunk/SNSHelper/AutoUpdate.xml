@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090617</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090617.zip</file>
-    <size>1285485</size>
-    <name>花园农夫V2.0 20090617</name>
-    <publisheddate>2009-06-17</publisheddate>
+    <last>20090621</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090621.zip</file>
+    <size>1288178</size>
+    <name>花园农夫V2.0 20090621</name>
+    <publisheddate>2009-06-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090617 What's New:
+Kaixin001.Framer.V2.0.20090621 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局：取消防假死版农夫的日志输出，原农夫目录下的日志文件请手动删除
+1. 全局：增加帐号登录信息缓存至本地磁盘的功能，有效减少登录次数，降低出现验证码的可能性
 
-2. 牧场：新增“小灰兔幼仔”“小粉兔幼仔”
+2. 全局：验证码输入窗口增加定时关闭功能，防止验证码窗口阻碍农夫其他任务的运行
+
+3. 全局：新增牧场农产品赠送功能
       ]]>
     </whatsnew>
   </version>
