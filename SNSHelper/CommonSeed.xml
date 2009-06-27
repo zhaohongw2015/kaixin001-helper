@@ -73,30 +73,6 @@
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
-    <ID>73</ID>
-    <Name>橙色5+5</Name>
-    <Rank>5</Rank>
-    <SeedPrice>4000</SeedPrice>
-    <FruitPrice>3000</FruitPrice>
-    <GrowthCycle>48</GrowthCycle>
-    <Theftproof>1</Theftproof>
-    <MinNum>2</MinNum>
-    <MaxNum>6</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
-    <ID>74</ID>
-    <Name>红色5+5</Name>
-    <Rank>5</Rank>
-    <SeedPrice>4000</SeedPrice>
-    <FruitPrice>3000</FruitPrice>
-    <GrowthCycle>48</GrowthCycle>
-    <Theftproof>1</Theftproof>
-    <MinNum>2</MinNum>
-    <MaxNum>6</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
     <ID>36</ID>
     <Name>水稻</Name>
     <Rank>1</Rank>
@@ -454,6 +430,30 @@
     <Theftproof>0</Theftproof>
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>74</ID>
+    <Name>红色5+5</Name>
+    <Rank>5</Rank>
+    <SeedPrice>4000</SeedPrice>
+    <FruitPrice>3000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>73</ID>
+    <Name>橙色5+5</Name>
+    <Rank>5</Rank>
+    <SeedPrice>4000</SeedPrice>
+    <FruitPrice>3000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
