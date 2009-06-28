@@ -1,23 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090627</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090627.zip</file>
-    <size>1292807</size>
-    <name>花园农夫V2.0 20090627</name>
-    <publisheddate>2009-06-27</publisheddate>
+    <last>20090628</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090628.zip</file>
+    <size>1293441</size>
+    <name>花园农夫V2.0 20090628</name>
+    <publisheddate>2009-06-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090627 What's New:
+Kaixin001.Framer.V2.0.20090628 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园：大幅度调整农夫请求开心网服务器的逻辑（可能使农夫变得不稳定）
+1. 花园：修正第一时间出现“10秒重试”的bug
 
-2. 花园：修正第一时间任务可能失败的Bug
+2. 全局：修正农产品无法赠送的bug
 
-3. 牧场：调整“添水”任务的执行顺序，解决牧场缺水时，无法进行生产等操作的问题
-
-4. 全局：“其他设置”面板中新增“是否自动排序牧场预报”选项
+3. 全局：增加"批量登录"功能，位置：工具-批量登录
       ]]>
     </whatsnew>
   </version>
