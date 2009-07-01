@@ -1,47 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090628</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090628.zip</file>
-    <size>1293441</size>
-    <name>花园农夫V2.0 20090628</name>
-    <publisheddate>2009-06-28</publisheddate>
+    <last>20090701</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090701.zip</file>
+    <size>1294332</size>
+    <name>花园农夫V2.0 20090701</name>
+    <publisheddate>2009-07-01</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090628 What's New:
+Kaixin001.Framer.V2.0.20090701 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园：修正第一时间出现“10秒重试”的bug
+1. 牧场：新增“提防巡查员”配置项
 
-2. 全局：修正农产品无法赠送的bug
+2. 牧场：新增偷取“企鹅幼崽”的功能
 
-3. 全局：增加"批量登录"功能，位置：工具-批量登录
+3. 牧场：修正部分情况下，牧场预报显示错误的问题
+
+4. 全局：由于“批量登录”后，其他工具还是需要输入验证码，特取消“批量登录”功能
+
+5. 全局：数据统计面试新增“偷盗次数(牧场)”“偷盗总量(牧场)”
       ]]>
     </whatsnew>
   </version>
   <ads>
     <ad>
       <title>
-        [6月30日] 牧场惊现巡查员，不想被抓的请暂时停用牧场偷取功能
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-35568-1-1.html
-      </url>
-    </ad>
-    <ad>
-      <title>
         [6月30日] SNSFun第二轮线上活动筹划中：票选你想玩的游戏，快来投票吧
       </title>
       <url>
         http://bbs.snsfun.com/thread-35544-1-1.html
-      </url>
-    </ad>
-    <ad>
-      <title>
-        [6月29日] 花园农夫V2.0补丁20090629：修正赠送农产品失败的Bug
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-35352-1-1.html
       </url>
     </ad>
     <ad>
