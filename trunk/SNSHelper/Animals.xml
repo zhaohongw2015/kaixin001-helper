@@ -217,24 +217,48 @@
     <CanBuy>0</CanBuy>
   </Animal>
   <Animal>
-    <AID>12</AID>
-    <TName>企鹅</TName>
-    <Name>企鹅幼仔</Name>
+    <AID>14</AID>
+    <TName>袋鼠</TName>
+    <Name>袋鼠幼仔</Name>
     <Gender>1</Gender>
-    <MHours>36</MHours>
-    <Grass>4</Grass>
-    <Price>10000</Price>
-    <MName>成年企鹅</MName>
-    <MPrice>20000</MPrice>
+    <MHours>72</MHours>
+    <Grass>5</Grass>
+    <Price>15000</Price>
+    <MName>成年袋鼠</MName>
+    <MPrice>25000</MPrice>
     <PHours>72</PHours>
-    <PName>企鹅幼仔</PName>
-    <PPrice>30000</PPrice>
+    <PName>袋鼠幼仔</PName>
+    <PPrice>35000</PPrice>
     <BPName></BPName>
     <BPPrice>0</BPPrice>
-    <Rank>12</Rank>
+    <Rank>15</Rank>
     <ARank>5</ARank>
     <PHour>20</PHour>
     <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+  </Animal>
+  <Animal>
+    <AID>13</AID>
+    <TName>熊猫</TName>
+    <Name>熊猫幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>240</MHours>
+    <Grass>4</Grass>
+    <Price>200000</Price>
+    <MName>成年熊猫</MName>
+    <MPrice>25000</MPrice>
+    <PHours>72</PHours>
+    <PName>熊猫幼仔</PName>
+    <PPrice>200000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>45</Rank>
+    <ARank>5</ARank>
+    <PHour>48</PHour>
+    <PDayNum>0</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
