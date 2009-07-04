@@ -25,54 +25,6 @@
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
-    <ID>69</ID>
-    <Name>悦活番茄</Name>
-    <Rank>1</Rank>
-    <SeedPrice>300</SeedPrice>
-    <FruitPrice>240</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>8</MinNum>
-    <MaxNum>24</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
-    <ID>70</ID>
-    <Name>悦活橙子</Name>
-    <Rank>1</Rank>
-    <SeedPrice>300</SeedPrice>
-    <FruitPrice>240</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>8</MinNum>
-    <MaxNum>24</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
-    <ID>71</ID>
-    <Name>悦活石榴</Name>
-    <Rank>1</Rank>
-    <SeedPrice>300</SeedPrice>
-    <FruitPrice>240</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>8</MinNum>
-    <MaxNum>24</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
-    <ID>72</ID>
-    <Name>悦活黑加仑</Name>
-    <Rank>1</Rank>
-    <SeedPrice>300</SeedPrice>
-    <FruitPrice>240</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>8</MinNum>
-    <MaxNum>24</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
     <ID>36</ID>
     <Name>水稻</Name>
     <Rank>1</Rank>
@@ -223,6 +175,54 @@
     <SeedPrice>200</SeedPrice>
     <FruitPrice>140</FruitPrice>
     <GrowthCycle>28</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>72</ID>
+    <Name>悦活黑加仑</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>71</ID>
+    <Name>悦活石榴</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>70</ID>
+    <Name>悦活橙子</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>69</ID>
+    <Name>悦活番茄</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
@@ -689,11 +689,11 @@
     <Name>竹子</Name>
     <Rank>7</Rank>
     <SeedPrice>2000</SeedPrice>
-    <FruitPrice>1500</FruitPrice>
+    <FruitPrice>600</FruitPrice>
     <GrowthCycle>28</GrowthCycle>
     <Theftproof>0</Theftproof>
-    <MinNum>4</MinNum>
-    <MaxNum>8</MaxNum>
+    <MinNum>14</MinNum>
+    <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
