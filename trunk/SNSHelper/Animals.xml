@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>1</AID>
@@ -256,6 +256,30 @@
     <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>15</Rank>
+    <ARank>5</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+  </Animal>
+  <Animal>
+    <AID>15</AID>
+    <TName>亚洲象</TName>
+    <Name>亚洲象幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>36</MHours>
+    <Grass>5</Grass>
+    <Price>20000</Price>
+    <MName>成年亚洲象</MName>
+    <MPrice>25000</MPrice>
+    <PHours>72</PHours>
+    <PName>亚洲象幼仔</PName>
+    <PPrice>45000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>18</Rank>
     <ARank>5</ARank>
     <PHour>20</PHour>
     <PDayNum>1</PDayNum>
