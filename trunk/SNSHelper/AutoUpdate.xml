@@ -1,23 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090705</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.0_20090705.zip</file>
-    <size>1295272</size>
-    <name>花园农夫V2.0 20090705</name>
-    <publisheddate>2009-07-05</publisheddate>
+    <last>20090713</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090713.zip</file>
+    <size>1381984</size>
+    <name>花园农夫V2.5 20090713</name>
+    <publisheddate>2009-07-13</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.0.20090705 What's New:
+Kaixin001.Framer.V2.5.20090713 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局：修正验证码输入面板无法输入汉字的问题
+1. 牧场：添加牧场高级配置管理（继续饲养功能未实现）
 
-2. 全局：“其他设置”面板新增配置项“验证码输入面板自动隐藏”，用于控制验证码输入面板自动隐藏的时间，默认为60秒
+2. 花园：添加花园高级配置管理（启用高级功能后，将彻底覆盖花园的其他种植设置）
 
-3. 全局：重新开放“批量登录”功能，同时修正批量登录后无法执行常规任务的Bug
+3. 全局：加入农夫“花园休息时间”的识别
 
-4. 花园：对开心网花园新规--不能在3秒内连续收获爱心地，做出识别，保证顺利收获爱心地
+4. 全局：调整农夫代码，减少验证码出现的几率
+
+5. 全局：修正“帐号管理”面板，移动好友时的Bug
       ]]>
     </whatsnew>
   </version>
