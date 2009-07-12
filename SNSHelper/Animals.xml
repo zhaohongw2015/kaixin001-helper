@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>1</AID>
@@ -23,6 +23,7 @@
     <PMaxNum>12</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>5</AID>
@@ -47,6 +48,7 @@
     <PMaxNum>8</PMaxNum>
     <GName>胡萝卜</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>2</AID>
@@ -71,6 +73,7 @@
     <PMaxNum>8</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>6</AID>
@@ -95,6 +98,7 @@
     <PMaxNum>8</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>3</AID>
@@ -119,6 +123,7 @@
     <PMaxNum>8</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>4</AID>
@@ -143,6 +148,7 @@
     <PMaxNum>14</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>9</AID>
@@ -167,6 +173,7 @@
     <PMaxNum>10</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>10</AID>
@@ -191,6 +198,7 @@
     <PMaxNum>8</PMaxNum>
     <GName>胡萝卜</GName>
     <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>11</AID>
@@ -215,6 +223,7 @@
     <PMaxNum>8</PMaxNum>
     <GName>胡萝卜</GName>
     <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
   </Animal>
   <Animal>
     <AID>12</AID>
@@ -239,6 +248,7 @@
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
   </Animal>
   <Animal>
     <AID>14</AID>
@@ -263,6 +273,7 @@
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
   </Animal>
   <Animal>
     <AID>15</AID>
@@ -287,30 +298,7 @@
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
-  </Animal>
-  <Animal>
-    <AID>13</AID>
-    <TName>熊猫</TName>
-    <Name>熊猫幼仔</Name>
-    <Gender>1</Gender>
-    <MHours>240</MHours>
-    <Grass>4</Grass>
-    <Price>200000</Price>
-    <MName>成年熊猫</MName>
-    <MPrice>250000</MPrice>
-    <PHours>72</PHours>
-    <PName>熊猫幼仔</PName>
-    <PPrice>200000</PPrice>
-    <BPName></BPName>
-    <BPPrice>0</BPPrice>
-    <Rank>45</Rank>
-    <ARank>5</ARank>
-    <PHour>48</PHour>
-    <PDayNum>0</PDayNum>
-    <PMinNum>1</PMinNum>
-    <PMaxNum>1</PMaxNum>
-    <GName>竹子</GName>
-    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
   </Animal>
   <Animal>
     <AID>16</AID>
@@ -335,5 +323,31 @@
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+  </Animal>
+  <Animal>
+    <AID>13</AID>
+    <TName>熊猫</TName>
+    <Name>熊猫幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>240</MHours>
+    <Grass>4</Grass>
+    <Price>200000</Price>
+    <MName>成年熊猫</MName>
+    <MPrice>250000</MPrice>
+    <PHours>72</PHours>
+    <PName>熊猫幼仔</PName>
+    <PPrice>200000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>45</Rank>
+    <ARank>5</ARank>
+    <PHour>48</PHour>
+    <PDayNum>0</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>竹子</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
   </Animal>
 </Animals>
