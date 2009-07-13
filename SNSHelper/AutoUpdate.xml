@@ -1,25 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090713</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090713.zip</file>
-    <size>1381984</size>
-    <name>花园农夫V2.5 20090713</name>
-    <publisheddate>2009-07-13</publisheddate>
+    <last>20090714</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090714.zip</file>
+    <size>1381742</size>
+    <name>花园农夫V2.5 20090714</name>
+    <publisheddate>2009-07-14</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.5.20090713 What's New:
+Kaixin001.Framer.V2.5.20090714 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 牧场：添加牧场高级配置管理（继续饲养功能未实现）
+1. 花园：修正农夫预报时间计算错误导致第一时间反复请求服务器的Bug
 
-2. 花园：添加花园高级配置管理（启用高级功能后，将彻底覆盖花园的其他种植设置）
-
-3. 全局：加入农夫“花园休息时间”的识别
-
-4. 全局：调整农夫代码，减少验证码出现的几率
-
-5. 全局：修正“帐号管理”面板，移动好友时的Bug
+2. 全局：修正验证码输入面板无法输入汉字、回车无法提交等问题
       ]]>
     </whatsnew>
   </version>
