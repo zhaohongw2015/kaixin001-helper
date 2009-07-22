@@ -198,8 +198,8 @@
     <Rank>15</Rank>
     <SeedPrice>12000</SeedPrice>
     <FruitPrice>120000</FruitPrice>
-    <GrowthCycle>16</GrowthCycle>
-    <Theftproof>480</Theftproof>
+    <GrowthCycle>480</GrowthCycle>
+    <Theftproof>24</Theftproof>
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
