@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
     <ID>35</ID>
@@ -191,5 +191,17 @@
     <MinNum>5</MinNum>
     <MaxNum>15</MaxNum>
     <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>25</ID>
+    <Name>人参(有人参娃娃)</Name>
+    <Rank>15</Rank>
+    <SeedPrice>12000</SeedPrice>
+    <FruitPrice>120000</FruitPrice>
+    <GrowthCycle>16</GrowthCycle>
+    <Theftproof>480</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>4</MaxNum>
+    <NotSteal>1</NotSteal>
   </Seed>
 </Seeds>
