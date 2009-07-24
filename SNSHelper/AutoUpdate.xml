@@ -1,37 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090723</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090723b.zip</file>
-    <size>1384395</size>
-    <name>花园农夫V2.5 20090723</name>
-    <publisheddate>2009-07-23</publisheddate>
+    <last>20090724</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090724.zip</file>
+    <size>1386270</size>
+    <name>花园农夫V2.5 20090724</name>
+    <publisheddate>2009-07-24</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.5.20090723 What's New:
+Kaixin001.Framer.V2.5.20090724 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局：修改农夫登录方式
+1. 全局：修正批量导入帐号失败的Bug
 
-2. 全局：把农夫的所有网页请求从程序中转移到配置文件中
+2. 全局：修正赠送农产品时，农夫有时会出错退出的Bug
 
-3. 全局：修正花园高级设置面板中，种植品种为空时不能保存的问题
-
-4. 花园：修正不选择偷取好友A时，农夫无法收获种在好友A爱心地果实的Bug
-
-5. 花园：修正部分情况下，花园预报会保留过期预报的Bug
-
-6. 花园：当花园高级设置中未指定某块农田种植的作物时，将运用其他相关设置
-
-7. 花园：修正一处常规任务扫描时有可能导致农夫“卡死”的Bug
-
-8. 花园：修正开心网调整，导致第一时间任务时出现“即将成熟，10秒重试”的Bug
-
-9. 牧场：修正牧场预报漏报的问题
-
-10. 牧场：修改牧场部分请求逻辑
-
-11. 全局：公开验证码识别接口，让编程爱好者自由发挥吧
+3. 花园：修正农夫无法自动应付精灵的Bug
       ]]>
     </whatsnew>
   </version>
