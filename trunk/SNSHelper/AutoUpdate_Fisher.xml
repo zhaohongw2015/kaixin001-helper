@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <version>
+    <last>20090803</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090724.zip</file>
+    <size>1386270</size>
+    <name>开心渔夫V1.0 20090803</name>
+    <publisheddate>2009-07-24</publisheddate>
+    <whatsnew>
+      <![CDATA[
+Kaixin001.Framer.V2.5.20090724 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 全局：修正批量导入帐号失败的Bug
+
+2. 全局：修正赠送农产品时，农夫有时会出错退出的Bug
+
+3. 花园：修正农夫无法自动应付精灵的Bug
+      ]]>
+    </whatsnew>
+  </version>
+  <ads>
+    <ad>
+      <title>
+        [8月2日] 开心网钓鱼组件辅助工具--《开心渔夫》将于8月2号晚上论坛首发
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-47717-1-1.html
+      </url>
+    </ad>
+    <ad>
+      <title>
+        [7月13日] SNSFun个人空间开通了，这里有很多连开心网都没有的趣味小游戏哦
+      </title>
+      <url>
+        http://www.snsfun.com
+      </url>
+    </ad>
+    <ad>
+      <title>
+        [7月10日] 花园农夫2.0每日偷取统计 v2.33 更新
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-14404-1-1.html
+      </url>
+    </ad>
+    <ad>
+      <title>
+        [7月5日] 开心网账号批量登录器(Kaixin001BatchLogin V1.14 Final)更新
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-34006-1-1.html
+      </url>
+    </ad>
+    <ad>
+      <title>
+        [7月5日] 简易开心网批量登录器 v1.093 更新
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-31884-1-1.html
+      </url>
+    </ad>
+    <ad>
+      <title>
+        [7月3日] 花园农夫V2.0偷取分析助手V1.8 被偷好友统计
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-17663-1-1.html
+      </url>
+    </ad>
+  </ads>
+  <fund>
+  </fund>
+</data>
