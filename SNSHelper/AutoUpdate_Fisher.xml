@@ -1,19 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090803B</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Fisher_V1.0_20090803b.zip</file>
-    <size>1386270</size>
-    <name>开心渔夫V1.0 20090803b</name>
-    <publisheddate>2009-08-03</publisheddate>
+    <last>20090804</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Fisher_V1.0_20090804.zip</file>
+    <size>1241088</size>
+    <name>开心渔夫V1.0 20090804</name>
+    <publisheddate>2009-08-04</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Fisher.V1.0.200900803B What's New:
+Kaixin001.Fisher.V1.0.200900804 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正登陆时遇到验证码后无法正常登录的Bug
+1. 修改渔夫登陆方式
 
-2. 修正帐号未添加“钓鱼”组件时，使用渔夫会导致渔夫退出的Bug
+2. 修正部分特殊字符未屏蔽的问题
+
+3. 修正“好友鱼塘”面板中，好友列表里的Tab被拖动后，加载列表数据错误的Bug
+
+4. 修正“鱼苗”数据错误的问题
+
+5. 修正帮忙列表，进入好友鱼塘数据错误的Bug
+
+6. 新增手动网鱼功能
+
+7. 提高“登陆”窗体可操作性
+
+8. 新增“渔具”相关数据，新增购买“渔具”功能
+
+9. 新增“更新鱼苗”“更新渔具”等功能
+
+10. 新增“网络代理”功能
       ]]>
     </whatsnew>
   </version>
