@@ -301,6 +301,31 @@
     <Advanced>1</Advanced>
   </Animal>
   <Animal>
+    <AID>17</AID>
+    <TName>丹顶鹤</TName>
+    <Name>丹顶鹤幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>36</MHours>
+    <Grass>4</Grass>
+    <Price>25000</Price>
+    <MName>成年丹顶鹤</MName>
+    <MPrice>25000</MPrice>
+    <PHours>72</PHours>
+    <PName>丹顶鹤幼仔</PName>
+    <PPrice>50000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>20</Rank>
+    <ARank>5</ARank>
+    <PHour>72</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>2</PMinNum>
+    <PMaxNum>2</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+  </Animal>
+  <Animal>
     <AID>16</AID>
     <TName>长颈龙</TName>
     <Name>长颈龙幼仔</Name>
