@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>1</AID>
@@ -309,7 +309,7 @@
     <Grass>4</Grass>
     <Price>25000</Price>
     <MName>成年丹顶鹤</MName>
-    <MPrice>25000</MPrice>
+    <MPrice>30000</MPrice>
     <PHours>72</PHours>
     <PName>丹顶鹤幼仔</PName>
     <PPrice>50000</PPrice>
@@ -317,7 +317,7 @@
     <BPPrice>0</BPPrice>
     <Rank>20</Rank>
     <ARank>5</ARank>
-    <PHour>72</PHour>
+    <PHour>24</PHour>
     <PDayNum>1</PDayNum>
     <PMinNum>2</PMinNum>
     <PMaxNum>2</PMaxNum>
