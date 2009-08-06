@@ -853,6 +853,18 @@
     <NotSteal>1</NotSteal>
   </Seed>
   <Seed>
+    <ID>102</ID>
+    <Name>摇钱树</Name>
+    <Rank>50</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>10000</FruitPrice>
+    <GrowthCycle>120</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>6</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
     <ID>61</ID>
     <Name>友谊花</Name>
     <Rank>1</Rank>
