@@ -303,7 +303,7 @@
   <Animal>
     <AID>17</AID>
     <TName>丹顶鹤</TName>
-    <Name>丹顶鹤幼仔</Name>
+    <Name>丹顶鹤幼鸟</Name>
     <Gender>1</Gender>
     <MHours>36</MHours>
     <Grass>4</Grass>
@@ -311,7 +311,7 @@
     <MName>成年丹顶鹤</MName>
     <MPrice>30000</MPrice>
     <PHours>72</PHours>
-    <PName>丹顶鹤幼仔</PName>
+    <PName>丹顶鹤幼鸟</PName>
     <PPrice>50000</PPrice>
     <BPName></BPName>
     <BPPrice>0</BPPrice>
