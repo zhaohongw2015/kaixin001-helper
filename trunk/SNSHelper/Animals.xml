@@ -76,31 +76,6 @@
     <Advanced>0</Advanced>
   </Animal>
   <Animal>
-    <AID>6</AID>
-    <TName>伊利荷斯坦牛</TName>
-    <Name>伊利荷斯坦牛</Name>
-    <Gender>1</Gender>
-    <MHours>36</MHours>
-    <Grass>5</Grass>
-    <Price>2200</Price>
-    <MName>伊利整牛</MName>
-    <MPrice>5000</MPrice>
-    <PHours>168</PHours>
-    <PName>优质牛奶</PName>
-    <PPrice>1200</PPrice>
-    <BPName>高级牛奶</BPName>
-    <BPPrice>3000</BPPrice>
-    <Rank>7</Rank>
-    <ARank>2</ARank>
-    <PHour>8</PHour>
-    <PDayNum>3</PDayNum>
-    <PMinNum>4</PMinNum>
-    <PMaxNum>8</PMaxNum>
-    <GName>牧草</GName>
-    <CanBuy>1</CanBuy>
-    <Advanced>0</Advanced>
-  </Animal>
-  <Animal>
     <AID>3</AID>
     <TName>荷兰奶牛</TName>
     <Name>荷兰奶牛幼仔</Name>
@@ -321,6 +296,31 @@
     <PDayNum>1</PDayNum>
     <PMinNum>2</PMinNum>
     <PMaxNum>2</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+  </Animal>
+  <Animal>
+    <AID>18</AID>
+    <TName>长颈鹿</TName>
+    <Name>长颈鹿幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>36</MHours>
+    <Grass>5</Grass>
+    <Price>30000</Price>
+    <MName>成年长颈鹿</MName>
+    <MPrice>35000</MPrice>
+    <PHours>72</PHours>
+    <PName>长颈鹿幼仔</PName>
+    <PPrice>50000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>20</Rank>
+    <ARank>5</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
