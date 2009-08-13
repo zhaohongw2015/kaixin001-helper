@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>1</AID>
@@ -24,6 +24,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>5</AID>
@@ -49,6 +50,7 @@
     <GName>胡萝卜</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>2</AID>
@@ -74,6 +76,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>3</AID>
@@ -99,6 +102,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>4</AID>
@@ -124,6 +128,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>9</AID>
@@ -149,6 +154,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>10</AID>
@@ -174,6 +180,7 @@
     <GName>胡萝卜</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>11</AID>
@@ -199,6 +206,7 @@
     <GName>胡萝卜</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
   </Animal>
   <Animal>
     <AID>12</AID>
@@ -224,6 +232,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
     <AID>14</AID>
@@ -249,6 +258,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
     <AID>15</AID>
@@ -274,6 +284,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
     <AID>17</AID>
@@ -299,6 +310,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
     <AID>18</AID>
@@ -324,6 +336,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
     <AID>16</AID>
@@ -349,6 +362,7 @@
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
     <AID>13</AID>
@@ -374,5 +388,6 @@
     <GName>竹子</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
+    <NotSteal>240</NotSteal>
   </Animal>
 </Animals>
