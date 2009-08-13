@@ -1,21 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090724</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090724.zip</file>
+    <last>20090813</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.5_20090813.zip</file>
     <size>1386270</size>
-    <name>花园农夫V2.5 20090724</name>
-    <publisheddate>2009-07-24</publisheddate>
+    <name>花园农夫V2.5 20090813</name>
+    <publisheddate>2009-08-13</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.5.20090724 What's New:
+Kaixin001.Framer.V2.5.20090813 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局：修正批量导入帐号失败的Bug
+1. 全局：全局设置中新增“登陆方式”、“扫描模式”、“花园预报时长”、“牧场预报时长”等设置项
 
-2. 全局：修正赠送农产品时，农夫有时会出错退出的Bug
+2. 全局：修正点击“从开心网更新植物信息”时农夫出错退出的Bug
 
-3. 花园：修正农夫无法自动应付精灵的Bug
+3. 花园：新增摇钱树摇钱功能（包括第一时间摇钱）
+
+4. 花园：调整花园预报算法
+
+5. 花园：修正当饲料不足时，反复尝试给好友添加饲料的Bug
+
+6. 花园：修正犁完爱心地，有时无法及时播种爱心地的Bug
+
+7. 花园：修正“第一时间”无视菜老伯、花婆婆等，继续偷取，被民警监管的Bug
+
+8. 全局：常规扫描中，新增自动更新好友列表的功能
+
+9. 牧场：对于熊猫等高级动物，牧场预报中加入对防偷时间的识别
+
+10. 牧场：调整牧场预报算法
       ]]>
     </whatsnew>
   </version>

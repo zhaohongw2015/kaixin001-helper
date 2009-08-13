@@ -85,6 +85,18 @@
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
+    <ID>62</ID>
+    <Name>七彩玫瑰</Name>
+    <Rank>7</Rank>
+    <SeedPrice>4000</SeedPrice>
+    <FruitPrice>12000</FruitPrice>
+    <GrowthCycle>80</GrowthCycle>
+    <Theftproof>4</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
     <ID>43</ID>
     <Name>黑郁金香</Name>
     <Rank>10</Rank>
@@ -181,18 +193,6 @@
     <NotSteal>1</NotSteal>
   </Seed>
   <Seed>
-    <ID>67</ID>
-    <Name>小白菊</Name>
-    <Rank>1</Rank>
-    <SeedPrice>0</SeedPrice>
-    <FruitPrice>20</FruitPrice>
-    <GrowthCycle>16</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>5</MinNum>
-    <MaxNum>15</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
     <ID>25</ID>
     <Name>人参(有人参娃娃)</Name>
     <Rank>15</Rank>
@@ -203,5 +203,41 @@
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>99</ID>
+    <Name>曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>6000</SeedPrice>
+    <FruitPrice>2000</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>100</ID>
+    <Name>多色曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>6000</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>67</ID>
+    <Name>小白菊</Name>
+    <Rank>1</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>20</FruitPrice>
+    <GrowthCycle>16</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>5</MinNum>
+    <MaxNum>15</MaxNum>
+    <NotSteal>0</NotSteal>
   </Seed>
 </Seeds>
