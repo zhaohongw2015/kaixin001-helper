@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
     <ID>63</ID>
@@ -879,7 +879,7 @@
   <Seed>
     <ID>102</ID>
     <Name>摇钱树</Name>
-    <Rank>50</Rank>
+    <Rank>1</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>10000</FruitPrice>
     <GrowthCycle>120</GrowthCycle>
