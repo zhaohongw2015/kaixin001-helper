@@ -205,18 +205,6 @@
     <NotSteal>1</NotSteal>
   </Seed>
   <Seed>
-    <ID>99</ID>
-    <Name>曼珠沙华</Name>
-    <Rank>9</Rank>
-    <SeedPrice>6000</SeedPrice>
-    <FruitPrice>2000</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>4</MinNum>
-    <MaxNum>8</MaxNum>
-    <NotSteal>0</NotSteal>
-  </Seed>
-  <Seed>
     <ID>100</ID>
     <Name>多色曼珠沙华</Name>
     <Rank>9</Rank>
@@ -227,6 +215,78 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>105</ID>
+    <Name>紫曼珠沙华</Name>
+    <Rank>30</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>7000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>106</ID>
+    <Name>蓝曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>8000</FruitPrice>
+    <GrowthCycle>72</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>107</ID>
+    <Name>黄曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>9000</FruitPrice>
+    <GrowthCycle>96</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>108</ID>
+    <Name>青曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>10000</FruitPrice>
+    <GrowthCycle>120</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>109</ID>
+    <Name>橙曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>11000</FruitPrice>
+    <GrowthCycle>144</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>110</ID>
+    <Name>红曼珠沙华</Name>
+    <Rank>9</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>12000</FruitPrice>
+    <GrowthCycle>168</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
   </Seed>
   <Seed>
     <ID>67</ID>

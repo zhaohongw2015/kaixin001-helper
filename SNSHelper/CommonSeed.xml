@@ -853,6 +853,18 @@
     <NotSteal>1</NotSteal>
   </Seed>
   <Seed>
+    <ID>104</ID>
+    <Name>曼珠沙华</Name>
+    <Rank>30</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>9500</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
     <ID>102</ID>
     <Name>摇钱树</Name>
     <Rank>50</Rank>
