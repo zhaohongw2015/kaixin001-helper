@@ -924,4 +924,28 @@
     <MaxNum>2</MaxNum>
     <NotSteal>0</NotSteal>
   </Seed>
+  <Seed>
+    <ID>112</ID>
+    <Name>断肠草</Name>
+    <Rank>30</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>13000</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>4</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>111</ID>
+    <Name>昙花</Name>
+    <Rank>34</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>14000</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
 </Seeds>
