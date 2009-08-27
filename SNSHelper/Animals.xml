@@ -80,8 +80,8 @@
   </Animal>
   <Animal>
     <AID>3</AID>
-    <TName>荷兰奶牛</TName>
-    <Name>荷兰奶牛幼仔</Name>
+    <TName>荷斯坦奶牛</TName>
+    <Name>荷斯坦奶牛幼仔</Name>
     <Gender>1</Gender>
     <MHours>36</MHours>
     <Grass>5</Grass>
