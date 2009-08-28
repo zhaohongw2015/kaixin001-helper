@@ -273,7 +273,7 @@
     <PHours>72</PHours>
     <PName>亚洲象幼仔</PName>
     <PPrice>45000</PPrice>
-    <BPName></BPName>
+    <BPName>亚洲象幼仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>18</Rank>
     <ARank>5</ARank>
@@ -299,7 +299,7 @@
     <PHours>72</PHours>
     <PName>丹顶鹤幼鸟</PName>
     <PPrice>50000</PPrice>
-    <BPName></BPName>
+    <BPName>丹顶鹤幼鸟</BPName>
     <BPPrice>0</BPPrice>
     <Rank>20</Rank>
     <ARank>5</ARank>
@@ -325,7 +325,7 @@
     <PHours>72</PHours>
     <PName>长颈鹿幼仔</PName>
     <PPrice>50000</PPrice>
-    <BPName></BPName>
+    <BPName>长颈鹿幼仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>20</Rank>
     <ARank>5</ARank>
@@ -351,7 +351,7 @@
     <PHours>72</PHours>
     <PName>孔雀幼鸟</PName>
     <PPrice>65000</PPrice>
-    <BPName></BPName>
+    <BPName>孔雀幼鸟</BPName>
     <BPPrice>0</BPPrice>
     <Rank>28</Rank>
     <ARank>6</ARank>
@@ -377,7 +377,7 @@
     <PHours>72</PHours>
     <PName>长颈龙幼仔</PName>
     <PPrice>70000</PPrice>
-    <BPName></BPName>
+    <BPName>长颈龙幼仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>30</Rank>
     <ARank>5</ARank>
@@ -403,7 +403,7 @@
     <PHours>72</PHours>
     <PName>熊猫幼仔</PName>
     <PPrice>200000</PPrice>
-    <BPName></BPName>
+    <BPName>熊猫幼仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>45</Rank>
     <ARank>5</ARank>
