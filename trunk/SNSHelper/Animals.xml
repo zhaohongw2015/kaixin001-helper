@@ -169,7 +169,7 @@
     <PHours>72</PHours>
     <PName>灰兔仔</PName>
     <PPrice>400</PPrice>
-    <BPName></BPName>
+    <BPName>灰兔仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>1</Rank>
     <ARank>1</ARank>
@@ -195,7 +195,7 @@
     <PHours>72</PHours>
     <PName>粉兔仔</PName>
     <PPrice>500</PPrice>
-    <BPName></BPName>
+    <BPName>粉兔仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>1</Rank>
     <ARank>1</ARank>
@@ -221,7 +221,7 @@
     <PHours>72</PHours>
     <PName>企鹅幼仔</PName>
     <PPrice>30000</PPrice>
-    <BPName></BPName>
+    <BPName>企鹅幼仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>12</Rank>
     <ARank>5</ARank>
@@ -247,7 +247,7 @@
     <PHours>72</PHours>
     <PName>袋鼠幼仔</PName>
     <PPrice>35000</PPrice>
-    <BPName></BPName>
+    <BPName>袋鼠幼仔</BPName>
     <BPPrice>0</BPPrice>
     <Rank>15</Rank>
     <ARank>5</ARank>
