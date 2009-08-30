@@ -169,7 +169,7 @@
     <PHours>72</PHours>
     <PName>灰兔仔</PName>
     <PPrice>400</PPrice>
-    <BPName>灰兔仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>1</Rank>
     <ARank>1</ARank>
@@ -195,7 +195,7 @@
     <PHours>72</PHours>
     <PName>粉兔仔</PName>
     <PPrice>500</PPrice>
-    <BPName>粉兔仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>1</Rank>
     <ARank>1</ARank>
@@ -221,7 +221,7 @@
     <PHours>72</PHours>
     <PName>企鹅幼仔</PName>
     <PPrice>30000</PPrice>
-    <BPName>企鹅幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>12</Rank>
     <ARank>5</ARank>
@@ -247,7 +247,7 @@
     <PHours>72</PHours>
     <PName>袋鼠幼仔</PName>
     <PPrice>35000</PPrice>
-    <BPName>袋鼠幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>15</Rank>
     <ARank>5</ARank>
@@ -273,7 +273,7 @@
     <PHours>72</PHours>
     <PName>亚洲象幼仔</PName>
     <PPrice>45000</PPrice>
-    <BPName>亚洲象幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>18</Rank>
     <ARank>5</ARank>
@@ -299,7 +299,7 @@
     <PHours>72</PHours>
     <PName>丹顶鹤幼鸟</PName>
     <PPrice>50000</PPrice>
-    <BPName>丹顶鹤幼鸟</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>20</Rank>
     <ARank>5</ARank>
@@ -325,7 +325,7 @@
     <PHours>72</PHours>
     <PName>长颈鹿幼仔</PName>
     <PPrice>50000</PPrice>
-    <BPName>长颈鹿幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>20</Rank>
     <ARank>5</ARank>
@@ -351,7 +351,7 @@
     <PHours>72</PHours>
     <PName>孔雀幼鸟</PName>
     <PPrice>65000</PPrice>
-    <BPName>孔雀幼鸟</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>28</Rank>
     <ARank>6</ARank>
@@ -377,7 +377,7 @@
     <PHours>72</PHours>
     <PName>长颈龙幼仔</PName>
     <PPrice>70000</PPrice>
-    <BPName>长颈龙幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>30</Rank>
     <ARank>5</ARank>
@@ -403,7 +403,7 @@
     <PHours>72</PHours>
     <PName>熊猫幼仔</PName>
     <PPrice>200000</PPrice>
-    <BPName>熊猫幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>45</Rank>
     <ARank>5</ARank>
@@ -429,7 +429,7 @@
     <PHours>0</PHours>
     <PName>麒麟幼仔</PName>
     <PPrice>0</PPrice>
-    <BPName>麒麟幼仔</BPName>
+    <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>0</Rank>
     <ARank>0</ARank>
