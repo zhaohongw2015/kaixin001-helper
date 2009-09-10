@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
     <ID>35</ID>
@@ -371,6 +371,90 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>111</ID>
+    <Name>昙花</Name>
+    <Rank>34</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>14000</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>1</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>74</ID>
+    <Name>红色5+5</Name>
+    <Rank>5</Rank>
+    <SeedPrice>4000</SeedPrice>
+    <FruitPrice>3000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>73</ID>
+    <Name>橙色5+5</Name>
+    <Rank>5</Rank>
+    <SeedPrice>4000</SeedPrice>
+    <FruitPrice>3000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>72</ID>
+    <Name>悦活黑加仑</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>71</ID>
+    <Name>悦活石榴</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>70</ID>
+    <Name>悦活橙子</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>69</ID>
+    <Name>悦活番茄</Name>
+    <Rank>3</Rank>
+    <SeedPrice>300</SeedPrice>
+    <FruitPrice>240</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>24</MaxNum>
+    <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
     <ID>67</ID>
