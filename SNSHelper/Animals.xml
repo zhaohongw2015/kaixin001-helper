@@ -365,6 +365,32 @@
     <NotSteal>20</NotSteal>
   </Animal>
   <Animal>
+    <AID>22</AID>
+    <TName>梅花鹿</TName>
+    <Name>梅花鹿幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>60</MHours>
+    <Grass>4</Grass>
+    <Price>40000</Price>
+    <MName>成年梅花鹿</MName>
+    <MPrice>45000</MPrice>
+    <PHours>72</PHours>
+    <PName>梅花鹿幼仔</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>40</Rank>
+    <ARank>5</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+  </Animal>
+  <Animal>
     <AID>16</AID>
     <TName>长颈龙</TName>
     <Name>长颈龙幼仔</Name>
