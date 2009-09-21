@@ -1,6 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
+    <ID>140</ID>
+    <Name>悦活洋槐</Name>
+    <Rank>1</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>300</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>12</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>141</ID>
+    <Name>悦活枸杞</Name>
+    <Rank>1</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>300</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>12</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
+    <ID>142</ID>
+    <Name>悦活党参</Name>
+    <Rank>1</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>300</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>12</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
     <ID>35</ID>
     <Name>黄玫瑰</Name>
     <Rank>7</Rank>
