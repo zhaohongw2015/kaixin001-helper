@@ -133,6 +133,18 @@
     <NotSteal>0</NotSteal>
   </Seed>
   <Seed>
+    <ID>154</ID>
+    <Name>倔强萝卜</Name>
+    <Rank>1</Rank>
+    <SeedPrice>10</SeedPrice>
+    <FruitPrice>20</FruitPrice>
+    <GrowthCycle>8</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>26</MaxNum>
+    <NotSteal>0</NotSteal>
+  </Seed>
+  <Seed>
     <ID>1</ID>
     <Name>胡萝卜</Name>
     <Rank>1</Rank>
