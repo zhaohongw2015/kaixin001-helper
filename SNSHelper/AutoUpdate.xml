@@ -1,46 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090913</last>
+    <last>20090927</last>
     <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.7_20090913.zip</file>
     <size>1386270</size>
-    <name>花园农夫V2.7 20090913</name>
-    <publisheddate>2009-09-13</publisheddate>
+    <name>花园农夫V2.8 20090927</name>
+    <publisheddate>2009-09-27</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.7.20090913 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Kaixin001.Framer.V2.8 20090927国庆中秋特别版 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局：修正自动更新好友时的错误提示和不按最后一个好友初始化新好友的Bug
+1. 修复第一时间在自家牧场和花园工作失败后，有一定几率导致农夫反复执行操作的Bug
 
-2. 花园：修正北京时间2-6点扫描花园时，导致花园预报被清空的Bug
+2. 修复农夫无法直接从开心网更新最新的悦活种子的Bug
 
-3. 全局：修正一处可能导致农夫崩溃的Bug
+3. 新增农夫动态托盘图标（感谢栗子De蛋糕制作的农夫动态图标）
 
-4. 全局：修正扫描时，农夫会长时间卡住的问题
+4. 修正种子或动物文件不完整时，导致农夫工作失败的Bug
 
-5. 花园：加入沙华轮回次数控制，防止极个别情况下，发生无限轮回的Bug
-
-6. 全局：调整农夫对北京时间2-6点休牧时段的处理逻辑
-
-7. 全局：新增删除预报及修改预报时间的功能
-
-8. 花园：简化农夫第一时间预报，去掉一些没有太大意义的提示信息
+5. 用户设置面板中新增“触发验证”配置项，防止某些情况下丢失牧场预报
       ]]>
     </whatsnew>
   </version>
   <ads>
     <ad>
       <title>
-        [9月23日] 热烈庆祝SNSFun成立半年，论坛版农夫闪亮登场
-      </title>
-      <url>
-        http://bbs.snsfun.com/viewthread.php?tid=62868
-      </url>
-    </ad>
-    <ad>
-      <title>
-        [9月16日] 请从农夫服务器更新动物信息，含最新的梅花鹿
+        [9月27日] 热烈庆祝中华人民共和国60华诞，农夫国庆中秋特别版发布
       </title>
       <url>
         http://bbs.snsfun.com
@@ -72,7 +58,7 @@ Kaixin001.Framer.V2.7.20090913 What's New:
     </ad>
     <ad>
       <title>
-        [8月24日] 无法运行农夫0814、0823、0827、0831的朋友，请安装.NET Framework V3.5
+        [8月24日] 无法运行农夫0814及之后版本的朋友，请安装.NET Framework V3.5
       </title>
       <url>
         http://bbs.snsfun.com/thread-94-1-1.html
