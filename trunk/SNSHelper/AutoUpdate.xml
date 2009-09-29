@@ -1,27 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090928</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.8_20090928.zip</file>
+    <last>20090929</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.8_20090929.zip</file>
     <size>1386270</size>
-    <name>花园农夫V2.8 20090928</name>
-    <publisheddate>2009-09-28</publisheddate>
+    <name>花园农夫V2.8 20090929</name>
+    <publisheddate>2009-09-29</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.8 20090928国庆中秋特别版 What's New:
+Kaixin001.Framer.V2.8 20090929国庆中秋特别版 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-0. 花园：国庆、中秋果篮的收获方式，可能导致农夫某些误操作，这里先做个预防，果篮具体的收获方式，还有待进一步观察（为了防止不必要的损失，田里种有果篮的朋友，建议你升级此版）
+1. 花园：增强农夫对国庆中秋果篮的判断，修正某些情况下无法预报果篮的问题（主要针对第一时间收获调整）
 
-1. 修复第一时间在自家牧场和花园工作失败后，有一定几率导致农夫反复执行操作的Bug
+2. 花园：修正农夫第一时间任务中，会梨掉果篮的Bug；修正农夫在常规任务中，会梨掉爱心地上果篮的Bug
 
-2. 修复农夫无法直接从开心网更新最新的悦活种子的Bug
+3. 花园：增加农夫收获果篮后，获得种子的提示
 
-3. 新增农夫动态托盘图标（感谢栗子De蛋糕制作的农夫动态图标）
-
-4. 修正种子或动物文件不完整时，导致农夫工作失败的Bug
-
-5. 用户设置面板中新增“触发验证”配置项，防止某些情况下丢失牧场预报
+4. 花园：修正开心网代码调整后，农夫常规任务输出中的乱码
       ]]>
     </whatsnew>
   </version>
