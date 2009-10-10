@@ -1,37 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20090930</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.8_20090930.zip</file>
+    <last>20091010</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.8_20091010.zip</file>
     <size>1386270</size>
-    <name>花园农夫V2.8 20090930</name>
-    <publisheddate>2009-09-30</publisheddate>
+    <name>花园农夫V2.8 20091010</name>
+    <publisheddate>2009-10-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.8 20090930国庆中秋特别版 What's New:
+Kaixin001.Framer.V2.8 20091010 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园：修正农夫不处理、不预报第二季果篮的问题
+1. 牧场：修正农夫读取牧场信息失败的Bug
+
+2. 牧场：修正农夫购买动物的部分逻辑
       ]]>
     </whatsnew>
   </version>
   <ads>
-    <ad>
-      <title>
-        [10月09日] 农夫临时补丁1009：修正开心网代码调整，农夫读取牧场失败的问题
-      </title>
-      <url>
-        http://kaixin001-helper.googlecode.com/files/SNSHelper1009.zip
-      </url>
-    </ad>
-    <ad>
-      <title>
-        [9月27日] 热烈庆祝中华人民共和国60华诞，农夫国庆中秋特别版发布
-      </title>
-      <url>
-        http://bbs.snsfun.com
-      </url>
-    </ad>
     <ad>
       <title>
         [9月29日] 0928之前的版本，会误处理果篮，请及时升级为0928或以上版本
