@@ -1,23 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <version>
-    <last>20091017</last>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V2.8_20091017.zip</file>
+    <last>20091021</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_V3.0_20091021.zip</file>
     <size>1386270</size>
-    <name>花园农夫V2.8 20091017</name>
-    <publisheddate>2009-10-17</publisheddate>
+    <name>花园农夫V3.0 20091021 Beta1</name>
+    <publisheddate>2009-10-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.V2.8 20091017 What's New:
+Kaixin001.Framer.V3.0 20091021 Beta1 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园：修正农夫第一时间任务中不收取爱心地的Bug
+1. 全局：新增“智能扫描设置”窗口，用于配置农夫智能扫描相关
 
-2. 花园：修正农夫在好友花园工作时，反复锄草的Bug
+2. 牧场：修正农夫偶尔不能添加竹子的Bug
 
-3. 牧场：修正开心网调整后，农夫运行记录中出现HTML代码的问题
+3. 花园：修正6点花园预报丢失，导致农夫6点不工作的Bug
 
-4. 牧场：修正开心网调整后，农夫牧场预报不准确、不偷取的Bug
+4. 花园：加入对七宝葫芦的支持与识别
+
+5. 全局：增加第一时间任务工作状态的显示
+
+6. 花园：调整部分花园和牧场的第一时间逻辑
+
+7. 全局：修正花园过期预报有时不消失的Bug
+
+8. 牧场：修正部分情况下，牧场预报中会出现花园预报的Bug
+
+9. 全局：“其他设置”面板中，新增“显示完整的第一时间工作记录”配置项，供有需要的朋友选用
+
+10. 全局：“商店明细”中新增“开心币”的显示
       ]]>
     </whatsnew>
   </version>
