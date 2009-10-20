@@ -25,6 +25,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>5</AID>
@@ -51,6 +52,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>2</AID>
@@ -77,6 +79,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>3</AID>
@@ -103,6 +106,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>4</AID>
@@ -129,6 +133,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>9</AID>
@@ -155,6 +160,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>10</AID>
@@ -181,6 +187,7 @@
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>11</AID>
@@ -207,6 +214,7 @@
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>12</AID>
@@ -233,6 +241,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>14</AID>
@@ -259,6 +268,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>15</AID>
@@ -285,6 +295,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>17</AID>
@@ -311,6 +322,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>18</AID>
@@ -337,6 +349,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>19</AID>
@@ -363,6 +376,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>22</AID>
@@ -389,6 +403,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>16</AID>
@@ -415,6 +430,7 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>13</AID>
@@ -441,31 +457,33 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>240</NotSteal>
+    <KXBean>0</KXBean>
   </Animal>
   <Animal>
-    <AID>20</AID>
+    <AID>25</AID>
     <TName>麒麟</TName>
     <Name>麒麟幼仔</Name>
     <Gender>1</Gender>
-    <MHours>0</MHours>
+    <MHours>168</MHours>
     <Grass>0</Grass>
     <Price>0</Price>
     <MName>成年麒麟</MName>
-    <MPrice>0</MPrice>
-    <PHours>0</PHours>
-    <PName>麒麟幼仔</PName>
-    <PPrice>0</PPrice>
+    <MPrice>20000</MPrice>
+    <PHours>168</PHours>
+    <PName>小麒麟</PName>
+    <PPrice>40000</PPrice>
     <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>0</Rank>
     <ARank>0</ARank>
-    <PHour>0</PHour>
-    <PDayNum>0</PDayNum>
-    <PMinNum>0</PMinNum>
-    <PMaxNum>0</PMaxNum>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
-    <CanBuy>0</CanBuy>
+    <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
-    <NotSteal>0</NotSteal>
+    <NotSteal>720</NotSteal>
+    <KXBean>8</KXBean>
   </Animal>
 </Animals>
