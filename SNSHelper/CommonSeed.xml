@@ -1,52 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
-    <ID>172</ID>
-    <Name>国庆花卉</Name>
-    <Rank>1</Rank>
-    <SeedPrice>0</SeedPrice>
-    <FruitPrice>9500</FruitPrice>
-    <GrowthCycle>24</GrowthCycle>
-    <Theftproof>1</Theftproof>
-    <MinNum>9</MinNum>
-    <MaxNum>9</MaxNum>
-    <NotSteal>1</NotSteal>
+    <ID>183</ID>
+    <Name>扶桑花</Name>
+    <Rank>6</Rank>
+    <SeedPrice>5000</SeedPrice>
+    <FruitPrice>6000</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
-    <ID>171</ID>
-    <Name>中秋果篮</Name>
-    <Rank>1</Rank>
-    <SeedPrice>0</SeedPrice>
-    <FruitPrice>10000</FruitPrice>
-    <GrowthCycle>24</GrowthCycle>
-    <Theftproof>1</Theftproof>
-    <MinNum>9</MinNum>
-    <MaxNum>9</MaxNum>
-    <NotSteal>1</NotSteal>
-  </Seed>
-  <Seed>
-    <ID>133</ID>
-    <Name>天堂鸟</Name>
-    <Rank>40</Rank>
-    <SeedPrice>12000</SeedPrice>
-    <FruitPrice>15000</FruitPrice>
+    <ID>182</ID>
+    <Name>缅栀</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>17500</FruitPrice>
     <GrowthCycle>56</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>2</MinNum>
     <MaxNum>6</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
-    <ID>123</ID>
-    <Name>虞美人</Name>
-    <Rank>20</Rank>
-    <SeedPrice>4500</SeedPrice>
-    <FruitPrice>7000</FruitPrice>
-    <GrowthCycle>36</GrowthCycle>
-    <Theftproof>0</Theftproof>
+    <ID>173</ID>
+    <Name>刻字苹果</Name>
+    <Rank>1</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>20000</FruitPrice>
+    <GrowthCycle>120</GrowthCycle>
+    <Theftproof>24</Theftproof>
     <MinNum>4</MinNum>
-    <MaxNum>8</MaxNum>
+    <MaxNum>4</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>2</KXBean>
+  </Seed>
+  <Seed>
+    <ID>174</ID>
+    <Name>七宝葫芦</Name>
+    <Rank>1</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>11000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>7</MinNum>
+    <MaxNum>7</MaxNum>
+    <NotSteal>1</NotSteal>
+    <KXBean>3</KXBean>
   </Seed>
   <Seed>
     <ID>134</ID>
@@ -59,6 +63,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>135</ID>
@@ -71,6 +76,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>136</ID>
@@ -83,6 +89,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>137</ID>
@@ -95,6 +102,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>138</ID>
@@ -107,6 +115,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>139</ID>
@@ -119,6 +128,46 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>140</ID>
+    <Name>悦活洋槐</Name>
+    <Rank>1</Rank>
+    <SeedPrice>500</SeedPrice>
+    <FruitPrice>300</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>12</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>141</ID>
+    <Name>悦活枸杞</Name>
+    <Rank>1</Rank>
+    <SeedPrice>500</SeedPrice>
+    <FruitPrice>300</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>12</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>142</ID>
+    <Name>悦活党参</Name>
+    <Rank>1</Rank>
+    <SeedPrice>500</SeedPrice>
+    <FruitPrice>300</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>12</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>63</ID>
@@ -131,6 +180,7 @@
     <MinNum>40</MinNum>
     <MaxNum>60</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>154</ID>
@@ -143,6 +193,7 @@
     <MinNum>8</MinNum>
     <MaxNum>26</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>1</ID>
@@ -155,6 +206,7 @@
     <MinNum>8</MinNum>
     <MaxNum>28</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>36</ID>
@@ -167,6 +219,7 @@
     <MinNum>10</MinNum>
     <MaxNum>30</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>2</ID>
@@ -179,6 +232,7 @@
     <MinNum>8</MinNum>
     <MaxNum>28</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>3</ID>
@@ -191,6 +245,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>4</ID>
@@ -203,6 +258,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>66</ID>
@@ -215,6 +271,7 @@
     <MinNum>12</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>51</ID>
@@ -227,6 +284,7 @@
     <MinNum>8</MinNum>
     <MaxNum>26</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>5</ID>
@@ -239,6 +297,7 @@
     <MinNum>10</MinNum>
     <MaxNum>26</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>6</ID>
@@ -251,6 +310,7 @@
     <MinNum>10</MinNum>
     <MaxNum>26</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>88</ID>
@@ -263,6 +323,7 @@
     <MinNum>12</MinNum>
     <MaxNum>16</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>7</ID>
@@ -275,6 +336,7 @@
     <MinNum>10</MinNum>
     <MaxNum>26</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>38</ID>
@@ -287,6 +349,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>8</ID>
@@ -299,6 +362,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>10</ID>
@@ -311,6 +375,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>92</ID>
@@ -323,6 +388,7 @@
     <MinNum>16</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>27</ID>
@@ -335,6 +401,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>56</ID>
@@ -347,6 +414,7 @@
     <MinNum>16</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>11</ID>
@@ -359,6 +427,7 @@
     <MinNum>10</MinNum>
     <MaxNum>22</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>9</ID>
@@ -371,6 +440,7 @@
     <MinNum>6</MinNum>
     <MaxNum>10</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>48</ID>
@@ -383,6 +453,7 @@
     <MinNum>8</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>49</ID>
@@ -395,6 +466,7 @@
     <MinNum>12</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>37</ID>
@@ -407,6 +479,7 @@
     <MinNum>12</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>64</ID>
@@ -419,6 +492,7 @@
     <MinNum>12</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>113</ID>
@@ -431,6 +505,7 @@
     <MinNum>16</MinNum>
     <MaxNum>24</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>12</ID>
@@ -443,6 +518,7 @@
     <MinNum>8</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>40</ID>
@@ -455,6 +531,7 @@
     <MinNum>8</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>68</ID>
@@ -467,6 +544,7 @@
     <MinNum>10</MinNum>
     <MaxNum>22</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>41</ID>
@@ -479,6 +557,7 @@
     <MinNum>8</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>50</ID>
@@ -491,6 +570,7 @@
     <MinNum>8</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>96</ID>
@@ -503,6 +583,7 @@
     <MinNum>8</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>13</ID>
@@ -515,6 +596,7 @@
     <MinNum>8</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>14</ID>
@@ -527,6 +609,7 @@
     <MinNum>6</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>59</ID>
@@ -539,6 +622,7 @@
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>52</ID>
@@ -551,6 +635,7 @@
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>15</ID>
@@ -563,6 +648,7 @@
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>97</ID>
@@ -575,6 +661,7 @@
     <MinNum>8</MinNum>
     <MaxNum>16</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>26</ID>
@@ -587,6 +674,7 @@
     <MinNum>8</MinNum>
     <MaxNum>12</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>58</ID>
@@ -599,6 +687,7 @@
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>90</ID>
@@ -611,6 +700,7 @@
     <MinNum>6</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>91</ID>
@@ -623,6 +713,7 @@
     <MinNum>6</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>89</ID>
@@ -635,6 +726,7 @@
     <MinNum>6</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>85</ID>
@@ -647,6 +739,7 @@
     <MinNum>6</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>16</ID>
@@ -659,6 +752,7 @@
     <MinNum>8</MinNum>
     <MaxNum>12</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>28</ID>
@@ -671,6 +765,7 @@
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>53</ID>
@@ -683,6 +778,7 @@
     <MinNum>8</MinNum>
     <MaxNum>16</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>54</ID>
@@ -695,6 +791,7 @@
     <MinNum>6</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>57</ID>
@@ -707,6 +804,7 @@
     <MinNum>12</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>93</ID>
@@ -719,6 +817,7 @@
     <MinNum>10</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>65</ID>
@@ -731,6 +830,7 @@
     <MinNum>12</MinNum>
     <MaxNum>20</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>60</ID>
@@ -743,6 +843,7 @@
     <MinNum>14</MinNum>
     <MaxNum>22</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>101</ID>
@@ -755,6 +856,7 @@
     <MinNum>8</MinNum>
     <MaxNum>16</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>83</ID>
@@ -767,6 +869,7 @@
     <MinNum>10</MinNum>
     <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>95</ID>
@@ -779,6 +882,7 @@
     <MinNum>14</MinNum>
     <MaxNum>18</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>17</ID>
@@ -791,6 +895,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>94</ID>
@@ -803,6 +908,7 @@
     <MinNum>8</MinNum>
     <MaxNum>12</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>19</ID>
@@ -815,6 +921,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>18</ID>
@@ -827,6 +934,7 @@
     <MinNum>2</MinNum>
     <MaxNum>6</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>42</ID>
@@ -839,6 +947,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>20</ID>
@@ -851,6 +960,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>23</ID>
@@ -863,6 +973,7 @@
     <MinNum>2</MinNum>
     <MaxNum>6</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>24</ID>
@@ -875,6 +986,7 @@
     <MinNum>2</MinNum>
     <MaxNum>6</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>22</ID>
@@ -887,6 +999,7 @@
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>21</ID>
@@ -899,6 +1012,7 @@
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>117</ID>
@@ -911,6 +1025,7 @@
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>86</ID>
@@ -923,6 +1038,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>84</ID>
@@ -935,6 +1051,7 @@
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>103</ID>
@@ -947,6 +1064,7 @@
     <MinNum>2</MinNum>
     <MaxNum>6</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>104</ID>
@@ -959,6 +1077,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>112</ID>
@@ -971,6 +1090,33 @@
     <MinNum>4</MinNum>
     <MaxNum>4</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>133</ID>
+    <Name>天堂鸟</Name>
+    <Rank>40</Rank>
+    <SeedPrice>12000</SeedPrice>
+    <FruitPrice>15000</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>123</ID>
+    <Name>虞美人</Name>
+    <Rank>20</Rank>
+    <SeedPrice>4500</SeedPrice>
+    <FruitPrice>7000</FruitPrice>
+    <GrowthCycle>36</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>114</ID>
@@ -983,6 +1129,7 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>102</ID>
@@ -995,6 +1142,7 @@
     <MinNum>6</MinNum>
     <MaxNum>6</MaxNum>
     <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>61</ID>
@@ -1007,6 +1155,7 @@
     <MinNum>2</MinNum>
     <MaxNum>2</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
   <Seed>
     <ID>39</ID>
@@ -1019,5 +1168,6 @@
     <MinNum>2</MinNum>
     <MaxNum>2</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
   </Seed>
 </Seeds>
