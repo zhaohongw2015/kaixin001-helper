@@ -838,7 +838,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -851,7 +851,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -864,7 +864,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -877,7 +877,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -890,7 +890,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -903,7 +903,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -916,7 +916,137 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>1</GrowthCycle>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>185</ID>
+    <Name>爱心南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4200</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>186</ID>
+    <Name>财迷南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>187</ID>
+    <Name>开心南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4200</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>188</ID>
+    <Name>骷髅南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>189</ID>
+    <Name>顽皮南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>3800</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>190</ID>
+    <Name>疯狂南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>191</ID>
+    <Name>好奇南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>192</ID>
+    <Name>害羞南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>193</ID>
+    <Name>忧郁南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>3800</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>0</MinNum>
+    <MaxNum>0</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>194</ID>
+    <Name>迷糊南瓜</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>0</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
