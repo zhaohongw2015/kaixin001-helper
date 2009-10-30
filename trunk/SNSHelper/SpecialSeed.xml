@@ -838,7 +838,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -851,7 +851,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -864,7 +864,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -877,7 +877,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -890,7 +890,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -903,7 +903,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -916,7 +916,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>11000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -929,7 +929,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4200</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -942,7 +942,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -955,7 +955,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4200</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -968,7 +968,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -981,7 +981,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>3800</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -994,7 +994,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -1007,7 +1007,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -1020,7 +1020,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -1033,7 +1033,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>3800</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
@@ -1046,7 +1046,7 @@
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
+    <GrowthCycle>1</GrowthCycle>
     <Theftproof>0</Theftproof>
     <MinNum>0</MinNum>
     <MaxNum>0</MaxNum>
