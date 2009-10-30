@@ -567,5 +567,31 @@
     <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Animal>
-
+  <Animal>
+    <AID>24</AID>
+    <TName>信鸽</TName>
+    <Name>信鸽幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>24</MHours>
+    <Grass>5</Grass>
+    <Price>0</Price>
+    <MName>成年鸽子</MName>
+    <MPrice>20000</MPrice>
+    <PHours>168</PHours>
+    <PName>小信鸽</PName>
+    <PPrice>25000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>60</NotSteal>
+    <KXBean>4</KXBean>
+  </Animal>
 </Animals>
