@@ -1,5 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animals>
+  <Animal>
+    <AID>5</AID>
+    <TName>大白母兔</TName>
+    <Name>大白母兔幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>20</MHours>
+    <Grass>1</Grass>
+    <Price>500</Price>
+    <MName>整兔</MName>
+    <MPrice>1500</MPrice>
+    <PHours>72</PHours>
+    <PName>兔仔</PName>
+    <PPrice>300</PPrice>
+    <BPName>长毛兔仔</BPName>
+    <BPPrice>500</BPPrice>
+    <Rank>1</Rank>
+    <ARank>1</ARank>
+    <PHour>6</PHour>
+    <PDayNum>3</PDayNum>
+    <PMinNum>4</PMinNum>
+    <PMaxNum>8</PMaxNum>
+    <GName>胡萝卜</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>10</AID>
+    <TName>小灰兔</TName>
+    <Name>小灰兔幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>20</MHours>
+    <Grass>1</Grass>
+    <Price>500</Price>
+    <MName>整灰兔</MName>
+    <MPrice>1800</MPrice>
+    <PHours>72</PHours>
+    <PName>灰兔仔</PName>
+    <PPrice>400</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>1</Rank>
+    <ARank>1</ARank>
+    <PHour>6</PHour>
+    <PDayNum>3</PDayNum>
+    <PMinNum>4</PMinNum>
+    <PMaxNum>8</PMaxNum>
+    <GName>胡萝卜</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>11</AID>
+    <TName>小粉兔</TName>
+    <Name>小粉兔幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>20</MHours>
+    <Grass>1</Grass>
+    <Price>500</Price>
+    <MName>整粉兔</MName>
+    <MPrice>2000</MPrice>
+    <PHours>72</PHours>
+    <PName>粉兔仔</PName>
+    <PPrice>500</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>1</Rank>
+    <ARank>1</ARank>
+    <PHour>6</PHour>
+    <PDayNum>3</PDayNum>
+    <PMinNum>4</PMinNum>
+    <PMaxNum>8</PMaxNum>
+    <GName>胡萝卜</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
   <Animal>
     <AID>1</AID>
     <TName>芦花母鸡</TName>
@@ -28,27 +109,27 @@
     <KXBean>0</KXBean>
   </Animal>
   <Animal>
-    <AID>5</AID>
-    <TName>大白母兔</TName>
-    <Name>大白母兔幼仔</Name>
+    <AID>9</AID>
+    <TName>大白母鹅</TName>
+    <Name>大白母鹅幼仔</Name>
     <Gender>1</Gender>
-    <MHours>20</MHours>
-    <Grass>1</Grass>
-    <Price>500</Price>
-    <MName>整兔</MName>
-    <MPrice>1500</MPrice>
+    <MHours>24</MHours>
+    <Grass>3</Grass>
+    <Price>400</Price>
+    <MName>整鹅</MName>
+    <MPrice>800</MPrice>
     <PHours>72</PHours>
-    <PName>兔仔</PName>
-    <PPrice>300</PPrice>
-    <BPName>长毛兔仔</BPName>
-    <BPPrice>500</BPPrice>
-    <Rank>1</Rank>
-    <ARank>1</ARank>
-    <PHour>6</PHour>
+    <PName>鹅蛋</PName>
+    <PPrice>60</PPrice>
+    <BPName>精品鹅蛋</BPName>
+    <BPPrice>100</BPPrice>
+    <Rank>4</Rank>
+    <ARank>2</ARank>
+    <PHour>8</PHour>
     <PDayNum>3</PDayNum>
-    <PMinNum>4</PMinNum>
-    <PMaxNum>8</PMaxNum>
-    <GName>胡萝卜</GName>
+    <PMinNum>6</PMinNum>
+    <PMaxNum>10</PMaxNum>
+    <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
@@ -131,87 +212,6 @@
     <PMaxNum>14</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
-    <Advanced>0</Advanced>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Animal>
-  <Animal>
-    <AID>9</AID>
-    <TName>大白母鹅</TName>
-    <Name>大白母鹅幼仔</Name>
-    <Gender>1</Gender>
-    <MHours>24</MHours>
-    <Grass>3</Grass>
-    <Price>400</Price>
-    <MName>整鹅</MName>
-    <MPrice>800</MPrice>
-    <PHours>72</PHours>
-    <PName>鹅蛋</PName>
-    <PPrice>60</PPrice>
-    <BPName>精品鹅蛋</BPName>
-    <BPPrice>100</BPPrice>
-    <Rank>4</Rank>
-    <ARank>2</ARank>
-    <PHour>8</PHour>
-    <PDayNum>3</PDayNum>
-    <PMinNum>6</PMinNum>
-    <PMaxNum>10</PMaxNum>
-    <GName>牧草</GName>
-    <CanBuy>1</CanBuy>
-    <Advanced>0</Advanced>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Animal>
-  <Animal>
-    <AID>10</AID>
-    <TName>小灰兔</TName>
-    <Name>小灰兔幼仔</Name>
-    <Gender>1</Gender>
-    <MHours>20</MHours>
-    <Grass>1</Grass>
-    <Price>500</Price>
-    <MName>整灰兔</MName>
-    <MPrice>1800</MPrice>
-    <PHours>72</PHours>
-    <PName>灰兔仔</PName>
-    <PPrice>400</PPrice>
-    <BPName></BPName>
-    <BPPrice>0</BPPrice>
-    <Rank>1</Rank>
-    <ARank>1</ARank>
-    <PHour>6</PHour>
-    <PDayNum>3</PDayNum>
-    <PMinNum>4</PMinNum>
-    <PMaxNum>8</PMaxNum>
-    <GName>胡萝卜</GName>
-    <CanBuy>0</CanBuy>
-    <Advanced>0</Advanced>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Animal>
-  <Animal>
-    <AID>11</AID>
-    <TName>小粉兔</TName>
-    <Name>小粉兔幼仔</Name>
-    <Gender>1</Gender>
-    <MHours>20</MHours>
-    <Grass>1</Grass>
-    <Price>500</Price>
-    <MName>整粉兔</MName>
-    <MPrice>2000</MPrice>
-    <PHours>72</PHours>
-    <PName>粉兔仔</PName>
-    <PPrice>500</PPrice>
-    <BPName></BPName>
-    <BPPrice>0</BPPrice>
-    <Rank>1</Rank>
-    <ARank>1</ARank>
-    <PHour>6</PHour>
-    <PDayNum>3</PDayNum>
-    <PMinNum>4</PMinNum>
-    <PMaxNum>8</PMaxNum>
-    <GName>胡萝卜</GName>
-    <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
@@ -367,33 +367,6 @@
     <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>28</Rank>
-    <ARank>6</ARank>
-    <PHour>20</PHour>
-    <PDayNum>1</PDayNum>
-    <PMinNum>1</PMinNum>
-    <PMaxNum>1</PMaxNum>
-    <GName>牧草</GName>
-    <CanBuy>1</CanBuy>
-    <Advanced>1</Advanced>
-    <NotSteal>20</NotSteal>
-    <KXBean>0</KXBean>
-  </Animal>
-  <Animal>
-    <AID>22</AID>
-    <TName>梅花鹿</TName>
-    <Name>梅花鹿幼仔</Name>
-    <Gender>0</Gender>
-    <MHours>60</MHours>
-    <Grass>4</Grass>
-    <Price>40000</Price>
-    <MName>成年梅花鹿</MName>
-    <MPrice>45000</MPrice>
-    <PHours>72</PHours>
-    <PName>梅花鹿幼仔</PName>
-    <PPrice>70000</PPrice>
-    <BPName></BPName>
-    <BPPrice>0</BPPrice>
-    <Rank>40</Rank>
     <ARank>5</ARank>
     <PHour>20</PHour>
     <PDayNum>1</PDayNum>
@@ -433,12 +406,66 @@
     <KXBean>0</KXBean>
   </Animal>
   <Animal>
+    <AID>27</AID>
+    <TName>松鼠</TName>
+    <Name>松鼠幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>24</MHours>
+    <Grass>5</Grass>
+    <Price>60000</Price>
+    <MName>成年松鼠</MName>
+    <MPrice>65000</MPrice>
+    <PHours>96</PHours>
+    <PName>小松鼠</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>32</Rank>
+    <ARank>5</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>22</AID>
+    <TName>梅花鹿</TName>
+    <Name>梅花鹿幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>60</MHours>
+    <Grass>4</Grass>
+    <Price>40000</Price>
+    <MName>成年梅花鹿</MName>
+    <MPrice>45000</MPrice>
+    <PHours>72</PHours>
+    <PName>梅花鹿幼仔</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>40</Rank>
+    <ARank>5</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
     <AID>13</AID>
     <TName>熊猫</TName>
     <Name>熊猫幼仔</Name>
     <Gender>1</Gender>
     <MHours>240</MHours>
-    <Grass>4</Grass>
+    <Grass>1</Grass>
     <Price>200000</Price>
     <MName>成年熊猫</MName>
     <MPrice>250000</MPrice>
@@ -468,7 +495,7 @@
     <Grass>0</Grass>
     <Price>0</Price>
     <MName>成年麒麟</MName>
-    <MPrice>20000</MPrice>
+    <MPrice>200000</MPrice>
     <PHours>168</PHours>
     <PName>小麒麟</PName>
     <PPrice>40000</PPrice>
@@ -480,9 +507,9 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName>牧草</GName>
-    <CanBuy>1</CanBuy>
-    <Advanced>1</Advanced>
+    <GName></GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
     <NotSteal>720</NotSteal>
     <KXBean>8</KXBean>
   </Animal>
@@ -512,33 +539,6 @@
     <Advanced>1</Advanced>
     <NotSteal>0</NotSteal>
     <KXBean>4</KXBean>
-  </Animal>
-  <Animal>
-    <AID>27</AID>
-    <TName>松鼠</TName>
-    <Name>松鼠幼仔</Name>
-    <Gender>1</Gender>
-    <MHours>24</MHours>
-    <Grass>5</Grass>
-    <Price>60000</Price>
-    <MName>成年松鼠</MName>
-    <MPrice>65000</MPrice>
-    <PHours>96</PHours>
-    <PName>小松鼠</PName>
-    <PPrice>70000</PPrice>
-    <BPName></BPName>
-    <BPPrice>0</BPPrice>
-    <Rank>32</Rank>
-    <ARank>0</ARank>
-    <PHour>20</PHour>
-    <PDayNum>1</PDayNum>
-    <PMinNum>1</PMinNum>
-    <PMaxNum>1</PMaxNum>
-    <GName>牧草</GName>
-    <CanBuy>1</CanBuy>
-    <Advanced>1</Advanced>
-    <NotSteal>20</NotSteal>
-    <KXBean>0</KXBean>
   </Animal>
   <Animal>
     <AID>26</AID>
