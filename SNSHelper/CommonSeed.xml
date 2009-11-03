@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
-    <ID>184</ID>
-    <Name>万圣节南瓜</Name>
-    <Rank>1</Rank>
-    <SeedPrice>500</SeedPrice>
-    <FruitPrice>4000</FruitPrice>
-    <GrowthCycle>24</GrowthCycle>
+    <ID>195</ID>
+    <Name>多色荷花</Name>
+    <Rank>7</Rank>
+    <SeedPrice>1000</SeedPrice>
+    <FruitPrice>800</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
     <Theftproof>0</Theftproof>
-    <MinNum>4</MinNum>
-    <MaxNum>4</MaxNum>
+    <MinNum>10</MinNum>
+    <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
@@ -842,19 +842,6 @@
     <Theftproof>0</Theftproof>
     <MinNum>8</MinNum>
     <MaxNum>16</MaxNum>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
-  <Seed>
-    <ID>83</ID>
-    <Name>荷花</Name>
-    <Rank>7</Rank>
-    <SeedPrice>1000</SeedPrice>
-    <FruitPrice>800</FruitPrice>
-    <GrowthCycle>44</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>10</MinNum>
-    <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
