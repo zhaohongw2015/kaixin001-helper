@@ -1145,6 +1145,19 @@
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
+    <ID>83</ID>
+    <Name>粉荷</Name>
+    <Rank>7</Rank>
+    <SeedPrice>1000</SeedPrice>
+    <FruitPrice>800</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>10</MinNum>
+    <MaxNum>14</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>196</ID>
     <Name>青莲</Name>
     <Rank>7</Rank>
