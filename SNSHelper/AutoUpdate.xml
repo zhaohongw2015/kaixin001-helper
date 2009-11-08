@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
+  <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
+  <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
     <last>20091021</last>
     <file>http://kaixin001-helper.googlecode.com/files/Farmer_V3.0_20091021.zip</file>
@@ -52,7 +54,7 @@ Kaixin001.Framer.V3.0 20091021 Beta1 What's New:
         http://www.900dy.cn
       </url>
       <color>-16744448</color>
-      <expired>2009-11-08 11:06:00</expired>
+      <expired>2009-11-08 11:08:00</expired>
     </ad>
     <ad>
       <title>
@@ -109,6 +111,4 @@ Kaixin001.Framer.V3.0 20091021 Beta1 What's New:
   <fund>
     http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
   </fund>
-  <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
-  <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
 </data>
