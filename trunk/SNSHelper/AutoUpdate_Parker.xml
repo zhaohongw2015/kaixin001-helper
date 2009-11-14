@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <version>
+    <last>20091114</last>
+    <file></file>
+    <size>1506575</size>
+    <name>开心车夫V2.0 20090823</name>
+    <publisheddate>2009-08-23</publisheddate>
+    <whatsnew>
+      <![CDATA[
+开心车夫v2.0 20090823 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+1、优化停车算法，主要是修改上一个版本中的问题
+2、增加代理功能，需要手工配置WebProxy.xml文件
+3、公开实现验证码功能的接口,实现方法和农夫一样
+      ]]>
+    </whatsnew>
+  </version>
+</data>
