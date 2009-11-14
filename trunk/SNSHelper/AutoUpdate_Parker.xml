@@ -8,12 +8,148 @@
     <publisheddate>2009-08-23</publisheddate>
     <whatsnew>
       <![CDATA[
-开心车夫v2.0 20090823 What's New:
+开心车夫v2.0 20091114 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1、优化停车算法，主要是修改上一个版本中的问题
-2、增加代理功能，需要手工配置WebProxy.xml文件
-3、公开实现验证码功能的接口,实现方法和农夫一样
+1、修正车夫无法加油的Bug
       ]]>
     </whatsnew>
   </version>
+  <ads>
+    <ad>
+      <title>
+        3D开心网，立体QQ农场，开通就送10Q币。
+      </title>
+      <url>
+        http://www.hi365.com/hi/index.html?c=10215
+      </url>
+      <color>-65408</color>
+      <expired>2009-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        在线电影、高清电影、最新影片，尽在E-900电影网(http://www.900dy.cn).
+      </title>
+      <url>
+        http://www.900dy.cn
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        3D开心网，立体QQ农场，开通就送10Q币！
+      </title>
+      <url>
+        http://www.hi365.com/hi/index.html?c=10215
+      </url>
+      <color>-65408</color>
+      <expired>2009-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        最具人气的开心网交流论坛－－《SNSFun开心网交流论坛》，真诚期待您的光临！
+      </title>
+      <url>
+        http://bbs.snsfun.com
+      </url>
+      <color>-65536</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        3D开心网，立体QQ农场，开通就送10Q币.
+      </title>
+      <url>
+        http://www.hi365.com/hi/index.html?c=10215
+      </url>
+      <color>-65408</color>
+      <expired>2009-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        在线电影、高清电影、最新影片，尽在E-900电影网(http://www.900dy.cn)。
+      </title>
+      <url>
+        http://www.900dy.cn
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        3D开心网，立体QQ农场，开通就送10Q币!
+      </title>
+      <url>
+        http://www.hi365.com/hi/index.html?c=10215
+      </url>
+      <color>-65408</color>
+      <expired>2009-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        在线电影、高清电影、最新影片尽在E-900电影网(http://www.900dy.cn)!
+      </title>
+      <url>
+        http://www.900dy.cn
+      </url>
+      <color>-16744448</color>
+      <expired>2009-11-08 11:13:00</expired>
+    </ad>
+  </ads>
+  <ads1>
+    <ad>
+      <title>
+        [10月20日] 花园农夫V3.0 20091021 Beta1新版功能注解（By 栗子de蛋糕）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-70136-1-1.html
+      </url>
+      <color>-16744256</color>
+    </ad>
+    <ad>
+      <title>
+        [9月12日] 农夫新手教程：农夫设置初级教程及名词解释（By 栗子de蛋糕）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-60301-1-1.html
+      </url>
+      <color>-13529542</color>
+    </ad>
+    <ad>
+      <title>
+        [9月12日] 农夫进阶教程：轻松上手，玩转农夫系列主题（By 番茄酱）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-53605-1-1.html
+      </url>
+      <color>-16744256</color>
+    </ad>
+    <ad>
+      <title>
+        [8月24日] 无法运行农夫0814及之后版本的朋友，请安装.NET Framework V3.5
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-94-1-1.html
+      </url>
+      <color>-13529542</color>
+    </ad>
+    <ad>
+      <title>
+        [8月23日] 支持《开心网花园农夫》的发展[捐赠、宣传、点广告]
+      </title>
+      <url>
+        http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
+      </url>
+      <color>-16744256</color>
+    </ad>
+    <ad>
+      <title>
+        [8月23日] 开心车夫v2.0 20090823（停车速度最快的争车位辅助工具）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-52763-1-1.html
+      </url>
+      <color>-13529542</color>
+    </ad>
+  </ads1>
 </data>
