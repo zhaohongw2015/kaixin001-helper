@@ -515,7 +515,7 @@
   </Animal>
   <Animal>
     <AID>25</AID>
-    <TName>麒麟</TName>
+    <TName>火麒麟</TName>
     <Name>麒麟幼仔</Name>
     <Gender>1</Gender>
     <MHours>168</MHours>
@@ -535,7 +535,7 @@
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
-    <CanBuy>0</CanBuy>
+    <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>720</NotSteal>
     <KXBean>8</KXBean>
@@ -593,5 +593,59 @@
     <Advanced>1</Advanced>
     <NotSteal>60</NotSteal>
     <KXBean>4</KXBean>
+  </Animal>
+  <Animal>
+    <AID>31</AID>
+    <TName>神龙</TName>
+    <Name>神龙幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>48</MHours>
+    <Grass>0</Grass>
+    <Price>0</Price>
+    <MName>成年神龙</MName>
+    <MPrice>0</MPrice>
+    <PHours>120</PHours>
+    <PName>小神龙</PName>
+    <PPrice>80000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>22</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>0</NotSteal>
+    <KXBean>12</KXBean>
+  </Animal>
+  <Animal>
+    <AID>29</AID>
+    <TName>玉麒麟</TName>
+    <Name>玉麒麟幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>96</MHours>
+    <Grass>0</Grass>
+    <Price>0</Price>
+    <MName>成年玉麒麟</MName>
+    <MPrice>20000</MPrice>
+    <PHours>72</PHours>
+    <PName>玉麒麟幼仔</PName>
+    <PPrice>80000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>720</NotSteal>
+    <KXBean>8</KXBean>
   </Animal>
 </Animals>
