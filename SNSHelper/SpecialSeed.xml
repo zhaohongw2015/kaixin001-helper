@@ -1158,6 +1158,71 @@
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
+    <ID>201</ID>
+    <Name>粉色绿绒蒿</Name>
+    <Rank>30</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>10000</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>202</ID>
+    <Name>黄色绿绒蒿</Name>
+    <Rank>30</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>10500</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>203</ID>
+    <Name>紫色绿绒蒿</Name>
+    <Rank>30</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>10950</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>204</ID>
+    <Name>青色绿绒蒿</Name>
+    <Rank>30</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>11500</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>205</ID>
+    <Name>多色绿绒蒿</Name>
+    <Rank>30</Rank>
+    <SeedPrice>10000</SeedPrice>
+    <FruitPrice>12000</FruitPrice>
+    <GrowthCycle>56</GrowthCycle>
+    <Theftproof>4</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>4</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>115</ID>
     <Name>紫色曼陀罗</Name>
     <Rank>32</Rank>
