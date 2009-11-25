@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
+    <ID>206</ID>
+    <Name>铃兰</Name>
+    <Rank>32</Rank>
+    <SeedPrice>9000</SeedPrice>
+    <FruitPrice>10000</FruitPrice>
+    <GrowthCycle>48</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>200</ID>
     <Name>绿绒蒿</Name>
     <Rank>30</Rank>
@@ -10,19 +23,6 @@
     <Theftproof>0</Theftproof>
     <MinNum>2</MinNum>
     <MaxNum>6</MaxNum>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
-  <Seed>
-    <ID>195</ID>
-    <Name>多色荷花</Name>
-    <Rank>7</Rank>
-    <SeedPrice>1000</SeedPrice>
-    <FruitPrice>800</FruitPrice>
-    <GrowthCycle>44</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>10</MinNum>
-    <MaxNum>14</MaxNum>
     <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
@@ -989,6 +989,19 @@
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
+    <ID>195</ID>
+    <Name>多色荷花</Name>
+    <Rank>7</Rank>
+    <SeedPrice>1000</SeedPrice>
+    <FruitPrice>800</FruitPrice>
+    <GrowthCycle>44</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>10</MinNum>
+    <MaxNum>14</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>183</ID>
     <Name>扶桑花</Name>
     <Rank>6</Rank>
@@ -1064,6 +1077,32 @@
     <MinNum>2</MinNum>
     <MaxNum>2</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>184</ID>
+    <Name>万圣节南瓜</Name>
+    <Rank>1</Rank>
+    <SeedPrice>500</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>24</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>4</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>25</ID>
+    <Name>人参(有人参娃娃)</Name>
+    <Rank>15</Rank>
+    <SeedPrice>12000</SeedPrice>
+    <FruitPrice>120000</FruitPrice>
+    <GrowthCycle>480</GrowthCycle>
+    <Theftproof>24</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>4</MaxNum>
+    <NotSteal>1</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
 </Seeds>
