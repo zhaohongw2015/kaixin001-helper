@@ -1050,7 +1050,7 @@
     <Theftproof>1</Theftproof>
     <MinNum>9</MinNum>
     <MaxNum>9</MaxNum>
-    <NotSteal>0</NotSteal>
+    <NotSteal>1</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
@@ -1063,7 +1063,7 @@
     <Theftproof>1</Theftproof>
     <MinNum>9</MinNum>
     <MaxNum>9</MaxNum>
-    <NotSteal>0</NotSteal>
+    <NotSteal>1</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
