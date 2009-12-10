@@ -3,32 +3,20 @@
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
-    <last>20091126</last>
-    <last1>20091126</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20091126.zip</file>
-    <size>1461147</size>
-    <name>花园农夫 Build 20091126</name>
-    <publisheddate>2009-11-26</publisheddate>
+    <last>20091211</last>
+    <last1>20091211</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20091211.zip</file>
+    <size>1461576</size>
+    <name>花园农夫 Build 20091211</name>
+    <publisheddate>2009-12-11</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20091126 What's New:
+Kaixin001.Framer.Build 20091211 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 全局[修正]：修正多次更新会导致农夫退出的Bug
+1. 花园[修正]：紧急修正开心网调整导致农夫花园模块工作不正常的Bug
 
-2. 全局[修正]：修正智能扫描不按周期执行的Bug
-
-3. 牧场[增强]：牧场高级设置中加入养殖优先级、不收获等设置
-
-4. 牧场[增强]：加入强制防神龙功能
-
-5. 花园[增强]：种植爱心地前暂停3秒，防止农夫种植爱心地速度太快，部分爱心地种不上
-
-6. 全局[增强]：重新开启农夫缓存本地cookie功能
-
-7. 全局[增强]：全局设置中加入自家花园牧场巡查功能，可有效防止因农夫漏报导致漏收的情况
-
-8. 全局[增强]：其他设置面板中加入“农夫启动后立即运行常规任务”配置项
+2. 牧场[修正]：紧急修正开心网调整导致农夫牧场模块工作不正常的Bug
       ]]>
     </whatsnew>
   </version>
