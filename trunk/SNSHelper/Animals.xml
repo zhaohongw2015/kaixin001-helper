@@ -379,6 +379,60 @@
     <KXBean>0</KXBean>
   </Animal>
   <Animal>
+    <AID>63</AID>
+    <TName>蒙古马</TName>
+    <Name>蒙古马幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>24</MHours>
+    <Grass>4</Grass>
+    <Price>60000</Price>
+    <MName>成年蒙古马</MName>
+    <MPrice>65000</MPrice>
+    <PHours>96</PHours>
+    <PName>小蒙古马</PName>
+    <PPrice>50000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>36</Rank>
+    <ARank>5</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>62</AID>
+    <TName>汗血宝马</TName>
+    <Name>汗血宝马幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>24</MHours>
+    <Grass>10</Grass>
+    <Price>0</Price>
+    <MName>成年汗血宝马</MName>
+    <MPrice>75000</MPrice>
+    <PHours>96</PHours>
+    <PName>小汗血宝马</PName>
+    <PPrice>60000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>96</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>60</NotSteal>
+    <KXBean>8</KXBean>
+  </Animal>
+  <Animal>
     <AID>16</AID>
     <TName>长颈龙</TName>
     <Name>长颈龙幼仔</Name>
