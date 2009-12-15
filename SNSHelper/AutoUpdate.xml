@@ -3,20 +3,20 @@
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
-    <last>20091211</last>
+    <last>20091215</last>
     <last1>20091211</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20091211.zip</file>
-    <size>1461576</size>
-    <name>花园农夫 Build 20091211</name>
-    <publisheddate>2009-12-11</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20091215.zip</file>
+    <size>1461677</size>
+    <name>花园农夫 Build 20091215</name>
+    <publisheddate>2009-12-15</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20091211 What's New:
+Kaixin001.Framer.Build 20091215 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园[修正]：紧急修正开心网调整导致农夫花园模块工作不正常的Bug
+1. 花园[修正]：修正农夫对防偷期植物判断不准确的Bug
 
-2. 牧场[修正]：紧急修正开心网调整导致农夫牧场模块工作不正常的Bug
+2. 牧场[新增]：加入对狗熊食物--整鸡的识别
       ]]>
     </whatsnew>
   </version>
