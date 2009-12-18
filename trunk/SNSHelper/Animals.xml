@@ -946,6 +946,60 @@
     <KXBean>12</KXBean>
   </Animal>
   <Animal>
+    <AID>65</AID>
+    <TName>杂耍熊</TName>
+    <Name>杂耍熊幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>80000</Price>
+    <MName>成年杂耍熊</MName>
+    <MPrice>65000</MPrice>
+    <PHours>120</PHours>
+    <PName>小杂耍熊</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>5</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>鸡肉</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>66</AID>
+    <TName>贪吃熊</TName>
+    <Name>贪吃熊幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>80000</Price>
+    <MName>成年贪吃熊</MName>
+    <MPrice>65000</MPrice>
+    <PHours>120</PHours>
+    <PName>小狗熊</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>5</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>鸡肉</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
     <AID>67</AID>
     <TName>狗熊</TName>
     <Name>狗熊幼仔</Name>
