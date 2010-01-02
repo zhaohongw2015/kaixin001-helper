@@ -1495,17 +1495,4 @@
     <NotSteal>1</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
-  <Seed>
-    <ID>10001</ID>
-    <Name>整鸡</Name>
-    <Rank>0</Rank>
-    <SeedPrice>0</SeedPrice>
-    <FruitPrice>0</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>0</MinNum>
-    <MaxNum>0</MaxNum>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
 </Seeds>
