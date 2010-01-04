@@ -4,31 +4,29 @@
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
     <last>20100102</last>
-    <last1>20091223</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20091223.zip</file>
-    <size>1461966</size>
-    <name>花园农夫 Build 20091223</name>
-    <publisheddate>2009-12-23</publisheddate>
+    <last1>20100102</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100102.zip</file>
+    <size>1466368</size>
+    <name>花园农夫 Build 20100102</name>
+    <publisheddate>2010-01-02</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20091223 What's New:
+Kaixin001.Framer.Build 20100102 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 花园[修正]：修正对防偷期植物成熟时间计算错误的Bug
+1. 牧场[修正]：修正部分动物漏报的Bug
 
-2. 牧场[修正]：修正第一时间任务中可偷动物数计算错误的Bug
-
-3. 花园[修正]：把“整鸡”从可偷列表中移除
+2. 花园[修正]：修正从开心网更新植物信息时会发生错误的Bug
       ]]>
     </whatsnew>
   </version>
   <ads>
     <ad>
       <title>
-        开心网花园农夫20100102版本已发布，欢迎下载
+        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
       </title>
       <url>
-        http://bbs.snsfun.com/viewthread.php?tid=81707
+        http://jailu.cn/goods.htm?f=1
       </url>
       <color>-65408</color>
       <expired>2019-12-13 23:59:59</expired>
