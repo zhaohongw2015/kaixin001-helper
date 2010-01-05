@@ -1470,6 +1470,84 @@
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
+    <ID>223</ID>
+    <Name>白鸢尾</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>3500</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>6</MinNum>
+    <MaxNum>10</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>224</ID>
+    <Name>粉鸢尾</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>4000</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>6</MinNum>
+    <MaxNum>10</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>225</ID>
+    <Name>紫鸢尾</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>4500</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>10</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>226</ID>
+    <Name>黄鸢尾</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>10000</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>227</ID>
+    <Name>蓝鸢尾</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>11000</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>228</ID>
+    <Name>彩虹鸢尾</Name>
+    <Rank>46</Rank>
+    <SeedPrice>20000</SeedPrice>
+    <FruitPrice>12000</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>4</Theftproof>
+    <MinNum>2</MinNum>
+    <MaxNum>6</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>115</ID>
     <Name>紫色曼陀罗</Name>
     <Rank>32</Rank>
@@ -1493,19 +1571,6 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>1</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
-  <Seed>
-    <ID>10001</ID>
-    <Name>整鸡</Name>
-    <Rank>0</Rank>
-    <SeedPrice>0</SeedPrice>
-    <FruitPrice>0</FruitPrice>
-    <GrowthCycle>0</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>0</MinNum>
-    <MaxNum>0</MaxNum>
-    <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
 </Seeds>
