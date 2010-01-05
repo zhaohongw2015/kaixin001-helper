@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>5</AID>
@@ -1011,6 +1011,60 @@
     <MPrice>65000</MPrice>
     <PHours>120</PHours>
     <PName>小狗熊</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>5</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>鸡肉</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>68</AID>
+    <TName>笨笨熊</TName>
+    <Name>笨笨熊幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>70000</Price>
+    <MName>成年笨笨熊</MName>
+    <MPrice>65000</MPrice>
+    <PHours>120</PHours>
+    <PName>小笨笨熊</PName>
+    <PPrice>70000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>5</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>鸡肉</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>69</AID>
+    <TName>冠军熊</TName>
+    <Name>冠军熊幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>80000</Price>
+    <MName>成年冠军熊</MName>
+    <MPrice>65000</MPrice>
+    <PHours>120</PHours>
+    <PName>小冠军熊</PName>
     <PPrice>70000</PPrice>
     <BPName></BPName>
     <BPPrice>0</BPPrice>
