@@ -633,7 +633,7 @@
     <MPrice>20000</MPrice>
     <PHours>168</PHours>
     <PName>小信鸽</PName>
-    <PPrice>25000</PPrice>
+    <PPrice>6500</PPrice>
     <BPName></BPName>
     <BPPrice>0</BPPrice>
     <Rank>0</Rank>
@@ -644,9 +644,9 @@
     <PMaxNum>1</PMaxNum>
     <GName>牧草</GName>
     <CanBuy>1</CanBuy>
-    <Advanced>0</Advanced>
+    <Advanced>1</Advanced>
     <NotSteal>60</NotSteal>
-    <KXBean>4</KXBean>
+    <KXBean>7</KXBean>
   </Animal>
   <Animal>
     <AID>29</AID>
