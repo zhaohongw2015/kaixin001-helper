@@ -1104,7 +1104,7 @@
     <GName>鸡肉</GName>
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
-    <NotSteal>0</NotSteal>
+    <NotSteal>40</NotSteal>
     <KXBean>0</KXBean>
   </Animal>
 </Animals>
