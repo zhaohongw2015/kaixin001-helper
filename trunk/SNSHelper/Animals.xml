@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>5</AID>
@@ -1078,6 +1078,33 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>70</AID>
+    <TName>老虎</TName>
+    <Name>老虎幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>48</MHours>
+    <Grass>2</Grass>
+    <Price>100000</Price>
+    <MName>成年老虎</MName>
+    <MPrice>70000</MPrice>
+    <PHours>120</PHours>
+    <PName>老虎幼崽</PName>
+    <PPrice>75000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>10</Rank>
+    <ARank>5</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>鸡肉</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Animal>
 </Animals>
