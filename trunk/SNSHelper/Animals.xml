@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>5</AID>
@@ -588,7 +588,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>720</NotSteal>
@@ -669,7 +669,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>720</NotSteal>
@@ -696,7 +696,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>1</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -723,7 +723,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -750,7 +750,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -777,7 +777,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -804,7 +804,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -831,7 +831,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -858,7 +858,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -885,7 +885,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -912,7 +912,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -939,7 +939,7 @@
     <PDayNum>1</PDayNum>
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
-    <GName></GName>
+    <GName>牧草</GName>
     <CanBuy>0</CanBuy>
     <Advanced>0</Advanced>
     <NotSteal>60</NotSteal>
@@ -1048,7 +1048,7 @@
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
     <GName>鸡肉</GName>
-    <CanBuy>1</CanBuy>
+    <CanBuy>0</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
     <KXBean>0</KXBean>
@@ -1075,7 +1075,7 @@
     <PMinNum>1</PMinNum>
     <PMaxNum>1</PMaxNum>
     <GName>鸡肉</GName>
-    <CanBuy>1</CanBuy>
+    <CanBuy>0</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>20</NotSteal>
     <KXBean>0</KXBean>
@@ -1106,5 +1106,194 @@
     <Advanced>1</Advanced>
     <NotSteal>40</NotSteal>
     <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>71</AID>
+    <TName>金貔貅</TName>
+    <Name>金貔貅幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>48</MHours>
+    <Grass>0</Grass>
+    <Price>0</Price>
+    <MName>成年金貔貅</MName>
+    <MPrice>60000</MPrice>
+    <PHours>96</PHours>
+    <PName>小金貔貅</PName>
+    <PPrice>85000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
+  </Animal>
+  <Animal>
+    <AID>72</AID>
+    <TName>福貔貅</TName>
+    <Name>福貔貅幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>0</Price>
+    <MName></MName>
+    <MPrice>0</MPrice>
+    <PHours>0</PHours>
+    <PName>福貔貅</PName>
+    <PPrice>15000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>0</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
+  </Animal>
+  <Animal>
+    <AID>73</AID>
+    <TName>乐貔貅</TName>
+    <Name>乐貔貅幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>0</Price>
+    <MName></MName>
+    <MPrice>0</MPrice>
+    <PHours>0</PHours>
+    <PName>乐貔貅</PName>
+    <PPrice>20000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>0</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
+  </Animal>
+  <Animal>
+    <AID>74</AID>
+    <TName>寿貔貅</TName>
+    <Name>寿貔貅幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>0</Price>
+    <MName></MName>
+    <MPrice>0</MPrice>
+    <PHours>0</PHours>
+    <PName>寿貔貅</PName>
+    <PPrice>25000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>0</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
+  </Animal>
+  <Animal>
+    <AID>75</AID>
+    <TName>喜貔貅</TName>
+    <Name>喜貔貅幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>0</Price>
+    <MName></MName>
+    <MPrice>0</MPrice>
+    <PHours>0</PHours>
+    <PName>喜貔貅</PName>
+    <PPrice>30000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>0</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
+  </Animal>
+  <Animal>
+    <AID>76</AID>
+    <TName>祥貔貅</TName>
+    <Name>祥貔貅幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>0</Price>
+    <MName></MName>
+    <MPrice>0</MPrice>
+    <PHours>0</PHours>
+    <PName>祥貔貅</PName>
+    <PPrice>35000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>0</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
+  </Animal>
+  <Animal>
+    <AID>77</AID>
+    <TName>财貔貅</TName>
+    <Name>财貔貅幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>24</MHours>
+    <Grass>1</Grass>
+    <Price>0</Price>
+    <MName></MName>
+    <MPrice>0</MPrice>
+    <PHours>0</PHours>
+    <PName>财貔貅</PName>
+    <PPrice>50000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>0</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>0</Advanced>
+    <NotSteal>1000000</NotSteal>
+    <KXBean>10</KXBean>
   </Animal>
 </Animals>
