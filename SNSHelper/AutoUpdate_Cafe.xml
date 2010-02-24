@@ -4,9 +4,9 @@
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
     <last>20100224</last>
-    <last1>20100221</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cook_Build_20100223.zip</file>
-    <size>1463373</size>
+    <last1>20100224</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cook_Build_20100224.zip</file>
+    <size>182306</size>
     <name>开心厨师 Build 20100224</name>
     <publisheddate>2010-02-24</publisheddate>
     <whatsnew>
@@ -16,9 +16,11 @@ Kaixin001.Cook.Build 20100224 What's New:
 
 1. 多帐号支持：可在一个《厨师》中同时管理多个帐号
 
-2. 加入新版自动更新功能
+2. 完善异常的处理，减少厨师自动退出的可能
 
-3. 其他细节优化
+3. 加入新版检测功能：若发现新版，可在第一时间下载试用
+
+4. 修正“查看菜谱”窗体中，不按数值大小排序的Bug
       ]]>
     </whatsnew>
   </version>
