@@ -3,24 +3,32 @@
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
-    <last>20100224</last>
+    <last>20100226</last>
     <last1>20100224</last1>
     <file>http://kaixin001-helper.googlecode.com/files/Cook_Build_20100224.zip</file>
     <size>182306</size>
-    <name>开心厨师 Build 20100224</name>
-    <publisheddate>2010-02-24</publisheddate>
+    <name>开心厨师 Build 20100226</name>
+    <publisheddate>2010-02-26</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cook.Build 20100224 What's New:
+Kaixin001.Cook.Build 20100226 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 多帐号支持：可在一个《厨师》中同时管理多个帐号
+1. 新增全局灶台高级设置
 
-2. 完善异常的处理，减少厨师自动退出的可能
+2. 新增验证码输入窗口（可参考农夫验证码自动识别机制）
 
-3. 加入新版检测功能：若发现新版，可在第一时间下载试用
+3. 新增代理功能
 
-4. 修正“查看菜谱”窗体中，不按数值大小排序的Bug
+4. 新增帐号列表右键菜单，内含“删除”按钮，可用于从帐号列表中删除帐号
+
+5. 修正帐号列表前的复选框不起作用的Bug：被选中的帐号，厨师才会执行
+
+6. 调整厨师工作顺序
+
+7. 修正菜谱每分收益计算有误的Bug
+
+8. 更新菜谱数据
       ]]>
     </whatsnew>
   </version>
