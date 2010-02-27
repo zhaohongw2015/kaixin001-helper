@@ -2,11 +2,11 @@
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
-  <StartAdFormDisplayedProbability>0</StartAdFormDisplayedProbability>
+  <StartAdFormDisplayedProbability>10</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100226</last>
+    <last>20100228</last>
     <last1>20100226</last1>
     <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100226.zip</file>
     <size>189938</size>
