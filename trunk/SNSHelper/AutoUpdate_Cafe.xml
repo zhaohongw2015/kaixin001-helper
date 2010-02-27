@@ -7,31 +7,27 @@
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
     <last>20100228</last>
-    <last1>20100226</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100226.zip</file>
+    <last1>20100228</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100228.zip</file>
     <size>189938</size>
-    <name>开心厨师 Build 20100226</name>
-    <publisheddate>2010-02-26</publisheddate>
+    <name>开心厨师 Build 20100228</name>
+    <publisheddate>2010-02-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cook.Build 20100226 What's New:
+Kaixin001.Cook.Build 20100228 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增全局灶台高级设置
+1. 新增帐号级别灶台设置配置项（位置：帐号列表-选中帐号-右键单击-设置）
 
-2. 新增验证码输入窗口（可参考农夫验证码自动识别机制）
+2. 新增自动卖菜功能（位置：帐号列表-选中帐号-右键单击-设置）
 
-3. 新增代理功能
+3. 修正厨师不按高级灶台设置做菜的Bug
 
-4. 新增帐号列表右键菜单，内含“删除”按钮，可用于从帐号列表中删除帐号
+4. 修正帐号取消操作后，第一时间认为还会继续运行的Bug
 
-5. 修正帐号列表前的复选框不起作用的Bug：被选中的帐号，厨师才会执行
+5. 修正本地缓存信息不存在时，双击帐号无法显示帐号信息的Bug
 
-6. 调整厨师工作顺序
-
-7. 修正菜谱每分收益计算有误的Bug
-
-8. 更新菜谱数据
+6. 更换开心厨师的图标，希望大家喜欢
       ]]>
     </whatsnew>
   </version>
