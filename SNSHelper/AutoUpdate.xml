@@ -2,28 +2,22 @@
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
-  <StartAdFormDisplayedProbability>100</StartAdFormDisplayedProbability>
+  <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/farmerad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100121</last>
-    <last1>20100121</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100121.zip</file>
+    <last>20100228</last>
+    <last1>20100228</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100228.zip</file>
     <size>1463373</size>
-    <name>花园农夫 Build 20100121</name>
-    <publisheddate>2010-01-21</publisheddate>
+    <name>花园农夫 Build 20100228</name>
+    <publisheddate>2010-02-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100121 What's New:
+Kaixin001.Framer.Build 20100228 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 牧场[修正]：修正“鸡肉”饲料数显示有误的Bug
-
-2. 牧场[修正]：修正农夫无法给未添加过“鸡肉”的牧场添加“鸡肉”饲料的Bug
-
-3. 牧场[修正]：修正农夫未按设置添加“鸡肉”的Bug
-
-4. 牧场[修正]：由于添料算法有问题，暂时取消第一时间任务中给好友添加饲料的功能
+1. 全局[修正]：取消登录方式配置项，默认使用0714版登录方式
       ]]>
     </whatsnew>
   </version>
