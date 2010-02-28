@@ -2,32 +2,32 @@
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
-  <StartAdFormDisplayedProbability>8</StartAdFormDisplayedProbability>
+  <StartAdFormDisplayedProbability>7</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100228</last>
-    <last1>20100228</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100228.zip</file>
-    <size>183976</size>
-    <name>开心厨师 Build 20100228</name>
-    <publisheddate>2010-02-28</publisheddate>
+    <last>20100301</last>
+    <last1>20100301</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100301.zip</file>
+    <size>187583</size>
+    <name>开心厨师 Build 20100301</name>
+    <publisheddate>2010-03-01</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cook.Build 20100228 What's New:
+Kaixin001.Cafe.Build 20100301 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增帐号级别灶台设置配置项（位置：帐号列表-选中帐号-右键单击-设置）
+1. 新增：自动帮助好友功能，助你早日获得“爱心大厨”勋章
 
-2. 新增自动卖菜功能（位置：帐号列表-选中帐号-右键单击-设置）
+2. 修复：灶台上的食物被好友收购或帮忙端菜之后，厨师无法识别的Bug
 
-3. 修正厨师不按高级灶台设置做菜的Bug
+3. 修复：当取消帐号操作后，第一时间任务仍会继续的Bug
 
-4. 修正帐号取消操作后，第一时间认为还会继续运行的Bug
+4. 修正：厨师工作失败后，提示“5分钟后重试”，但预报里的时间没有更新，导致厨师5分钟后不重试的Bug
 
-5. 修正本地缓存信息不存在时，双击帐号无法显示帐号信息的Bug
+5. 修复：双击帐号，显示的最后更新时间有误的Bug
 
-6. 更换开心厨师的图标，希望大家喜欢
+6. 新增：对被爱抚帐号的识别机制，一旦帐号被F5，该帐号的所有后期任务将马上停止，且当天内都不再运行该帐号，并于次日自动恢复运行
       ]]>
     </whatsnew>
   </version>
