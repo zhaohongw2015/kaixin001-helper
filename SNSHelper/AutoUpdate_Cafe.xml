@@ -6,28 +6,20 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100304</last>
-    <last1>20100304</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100304.zip</file>
-    <size>196206</size>
-    <name>开心厨师 Build 20100304</name>
-    <publisheddate>2010-03-04</publisheddate>
+    <last>20100305</last>
+    <last1>20100305</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100305.zip</file>
+    <size>197829</size>
+    <name>开心厨师 Build 20100305</name>
+    <publisheddate>2010-03-05</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100304 What's New:
+Kaixin001.Cafe.Build 20100305 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：帐号巡查功能，确保帐号的运行状态（某帐号由于某种原因，丢失预报，巡查功能可以帮你重新加载该帐号，建立预报）
+1. 新增：自动购买炉子的功能（设置项在“帐号设置”面板中）
 
-2. 新增：自动添加组件的功能（若帐号未添加餐厅组件，厨师将为您自动添加该组件）
-
-3. 新增：“文件”菜单下新增“查看日志”子菜单，用于快速打开日志文件夹
-
-4. 调整次日自动恢复被爱抚帐号的时间，一定程度上防止因本地时间和开心网时间不一致导致帐号恢复失败的问题
-
-5. 修正：上菜操作受“自动烧菜”配置项控制的Bug
-
-6. 修正：更新菜谱时厨师异常退出的Bug
+2. 新增：网络延时设置项（在“全局设置”面板中）
       ]]>
     </whatsnew>
   </version>
