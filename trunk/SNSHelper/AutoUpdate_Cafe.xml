@@ -6,30 +6,28 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100303</last>
-    <last1>20100303</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100303.zip</file>
-    <size>195335</size>
-    <name>开心厨师 Build 20100303</name>
-    <publisheddate>2010-03-03</publisheddate>
+    <last>20100304</last>
+    <last1>20100304</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100304.zip</file>
+    <size>196206</size>
+    <name>开心厨师 Build 20100304</name>
+    <publisheddate>2010-03-04</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100303 What's New:
+Kaixin001.Cafe.Build 20100304 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修改登录开心网的代码，和最新的开心网登录模式完全一致
+1. 新增：帐号巡查功能，确保帐号的运行状态（某帐号由于某种原因，丢失预报，巡查功能可以帮你重新加载该帐号，建立预报）
 
-2. 新增：更新菜谱功能（更新菜谱时以帐号列表中的第一个帐号为准，未解锁的菜价将显示为0）
+2. 新增：自动添加组件的功能（若帐号未添加餐厅组件，厨师将为您自动添加该组件）
 
-3. 修正：不能识别空灶台的Bug
+3. 新增：“文件”菜单下新增“查看日志”子菜单，用于快速打开日志文件夹
 
-4. 修正：需要兑换材料才能加工的菜，若缺少材料，会导致厨师出错的Bug
+4. 调整次日自动恢复被爱抚帐号的时间，一定程度上防止因本地时间和开心网时间不一致导致帐号恢复失败的问题
 
-5. 修正：帮助好友过程出现错误，导致整个工作任务失败的Bug
+5. 修正：上菜操作受“自动烧菜”配置项控制的Bug
 
-6. 新增：自动保存日志及手动清除日志的功能
-
-7. 优化：炒菜过程出错时的错误提示
+6. 修正：更新菜谱时厨师异常退出的Bug
       ]]>
     </whatsnew>
   </version>
