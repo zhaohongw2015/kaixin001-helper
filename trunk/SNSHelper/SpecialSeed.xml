@@ -1691,19 +1691,6 @@
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
-    <ID>238</ID>
-    <Name>元宵灯笼树</Name>
-    <Rank>1</Rank>
-    <SeedPrice>0</SeedPrice>
-    <FruitPrice>21666</FruitPrice>
-    <GrowthCycle>24</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>10</MinNum>
-    <MaxNum>10</MaxNum>
-    <NotSteal>0</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
-  <Seed>
     <ID>239</ID>
     <Name>快乐灯笼树</Name>
     <Rank>1</Rank>

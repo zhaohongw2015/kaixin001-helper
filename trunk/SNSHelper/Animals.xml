@@ -1296,4 +1296,31 @@
     <NotSteal>1000000</NotSteal>
     <KXBean>10</KXBean>
   </Animal>
+  <Animal>
+    <AID>79</AID>
+    <TName>花头鹦鹉</TName>
+    <Name>花头鹦鹉幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>48</MHours>
+    <Grass>5</Grass>
+    <Price>0</Price>
+    <MName>成年鹦鹉</MName>
+    <MPrice>90000</MPrice>
+    <PHours>72</PHours>
+    <PName>小鹦鹉</PName>
+    <PPrice>95000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>40</NotSteal>
+    <KXBean>4</KXBean>
+  </Animal>
 </Animals>
