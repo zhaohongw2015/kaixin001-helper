@@ -6,18 +6,19 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/farmerad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100228</last>
+    <last>20100323</last>
     <last1>20100323</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100228.zip</file>
-    <size>1477120</size>
-    <name>花园农夫 Build 20100228</name>
-    <publisheddate>2010-02-28</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100323.zip</file>
+    <size>1465407</size>
+    <name>花园农夫 Build 20100323</name>
+    <publisheddate>2010-03-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100228 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Kaixin001.Framer.Build 20100323 What's New:
 
-1. 全局[修正]：取消登录方式配置项，默认使用0714版登录方式
+1. 全局[修正]：修改开心网登录方式，以开心网最新登录代码完全一致
+
+2. 花园[新增]：花园高级设置面板中新增20、21、22、23、24等土地的设置项
       ]]>
     </whatsnew>
   </version>
