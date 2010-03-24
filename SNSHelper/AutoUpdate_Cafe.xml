@@ -6,26 +6,26 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100324</last>
-    <last1>20100324</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100324.zip</file>
-    <size>208743</size>
-    <name>开心厨师 Build 20100324</name>
-    <publisheddate>2010-03-24</publisheddate>
+    <last>20100325</last>
+    <last1>20100325</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100325.zip</file>
+    <size>210479</size>
+    <name>开心厨师 Build 20100325</name>
+    <publisheddate>2010-03-25</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100324 What's New:
+Kaixin001.Cafe.Build 20100325 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动延迟收获功能（设置项在“收购设置”面板中）
+1. 新增：“收购设置”面板中增加“全选”及“应用到...”等便捷操作
 
-2. 新增：自动收购功能（设置项在“收购设置”面板中）
+2. 修正：“收购预报”中收购时间计算有误的Bug
 
-3. 新增：帐号级别“自动烧菜”配置项
+3. 修正：“收购设置”面板中好友不全的Bug
 
-4. 新增：自动领奖功能
+4. 修正：“收购设置”面板中多次刷新后，好友会重复的Bug
 
-5. 新增：配置文件中的密码采取密文形式保存
+5. 修正：12点过后，厨师无法智能识别可收购好友的Bug
       ]]>
     </whatsnew>
   </version>
