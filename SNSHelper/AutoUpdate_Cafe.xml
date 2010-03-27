@@ -6,26 +6,26 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100325</last>
-    <last1>20100325</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100325.zip</file>
-    <size>210479</size>
-    <name>开心厨师 Build 20100325</name>
-    <publisheddate>2010-03-25</publisheddate>
+    <last>20100328</last>
+    <last1>20100328</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100328.zip</file>
+    <size>211308</size>
+    <name>开心厨师 Build 20100328</name>
+    <publisheddate>2010-03-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100325 What's New:
+Kaixin001.Cafe.Build 20100328 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：“收购设置”面板中增加“全选”及“应用到...”等便捷操作
+1. 修正：收购预报中，预报的时间不准确的Bug
 
-2. 修正：“收购预报”中收购时间计算有误的Bug
+2. 新增：“帐号设置”面板中增加“应用到...”按钮，方便多帐号便捷操作
 
-3. 修正：“收购设置”面板中好友不全的Bug
+3. 新增：帐号列表右键菜单中新增“置顶”“上移”“下移”“置底”等菜单项，方便调整帐号顺序
 
-4. 修正：“收购设置”面板中多次刷新后，好友会重复的Bug
+4. 修正：开心网代码改动，导致在厨师中输入正确的验证码后，厨师异常退出的Bug
 
-5. 修正：12点过后，厨师无法智能识别可收购好友的Bug
+5. 修正：验证码输入窗口无法输入汉字的Bug
       ]]>
     </whatsnew>
   </version>
