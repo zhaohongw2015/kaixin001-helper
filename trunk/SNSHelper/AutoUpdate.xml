@@ -9,7 +9,7 @@
     <last>20100328</last>
     <last1>20100328</last1>
     <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100328.zip</file>
-    <size>1465197</size>
+    <size>1465190</size>
     <name>花园农夫 Build 20100328</name>
     <publisheddate>2010-03-28</publisheddate>
     <whatsnew>
@@ -17,7 +17,7 @@
 Kaixin001.Framer.Build 20100328 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：开心网代码改动，导致在厨师中输入正确的验证码后，厨师异常退出的Bug
+1. 修正：开心网代码改动，导致在农夫中输入正确的验证码后，农夫异常退出的Bug
       ]]>
     </whatsnew>
   </version>
