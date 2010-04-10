@@ -6,20 +6,22 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100401</last>
-    <last1>20100401</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100401.zip</file>
-    <size>211458</size>
-    <name>开心厨师 Build 20100401</name>
-    <publisheddate>2010-04-01</publisheddate>
+    <last>20100410</last>
+    <last1>20100410</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100410.zip</file>
+    <size>223132</size>
+    <name>开心厨师 Build 20100410</name>
+    <publisheddate>2010-04-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100401 What's New:
+Kaixin001.Cafe.Build 20100410 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：遍历好友时网络延迟设置无效的Bug
+1. 新增：对组件验证码的支持
 
-2. 修正：某些情况下读取餐厅信息时，厨师工作失败，五分钟重试的Bug
+2. 修正：本地缓存Cookie不起作用的Bug
+
+3. 修正：帐号信息错误登录失败后，出现反复重试的Bug
       ]]>
     </whatsnew>
   </version>
