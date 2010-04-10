@@ -1,6 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
+    <ID>245</ID>
+    <Name>水仙</Name>
+    <Rank>20</Rank>
+    <SeedPrice>2000</SeedPrice>
+    <FruitPrice>1750</FruitPrice>
+    <GrowthCycle>60</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>8</MinNum>
+    <MaxNum>10</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>241</ID>
+    <Name>极品枸杞</Name>
+    <Rank>7</Rank>
+    <SeedPrice>1600</SeedPrice>
+    <FruitPrice>900</FruitPrice>
+    <GrowthCycle>24</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>15</MinNum>
+    <MaxNum>20</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>240</ID>
     <Name>迎春花</Name>
     <Rank>4</Rank>
