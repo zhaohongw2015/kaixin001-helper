@@ -6,18 +6,20 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/farmerad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100328</last>
-    <last1>20100328</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100328.zip</file>
-    <size>1465190</size>
-    <name>花园农夫 Build 20100328</name>
-    <publisheddate>2010-03-28</publisheddate>
+    <last>20100410</last>
+    <last1>20100410</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100410.zip</file>
+    <size>1563622</size>
+    <name>花园农夫 Build 20100410</name>
+    <publisheddate>2010-04-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100328 What's New:
+Kaixin001.Framer.Build 20100410 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：开心网代码改动，导致在农夫中输入正确的验证码后，农夫异常退出的Bug
+1. 新增：对组件验证码的支持
+
+2. 修正：本地缓存Cookie不起作用的Bug
       ]]>
     </whatsnew>
   </version>
