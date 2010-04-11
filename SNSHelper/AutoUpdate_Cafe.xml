@@ -6,22 +6,20 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100410</last>
-    <last1>20100410</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100410.zip</file>
-    <size>223132</size>
-    <name>开心厨师 Build 20100410</name>
-    <publisheddate>2010-04-10</publisheddate>
+    <last>20100411</last>
+    <last1>20100411</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip</file>
+    <size>223643</size>
+    <name>开心厨师 Build 20100411</name>
+    <publisheddate>2010-04-11</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100410 What's New:
+Kaixin001.Cafe.Build 20100411 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：对组件验证码的支持
+1. 新增：组件验证码中加入识别接口，可用验证码识别组件自动识别验证码
 
-2. 修正：本地缓存Cookie不起作用的Bug
-
-3. 修正：帐号信息错误登录失败后，出现反复重试的Bug
+2. 新增：“全局设置”中新增Cookie存放目录设置项
       ]]>
     </whatsnew>
   </version>
