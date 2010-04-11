@@ -6,20 +6,20 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/farmerad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100410</last>
-    <last1>20100410</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100410.zip</file>
-    <size>1563622</size>
-    <name>花园农夫 Build 20100410</name>
-    <publisheddate>2010-04-10</publisheddate>
+    <last>20100411</last>
+    <last1>20100411</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100411.zip</file>
+    <size>1564321</size>
+    <name>花园农夫 Build 20100411</name>
+    <publisheddate>2010-04-11</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100410 What's New:
+Kaixin001.Framer.Build 20100411 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：对组件验证码的支持
+1. 新增：组件验证码中加入识别接口，可用验证码识别组件自动识别验证码
 
-2. 修正：本地缓存Cookie不起作用的Bug
+2. 新增：“全局设置”中新增Cookie存放目录设置项
       ]]>
     </whatsnew>
   </version>
@@ -36,10 +36,10 @@ Kaixin001.Framer.Build 20100410 What's New:
     </ad>
     <ad>
       <title>
-        开心网组件《开心餐厅》辅助工具《开心厨师20100328》已发布，欢迎试用
+        开心网组件《开心餐厅》辅助工具《开心厨师20100411》已发布，欢迎试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100328.zip
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
       </url>
       <color>-65408</color>
       <expired>2019-12-13 23:59:59</expired>
@@ -56,10 +56,10 @@ Kaixin001.Framer.Build 20100410 What's New:
     </ad>
     <ad>
       <title>
-        开心网组件《开心餐厅》辅助工具《开心厨师20100328》已发布，欢迎试用
+        开心网组件《开心餐厅》辅助工具《开心厨师20100411》已发布，欢迎试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100328.zip
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
       </url>
       <color>-65536</color>
       <expired>2019-11-08 11:13:00</expired>
@@ -76,10 +76,10 @@ Kaixin001.Framer.Build 20100410 What's New:
     </ad>
     <ad>
       <title>
-        开心网组件《开心餐厅》辅助工具《开心厨师20100328》已发布，欢迎试用
+        开心网组件《开心餐厅》辅助工具《开心厨师20100411》已发布，欢迎试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100328.zip
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
@@ -96,10 +96,10 @@ Kaixin001.Framer.Build 20100410 What's New:
     </ad>
     <ad>
       <title>
-        开心网组件《开心餐厅》辅助工具《开心厨师20100328》已发布，欢迎试用
+        开心网组件《开心餐厅》辅助工具《开心厨师20100411》已发布，欢迎试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100328.zip
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
