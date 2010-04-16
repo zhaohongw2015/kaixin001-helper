@@ -1,20 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
   <version>
-    <last>20091114</last>
-    <file></file>
-    <size>1264887</size>
-    <name>开心车夫V2.0 20091114</name>
-    <publisheddate>2009-11-14</publisheddate>
+    <last>20100416</last>
+    <file>http://kaixin001-helper.googlecode.com/files/Parker_Build_20100416.zip</file>
+    <size>1294471</size>
+    <name>开心车夫 Build 20100416</name>
+    <publisheddate>2010-04-16</publisheddate>
     <whatsnew>
       <![CDATA[
-开心车夫v2.0 20091114 What's New:
+开心车夫v2.0 20100416 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1、修正车夫无法加油的Bug
-2、修正车夫不以默认浏览器打开网页的Bug
-3、修正车夫多次更新时会出错退出的Bug
+注：由于20091114版车夫源码丢失，该版本从20090823升级而来
+1、修改车夫底层，完全基于农夫/厨师等最新的SNSHelper组件
+2、修正车夫无法加油的Bug
+3、修正车夫不以默认浏览器打开网页的Bug
+4、修正车夫多次更新时会出错退出的Bug
       ]]>
     </whatsnew>
   </version>
