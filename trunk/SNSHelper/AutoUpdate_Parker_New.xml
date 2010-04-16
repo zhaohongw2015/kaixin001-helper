@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
+  <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
+  <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
+  <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
+  <StartAdFormPageUrl>http://jailu.cn/farmerad.htm</StartAdFormPageUrl>
+  <version>
+    <last>20100416</last>
+    <last1>20100416</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Parker_Build_20100416.zip</file>
+    <size>1564321</size>
+    <name>开心车夫 Build 20100416</name>
+    <publisheddate>2010-04-16</publisheddate>
+    <whatsnew>
+      <![CDATA[
+开心车夫v2.0 20100416 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+注：由于20091114版车夫源码丢失，该版本从20090823升级而来
+1、修改车夫底层，完全基于农夫/厨师等最新的SNSHelper组件
+2、修正车夫无法加油的Bug
+3、修正车夫不以默认浏览器打开网页的Bug
+4、修正车夫多次更新时会出错退出的Bug
+      ]]>
+    </whatsnew>
+  </version>
+  <ads>
+    <ad>
+      <title>
+        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
+      </title>
+      <url>
+        http://jailu.cn:81/goods.htm?f=1
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        开心网组件《开心餐厅》辅助工具《开心厨师20100416》已发布，欢迎试用
+      </title>
+      <url>
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
+      </title>
+      <url>
+        http://jailu.cn:81/goods.htm?f=1
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        开心网组件《开心餐厅》辅助工具《开心厨师20100416》已发布，欢迎试用
+      </title>
+      <url>
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
+      </url>
+      <color>-65536</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
+      </title>
+      <url>
+        http://jailu.cn:81/goods.htm?f=1
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        开心网组件《开心餐厅》辅助工具《开心厨师20100416》已发布，欢迎试用
+      </title>
+      <url>
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
+      </title>
+      <url>
+        http://jailu.cn:81/goods.htm?f=1
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        开心网组件《开心餐厅》辅助工具《开心厨师20100416》已发布，欢迎试用
+      </title>
+      <url>
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100411.zip
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+  </ads>
+  <ads1>
+    <ad>
+      <title>
+        点击下载最新版开心车夫，修正老版本不加油等问题
+      </title>
+      <url>
+        http://bbs.snsfun.com/viewthread.php?tid=74889
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        [10月20日] 花园农夫V3.0 20091021 Beta1新版功能注解（By 栗子de蛋糕）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-70136-1-1.html
+      </url>
+      <color>-16744256</color>
+    </ad>
+    <ad>
+      <title>
+        [9月12日] 农夫新手教程：农夫设置初级教程及名词解释（By 栗子de蛋糕）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-60301-1-1.html
+      </url>
+      <color>-13529542</color>
+    </ad>
+    <ad>
+      <title>
+        [9月12日] 农夫进阶教程：轻松上手，玩转农夫系列主题（By 番茄酱）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-53605-1-1.html
+      </url>
+      <color>-16744256</color>
+    </ad>
+    <ad>
+      <title>
+        [8月24日] 无法运行农夫0814及之后版本的朋友，请安装.NET Framework V3.5
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-94-1-1.html
+      </url>
+      <color>-13529542</color>
+    </ad>
+    <ad>
+      <title>
+        [8月23日] 支持《开心网花园农夫》的发展[捐赠、宣传、点广告]
+      </title>
+      <url>
+        http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
+      </url>
+      <color>-16744256</color>
+    </ad>
+    <ad>
+      <title>
+        [8月23日] 开心车夫v2.0 20090823（停车速度最快的争车位辅助工具）
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-52763-1-1.html
+      </url>
+      <color>-13529542</color>
+    </ad>
+  </ads1>
+  <fund>
+    http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
+  </fund>
+</data>
