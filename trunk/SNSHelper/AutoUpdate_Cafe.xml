@@ -6,22 +6,24 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100412</last>
-    <last1>20100412</last1>
+    <last>20100417</last>
+    <last1>20100417</last1>
     <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100412.zip</file>
-    <size>224082</size>
-    <name>开心厨师 Build 20100412</name>
-    <publisheddate>2010-04-12</publisheddate>
+    <size>228105</size>
+    <name>开心厨师 Build 20100417</name>
+    <publisheddate>2010-04-17</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100412 What's New:
+Kaixin001.Cafe.Build 20100417 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：调整每次卖菜的数量为10，和开心网一致
+1. 修正：几处导致厨师异常退出的Bug
 
-2. 修正：调整两次卖菜间的间隔为30秒，减少请求开心网服务器的次数。调整后每分钟的卖菜数量仍和以前一样，每分钟约20份
+2. 新增：“操作记录”中增加验证码自动识别过程的提示信息
 
-3. 新增：把常规操作日志和卖菜日志分开显示，调整后的日志更便于浏览；同时厨师将只保存常规操作日志，不再保存卖菜日志
+3. 修正：修正验证码识别次数不遵循设置项的Bug
+
+4. 调整：调整代码逻辑，同一时间内不再出现多个线程同时操作一个帐号导致错误请求的问题
       ]]>
     </whatsnew>
   </version>
