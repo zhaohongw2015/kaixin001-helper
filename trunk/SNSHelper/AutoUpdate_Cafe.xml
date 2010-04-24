@@ -6,24 +6,18 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100417</last>
+    <last>20100423</last>
     <last1>20100423</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100417.zip</file>
-    <size>228105</size>
-    <name>开心厨师 Build 20100417</name>
-    <publisheddate>2010-04-17</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100423.zip</file>
+    <size>217598</size>
+    <name>开心厨师 Build 20100423</name>
+    <publisheddate>2010-04-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100417 What's New:
+Kaixin001.Cafe.Build 20100423 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：几处导致厨师异常退出的Bug
-
-2. 新增：“操作记录”中增加验证码自动识别过程的提示信息
-
-3. 修正：修正验证码识别次数不遵循设置项的Bug
-
-4. 调整：调整代码逻辑，同一时间内不再出现多个线程同时操作一个帐号导致错误请求的问题
+1. 修正：跟新开心餐厅最新的卖菜规则，调整厨师卖菜逻辑
       ]]>
     </whatsnew>
   </version>
