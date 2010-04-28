@@ -6,18 +6,22 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100423</last>
-    <last1>20100423</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100423.zip</file>
-    <size>217598</size>
-    <name>开心厨师 Build 20100423</name>
-    <publisheddate>2010-04-23</publisheddate>
+    <last>20100428</last>
+    <last1>20100428</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100428.zip</file>
+    <size>218837</size>
+    <name>开心厨师 Build 20100428</name>
+    <publisheddate>2010-04-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100423 What's New:
+Kaixin001.Cafe.Build 20100428 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：跟新开心餐厅最新的卖菜规则，调整厨师卖菜逻辑
+1. 修正：一处导致卖菜失败的Bug
+
+2. 修正：因网络问题导致更新失败时造成厨师崩溃的Bug
+
+3. 新增：“实用参数”窗体
       ]]>
     </whatsnew>
   </version>
