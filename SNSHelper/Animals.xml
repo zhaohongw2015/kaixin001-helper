@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animals>
   <Animal>
     <AID>5</AID>
@@ -565,6 +565,60 @@
     <CanBuy>1</CanBuy>
     <Advanced>1</Advanced>
     <NotSteal>240</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>81</AID>
+    <TName>北极熊</TName>
+    <Name>北极熊幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>32</MHours>
+    <Grass>2</Grass>
+    <Price>260000</Price>
+    <MName>成年北极熊</MName>
+    <MPrice>320000</MPrice>
+    <PHours>72</PHours>
+    <PName>小北极熊</PName>
+    <PPrice>350000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>5</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>鸡肉</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>120</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
+  <Animal>
+    <AID>80</AID>
+    <TName>树袋熊</TName>
+    <Name>树袋熊幼仔</Name>
+    <Gender>1</Gender>
+    <MHours>32</MHours>
+    <Grass>4</Grass>
+    <Price>15000</Price>
+    <MName>成年树袋熊</MName>
+    <MPrice>30000</MPrice>
+    <PHours>72</PHours>
+    <PName>树袋熊幼仔</PName>
+    <PPrice>40000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>12</Rank>
+    <ARank>0</ARank>
+    <PHour>20</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>1</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>20</NotSteal>
     <KXBean>0</KXBean>
   </Animal>
   <Animal>
