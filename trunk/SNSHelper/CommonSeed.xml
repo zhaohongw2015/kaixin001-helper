@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Seeds>
   <Seed>
+    <ID>248</ID>
+    <Name>世博花</Name>
+    <Rank>3</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>1000</FruitPrice>
+    <GrowthCycle>4</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>3</MinNum>
+    <MaxNum>3</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
     <ID>245</ID>
     <Name>水仙</Name>
     <Rank>20</Rank>

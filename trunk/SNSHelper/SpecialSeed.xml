@@ -1791,7 +1791,7 @@
     <Theftproof>0</Theftproof>
     <MinNum>3</MinNum>
     <MaxNum>3</MaxNum>
-    <NotSteal>1</NotSteal>
+    <NotSteal>0</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
