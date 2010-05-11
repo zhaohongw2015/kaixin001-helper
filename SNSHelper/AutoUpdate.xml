@@ -6,24 +6,20 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/farmerad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100506</last>
-    <last1>20100506</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100506.zip</file>
-    <size>1547305</size>
-    <name>花园农夫 Build 20100506</name>
-    <publisheddate>2010-05-06</publisheddate>
+    <last>20100512</last>
+    <last1>20100512</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100512.zip</file>
+    <size>1547573</size>
+    <name>花园农夫 Build 2010012</name>
+    <publisheddate>2010-05-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100506 What's New:
+Kaixin001.Framer.Build 20100512 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：农夫误犁世博花的Bug
+1. 修正：调整农夫犁地、种菜流程
 
-2. 修正：更改偷取下限后无效的Bug
-
-3. 新增：“花园高级设置”面板中新增对16，17，19等自留地的配置支持
-
-4. 调整：调整“从开心网更新植物信息”的处理逻辑
+2. 修正：收获作物后，农夫出错，导致5分钟重试的Bug
       ]]>
     </whatsnew>
   </version>
@@ -50,10 +46,10 @@ Kaixin001.Framer.Build 20100506 What's New:
     </ad>
     <ad>
       <title>
-        20100505版及之前版本的农夫会误犁世博花，请取消自动犁地功能或使用20010506
+        20100512版及之前版本的农夫会误犁世博花，请取消自动犁地功能或使用20010512
       </title>
       <url>
-        http://bbs.snsfun.com/thread-118741-1-1.html
+        http://bbs.snsfun.com/thread-120131-1-1.html
       </url>
       <color>-65408</color>
       <expired>2019-12-13 23:59:59</expired>
@@ -70,10 +66,10 @@ Kaixin001.Framer.Build 20100506 What's New:
     </ad>
     <ad>
       <title>
-        20100505版及之前版本的农夫会误犁世博花，请取消自动犁地功能或使用20010506
+        20100512版及之前版本的农夫会误犁世博花，请取消自动犁地功能或使用20010512
       </title>
       <url>
-        http://bbs.snsfun.com/thread-118741-1-1.html
+        http://bbs.snsfun.com/thread-120131-1-1.html
       </url>
       <color>-65408</color>
       <expired>2019-12-13 23:59:59</expired>
