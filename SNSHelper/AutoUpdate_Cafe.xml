@@ -6,20 +6,32 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100512</last>
-    <last1>20100514</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100512.zip</file>
-    <size>221181</size>
-    <name>开心厨师 Build 20100512</name>
-    <publisheddate>2010-05-12</publisheddate>
+    <last>20100515</last>
+    <last1>20100515</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100515.zip</file>
+    <size>225131</size>
+    <name>开心厨师 Build 20100515</name>
+    <publisheddate>2010-05-15</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100512 What's New:
+Kaixin001.Cafe.Build 20100515 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动广告系统（可自动接收广告订单、自动领取广告费）
+1. 新增：“查看菜谱”面板中新增从冷藏室中直接卖出菜肴的价格（最低价格、最高价格、当前价格）。价格数据由乐趣网独家提供
 
-2. 修正：修改雇佣逻辑，增加雇佣成功率
+2. 新增：菜价天花托盘图标气泡提示功能，可设置需要提示的菜肴
+
+3. 新增：“全局设置”面板中新增“自动更新售价”“菜价天花设置”等配置项
+
+4. 新增：“菜价天花设置”面板（菜单栏-工具-全局设置-菜价天花提示设置;菜单栏-工具-菜价天花设置）
+
+5. 调整：“全局设置”面板中，调整最小巡查周期为1分钟
+
+6. 修正：修正厨师未运行任务时，在“查看菜谱”面板中更新菜谱时，厨师会出错的Bug
+
+7. 修正：对自动广告功能添加保护，防止自动广告功能块出错，导至5分钟重试的问题
+
+8. 调整：调整厨师主窗口部分布局
       ]]>
     </whatsnew>
   </version>
