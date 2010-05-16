@@ -6,32 +6,28 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
   <version>
-    <last>20100516</last>
-    <last1>20100516</last1>
+    <last>20100517</last>
+    <last1>20100517</last1>
     <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100515.zip</file>
-    <size>225131</size>
-    <name>开心厨师 Build 20100515</name>
-    <publisheddate>2010-05-15</publisheddate>
+    <size>217897</size>
+    <name>X超人 Build 20100517</name>
+    <publisheddate>2010-05-17</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100515 What's New:
+Kaixin001.XMan.Build 20100517 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：“查看菜谱”面板中新增从冷藏室中直接卖出菜肴的价格（最低价格、最高价格、当前价格）。价格数据由乐趣网独家提供
+《X超人》是开心网(http://www.kaixin001.com)《X世界》组件的辅助工具，欢迎大家使用该工具，在一定程度上降低游戏的复杂度。
 
-2. 新增：菜价天花托盘图标气泡提示功能，可设置需要提示的菜肴
+作为《X超人》的第一个版本，目前本工具只具有以下最简单功能：
 
-3. 新增：“全局设置”面板中新增“自动更新售价”“菜价天花设置”等配置项
+1. 自动战斗（可配置战斗策略）
 
-4. 新增：“菜价天花设置”面板（菜单栏-工具-全局设置-菜价天花提示设置;菜单栏-工具-菜价天花设置）
+2. 自动就医（战斗损血后，可自动就医）
 
-5. 调整：“全局设置”面板中，调整最小巡查周期为1分钟
+3. 自定义能量、战斗的提配值，当能量或战斗到达设置时，将给予托盘气泡提示
 
-6. 修正：修正厨师未运行任务时，在“查看菜谱”面板中更新菜谱时，厨师会出错的Bug
-
-7. 修正：对自动广告功能添加保护，防止自动广告功能块出错，导至5分钟重试的问题
-
-8. 调整：调整厨师主窗口部分布局
+4. 多帐号自由切换功能
       ]]>
     </whatsnew>
   </version>
