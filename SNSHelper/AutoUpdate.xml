@@ -51,7 +51,7 @@ Kaixin001.Framer.Build 20100512 What's New:
       <url>
         http://jailu.cn:81/goods.htm?f=1
       </url>
-      <color>-65408</color>
+      <color>-65536</color>
       <expired>2019-12-13 23:59:59</expired>
     </ad>
     <ad>
@@ -61,8 +61,18 @@ Kaixin001.Framer.Build 20100512 What's New:
       <url>
         http://kaixin001-helper.googlecode.com/files/XMan_Build_20100517.zip
       </url>
-      <color>-65536</color>
+      <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
+    </ad>
+    <ad>
+      <title>
+        开心网组件《开心餐厅》辅助工具《开心厨师20100515》已发布，欢迎试用
+      </title>
+      <url>
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100515.zip
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
     </ad>
     <ad>
       <title>
@@ -71,18 +81,8 @@ Kaixin001.Framer.Build 20100512 What's New:
       <url>
         http://jailu.cn:81/goods.htm?f=1
       </url>
-      <color>-65408</color>
+      <color>-65536</color>
       <expired>2019-12-13 23:59:59</expired>
-    </ad>
-    <ad>
-      <title>
-        开心网组件《开心餐厅》辅助工具《开心厨师20100515》已发布，欢迎试用
-      </title>
-      <url>
-        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100515.zip
-      </url>
-      <color>-16744448</color>
-      <expired>2019-11-08 11:13:00</expired>
     </ad>
     <ad>
       <title>
@@ -91,8 +91,8 @@ Kaixin001.Framer.Build 20100512 What's New:
       <url>
         http://kaixin001-helper.googlecode.com/files/XMan_Build_20100517.zip
       </url>
-      <color>-65408</color>
-      <expired>2019-12-13 23:59:59</expired>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
     </ad>
     <ad>
       <title>
@@ -101,8 +101,18 @@ Kaixin001.Framer.Build 20100512 What's New:
       <url>
         http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100515.zip
       </url>
-      <color>-16744448</color>
-      <expired>2019-11-08 11:13:00</expired>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+    <ad>
+      <title>
+        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
+      </title>
+      <url>
+        http://jailu.cn:81/goods.htm?f=1
+      </url>
+      <color>-65536</color>
+      <expired>2019-12-13 23:59:59</expired>
     </ad>
   </ads>
   <ads1>
