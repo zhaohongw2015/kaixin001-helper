@@ -6,28 +6,28 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/xmanad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100517</last>
-    <last1>20100517</last1>
+    <last>20100518</last>
+    <last1>20100518</last1>
     <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100517.zip</file>
-    <size>217897</size>
-    <name>X超人 Build 20100517</name>
-    <publisheddate>2010-05-17</publisheddate>
+    <size>219990</size>
+    <name>X超人 Build 20100518</name>
+    <publisheddate>2010-05-18</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100517 What's New:
+Kaixin001.XMan.Build 20100518 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-《X超人》是开心网(http://www.kaixin001.com)《X世界》组件的辅助工具，欢迎大家使用该工具，在一定程度上降低游戏的复杂度。
+《X超人》改名为《XMan》
 
-作为《X超人》的第一个版本，目前本工具只具有以下最简单功能：
+1. 新增：开始挑战的最低战斗值设值
 
-1. 自动战斗（可配置战斗策略）
+2. 新增：对手人数的设置
 
-2. 自动就医（战斗损血后，可自动就医）
+3. 新增：追杀功能
 
-3. 自定义能量、战斗的提配值，当能量或战斗到达设置时，将给予托盘气泡提示
+4. 新增：获取战斗列表后开始挑战前，根据生命值进行就医
 
-4. 多帐号自由切换功能
+5. 调整：重整了主窗体，操作更加直观
       ]]>
     </whatsnew>
   </version>
