@@ -6,28 +6,22 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/xmanad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100518</last>
-    <last1>20100518</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100518.zip</file>
-    <size>219990</size>
-    <name>X超人 Build 20100518</name>
-    <publisheddate>2010-05-18</publisheddate>
+    <last>20100519</last>
+    <last1>20100519</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100519.zip</file>
+    <size>221905</size>
+    <name>X超人 Build 20100519</name>
+    <publisheddate>2010-05-19</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100518 What's New:
+Kaixin001.XMan.Build 20100519 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-《X超人》改名为《XMan》
+1. 新增：自动任务功能，需设置“任务策略”
 
-1. 新增：开始挑战的最低战斗值设值
+2. 新增：完善就医策略，可自定义需就医的最低生命值
 
-2. 新增：对手人数的设置
-
-3. 新增：追杀功能
-
-4. 新增：获取战斗列表后开始挑战前，根据生命值进行就医
-
-5. 调整：重整了主窗体，操作更加直观
+3. 修正：挑战失败后，偶尔出现反复挑战的Bug
       ]]>
     </whatsnew>
   </version>
@@ -42,76 +36,6 @@ Kaixin001.XMan.Build 20100518 What's New:
       <color>-65408</color>
       <expired>2019-12-13 23:59:59</expired>
     </ad>
-    <ad>
-      <title>
-        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
-      </title>
-      <url>
-        http://jailu.cn:81/goods.htm?f=1
-      </url>
-      <color>-16744448</color>
-      <expired>2019-11-08 11:13:00</expired>
-    </ad>
-    <ad>
-      <title>
-        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
-      </title>
-      <url>
-        http://jailu.cn:81/goods.htm?f=1
-      </url>
-      <color>-65408</color>
-      <expired>2019-12-13 23:59:59</expired>
-    </ad>
-    <ad>
-      <title>
-        在线电影、高清电影、最新影片，尽在E-900电影网(http://www.900dy.cn).
-      </title>
-      <url>
-        http://www.900dy.cn
-      </url>
-      <color>-65536</color>
-      <expired>2019-11-08 11:13:00</expired>
-    </ad>
-    <ad>
-      <title>
-        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
-      </title>
-      <url>
-        http://jailu.cn:81/goods.htm?f=1
-      </url>
-      <color>-65408</color>
-      <expired>2019-12-13 23:59:59</expired>
-    </ad>
-    <ad>
-      <title>
-        在线电影、高清电影、最新影片，尽在E-900电影网(http://www.900dy.cn)。
-      </title>
-      <url>
-        http://www.900dy.cn
-      </url>
-      <color>-16744448</color>
-      <expired>2019-11-08 11:13:00</expired>
-    </ad>
-    <ad>
-      <title>
-        Kaixin001超级大亨实时物价表，最专业的物价表，等你来体验！
-      </title>
-      <url>
-        http://jailu.cn:81/goods.htm?f=1
-      </url>
-      <color>-65408</color>
-      <expired>2019-12-13 23:59:59</expired>
-    </ad>
-    <ad>
-      <title>
-        在线电影、高清电影、最新影片尽在E-900电影网(http://www.900dy.cn)!
-      </title>
-      <url>
-        http://www.900dy.cn
-      </url>
-      <color>-16744448</color>
-      <expired>2009-11-08 11:13:00</expired>
-    </ad>
   </ads>
   <ads1>
     <ad>
@@ -123,60 +47,6 @@ Kaixin001.XMan.Build 20100518 What's New:
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
-    </ad>
-    <ad>
-      <title>
-        [10月20日] 花园农夫V3.0 20091021 Beta1新版功能注解（By 栗子de蛋糕）
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-70136-1-1.html
-      </url>
-      <color>-16744256</color>
-    </ad>
-    <ad>
-      <title>
-        [9月12日] 农夫新手教程：农夫设置初级教程及名词解释（By 栗子de蛋糕）
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-60301-1-1.html
-      </url>
-      <color>-13529542</color>
-    </ad>
-    <ad>
-      <title>
-        [9月12日] 农夫进阶教程：轻松上手，玩转农夫系列主题（By 番茄酱）
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-53605-1-1.html
-      </url>
-      <color>-16744256</color>
-    </ad>
-    <ad>
-      <title>
-        [8月24日] 无法运行农夫0814及之后版本的朋友，请安装.NET Framework V3.5
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-94-1-1.html
-      </url>
-      <color>-13529542</color>
-    </ad>
-    <ad>
-      <title>
-        [8月23日] 支持《开心网花园农夫》的发展[捐赠、宣传、点广告]
-      </title>
-      <url>
-        http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
-      </url>
-      <color>-16744256</color>
-    </ad>
-    <ad>
-      <title>
-        [8月23日] 开心车夫v2.0 20090823（停车速度最快的争车位辅助工具）
-      </title>
-      <url>
-        http://bbs.snsfun.com/thread-52763-1-1.html
-      </url>
-      <color>-13529542</color>
     </ad>
   </ads1>
   <fund>
