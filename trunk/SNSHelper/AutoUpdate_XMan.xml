@@ -6,22 +6,24 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/xmanad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100519</last>
-    <last1>20100519</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100519.zip</file>
-    <size>221905</size>
-    <name>X超人 Build 20100519</name>
-    <publisheddate>2010-05-19</publisheddate>
+    <last>20100520</last>
+    <last1>20100520</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100520.zip</file>
+    <size>227511</size>
+    <name>X超人 Build 20100520</name>
+    <publisheddate>2010-05-20</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100519 What's New:
+Kaixin001.XMan.Build 20100520 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动任务功能，需设置“任务策略”
+1. 新增：经验达到升级要求时，自动升级，并补满能量
 
-2. 新增：完善就医策略，可自定义需就医的最低生命值
+2. 新增：自动存钱功能
 
-3. 修正：挑战失败后，偶尔出现反复挑战的Bug
+3. 新增：自动收租功能
+
+4. 新增：自动升级地产功能
       ]]>
     </whatsnew>
   </version>
