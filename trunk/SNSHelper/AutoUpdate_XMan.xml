@@ -6,24 +6,22 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/xmanad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100520</last>
-    <last1>20100520</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100520.zip</file>
-    <size>227511</size>
-    <name>X超人 Build 20100520</name>
-    <publisheddate>2010-05-20</publisheddate>
+    <last>20100521</last>
+    <last1>20100521</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100521.zip</file>
+    <size>228117</size>
+    <name>X超人 Build 20100521</name>
+    <publisheddate>2010-05-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100520 What's New:
+Kaixin001.XMan.Build 20100521 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：经验达到升级要求时，自动升级，并补满能量
+1. 修正：未购买地产的帐号登录X-Man时，无提示退出的Bug
 
-2. 新增：自动存钱功能
+2. 修正：现金不够就医时，死循环挑战的Bug
 
-3. 新增：自动收租功能
-
-4. 新增：自动升级地产功能
+3. 修正：战斗失败后，死循环挑战的Bug
       ]]>
     </whatsnew>
   </version>
