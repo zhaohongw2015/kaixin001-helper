@@ -6,22 +6,24 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/xmanad.htm</StartAdFormPageUrl>
   <version>
-    <last>20100521</last>
-    <last1>20100521</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100521.zip</file>
-    <size>228117</size>
-    <name>X超人 Build 20100521</name>
-    <publisheddate>2010-05-21</publisheddate>
+    <last>20100522</last>
+    <last1>20100522</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100522.zip</file>
+    <size>228234</size>
+    <name>X超人 Build 20100522</name>
+    <publisheddate>2010-05-22</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100521 What's New:
+Kaixin001.XMan.Build 20100522 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：未购买地产的帐号登录X-Man时，无提示退出的Bug
+1. 修正：修正X-Man有时不自动刷新的Bug
 
-2. 修正：现金不够就医时，死循环挑战的Bug
+2. 修正：挑战后提示“黑暗势力在你的强力威慑下仓皇逃跑，去找其它的对手吧”后，X-Man自动停止挑战的Bug
 
-3. 修正：战斗失败后，死循环挑战的Bug
+3. 修正：X-Man不显示气泡提示的Bug，同时修正气泡的显示逻辑
+
+4. 修正：其它小Bug
       ]]>
     </whatsnew>
   </version>
