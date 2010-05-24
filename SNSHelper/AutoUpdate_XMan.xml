@@ -8,24 +8,20 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=xman</TopAdLink>
   <version>
-    <last>20100522</last>
-    <last1>20100522</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100522.zip</file>
-    <size>228234</size>
-    <name>X超人 Build 20100522</name>
-    <publisheddate>2010-05-22</publisheddate>
+    <last>20100524</last>
+    <last1>20100524</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100524.zip</file>
+    <size>230326</size>
+    <name>X超人 Build 20100524</name>
+    <publisheddate>2010-05-24</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100522 What's New:
+Kaixin001.XMan.Build 20100524 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：修正X-Man有时不自动刷新的Bug
+1. 修正：密码中含有特殊字符的帐号无法登录的Bug
 
-2. 修正：挑战后提示“黑暗势力在你的强力威慑下仓皇逃跑，去找其它的对手吧”后，X-Man自动停止挑战的Bug
-
-3. 修正：X-Man不显示气泡提示的Bug，同时修正气泡的显示逻辑
-
-4. 修正：其它小Bug
+2. 新增：多帐号独立设置，互不影响（即每个帐号都可分别设置，不像以前版本那样所有帐号共享同一个设置）
       ]]>
     </whatsnew>
   </version>
