@@ -8,14 +8,20 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=farmer</TopAdLink>
   <version>
-    <last>20100512</last>
-    <last1>20100512</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100512.zip</file>
-    <size>1547573</size>
-    <name>花园农夫 Build 2010012</name>
-    <publisheddate>2010-05-12</publisheddate>
+    <last>20100525</last>
+    <last1>20100525</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100525.zip</file>
+    <size>1556827</size>
+    <name>花园农夫 Build 20100525</name>
+    <publisheddate>2010-05-25</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Cafe.Build 20100525 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正：密码中含有特殊字符的帐号无法登录的Bug
+
+
 Kaixin001.Framer.Build 20100512 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
