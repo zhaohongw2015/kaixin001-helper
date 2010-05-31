@@ -8,20 +8,26 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=xman</TopAdLink>
   <version>
-    <last>20100524</last>
+    <last>20100530</last>
     <last1>20100530</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100524.zip</file>
-    <size>230326</size>
-    <name>X超人 Build 20100524</name>
-    <publisheddate>2010-05-24</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100530.zip</file>
+    <size>234858</size>
+    <name>X超人 Build 20100530</name>
+    <publisheddate>2010-05-30</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100524 What's New:
+Kaixin001.XMan.Build 20100530 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：密码中含有特殊字符的帐号无法登录的Bug
+1. 新增：多帐号支持
 
-2. 新增：多帐号独立设置，互不影响（即每个帐号都可分别设置，不像以前版本那样所有帐号共享同一个设置）
+2. 新增：自动送礼功能
+
+3. 新增：自动帮忙好友功能
+
+4. 新增：更新周期设置项
+
+5. 修正：登陆时，X-Man不使用本地Cookie的Bug
       ]]>
     </whatsnew>
   </version>
