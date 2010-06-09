@@ -8,26 +8,30 @@
   <TopAd></TopAd>
   <TopAdLink>http://www.78gw.com?f=xman</TopAdLink>
   <version>
-    <last>20100530</last>
+    <last>20100609</last>
     <last1>20100609</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100530.zip</file>
-    <size>234858</size>
-    <name>X超人 Build 20100530</name>
-    <publisheddate>2010-05-30</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100609.zip</file>
+    <size>239260</size>
+    <name>X超人 Build 20100609</name>
+    <publisheddate>2010-06-09</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100530 What's New:
+Kaixin001.XMan.Build 20100609 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：多帐号支持
+1. 新增：智能任务系统（自动完成未完成的任务；自动购买任务所需道具；自动完成前置任务（暂未实现））
 
-2. 新增：自动送礼功能
+2. 新增：帐号设置面板中新增了帐号列表，方便对不同帐号进行设置；同时调整了帐号设置面板的布局
 
-3. 新增：自动帮忙好友功能
+3. 新增：帐号设面板中新增配置项：是否显示托盘气泡提示
 
-4. 新增：更新周期设置项
+4. 新增：全局设置面板（更新周期及代理服务器设置移至全局设置面板）
 
-5. 修正：登陆时，X-Man不使用本地Cookie的Bug
+5. 修正：启动“多帐号”模式后，打开X-Man时自动隐藏登录框
+
+6. 修正：保存帐号设置时，X-Man有可能会出错的Bug
+
+7. 修正：其它细节若干
       ]]>
     </whatsnew>
   </version>
