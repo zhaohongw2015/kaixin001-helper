@@ -8,30 +8,28 @@
   <TopAd></TopAd>
   <TopAdLink>http://www.78gw.com?f=xman</TopAdLink>
   <version>
-    <last>20100609</last>
-    <last1>20100609</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100609.zip</file>
-    <size>239260</size>
-    <name>X超人 Build 20100609</name>
-    <publisheddate>2010-06-09</publisheddate>
+    <last>20100610</last>
+    <last1>20100610</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100610.zip</file>
+    <size>240900</size>
+    <name>X超人 Build 20100610</name>
+    <publisheddate>2010-06-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100609 What's New:
+Kaixin001.XMan.Build 20100610 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：智能任务系统（自动完成未完成的任务；自动购买任务所需道具；自动完成前置任务（暂未实现））
+1. 新增：自动完成前置任务
 
-2. 新增：帐号设置面板中新增了帐号列表，方便对不同帐号进行设置；同时调整了帐号设置面板的布局
+2. 新增：完成任务后增加对“意外获得”的显示
 
-3. 新增：帐号设面板中新增配置项：是否显示托盘气泡提示
+3. 新增：帐号信息面板新增帐号列表，双击可显示帐号详情
 
-4. 新增：全局设置面板（更新周期及代理服务器设置移至全局设置面板）
+4. 修正：满5级但没有购买地产的帐号运行时出错的Bug
 
-5. 修正：启动“多帐号”模式后，打开X-Man时自动隐藏登录框
+5. 修正：X-Man同时执行多个周期性任务的问题，避免一些特殊情况的发生
 
-6. 修正：保存帐号设置时，X-Man有可能会出错的Bug
-
-7. 修正：其它细节若干
+6. 修正：点击“停止任务”后，自动任务仍在继续的问题
       ]]>
     </whatsnew>
   </version>
