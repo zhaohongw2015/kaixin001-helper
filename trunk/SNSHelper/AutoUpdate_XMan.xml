@@ -8,28 +8,30 @@
   <TopAd>激情世界杯</TopAd>
   <TopAdLink>http://bbs.snsfun.com/forum-163-1.html</TopAdLink>
   <version>
-    <last>20100610</last>
-    <last1>20100610</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100610.zip</file>
-    <size>240900</size>
-    <name>X超人 Build 20100610</name>
-    <publisheddate>2010-06-10</publisheddate>
+    <last>20100612</last>
+    <last1>20100612</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100612.zip</file>
+    <size>244557</size>
+    <name>X超人 Build 20100612</name>
+    <publisheddate>2010-06-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100610 What's New:
+Kaixin001.XMan.Build 20100612 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动完成前置任务
+1. 新增：强化帐号管理功能，多帐号管理将更加方便。添加了“应用到”等实用功能
 
-2. 新增：完成任务后增加对“意外获得”的显示
+2. 新增：帐号批量导入功能
 
-3. 新增：帐号信息面板新增帐号列表，双击可显示帐号详情
+3. 新增：帐号未添加X世界组件时，X-Man将为你自动添加
 
-4. 修正：满5级但没有购买地产的帐号运行时出错的Bug
+4. 修正：多次购买任务所需道具的Bug
 
-5. 修正：X-Man同时执行多个周期性任务的问题，避免一些特殊情况的发生
+5. 修正：无法在登陆窗体添加新帐号的Bug
 
-6. 修正：点击“停止任务”后，自动任务仍在继续的问题
+6. 修正：找不到名为 假扮人质助飞虎队捉捕炸弹携带者 的前置任务的问题
+
+7. 修正：双击“帐号详情”左侧帖号，右侧的名字等信息没有更新的Bug
       ]]>
     </whatsnew>
   </version>
