@@ -1377,4 +1377,31 @@
     <NotSteal>40</NotSteal>
     <KXBean>4</KXBean>
   </Animal>
+  <Animal>
+    <AID>82</AID>
+    <TName>白虎</TName>
+    <Name>白虎幼仔</Name>
+    <Gender>0</Gender>
+    <MHours>48</MHours>
+    <Grass>2</Grass>
+    <Price>100000</Price>
+    <MName>成年白虎</MName>
+    <MPrice>90000</MPrice>
+    <PHours>120</PHours>
+    <PName>白虎幼崽</PName>
+    <PPrice>100000</PPrice>
+    <BPName></BPName>
+    <BPPrice>0</BPPrice>
+    <Rank>0</Rank>
+    <ARank>0</ARank>
+    <PHour>24</PHour>
+    <PDayNum>1</PDayNum>
+    <PMinNum>1</PMinNum>
+    <PMaxNum>1</PMaxNum>
+    <GName>牧草</GName>
+    <CanBuy>0</CanBuy>
+    <Advanced>1</Advanced>
+    <NotSteal>40</NotSteal>
+    <KXBean>0</KXBean>
+  </Animal>
 </Animals>
