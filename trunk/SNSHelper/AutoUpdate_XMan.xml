@@ -8,30 +8,26 @@
   <TopAd>激情世界杯</TopAd>
   <TopAdLink>http://bbs.snsfun.com/forum-163-1.html</TopAdLink>
   <version>
-    <last>20100612</last>
-    <last1>20100612</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100612.zip</file>
-    <size>244557</size>
-    <name>X超人 Build 20100612</name>
-    <publisheddate>2010-06-12</publisheddate>
+    <last>20100613</last>
+    <last1>20100613</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100613.zip</file>
+    <size>246209</size>
+    <name>X超人 Build 20100613</name>
+    <publisheddate>2010-06-13</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100612 What's New:
+Kaixin001.XMan.Build 20100613 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：强化帐号管理功能，多帐号管理将更加方便。添加了“应用到”等实用功能
+1. 新增：自动创建团队的功能。若帐号未组建团队，同时勾选了“自动挑战”，X-Man将为你自动创建团队
 
-2. 新增：帐号批量导入功能
+2. 新增：自动兑换收集品功能及相关配置项
 
-3. 新增：帐号未添加X世界组件时，X-Man将为你自动添加
+3. 新增：自动购买地产功能及相关配置项
 
-4. 修正：多次购买任务所需道具的Bug
+4. 修正：开心网调整金钱显示后，X-Man部分功能失效的问题（如：追杀功能失效）
 
-5. 修正：无法在登陆窗体添加新帐号的Bug
-
-6. 修正：找不到名为 假扮人质助飞虎队捉捕炸弹携带者 的前置任务的问题
-
-7. 修正：双击“帐号详情”左侧帖号，右侧的名字等信息没有更新的Bug
+5. 调整：把“自动收租”操作移至“自动任务”之前
       ]]>
     </whatsnew>
   </version>
