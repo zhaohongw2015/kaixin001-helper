@@ -8,26 +8,28 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <version>
-    <last>20100613</last>
-    <last1>20100613</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100613.zip</file>
-    <size>246209</size>
-    <name>X超人 Build 20100613</name>
-    <publisheddate>2010-06-13</publisheddate>
+    <last>20100619</last>
+    <last1>20100619</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100619.zip</file>
+    <size>249771</size>
+    <name>X超人 Build 20100619</name>
+    <publisheddate>2010-06-19</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100613 What's New:
+Kaixin001.XMan.Build 20100619 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动创建团队的功能。若帐号未组建团队，同时勾选了“自动挑战”，X-Man将为你自动创建团队
+1. 新增：自动取钱功能；帐号设置面板新增“自动取款”配置项（当你的现金不足以够买任务所需道具时，X-Man将根据需要，智能的从银行取款）
 
-2. 新增：自动兑换收集品功能及相关配置项
+2. 新增：批量送礼设置保存功能
 
-3. 新增：自动购买地产功能及相关配置项
+3. 新增：对于第二个角色，自动处理任务过程中遇到先知提示需要更改任务的要求
 
-4. 修正：开心网调整金钱显示后，X-Man部分功能失效的问题（如：追杀功能失效）
+4. 修正：执行指定编号任务时，X-Man双倍扣除能量导致能量计算错误的Bug
 
-5. 调整：把“自动收租”操作移至“自动任务”之前
+5. 调整：调整批量送礼窗口（礼物标识改为下拉框，可直接从下拉框中选择礼物，也可手动输入礼物标识；礼物信息保存在FreeGift.txt文件中，可手动更改）
+
+6. 调整：调整打开送礼窗口时的判断逻辑（以前为当前正在运行的帐号；现改为当前选中的帐号（即双击帐号列表后选中的帐号））
       ]]>
     </whatsnew>
   </version>
