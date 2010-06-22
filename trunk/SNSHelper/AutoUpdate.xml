@@ -8,36 +8,34 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <version>
-    <last>20100525</last>
+    <last>20100623</last>
     <last1>20100623</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100525.zip</file>
-    <size>1556827</size>
-    <name>花园农夫 Build 20100525</name>
-    <publisheddate>2010-05-25</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100623.zip</file>
+    <size>1564648</size>
+    <name>花园农夫 Build 20100623</name>
+    <publisheddate>2010-06-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100525 What's New:
+Kaixin001.Framer.Build 20100623 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：密码中含有特殊字符的帐号无法登录的Bug
+1. 新增：世界杯期间，每天自动领取足球树种子
 
+2. 新增：更新大量植物种子数据
 
-Kaixin001.Framer.Build 20100512 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+3. 修正：取消勾选“摇钱”后，在第一时间任务中依旧会摇钱的Bug
 
-1. 修正：调整农夫犁地、种菜流程
-
-2. 修正：收获作物后，农夫出错，导致5分钟重试的Bug
+4. 修正：点击“从开心网更新植物信息”后，种子文件（金仙桃）有误的问题
       ]]>
     </whatsnew>
   </version>
   <ads>
     <ad>
       <title>
-        农夫服务器的种子文件上动物文件已更新（含大量世博花卉和白虎）
+        X世界辅助工具“X-Man 20100619”闪亮发布，欢迎下载试用
       </title>
       <url>
-        http://bbs.snsfun.com/thread-127640-1-1.html
+        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100619.zip
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
@@ -64,10 +62,10 @@ Kaixin001.Framer.Build 20100512 What's New:
     </ad>
     <ad>
       <title>
-        X世界辅助工具“X-Man 20100610”闪亮发布，欢迎下载试用
+        X世界辅助工具“X-Man 20100619”闪亮发布，欢迎下载试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100610.zip
+        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100619.zip
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
@@ -94,10 +92,10 @@ Kaixin001.Framer.Build 20100512 What's New:
     </ad>
     <ad>
       <title>
-        X世界辅助工具“X-Man 20100610”闪亮发布，欢迎下载试用
+        X世界辅助工具“X-Man 20100619”闪亮发布，欢迎下载试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100610.zip
+        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100619.zip
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
