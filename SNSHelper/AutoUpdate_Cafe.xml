@@ -8,28 +8,22 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <version>
-    <last>20100525</last>
+    <last>20100623</last>
     <last1>20100623</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100525.zip</file>
-    <size>231788</size>
-    <name>开心厨师 Build 20100525</name>
-    <publisheddate>2010-05-25</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100623.zip</file>
+    <size>240920</size>
+    <name>开心厨师 Build 20100623</name>
+    <publisheddate>2010-06-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100525 What's New:
+Kaixin001.Cafe.Build 20100623 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正：密码中含有特殊字符的帐号无法登录的Bug
 
-Kaixin001.Cafe.Build 20100515 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 新增：“查看菜谱”面板中新增从冷藏室中直接卖出菜肴的价格（最低价格、最高价格、当前价格）。价格数据由乐趣网独家提供
-2. 新增：菜价天花托盘图标气泡提示功能，可设置需要提示的菜肴
-3. 新增：“全局设置”面板中新增“自动更新售价”“菜价天花设置”等配置项
-4. 新增：“菜价天花设置”面板（菜单栏-工具-全局设置-菜价天花提示设置;菜单栏-工具-菜价天花设置）
-5. 调整：“全局设置”面板中，调整最小巡查周期为1分钟
-6. 修正：修正厨师未运行任务时，在“查看菜谱”面板中更新菜谱时，厨师会出错的Bug
-7. 修正：对自动广告功能添加保护，防止自动广告功能块出错，导至5分钟重试的问题
-8. 调整：调整厨师主窗口部分布局
+1. 新增：自动售菜功能（自动监听仓库存菜的最高菜价，并以最高菜价卖出。使用该功能时，请确保“全局设置”面板中的“自动更新菜价”已勾选）
+
+2. 新增：雇佣厨友功能
+
+3. 修正：自动更新菜价时，会出现异常的Bug
       ]]>
     </whatsnew>
   </version>
