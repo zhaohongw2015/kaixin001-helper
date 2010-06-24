@@ -9,28 +9,24 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100619</last>
-    <last1>20100619</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100619.zip</file>
-    <size>249886</size>
-    <name>X超人 Build 20100619</name>
-    <publisheddate>2010-06-19</publisheddate>
+    <last>20100625</last>
+    <last1>20100625</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100625.zip</file>
+    <size>252647</size>
+    <name>X超人 Build 20100625</name>
+    <publisheddate>2010-06-25</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100619 What's New:
+Kaixin001.XMan.Build 20100625 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动取钱功能；帐号设置面板新增“自动取款”配置项（当你的现金不足以够买任务所需道具时，X-Man将根据需要，智能的从银行取款）
+1. 修正：挑战后，能量数据读取有误的Bug
 
-2. 新增：批量送礼设置保存功能
+2. 新增：帐号设置面板中新增“是否操作”配置项，用于控制该帐号是否被操作（仅在多帐号模式下生效）
 
-3. 新增：对于第二个角色，自动处理任务过程中遇到先知提示需要更改任务的要求
+3. 新增：自动保存操作日志功能
 
-4. 修正：执行指定编号任务时，X-Man双倍扣除能量导致能量计算错误的Bug
-
-5. 调整：调整批量送礼窗口（礼物标识改为下拉框，可直接从下拉框中选择礼物，也可手动输入礼物标识；礼物信息保存在FreeGift.txt文件中，可手动更改）
-
-6. 调整：调整打开送礼窗口时的判断逻辑（以前为当前正在运行的帐号；现改为当前选中的帐号（即双击帐号列表后选中的帐号））
+4. 调整：批量送礼窗口好友列表中好友姓名的显示格式：姓名(UID)
       ]]>
     </whatsnew>
   </version>
