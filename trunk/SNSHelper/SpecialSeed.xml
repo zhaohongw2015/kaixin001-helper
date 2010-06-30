@@ -547,32 +547,6 @@
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
-    <ID>115</ID>
-    <Name>紫色曼陀罗</Name>
-    <Rank>32</Rank>
-    <SeedPrice>8000</SeedPrice>
-    <FruitPrice>6000</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>4</MinNum>
-    <MaxNum>8</MaxNum>
-    <NotSteal>1</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
-  <Seed>
-    <ID>116</ID>
-    <Name>翡翠曼陀罗</Name>
-    <Rank>32</Rank>
-    <SeedPrice>8000</SeedPrice>
-    <FruitPrice>6400</FruitPrice>
-    <GrowthCycle>32</GrowthCycle>
-    <Theftproof>0</Theftproof>
-    <MinNum>4</MinNum>
-    <MaxNum>8</MaxNum>
-    <NotSteal>1</NotSteal>
-    <KXBean>0</KXBean>
-  </Seed>
-  <Seed>
     <ID>118</ID>
     <Name>粉绣球花</Name>
     <Rank>16</Rank>
@@ -3187,7 +3161,7 @@
   </Seed>
   <Seed>
     <ID>609</ID>
-    <Name>阿根廷足球</Name>
+    <Name>阿根廷足球树</Name>
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>40000</FruitPrice>
@@ -3200,7 +3174,7 @@
   </Seed>
   <Seed>
     <ID>610</ID>
-    <Name>阿尔及利亚足球</Name>
+    <Name>阿尔及利亚足球树</Name>
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>40000</FruitPrice>
@@ -3213,7 +3187,7 @@
   </Seed>
   <Seed>
     <ID>611</ID>
-    <Name>巴拉圭足球</Name>
+    <Name>巴拉圭足球树</Name>
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>40000</FruitPrice>
@@ -3226,7 +3200,7 @@
   </Seed>
   <Seed>
     <ID>612</ID>
-    <Name>朝鲜足球</Name>
+    <Name>朝鲜足球树</Name>
     <Rank>0</Rank>
     <SeedPrice>0</SeedPrice>
     <FruitPrice>40000</FruitPrice>
@@ -3235,6 +3209,331 @@
     <MinNum>4</MinNum>
     <MaxNum>8</MaxNum>
     <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>613</ID>
+    <Name>巴西足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>614</ID>
+    <Name>德国足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>615</ID>
+    <Name>丹麦足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>616</ID>
+    <Name>法国足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>617</ID>
+    <Name>韩国足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>618</ID>
+    <Name>荷兰足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>619</ID>
+    <Name>加纳足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>620</ID>
+    <Name>喀麦隆足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>621</ID>
+    <Name>科特迪瓦足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>622</ID>
+    <Name>美国足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>623</ID>
+    <Name>墨西哥足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>624</ID>
+    <Name>南非足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>625</ID>
+    <Name>尼日利亚足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>626</ID>
+    <Name>日本足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>627</ID>
+    <Name>塞尔维亚足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>628</ID>
+    <Name>斯洛伐克足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>629</ID>
+    <Name>斯洛文尼亚足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>630</ID>
+    <Name>乌拉圭足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>631</ID>
+    <Name>西班牙足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>632</ID>
+    <Name>希腊足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>633</ID>
+    <Name>新西兰足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>634</ID>
+    <Name>意大利足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>635</ID>
+    <Name>英格兰足球树</Name>
+    <Rank>0</Rank>
+    <SeedPrice>0</SeedPrice>
+    <FruitPrice>40000</FruitPrice>
+    <GrowthCycle>40</GrowthCycle>
+    <Theftproof>1</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>0</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>115</ID>
+    <Name>紫色曼陀罗</Name>
+    <Rank>32</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>6000</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
+    <KXBean>0</KXBean>
+  </Seed>
+  <Seed>
+    <ID>116</ID>
+    <Name>翡翠曼陀罗</Name>
+    <Rank>32</Rank>
+    <SeedPrice>8000</SeedPrice>
+    <FruitPrice>6400</FruitPrice>
+    <GrowthCycle>32</GrowthCycle>
+    <Theftproof>0</Theftproof>
+    <MinNum>4</MinNum>
+    <MaxNum>8</MaxNum>
+    <NotSteal>1</NotSteal>
     <KXBean>0</KXBean>
   </Seed>
   <Seed>
