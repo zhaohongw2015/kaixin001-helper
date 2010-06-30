@@ -9,24 +9,22 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100625</last>
-    <last1>20100625</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100625.zip</file>
-    <size>252647</size>
-    <name>X超人 Build 20100625</name>
-    <publisheddate>2010-06-25</publisheddate>
+    <last>20100630</last>
+    <last1>20100630</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100630.zip</file>
+    <size>252834</size>
+    <name>X超人 Build 20100630</name>
+    <publisheddate>2010-06-30</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100625 What's New:
+Kaixin001.XMan.Build 20100630 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：挑战后，能量数据读取有误的Bug
+1. 修正：勾选了自动就医、不勾选自动战斗的情况下，X-Man不自动就医的Bug
 
-2. 新增：帐号设置面板中新增“是否操作”配置项，用于控制该帐号是否被操作（仅在多帐号模式下生效）
+2. 修正：挑战时提示“对不起，不能频繁挑战该对手”后，就算还有战斗时，但挑战任务会自动结束的Bug
 
-3. 新增：自动保存操作日志功能
-
-4. 调整：批量送礼窗口好友列表中好友姓名的显示格式：姓名(UID)
+3. 优化：“批量送礼”窗口的打开速度
       ]]>
     </whatsnew>
   </version>
