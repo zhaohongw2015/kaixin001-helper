@@ -8,30 +8,28 @@
   <TopAd>单品团购，一网打尽</TopAd>
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <version>
-    <last>20100625</last>
-    <last1>20100625</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100625.zip</file>
-    <size>241212</size>
-    <name>开心厨师 Build 20100625</name>
-    <publisheddate>2010-06-25</publisheddate>
+    <last>20100709</last>
+    <last1>20100709</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100709.zip</file>
+    <size>242136</size>
+    <name>开心厨师 Build 20100709</name>
+    <publisheddate>2010-07-09</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100625 What's New:
+Kaixin001.Cafe.Build 20100709 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：由于菜价天花系统有误，导致厨师可能低价出售库存的Bug
+1. 新增：出售设置窗体，在该面板上可指定哪个存菜不出售
 
-2. 修正：帐号设置面板中，“自动以最高价卖出仓库里的存货”选项无法应用到其它帐号的Bug
+2. 修正：部分菜品没有显最高价最低价，导致这部分菜无法自动售出的Bug
 
+3. 修正：待售列表中只列出第一页仓库库存的Bug
 
-Kaixin001.Cafe.Build 20100623 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+4. 修正：自动出售存菜后，会预留一份的问题
 
-1. 新增：自动售菜功能（自动监听仓库存菜的最高菜价，并以最高菜价卖出。使用该功能时，请确保“全局设置”面板中的“自动更新菜价”已勾选）
+5. 修正：收购任务中，提示“已经被收购了3次”厨师仍会继续尝试收购的问题
 
-2. 新增：雇佣厨友功能
-
-3. 修正：自动更新菜价时，会出现异常的Bug
+6. 调整：扫描好友逻辑，访止扫描过程中出现错误五分钟重试时又需要从头开始扫描所有好友的问题
       ]]>
     </whatsnew>
   </version>
