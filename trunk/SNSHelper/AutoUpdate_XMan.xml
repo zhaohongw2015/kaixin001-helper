@@ -9,22 +9,18 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100630</last>
-    <last1>20100630</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100630.zip</file>
-    <size>252834</size>
-    <name>X超人 Build 20100630</name>
-    <publisheddate>2010-06-30</publisheddate>
+    <last>20100709</last>
+    <last1>20100709</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100709.zip</file>
+    <size>253506</size>
+    <name>X超人 Build 20100709</name>
+    <publisheddate>2010-07-09</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100630 What's New:
+Kaixin001.XMan.Build 20100709 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：勾选了自动就医、不勾选自动战斗的情况下，X-Man不自动就医的Bug
-
-2. 修正：挑战时提示“对不起，不能频繁挑战该对手”后，就算还有战斗时，但挑战任务会自动结束的Bug
-
-3. 优化：“批量送礼”窗口的打开速度
+1. 新增：80级以上帐号，自动领取先知赠送的150点能量功能
       ]]>
     </whatsnew>
   </version>
