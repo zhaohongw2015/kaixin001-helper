@@ -9,18 +9,24 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100709</last>
-    <last1>20100713</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100709.zip</file>
-    <size>253506</size>
-    <name>X超人 Build 20100709</name>
-    <publisheddate>2010-07-09</publisheddate>
+    <last>20100714</last>
+    <last1>20100714</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100714.zip</file>
+    <size>256636</size>
+    <name>X超人 Build 20100714</name>
+    <publisheddate>2010-07-14</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100709 What's New:
+Kaixin001.XMan.Build 20100714 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：80级以上帐号，自动领取先知赠送的150点能量功能
+1. 新增：修改帐号设置面板，增加对曼谷地图的支持（可在帐号设置面板中对纽约、曼谷进行独立设置，X-Man将根据您的设置在纽约、曼谷地图中智能切换）
+
+2. 新增：增加跟据挑战所获经验进行追杀的配置项
+
+3. 调整：最大追加次数从3次调整为5次
+
+4. 调整：暂时取消自动帮忙功能（不论自动帮忙是否选中，X-Man都不执行自动帮忙任务）
       ]]>
     </whatsnew>
   </version>
