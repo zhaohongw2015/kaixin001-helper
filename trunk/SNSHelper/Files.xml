@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <files>
   <file>
     <name>CommonSeed</name>
     <path>http://kaixin001-helper.googlecode.com/svn/trunk/SNSHelper/CommonSeed.xml</path>
-    <date>2010-06-30 ‏‎9:47:56</date>
+    <date>2010-07-18 10:26:28</date>
   </file>
   <file>
     <name>SpecialSeed</name>
