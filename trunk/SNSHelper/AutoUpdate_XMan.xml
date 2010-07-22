@@ -9,15 +9,21 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100722</last>
-    <last1>20100722</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100722.zip</file>
-    <size>259687</size>
-    <name>X超人 Build 20100722</name>
-    <publisheddate>2010-07-22</publisheddate>
+    <last>20100723</last>
+    <last1>20100723</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100723.zip</file>
+    <size>259841</size>
+    <name>X超人 Build 20100723</name>
+    <publisheddate>2010-07-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100722 What's New:
+Kaixin001.XMan.Build 20100723 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正：官方调整后，经验溢出当前升级经验后,X-Man会反复做同一个任务的Bug
+
+
+Kaixin001.XMan.Build 20100723 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 新增：用光能量再升级功能，最大限度上减少升级时能量值的浪费
