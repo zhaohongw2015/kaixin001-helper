@@ -9,26 +9,26 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100718</last>
-    <last1>20100718</last1>
+    <last>20100722</last>
+    <last1>20100722</last1>
     <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100718.zip</file>
-    <size>258540</size>
-    <name>X超人 Build 20100718</name>
-    <publisheddate>2010-07-18</publisheddate>
+    <size>259687</size>
+    <name>X超人 Build 20100722</name>
+    <publisheddate>2010-07-22</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100718 What's New:
+Kaixin001.XMan.Build 20100722 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：自动购买免费彩票的功能
+1. 新增：用光能量再升级功能，最大限度上减少升级时能量值的浪费
 
-2. 新增：自动使用爱心能量包的功能
+2. 新增：不再重复挑战挑战失败的对手，提高挑战成功率
 
-3. 新增：现金不够时，自动取款就医
+3. 修正：某些情况下，X-Man对现金、能量、战斗等值计算错误的问题
 
-4. 修正：X-Man0714版不支持小号的Bug
+4. 修正：某些情况下，某些帐号无法自动领取先知150/200能量包的问题
 
-5. 修正：帐号升级后会多次执行“自动升级地产”“自动存款”任务的Bug
+5. 修正：现金过大时，X-Man显示现金为0的Bug
       ]]>
     </whatsnew>
   </version>
