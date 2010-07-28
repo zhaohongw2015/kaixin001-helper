@@ -9,32 +9,26 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>2010072302</last>
-    <last1>2010072302</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_2010072302.zip</file>
-    <size>259721</size>
-    <name>X超人 Build 20100723</name>
-    <publisheddate>2010-07-23</publisheddate>
+    <last>20100728</last>
+    <last1>20100728</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100728.zip</file>
+    <size>260260</size>
+    <name>X超人 Build 20100728</name>
+    <publisheddate>2010-07-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100723 What's New:
+Kaixin001.XMan.Build 20100728 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正：官方调整后，经验溢出当前升级经验后,X-Man会反复做同一个任务的Bug
+1. 修正：“战斗值还没用完，继续挑战...”会出现死循环的Bug
 
+2. 修正：任务过程中升级后，X-Man不按设置项进行任务的Bug
 
-Kaixin001.XMan.Build 20100723 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+3. 修正：错误提示“你的当前能量为0，当前经验为0，用完所有能量后将升级。X-Man将自动为你使用完所有能量...”的Bug
 
-1. 新增：用光能量再升级功能，最大限度上减少升级时能量值的浪费
+4. 修正：“挑战策略”“就医策略”“任务策略”中的所属城市无法应用到其它帐号的Bug
 
-2. 新增：不再重复挑战挑战失败的对手，提高挑战成功率
-
-3. 修正：某些情况下，X-Man对现金、能量、战斗等值计算错误的问题
-
-4. 修正：某些情况下，某些帐号无法自动领取先知150/200能量包的问题
-
-5. 修正：现金过大时，X-Man显示现金为0的Bug
+5. 修正：关闭X-Man后，X-Man进程有时会保留在系统一段时间的Bug
       ]]>
     </whatsnew>
   </version>
