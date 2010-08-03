@@ -9,34 +9,18 @@
   <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100730</last>
-    <last1>20100730</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100730.zip</file>
-    <size>261888</size>
-    <name>X超人 Build 20100730</name>
-    <publisheddate>2010-07-30</publisheddate>
+    <last>20100803</last>
+    <last1>20100803</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100803.zip</file>
+    <size>263789</size>
+    <name>X超人 Build 20100803</name>
+    <publisheddate>2010-08-03</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.XMan.Build 20100730 What's New:
+Kaixin001.XMan.Build 20100803 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：“批量赠送能量包”插件（菜单-工具-实用插件-批量赠送能量包）
-
-2. 修正：修改自动帮忙的逻辑并恢复该功能
-
-
-Kaixin001.XMan.Build 20100728 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 修正：“战斗值还没用完，继续挑战...”会出现死循环的Bug
-
-2. 修正：任务过程中升级后，X-Man不按设置项进行任务的Bug
-
-3. 修正：错误提示“你的当前能量为0，当前经验为0，用完所有能量后将升级。X-Man将自动为你使用完所有能量...”的Bug
-
-4. 修正：“挑战策略”“就医策略”“任务策略”中的所属城市无法应用到其它帐号的Bug
-
-5. 修正：关闭X-Man后，X-Man进程有时会保留在系统一段时间的Bug
+1. 新增：“批量领奖(彩票)”插件（位置：菜单-工具-实用插件-批量领奖(彩票)）
       ]]>
     </whatsnew>
   </version>
