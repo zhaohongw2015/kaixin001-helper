@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
+  <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
+  <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
+  <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
+  <StartAdFormPageUrl>http://jailu.cn/villa.htm</StartAdFormPageUrl>
+  <TopAd>单品团购，一网打尽</TopAd>
+  <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
+  <AddMe>1</AddMe>
+  <version>
+    <last>20100809</last>
+    <last1>20100809</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100809.zip</file>
+    <size>261888</size>
+    <name>开心庄主 Build 20100809</name>
+    <publisheddate>2010-08-09</publisheddate>
+    <whatsnew>
+      <![CDATA[
+Kaixin001.Villa.Build 20100809 Preview1 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+这是《开心庄主》的首个预览版本，整个工具只实现了相当有限的功能且不保证其稳定性，欢迎大家试用。
+
+1. 查看庄园基本信息
+
+2. 查看农田信息、一键收获、一键犁地、一键播种等
+
+3. 查看果树信息、一键收获等
+
+4. 查看动物信息、一键收获等
+      ]]>
+    </whatsnew>
+  </version>
+  <ads>
+    <ad>
+      <title>
+        20100105版农夫新增强制防大兵成龙功能，请及时更新！
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-82550-1-1.html
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+  </ads>
+  <ads1>
+    <ad>
+      <title>
+        点击下载最新版开心车夫，修正老版本不加油等问题
+      </title>
+      <url>
+        http://bbs.snsfun.com/viewthread.php?tid=74889
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+  </ads1>
+  <fund>
+    http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
+  </fund>
+</data>
