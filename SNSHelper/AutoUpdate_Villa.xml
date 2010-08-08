@@ -6,12 +6,12 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/villa.htm</StartAdFormPageUrl>
   <TopAd>单品团购，一网打尽</TopAd>
-  <TopAdLink>http://www.78gw.com?f=cafe</TopAdLink>
+  <TopAdLink>http://www.78gw.com?f=villa</TopAdLink>
   <AddMe>1</AddMe>
   <version>
     <last>20100809</last>
     <last1>20100809</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100809.zip</file>
+    <file>http://kaixin001-helper.googlecode.com/files/XMan_Build_20100803.zip</file>
     <size>261888</size>
     <name>开心庄主 Build 20100809</name>
     <publisheddate>2010-08-09</publisheddate>
