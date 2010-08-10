@@ -9,26 +9,24 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100809</last>
-    <last1>20100809</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100809.zip</file>
-    <size>223974</size>
-    <name>开心庄主 Build 20100809</name>
-    <publisheddate>2010-08-09</publisheddate>
+    <last>20100810</last>
+    <last1>20100810</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100810.zip</file>
+    <size>230485</size>
+    <name>开心庄主 Build 20100810</name>
+    <publisheddate>2010-08-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100809 Preview1 What's New:
+Kaixin001.Villa.Build 20100810 Preview2 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-这是《开心庄主》的首个预览版本，整个工具只实现了相当有限的功能且不保证其稳定性，欢迎大家试用。
+1. 新增：一键帮忙好友功能
 
-1. 查看庄园基本信息
+2. 新增：一键收犁收功能
 
-2. 查看农田信息、一键收获、一键犁地、一键播种等
+3. 新增：多帐号管理的初步支持
 
-3. 查看果树信息、一键收获等
-
-4. 查看动物信息、一键收获等
+4. 增强：一定程度上增强工具的稳定性
       ]]>
     </whatsnew>
   </version>
