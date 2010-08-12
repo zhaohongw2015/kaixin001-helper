@@ -9,24 +9,26 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>2010081002</last>
-    <last1>2010081002</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_2010081002.zip</file>
-    <size>230460</size>
-    <name>开心庄主 Build 20100810</name>
-    <publisheddate>2010-08-10</publisheddate>
+    <last>20100812</last>
+    <last1>20100812</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100812.zip</file>
+    <size>234773</size>
+    <name>开心庄主 Build 20100812</name>
+    <publisheddate>2010-08-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100810 Preview2 What's New:
+Kaixin001.Villa.Build 20100812 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：一键帮忙好友功能
+1. 修正庄主工作时，用户使用浏览器等操作庄园会导致庄主自动退出的Bug
 
-2. 新增：一键收犁收功能
+2. 新增“全局设置”窗体（位置：“工具 - 全局设置”）：含“网络延迟”、“代理服务器”等全局设置项
 
-3. 新增：多帐号管理的初步支持
+3. 主窗体帐号列表中加入右键快捷菜单：含“删除帐号”、“设置”等功能菜单
 
-4. 增强：一定程度上增强工具的稳定性
+4. 调整商店窗体中种子小时经验和小时收入的计算方法
+
+5. 修正界面上的一些小问题
       ]]>
     </whatsnew>
   </version>
