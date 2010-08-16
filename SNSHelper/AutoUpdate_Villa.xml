@@ -9,26 +9,24 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100812</last>
-    <last1>20100812</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100812.zip</file>
-    <size>234773</size>
-    <name>开心庄主 Build 20100812</name>
-    <publisheddate>2010-08-12</publisheddate>
+    <last>20100817</last>
+    <last1>20100817</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100817.zip</file>
+    <size>239296</size>
+    <name>开心庄主 Build 20100817</name>
+    <publisheddate>2010-08-17</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100812 What's New:
+Kaixin001.Villa.Build 20100817 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正庄主工作时，用户使用浏览器等操作庄园会导致庄主自动退出的Bug
+1. 新增“一键收礼”功能
 
-2. 新增“全局设置”窗体（位置：“工具 - 全局设置”）：含“网络延迟”、“代理服务器”等全局设置项
+2. 新增Wap版一键操作功能，真正实现一键操作（该功能可在“帐号设置”面板中设置，位置：帐号列表-右键快捷菜单-设置）
 
-3. 主窗体帐号列表中加入右键快捷菜单：含“删除帐号”、“设置”等功能菜单
+3. “商店信息”面板及“一键播种”下拉列表中增加对种子“解锁时间”的显示
 
-4. 调整商店窗体中种子小时经验和小时收入的计算方法
-
-5. 修正界面上的一些小问题
+4. 修正非东八区（北京时区）用户使用《开心庄主》时，时间显示有误，无法正成种获庄园的问题（非东八区的用户，请在“全局设置”面板中设置你与北京时间的时差）
       ]]>
     </whatsnew>
   </version>
