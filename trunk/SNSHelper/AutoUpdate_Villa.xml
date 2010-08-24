@@ -9,24 +9,22 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100817</last>
-    <last1>20100817</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100817.zip</file>
-    <size>239296</size>
-    <name>开心庄主 Build 20100817</name>
-    <publisheddate>2010-08-17</publisheddate>
+    <last>20100824</last>
+    <last1>20100824</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100824.zip</file>
+    <size>243259</size>
+    <name>开心庄主 Build 20100824</name>
+    <publisheddate>2010-08-24</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100817 What's New:
+Kaixin001.Villa.Build 20100824 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增“一键收礼”功能
+1. 新增农田右键菜单，内含“播种”“铲地”“一键刷经验”等功能，位置：农田信息-农田列表-右键菜单
 
-2. 新增Wap版一键操作功能，真正实现一键操作（该功能可在“帐号设置”面板中设置，位置：帐号列表-右键快捷菜单-设置）
+2. 细化Wap操作配置项，可单独设置各项操作
 
-3. “商店信息”面板及“一键播种”下拉列表中增加对种子“解锁时间”的显示
-
-4. 修正非东八区（北京时区）用户使用《开心庄主》时，时间显示有误，无法正成种获庄园的问题（非东八区的用户，请在“全局设置”面板中设置你与北京时间的时差）
+3. 新增导入功能，可用于导入新帐号和老版庄主配置信息，位置：菜单-文件-导入
       ]]>
     </whatsnew>
   </version>
