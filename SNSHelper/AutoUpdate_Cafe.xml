@@ -8,33 +8,23 @@
   <TopAd>开心庄园辅助工具开心庄主已发布</TopAd>
   <TopAdLink>http://bbs.snsfun.com/thread-136842-1-1.html</TopAdLink>
   <version>
-    <last>20100823</last>
-    <last1>20100823</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100823.zip</file>
-    <size>253952</size>
-    <name>开心厨师 Build 20100823</name>
-    <publisheddate>2010-08-23</publisheddate>
+    <last>20100903</last>
+    <last1>20100903</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100903.zip</file>
+    <size>265675</size>
+    <name>开心厨师 Build 20100903</name>
+    <publisheddate>2010-09-03</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Cafe.Build 20100903 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 新增：土尔其菜谱
+
 Kaixin001.Cafe.Build 20100823 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 新增：法国菜谱、意大利菜谱
-
-Kaixin001.Cafe.Build 20100823 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增：出售设置窗体，在该面板上可指定哪个存菜不出售
-
-2. 修正：部分菜品没有显最高价最低价，导致这部分菜无法自动售出的Bug
-
-3. 修正：待售列表中只列出第一页仓库库存的Bug
-
-4. 修正：自动出售存菜后，会预留一份的问题
-
-5. 修正：收购任务中，提示“已经被收购了3次”厨师仍会继续尝试收购的问题
-
-6. 调整：扫描好友逻辑，访止扫描过程中出现错误五分钟重试时又需要从头开始扫描所有好友的问题
       ]]>
     </whatsnew>
   </version>
