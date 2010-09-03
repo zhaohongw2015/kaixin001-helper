@@ -9,14 +9,21 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100903</last>
-    <last1>20100903</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100903.zip</file>
-    <size>252775</size>
-    <name>开心庄主 Build 20100903</name>
-    <publisheddate>2010-09-03</publisheddate>
+    <last>20100904</last>
+    <last1>20100904</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100904.zip</file>
+    <size>253073</size>
+    <name>开心庄主 Build 20100904</name>
+    <publisheddate>2010-09-04</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Villa.Build 20100904 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正铲地操作时出现错误的Bug
+
+2. 添加“自动开启礼盒”配置项，不希望自动开启礼盒的，请在“帐号设置”面板中取消
+
 Kaixin001.Villa.Build 20100903 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
