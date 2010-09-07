@@ -9,37 +9,22 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100904</last>
+    <last>20100907</last>
     <last1>20100907</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100904.zip</file>
-    <size>253073</size>
-    <name>开心庄主 Build 20100904</name>
-    <publisheddate>2010-09-04</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100907.zip</file>
+    <size>254023</size>
+    <name>开心庄主 Build 20100907</name>
+    <publisheddate>2010-09-07</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100904 What's New:
+Kaixin001.Villa.Build 20100907 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正铲地操作时出现错误的Bug
+1. 添加第一时间收获农田功能
 
-2. 添加“自动开启礼盒”配置项，不希望自动开启礼盒的，请在“帐号设置”面板中取消
+2. 添加“一键收获”花盆功能
 
-Kaixin001.Villa.Build 20100903 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增简单的“第一时间”功能，目前只支持第一时间开启自家礼盒（启动方法：菜单-文件-开始运行）
-
-2. 新增“工作预报”面板
-
-3. “帐号信息”面板中新增“礼盒信息”“花圃信息”的显示
-
-4. 新增一键开启自家礼盒、一键删除已开启礼盒等功能
-
-5. “帐号设置”面板中新增“是否操作”配置项
-
-6. 新增庄园信息本地缓存功能，便于查看
-
-7. 其它细节若干
+3. 修正“花圃信息”中遗漏部分花盆的Bug
       ]]>
     </whatsnew>
   </version>
