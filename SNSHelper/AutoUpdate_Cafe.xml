@@ -8,23 +8,18 @@
   <TopAd>开心庄园辅助工具开心庄主已发布</TopAd>
   <TopAdLink>http://bbs.snsfun.com/thread-136842-1-1.html</TopAdLink>
   <version>
-    <last>20100903</last>
-    <last1>20100903</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100903.zip</file>
-    <size>265675</size>
-    <name>开心厨师 Build 20100903</name>
-    <publisheddate>2010-09-03</publisheddate>
+    <last>20100908</last>
+    <last1>20100908</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100908.zip</file>
+    <size>265657</size>
+    <name>开心厨师 Build 20100908</name>
+    <publisheddate>2010-09-08</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100903 What's New:
+Kaixin001.Cafe.Build 20100908 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：土尔其菜谱
-
-Kaixin001.Cafe.Build 20100823 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增：法国菜谱、意大利菜谱
+1. 修正：无法自动购买炉子的Bug
       ]]>
     </whatsnew>
   </version>
