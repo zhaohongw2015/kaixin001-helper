@@ -5,17 +5,23 @@
   <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/cafead.htm</StartAdFormPageUrl>
-  <TopAd>做菜出现死循环的，请把饼干机放入仓库</TopAd>
-  <TopAdLink>http://bbs.snsfun.com/thread-141655-1-1.html</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <version>
-    <last>20100908</last>
-    <last1>20100908</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100908.zip</file>
-    <size>265657</size>
-    <name>开心厨师 Build 20100908</name>
-    <publisheddate>2010-09-08</publisheddate>
+    <last>20100909</last>
+    <last1>20100909</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100909.zip</file>
+    <size>266944</size>
+    <name>开心厨师 Build 20100909</name>
+    <publisheddate>2010-09-09</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Cafe.Build 20100909 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1.修正：焙焙机导致做菜时出现死循环的Bug
+
+
 Kaixin001.Cafe.Build 20100908 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
