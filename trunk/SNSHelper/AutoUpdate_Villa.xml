@@ -9,22 +9,26 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100907</last>
-    <last1>20100907</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100907.zip</file>
-    <size>254023</size>
-    <name>开心庄主 Build 20100907</name>
-    <publisheddate>2010-09-07</publisheddate>
+    <last>20100910</last>
+    <last1>20100910</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100910.zip</file>
+    <size>582391</size>
+    <name>开心庄主 Build 20100910</name>
+    <publisheddate>2010-09-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100907 What's New:
+Kaixin001.Villa.Build 20100910 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 添加第一时间收获农田功能
+1. 新增第一时间收获果树、动物功能
 
-2. 添加“一键收获”花盆功能
+2. “帐号设置”面板中新增“应用到”功能按钮
 
-3. 修正“花圃信息”中遗漏部分花盆的Bug
+3. 优化部分操作，减少网络请求，大幅度提高操作速度
+
+4. 优化日志输出：工作日志中清楚的显示了每个操作获得的现金、经验、收藏品等
+
+5. 修正开心网调整后，果树成熟时间计算错误导致无法收获果树的Bug
       ]]>
     </whatsnew>
   </version>
