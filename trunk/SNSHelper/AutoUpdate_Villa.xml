@@ -9,32 +9,22 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100913</last>
-    <last1>20100913</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100913.zip</file>
-    <size>584785</size>
-    <name>开心庄主 Build 20100913</name>
-    <publisheddate>2010-09-13</publisheddate>
+    <last>20100914</last>
+    <last1>20100914</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100914.zip</file>
+    <size>585805</size>
+    <name>开心庄主 Build 20100914</name>
+    <publisheddate>2010-09-14</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100913 What's New:
+Kaixin001.Villa.Build 20100914 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增“一键种花”功能（一键种花的种子可在“帐号设置”面板中设置）
+1. 在种花过程中，如果发现可以好友庄园需要帮助的话，会自动执行帮助操作
 
-2. “查看商店”面板中新增“花圃”种子数据
+2. 修正工作日志中的一处笔误
 
-3. 修正第一个帐号的工作预报总会莫名消失的Bug
-
-4. 调整开礼盒的方式，开启速度更快
-
-5. 修正犁地日志中现金和经验显示有误的Bug
-
-6. 新增现金不足无法播种时的相关提示
-
-7. 修正一处可能导致犁地出错的Bug
-
-8. 添加部分操作提示，方面新用户更快熟悉如何使用庄主
+3. 进一步完善庄主软件界面上的提示信息
       ]]>
     </whatsnew>
   </version>
