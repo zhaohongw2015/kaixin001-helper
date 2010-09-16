@@ -9,28 +9,28 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100915</last>
+    <last>20100916</last>
     <last1>20100916</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100915.zip</file>
-    <size>584963</size>
-    <name>开心庄主 Build 20100915</name>
-    <publisheddate>2010-09-15</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100916.zip</file>
+    <size>587323</size>
+    <name>开心庄主 Build 20100916</name>
+    <publisheddate>2010-09-16</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Villa.Build 20100916 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正无法自动种花的Bug
+
+2. 新增对“建材树”的显示（建材树的相关操作将在后续版本中添加）
+
+3. 修改部分数据显示逻辑（按时间顺序显示）
+
+
 Kaixin001.Villa.Build 20100915 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 修正“一键种花”后，“一键帮忙”无法帮忙的Bug
-
-
-Kaixin001.Villa.Build 20100914 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 在种花过程中，如果发现可以好友庄园需要帮助的话，会自动执行帮助操作
-
-2. 修正工作日志中的一处笔误
-
-3. 进一步完善庄主软件界面上的提示信息
       ]]>
     </whatsnew>
   </version>
