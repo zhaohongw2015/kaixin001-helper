@@ -9,14 +9,21 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100917</last>
-    <last1>20100917</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100917.zip</file>
-    <size>588735</size>
-    <name>开心庄主 Build 20100917</name>
+    <last>2010091702</last>
+    <last1>2010091702</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_2010091702.zip</file>
+    <size>589412</size>
+    <name>开心庄主 Build 2010091702</name>
     <publisheddate>2010-09-17</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Villa.Build 2010091702 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正“一键砍树”时会遗漏部分可砍树好友的Bug
+
+2. 修正一处可能导致“一键砍树”操作出现死循环的Bug
+
 Kaixin001.Villa.Build 20100917 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
