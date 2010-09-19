@@ -9,29 +9,22 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>2010091702</last>
-    <last1>2010091702</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_2010091702.zip</file>
-    <size>589412</size>
-    <name>开心庄主 Build 2010091702</name>
-    <publisheddate>2010-09-17</publisheddate>
+    <last>20100919</last>
+    <last1>20100919</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100919.zip</file>
+    <size>590078</size>
+    <name>开心庄主 Build 20100919</name>
+    <publisheddate>2010-09-19</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 2010091702 What's New:
+Kaixin001.Villa.Build 20100919 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正“一键砍树”时会遗漏部分可砍树好友的Bug
+1. 新增“一键收花”功能：该功能可自动从好友庄园中收获成熟花朵
 
-2. 修正一处可能导致“一键砍树”操作出现死循环的Bug
+2. 增加两种砍树错误信息提示
 
-Kaixin001.Villa.Build 20100917 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增“一键收获”功能：该功能可收获自家树桩并自动种植同种建材物
-
-2. 新增“一键砍树”功能：该功能可自动前往好友庄园并砍伐建材
-
-3. “帐号设置”面板中新增“自动收获建材树”配置项
+3. 修正某些情况下，“一键帮忙”出现错误的问题
       ]]>
     </whatsnew>
   </version>
