@@ -5,34 +5,30 @@
   <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/farmerad.htm</StartAdFormPageUrl>
-  <TopAd>开心庄园辅助工具开心庄主已发布</TopAd>
-  <TopAdLink>http://bbs.snsfun.com/thread-136842-1-1.html</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <version>
-    <last>20100623</last>
-    <last1>20100623</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100623.zip</file>
-    <size>1564648</size>
-    <name>花园农夫 Build 20100623</name>
-    <publisheddate>2010-06-23</publisheddate>
+    <last>20100927</last>
+    <last1>20100927</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100927.zip</file>
+    <size>1581289</size>
+    <name>花园农夫 Build 20100927</name>
+    <publisheddate>2010-09-27</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100623 What's New:
+Kaixin001.Framer.Build 20100927 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：世界杯期间，每天自动领取足球树种子
+1. 新增：月宫桂子、桂树、小麦等植物种子数据
 
-2. 新增：更新大量植物种子数据
-
-3. 修正：取消勾选“摇钱”后，在第一时间任务中依旧会摇钱的Bug
-
-4. 修正：点击“从开心网更新植物信息”后，种子文件（金仙桃）有误的问题
+2. 新增：玉兔
       ]]>
     </whatsnew>
   </version>
   <ads>
     <ad>
       <title>
-        [07-18] 农夫服务器种子文件已更新，含桔梗花、紫阳花等大量种子信息，欢迎下载更新
+        [09-26] 农夫服务器种子文件已更新，含桔梗花、紫阳花月宫桂子、桂树、小麦等大量种子信息，欢迎下载更新
       </title>
       <url>
         http://bbs.snsfun.com
@@ -42,20 +38,20 @@ Kaixin001.Framer.Build 20100623 What's New:
     </ad>
     <ad>
       <title>
-        X世界辅助工具“X-Man 20100619”闪亮发布，欢迎下载试用
+        X世界辅助工具“X-Man 20100903”闪亮发布，欢迎下载试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100619.zip
+        http://kaixin001-helper.googlecode.com/files/XMan_Build_20100903.zip
       </url>
       <color>-16744448</color>
       <expired>2019-11-08 11:13:00</expired>
     </ad>
     <ad>
       <title>
-        开心网组件《开心餐厅》辅助工具《开心厨师20100525》已发布，欢迎试用
+        开心网组件《开心餐厅》辅助工具《开心厨师20100921》已发布，欢迎试用
       </title>
       <url>
-        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100525.zip
+        http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100921.zip
       </url>
       <color>-65408</color>
       <expired>2019-12-13 23:59:59</expired>
