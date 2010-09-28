@@ -9,26 +9,30 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>2010092102</last>
+    <last>20100928</last>
     <last1>20100928</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_2010092102.zip</file>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100928.zip</file>
     <size>593241</size>
-    <name>开心庄主 Build 20100921</name>
-    <publisheddate>2010-09-21</publisheddate>
+    <name>开心庄主 Build 20100928</name>
+    <publisheddate>2010-09-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100921 What's New:
+Kaixin001.Villa.Build 20100928 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. “帐号设置”面板中新增好友列表，可在该列表中设置在特定的好友庄园中执行帮忙、种花、砍树等操作
+1. 新增“一键送礼”功能：该功能可自动赠送好友向你请求的礼物
 
-2. 庄主主面板中新增对庄园鲜花的显示
+2. “全局设置”面板中新增“巡查周期”配置项：该功能会定时检查是否有帐号的工作预报丢失。若丢失，则自动重启。
 
-3. 新增“一键删除”功能：该功能可自动删除庄园中已枯萎的鲜花
+3. “帐号设置”面板中，选中好友后，庄主将优先操作选中的好友，然后再操作未选中的好友
 
-4. 新增对“一键砍树”过程中达到砍树上限的判断：达到砍树上限后，庄主将自动停止砍树操作
+4. “帐号设置”面板中新增“种植建材树”配置项：该配置项选中后，自家庄园中收获建材树后将在原地种植同类建材树
 
-5. 修正某些情况下，“一键收礼”操作会出现错误的问题
+5. 修正某些情况下，庄主工作失败后，“工作预报”会留下过期预报的问题
+
+6. 新增日志自动清除功能，防止长时间运行后，占用过多内存
+
+7. 进一步完善庄主软件界面上的提示信息
       ]]>
     </whatsnew>
   </version>
