@@ -8,24 +8,18 @@
   <TopAd>Jailu@新浪微博</TopAd>
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <version>
-    <last>20100921</last>
-    <last1>20100921</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20100921.zip</file>
-    <size>258816</size>
-    <name>开心厨师 Build 20100921</name>
-    <publisheddate>2010-09-21</publisheddate>
+    <last>20101018</last>
+    <last1>20101018</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20101018.zip</file>
+    <size>259990</size>
+    <name>开心厨师 Build 20101018</name>
+    <publisheddate>2010-10-18</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20100921 What's New:
+Kaixin001.Cafe.Build 20101018 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：墨西哥菜谱、月饼等
-
-
-Kaixin001.Cafe.Build 20100909 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1.修正：焙焙机导致做菜时出现死循环的Bug
+1. 新增：中国菜谱
       ]]>
     </whatsnew>
   </version>
