@@ -9,36 +9,24 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20100929</last>
-    <last1>20100929</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20100929.zip</file>
-    <size>595731</size>
-    <name>开心庄主 Build 20100929</name>
-    <publisheddate>2010-09-29</publisheddate>
+    <last>20101018</last>
+    <last1>20101018</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101018.zip</file>
+    <size>598941</size>
+    <name>开心庄主 Build 20101018</name>
+    <publisheddate>2010-10-18</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20100929 What's New:
+Kaixin001.Villa.Build 20101018 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增对“国庆神秘礼盒”的显示
+1. 新增“插件”功能，位置：菜单-工具-插件。（插件：可对所有帐号执行相关操作）
 
+2. 新增“一键爱抚”功能：该功能可自动为你爱抚庄园里的小动物
 
-Kaixin001.Villa.Build 20100928 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+3. 新增“砍树”后获得道具的相关提示
 
-1. 新增“一键送礼”功能：该功能可自动赠送好友向你请求的礼物
-
-2. “全局设置”面板中新增“巡查周期”配置项：该功能会定时检查是否有帐号的工作预报丢失。若丢失，则自动重启。
-
-3. “帐号设置”面板中，选中好友后，庄主将优先操作选中的好友，然后再操作未选中的好友
-
-4. “帐号设置”面板中新增“种植建材树”配置项：该配置项选中后，自家庄园中收获建材树后将在原地种植同类建材树
-
-5. 修正某些情况下，庄主工作失败后，“工作预报”会留下过期预报的问题
-
-6. 新增日志自动清除功能，防止长时间运行后，占用过多内存
-
-7. 进一步完善庄主软件界面上的提示信息
+4. 新增对“鸡蛋”的识别（未测试）
       ]]>
     </whatsnew>
   </version>
