@@ -5,28 +5,26 @@
   <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://jailu.cn/villaad.htm</StartAdFormPageUrl>
-  <TopAd>开心庄主 Build 20101020 已发布：新增对"神秘彩罐"的识别</TopAd>
-  <TopAdLink>http://bbs.snsfun.com/thread-148049-1-1.html</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20101018</last>
+    <last>20101020</last>
     <last1>20101020</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101018.zip</file>
-    <size>598941</size>
-    <name>开心庄主 Build 20101018</name>
-    <publisheddate>2010-10-18</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101020.zip</file>
+    <size>608935</size>
+    <name>开心庄主 Build 20101020</name>
+    <publisheddate>2010-10-20</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20101018 What's New:
+Kaixin001.Villa.Build 20101020 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增“插件”功能，位置：菜单-工具-插件。（插件：可对所有帐号执行相关操作）
+1. 调整插件“一键收花”功能为：一键收取所有帐号种在好友庄园中的花朵
 
-2. 新增“一键爱抚”功能：该功能可自动为你爱抚庄园里的小动物
+2. 新增对“神秘彩罐”的识别
 
-3. 新增“砍树”后获得道具的相关提示
-
-4. 新增对“鸡蛋”的识别（未测试）
+3. 主要操作日志中增加进度标识
       ]]>
     </whatsnew>
   </version>
