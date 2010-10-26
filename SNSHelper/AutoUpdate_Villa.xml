@@ -9,22 +9,20 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20101020</last>
-    <last1>20101020</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101020.zip</file>
-    <size>608935</size>
-    <name>开心庄主 Build 20101020</name>
-    <publisheddate>2010-10-20</publisheddate>
+    <last>20101026</last>
+    <last1>20101026</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101026.zip</file>
+    <size>611151</size>
+    <name>开心庄主 Build 20101026</name>
+    <publisheddate>2010-10-26</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20101020 What's New:
+Kaixin001.Villa.Build 20101026 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 调整插件“一键收花”功能为：一键收取所有帐号种在好友庄园中的花朵
+1. 新增对“南瓜神秘礼盒”的识别
 
-2. 新增对“神秘彩罐”的识别
-
-3. 主要操作日志中增加进度标识
+2. 修正对“神秘蛋”的显示
       ]]>
     </whatsnew>
   </version>
