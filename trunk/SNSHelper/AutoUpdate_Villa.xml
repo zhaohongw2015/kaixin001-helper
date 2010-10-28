@@ -9,20 +9,22 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>2010102602</last>
-    <last1>2010102602</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_2010102602.zip</file>
-    <size>611413</size>
-    <name>开心庄主 Build 20101026</name>
-    <publisheddate>2010-10-26</publisheddate>
+    <last>20101028</last>
+    <last1>20101028</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101028.zip</file>
+    <size>613279</size>
+    <name>开心庄主 Build 20101028</name>
+    <publisheddate>2010-10-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20101026 What's New:
+Kaixin001.Villa.Build 20101028 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增对“南瓜神秘礼盒”的识别
+1. 新增“一键喂鸡”功能
 
-2. 修正对“神秘蛋”的显示
+2. 新增“一键开蛋”功能
+
+3. 新增插件“一键喂鸡”“一键开蛋”
       ]]>
     </whatsnew>
   </version>
