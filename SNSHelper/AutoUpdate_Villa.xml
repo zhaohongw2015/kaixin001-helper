@@ -5,32 +5,30 @@
   <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/villa.htm</StartAdFormPageUrl>
-  <TopAd>Jailu @ 新浪微博</TopAd>
-  <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
+  <TopAd>1123版庄主已发布，修正不种花问题</TopAd>
+  <TopAdLink>http://bbs.snsfun.com/thread-151592-1-1.html</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20101122</last>
-    <last1>20101122</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101122.zip</file>
-    <size>613321</size>
-    <name>开心庄主 Build 20101122</name>
-    <publisheddate>2010-11-22</publisheddate>
+    <last>20101123</last>
+    <last1>20101123</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101123.zip</file>
+    <size>614390</size>
+    <name>开心庄主 Build 20101123</name>
+    <publisheddate>2010-11-23</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Villa.Build 20101123 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正无法在好友庄园种花的Bug
+
+2. 修正建材树显示有误的Bug
+
+
 Kaixin001.Villa.Build 20101122 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 修正开心庄园调整后，导致庄园加载数据失败的Bug
-      
-      
-Kaixin001.Villa.Build 20101028 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增“一键喂鸡”功能
-
-2. 新增“一键开蛋”功能
-
-3. 新增插件“一键喂鸡”“一键开蛋”
       ]]>
     </whatsnew>
   </version>
