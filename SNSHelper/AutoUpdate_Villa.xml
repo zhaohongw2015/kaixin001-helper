@@ -9,26 +9,22 @@
   <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20101123</last>
-    <last1>20101123</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101123.zip</file>
-    <size>614390</size>
-    <name>开心庄主 Build 20101123</name>
-    <publisheddate>2010-11-23</publisheddate>
+    <last>20101201</last>
+    <last1>20101201</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101201.zip</file>
+    <size>604015</size>
+    <name>开心庄主 Build 20101201</name>
+    <publisheddate>2010-12-01</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20101123 What's New:
+Kaixin001.Villa.Build 20101201 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正无法在好友庄园种花的Bug
+1. 修正喂鸡掏蛋时，庄主会出错的Bug
 
-2. 修正建材树显示有误的Bug
+2. 全局设置面板中新增“掏蛋分享语”，可自行定制，让你的分享与众不同
 
-
-Kaixin001.Villa.Build 20101122 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 修正开心庄园调整后，导致庄园加载数据失败的Bug
+3. 更新种子数据
       ]]>
     </whatsnew>
   </version>
