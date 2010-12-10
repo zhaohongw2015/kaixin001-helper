@@ -9,19 +9,25 @@
   <TopAdLink>http://t.sina.com.cn/1700919817/zF0vqjrghD</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20101209</last>
-    <last1>20101209</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101209.zip</file>
-    <size>604419</size>
-    <name>开心庄主 Build 20101209</name>
-    <publisheddate>2010-12-09</publisheddate>
+    <last>20101210</last>
+    <last1>20101210</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101210.zip</file>
+    <size>604844</size>
+    <name>开心庄主 Build 20101210</name>
+    <publisheddate>2010-12-10</publisheddate>
     <whatsnew>
       <![CDATA[
+Kaixin001.Villa.Build 20101210 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正无法开启“大众汽车礼盒”的Bug
+
+
 Kaixin001.Villa.Build 20101209 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 新增对“大众汽车礼盒”的识别
-      ]]>
+]]>
     </whatsnew>
   </version>
   <ads>
