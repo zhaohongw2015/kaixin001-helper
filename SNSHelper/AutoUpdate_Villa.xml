@@ -9,24 +9,28 @@
   <TopAdLink>http://t.sina.com.cn/1700919817/zF0vqjrghD</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>2010121002</last>
-    <last1>2010121002</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_2010121002.zip</file>
-    <size>603879</size>
-    <name>开心庄主 Build 20101210 sp1</name>
-    <publisheddate>2010-12-10</publisheddate>
+    <last>20101212</last>
+    <last1>20101212</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101212.zip</file>
+    <size>604795</size>
+    <name>开心庄主 Build 20101212</name>
+    <publisheddate>2010-12-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 2010121002 What's New:
+Kaixin001.Villa.Build 20101212 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 修正第一次Wap操作时出错的Bug
+
+2. 修正庄主显示施肥成功，实际上并未成功的Bug
+
+3. 修正庄主对可种花盆计算错误的Bug
+
+
+Kaixin001.Villa.Build 20101210 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 1. 修正无法开启“大众汽车礼盒”的Bug
-
-
-Kaixin001.Villa.Build 20101209 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增对“大众汽车礼盒”的识别
 ]]>
     </whatsnew>
   </version>
