@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
+  <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
+  <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
+  <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
+  <StartAdFormPageUrl>http://www.jailu.cn/wargame.htm</StartAdFormPageUrl>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://t.sina.com.cn/jailu</TopAdLink>
+  <AddMe>1</AddMe>
+  <version>
+    <last>20110118</last>
+    <last1>20110118</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/WarGame_Build_20110118.zip</file>
+    <size>604631</size>
+    <name>开心网小小战争辅助工具 Build 20110118</name>
+    <publisheddate>2011-01-18</publisheddate>
+    <whatsnew>
+      <![CDATA[
+
+]]>
+    </whatsnew>
+  </version>
+  <ads>
+    <ad>
+      <title>
+        20100105版农夫新增强制防大兵成龙功能，请及时更新！
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-82550-1-1.html
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+  </ads>
+  <ads1>
+    <ad>
+      <title>
+        点击下载最新版开心车夫，修正老版本不加油等问题
+      </title>
+      <url>
+        http://bbs.snsfun.com/viewthread.php?tid=74889
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+  </ads1>
+  <fund>
+    http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
+  </fund>
+</data>
