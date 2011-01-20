@@ -8,18 +8,18 @@
   <TopAd>小小战争辅助工具已发布</TopAd>
   <TopAdLink>http://bbs.snsfun.com/thread-157081-1-1.html</TopAdLink>
   <version>
-    <last>20101018</last>
-    <last1>20101018</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20101018.zip</file>
-    <size>259990</size>
-    <name>开心厨师 Build 20101018</name>
-    <publisheddate>2010-10-18</publisheddate>
+    <last>20110121</last>
+    <last1>20110121</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Cafe_Build_20110121.zip</file>
+    <size>262290</size>
+    <name>开心厨师 Build 20110121</name>
+    <publisheddate>2011-01-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Cafe.Build 20101018 What's New:
+Kaixin001.Cafe.Build 20110121 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：中国菜谱
+1. 紧急修复开心网调整造成的《庄主》出错的问题
       ]]>
     </whatsnew>
   </version>
