@@ -9,24 +9,20 @@
   <TopAdLink>http://bbs.snsfun.com/thread-157082-1-1.html</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20110120</last>
-    <last1>20110120</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/WarGame_Build_20110120.zip</file>
+    <last>20110121</last>
+    <last1>20110121</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/WarGame_Build_20110121.zip</file>
     <size>604631</size>
-    <name>开心网小小战争辅助工具 Build 20110120</name>
-    <publisheddate>2011-01-20</publisheddate>
+    <name>小小领主 Build 20110121</name>
+    <publisheddate>2011-01-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.WarGame.Build 20110120 What's New:
+Kaixin001.WarGame.Build 20110121 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 自动生产
+1. 紧急修复开心网调整造成的《领主》出错的问题
 
-2. 自动训练
-
-3. 自动领取每日上线奖励
-
-4. 自动打猎
+2. 更改本工具名称为《小小领主》
 ]]>
     </whatsnew>
   </version>
