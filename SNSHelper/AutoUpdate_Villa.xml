@@ -9,34 +9,18 @@
   <TopAdLink>http://bbs.snsfun.com/thread-157081-1-1.html</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20101213</last>
-    <last1>20101213</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20101213.zip</file>
-    <size>604631</size>
-    <name>开心庄主 Build 20101213</name>
-    <publisheddate>2010-12-13</publisheddate>
+    <last>20110121</last>
+    <last1>20110121</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20110121.zip</file>
+    <size>604547</size>
+    <name>开心庄主 Build 20110121</name>
+    <publisheddate>2011-01-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20101213 What's New:
+Kaixin001.Villa.Build 20110121 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正第一次Wap操作时出错的Bug
-
-
-Kaixin001.Villa.Build 20101212 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 修正第一次Wap操作时出错的Bug
-
-2. 修正庄主显示施肥成功，实际上并未成功的Bug
-
-3. 修正庄主对可种花盆计算错误的Bug
-
-
-Kaixin001.Villa.Build 20101210 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 修正无法开启“大众汽车礼盒”的Bug
+1. 紧急修复开心网调整造成的《庄主》出错的问题
 ]]>
     </whatsnew>
   </version>
