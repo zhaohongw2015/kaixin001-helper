@@ -8,20 +8,18 @@
   <TopAd>小小战争辅助工具已发布</TopAd>
   <TopAdLink>http://bbs.snsfun.com/thread-157081-1-1.html</TopAdLink>
   <version>
-    <last>20100927</last>
-    <last1>20100927</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20100927.zip</file>
-    <size>1581289</size>
-    <name>花园农夫 Build 20100927</name>
-    <publisheddate>2010-09-27</publisheddate>
+    <last>20110121</last>
+    <last1>20110121</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20110121.zip</file>
+    <size>1585365</size>
+    <name>花园农夫 Build 20110121</name>
+    <publisheddate>2011-01-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20100927 What's New:
+Kaixin001.Framer.Build 20110121 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：月宫桂子、桂树、小麦等植物种子数据
-
-2. 新增：玉兔
+1. 紧急修复开心网调整造成的《农夫》出错的问题
       ]]>
     </whatsnew>
   </version>
