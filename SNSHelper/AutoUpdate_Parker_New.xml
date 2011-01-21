@@ -6,22 +6,17 @@
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/parker.htm</StartAdFormPageUrl>
   <version>
-    <last>2010041602</last>
-    <last1>2010041602</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Parker_Build_2010041602.zip</file>
-    <size>1293832</size>
-    <name>开心车夫 Build 2010041602</name>
-    <publisheddate>2010-04-16</publisheddate>
+    <last>20110121</last>
+    <last1>20110121</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Parker_Build_20110121.zip</file>
+    <size>1327798</size>
+    <name>开心车夫 Build 20110121</name>
+    <publisheddate>2011-01-21</publisheddate>
     <whatsnew>
       <![CDATA[
-开心车夫v2.0 2010041602 What's New:
+开心车夫v2.0 20110121 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-注：由于20091114版车夫源码丢失，该版本从20090823升级而来
-0. 修正车夫最小化后托盘图标丢失的Bug
-1. 修改车夫底层，完全基于农夫/厨师等最新的SNSHelper组件
-2. 修正车夫无法加油的Bug
-3. 修正车夫不以默认浏览器打开网页的Bug
-4. 修正车夫多次更新时会出错退出的Bug
+1. 紧急修复开心网调整造成的《车夫》出错的问题
       ]]>
     </whatsnew>
   </version>
