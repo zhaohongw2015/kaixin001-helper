@@ -9,26 +9,22 @@
   <TopAdLink>http://bbs.snsfun.com/forum-169-1.html</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20110124</last>
-    <last1>20110124</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Bird_Build_20110124.zip</file>
-    <size>604631</size>
-    <name>开心神掏 Build 20110124</name>
-    <publisheddate>2011-01-24</publisheddate>
+    <last>20110125</last>
+    <last1>20110125</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Bird_Build_20110125.zip</file>
+    <size>416438</size>
+    <name>开心神掏 Build 20110125</name>
+    <publisheddate>2011-01-25</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Bird.Build 20110124 What's New:
+Kaixin001.Bird.Build 20110125 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 支持多帐号管理，每个帐号独立设置
+1. 自动破壳
 
-2. 自动喂食
+2. 自动领取动态
 
-3. 自动清除鸟屎
-
-4. 自动放飞老鸟
-
-7. 新版本自动检测功能
+3. 更多手动操作功能：放鸟、破壳、收蛋等。
 ]]>
     </whatsnew>
   </version>
