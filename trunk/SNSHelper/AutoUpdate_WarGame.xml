@@ -9,20 +9,18 @@
   <TopAdLink>http://bbs.snsfun.com/thread-157282-1-1.html</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20110121</last>
-    <last1>20110121</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/WarGame_Build_20110121.zip</file>
-    <size>604631</size>
-    <name>小小领主 Build 20110121</name>
-    <publisheddate>2011-01-21</publisheddate>
+    <last>20110126</last>
+    <last1>20110126</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/WarGame_Build_20110126.zip</file>
+    <size>119568</size>
+    <name>小小领主 Build 20110126</name>
+    <publisheddate>2011-01-26</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.WarGame.Build 20110121 What's New:
+Kaixin001.WarGame.Build 20110126 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 紧急修复开心网调整造成的《领主》出错的问题
-
-2. 更改本工具名称为《小小领主》
+1. 修复采取场、训练场显示不全，导致领主未能完全处理Bug
 ]]>
     </whatsnew>
   </version>
