@@ -9,18 +9,20 @@
   <TopAdLink>http://t.sina.com.cn/1700919817/m4ERHnjPB</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20110121</last>
-    <last1>20110121</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20110121.zip</file>
-    <size>604547</size>
-    <name>开心庄主 Build 20110121</name>
-    <publisheddate>2011-01-21</publisheddate>
+    <last>20110401</last>
+    <last1>20110401</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20110401.zip</file>
+    <size>604565</size>
+    <name>开心庄主 Build 20110401</name>
+    <publisheddate>2011-04-01</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20110121 What's New:
+Kaixin001.Villa.Build 20110401 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 紧急修复开心网调整造成的《庄主》出错的问题
+1. 修复更新种子后，《庄主》无法播种的Bug
+
+2. 商店信息面板中，原“解锁等级”改为“解锁前提”
 ]]>
     </whatsnew>
   </version>
