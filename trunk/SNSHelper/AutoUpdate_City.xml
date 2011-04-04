@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
+  <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
+  <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
+  <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
+  <StartAdFormPageUrl>http://www.365cnxfc.com/jailu/bird.htm</StartAdFormPageUrl>
+  <TopAd>开心网辅助工具愚人节更新计划</TopAd>
+  <TopAdLink>http://t.sina.com.cn/1700919817/m4ERHnjPB</TopAdLink>
+  <AddMe>1</AddMe>
+  <version>
+    <last>20110405</last>
+    <last1>20110405</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Bird_Build_20110125.zip</file>
+    <size>416438</size>
+    <name>开心神掏 Build 20110125</name>
+    <publisheddate>2011-01-25</publisheddate>
+    <whatsnew>
+      <![CDATA[
+Kaixin001.Bird.Build 20110125 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+1. 自动破壳
+
+2. 自动领取动态
+
+3. 更多手动操作功能：放鸟、破壳、收蛋等。
+]]>
+    </whatsnew>
+  </version>
+  <ads>
+    <ad>
+      <title>
+        20100105版农夫新增强制防大兵成龙功能，请及时更新！
+      </title>
+      <url>
+        http://bbs.snsfun.com/thread-82550-1-1.html
+      </url>
+      <color>-65408</color>
+      <expired>2019-12-13 23:59:59</expired>
+    </ad>
+  </ads>
+  <ads1>
+    <ad>
+      <title>
+        点击下载最新版开心车夫，修正老版本不加油等问题
+      </title>
+      <url>
+        http://bbs.snsfun.com/viewthread.php?tid=74889
+      </url>
+      <color>-16744448</color>
+      <expired>2019-11-08 11:13:00</expired>
+    </ad>
+  </ads1>
+  <fund>
+    http://www.cnblogs.com/jailu/archive/2009/08/23/1552371.html
+  </fund>
+</data>
