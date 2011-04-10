@@ -12,20 +12,24 @@
   <version>
     <last>20110409</last>
     <last1>20110409</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Bird_Build_20110125.zip</file>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110410.zip</file>
     <size>416438</size>
-    <name>开心神掏 Build 20110125</name>
-    <publisheddate>2011-01-25</publisheddate>
+    <name>开心城管 Build 20110410</name>
+    <publisheddate>2011-04-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Bird.Build 20110125 What's New:
+Kaixin001.City Build 20110410 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 自动破壳
+1. 修复因电脑环境因素导致《开心管家》运行时出现“任务过程中出现错误”的问题
 
-2. 自动领取动态
+2. 新增自动升级功能
 
-3. 更多手动操作功能：放鸟、破壳、收蛋等。
+3. 新增自动接受好友的帮助：复活作物
+
+4. 新增自动收礼、自动回赠功能
+
+5. 新增自动领取动态功能
 ]]>
     </whatsnew>
   </version>
