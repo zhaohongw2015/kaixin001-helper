@@ -10,26 +10,24 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110410</last>
-    <last1>20110410</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110410.zip</file>
-    <size>1320758</size>
-    <name>开心城管 Build 20110410</name>
-    <publisheddate>2011-04-10</publisheddate>
+    <last>20110412</last>
+    <last1>20110412</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110412.zip</file>
+    <size>1425715</size>
+    <name>开心城管 Build 20110412</name>
+    <publisheddate>2011-04-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110410 What's New:
+Kaixin001.City Build 20110412 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修复因电脑环境因素导致《开心管家》运行时出现“任务过程中出现错误”的问题
+1. 修复360安全卫士和部分杀毒软件会报木马的问题（PS：绝对属于误报！！！）
 
-2. 新增自动升级功能
+2. 修复城管在收钱和收租时不计算增益的Bug
 
-3. 新增自动接受好友的帮助：复活作物
+3. 修复领取动态时出错的Bug
 
-4. 新增自动收礼、自动回赠功能
-
-5. 新增自动领取动态功能
+4. 主面板上增加增益率的显示
 ]]>
     </whatsnew>
   </version>
