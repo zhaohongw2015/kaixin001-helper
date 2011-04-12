@@ -9,20 +9,20 @@
   <TopAdLink>http://bbs.snsfun.com/thread-164492-1-1.html</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20110401</last>
-    <last1>20110401</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20110401.zip</file>
-    <size>604565</size>
-    <name>开心庄主 Build 20110401</name>
-    <publisheddate>2011-04-01</publisheddate>
+    <last>20110412</last>
+    <last1>20110412</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20110412.zip</file>
+    <size>886200</size>
+    <name>开心庄主 Build 20110412</name>
+    <publisheddate>2011-04-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20110401 What's New:
+Kaixin001.Villa.Build 20110412 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修复更新种子后，《庄主》无法播种的Bug
+1. 修复《庄主》被360等杀毒软件报木马的问题
 
-2. 商店信息面板中，原“解锁等级”改为“解锁前提”
+2. 主界面上增加“查看MD5码”的链接
 ]]>
     </whatsnew>
   </version>
