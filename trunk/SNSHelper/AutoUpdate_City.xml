@@ -10,24 +10,22 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110412</last>
-    <last1>20110412</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110412.zip</file>
-    <size>1425715</size>
-    <name>开心城管 Build 20110412</name>
-    <publisheddate>2011-04-12</publisheddate>
+    <last>20110414</last>
+    <last1>20110414</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110414.zip</file>
+    <size>1432189</size>
+    <name>开心城管 Build 20110414</name>
+    <publisheddate>2011-04-14</publisheddate>
     <whatsnew>
       <![CDATA[
 Kaixin001.City Build 20110412 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修复360安全卫士和部分杀毒软件会报木马的问题（PS：绝对属于误报！！！）
+1. 修正增益率计算有误的Bug
 
-2. 修复城管在收钱和收租时不计算增益的Bug
+2. 修正人口上限显示不正确的Bug
 
-3. 修复领取动态时出错的Bug
-
-4. 主面板上增加增益率的显示
+3. 新增一键帮助好友功能：可自动获得每天首次访问好友时的奖励、可自动帮助好友
 ]]>
     </whatsnew>
   </version>
