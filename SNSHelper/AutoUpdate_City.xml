@@ -10,22 +10,20 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110414</last>
-    <last1>20110414</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110414.zip</file>
-    <size>1432189</size>
-    <name>开心城管 Build 20110414</name>
-    <publisheddate>2011-04-14</publisheddate>
+    <last>20110418</last>
+    <last1>20110418</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110418.zip</file>
+    <size>1550235</size>
+    <name>开心城管 Build 20110418</name>
+    <publisheddate>2011-04-18</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110412 What's New:
+Kaixin001.City Build 20110418 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正增益率计算有误的Bug
+1. 修正接受好友浇水帮忙后，作物成熟时间计算不正确的Bug
 
-2. 修正人口上限显示不正确的Bug
-
-3. 新增一键帮助好友功能：可自动获得每天首次访问好友时的奖励、可自动帮助好友
+2. 修正非东八区（北京时区）用户使用《开心城管》时，时间显示有误的问题（非东八区的用户，请在“全局设置”面板中设置本机与北京时间的时差）
 ]]>
     </whatsnew>
   </version>
