@@ -10,20 +10,26 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110418</last>
-    <last1>20110418</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110418.zip</file>
-    <size>1550235</size>
-    <name>开心城管 Build 20110418</name>
-    <publisheddate>2011-04-18</publisheddate>
+    <last>20110425</last>
+    <last1>20110425</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110425.zip</file>
+    <size>1571161</size>
+    <name>开心城管 Build 20110425</name>
+    <publisheddate>2011-04-25</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110418 What's New:
+Kaixin001.City Build 20110425 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正接受好友浇水帮忙后，作物成熟时间计算不正确的Bug
+1. 新增：单店操作功能（详情请多点击右键）
 
-2. 修正非东八区（北京时区）用户使用《开心城管》时，时间显示有误的问题（非东八区的用户，请在“全局设置”面板中设置本机与北京时间的时差）
+2. 新增：分店信息显示及供货功能
+
+3. 新增：自动接受好友供货功能
+
+4. 新增：代理功能
+
+5. 修复其它小Bug
 ]]>
     </whatsnew>
   </version>
