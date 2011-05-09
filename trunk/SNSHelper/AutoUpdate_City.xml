@@ -5,31 +5,23 @@
   <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
-  <TopAd>用手机管理城市：开心城市手机版</TopAd>
+  <TopAd>用手机打理你的城市：开心城市手机版</TopAd>
   <TopAdLink>http://bbs.snsfun.com/thread-165289-1-1.html</TopAdLink>
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110425</last>
-    <last1>20110425</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110425.zip</file>
-    <size>1571161</size>
-    <name>开心城管 Build 20110425</name>
-    <publisheddate>2011-04-25</publisheddate>
+    <last>20110510</last>
+    <last1>20110510</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110510.zip</file>
+    <size>1577165</size>
+    <name>开心城管 Build 20110510</name>
+    <publisheddate>2011-05-10</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110425 What's New:
+Kaixin001.City Build 20110510 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：单店操作功能（详情请多点击右键）
-
-2. 新增：分店信息显示及供货功能
-
-3. 新增：自动接受好友供货功能
-
-4. 新增：代理功能
-
-5. 修复其它小Bug
+1. 新增：对“北京会馆”的支持
 ]]>
     </whatsnew>
   </version>
