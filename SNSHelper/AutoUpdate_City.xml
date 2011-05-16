@@ -10,18 +10,20 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110510</last>
-    <last1>20110510</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110510.zip</file>
-    <size>1577165</size>
-    <name>开心城管 Build 20110510</name>
-    <publisheddate>2011-05-10</publisheddate>
+    <last>20110517</last>
+    <last1>20110517</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110517.zip</file>
+    <size>1581501</size>
+    <name>开心城管 Build 20110517</name>
+    <publisheddate>2011-05-17</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110510 What's New:
+Kaixin001.City Build 20110517 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 新增：对“北京会馆”的支持
+1. 新增：对“上海会馆”“埃菲尔铁塔”“旋转餐厅”等的支持
+2. 修改：登陆模块
+3. 城管最多可添加帐号数调整为15个
 ]]>
     </whatsnew>
   </version>
