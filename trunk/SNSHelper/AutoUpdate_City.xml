@@ -10,18 +10,22 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110523</last>
-    <last1>20110523</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110523.zip</file>
-    <size>1606834</size>
-    <name>开心城管 Build 20110523</name>
-    <publisheddate>2011-05-23</publisheddate>
+    <last>20110525</last>
+    <last1>20110525</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110525.zip</file>
+    <size>1641198</size>
+    <name>开心城管 Build 20110525</name>
+    <publisheddate>2011-05-25</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110523 What's New:
+Kaixin001.City Build 20110525 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正部分已开通的火车站在城管上显示“未开通”的问题
+1. 修正开心网调整后导致城管出现错误的Bug
+
+2. 继续修正火车站显示为“未开通”的问题
+
+3. 新增对“游乐场”的支持
 ]]>
     </whatsnew>
   </version>
