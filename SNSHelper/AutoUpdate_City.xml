@@ -10,20 +10,20 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>2011052502</last>
-    <last1>2011052502</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_2011052502.zip</file>
-    <size>1641535</size>
-    <name>开心城管 Build 2011052502</name>
-    <publisheddate>2011-05-25</publisheddate>
+    <last>20110527</last>
+    <last1>20110527</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110527.zip</file>
+    <size>1643576</size>
+    <name>开心城管 Build 20110527</name>
+    <publisheddate>2011-05-27</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 2011052502 What's New:
+Kaixin001.City Build 20110527 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正增益计算错误的问题
+1. 修正开心网调整后，城管多号运行时频繁出错的Bug
 
-2. 继续修正火车站显示为“未开通”的问题
+2. 新增对“香港会馆”“比萨斜塔”的支持
 
 Kaixin001.City Build 20110525 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
