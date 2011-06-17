@@ -10,29 +10,26 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110527</last>
-    <last1>20110527</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110527.zip</file>
-    <size>1643576</size>
-    <name>开心城管 Build 20110527</name>
-    <publisheddate>2011-05-27</publisheddate>
+    <last>20110617</last>
+    <last1>20110617</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110617.zip</file>
+    <size>2272293</size>
+    <name>开心城管 Build 20110617</name>
+    <publisheddate>2011-06-17</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110527 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Kaixin001.City Build 20110617 What's New:
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正开心网调整后，城管多号运行时频繁出错的Bug
+1. 新增“验证码”输入窗
 
-2. 新增对“香港会馆”“比萨斜塔”的支持
+2. 新增“批量导入帐号”功能
 
-Kaixin001.City Build 20110525 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+3. 新增“一键全部帮助”功能
 
-1. 修正开心网调整后导致城管出现错误的Bug
+4. 新增随机获得两点经验功能
 
-2. 继续修正火车站显示为“未开通”的问题
-
-3. 新增对“游乐场”的支持
+5. 新增大量新式建筑，如：迪拜帆船酒店、悉尼歌剧院等
 ]]>
     </whatsnew>
   </version>
