@@ -2,7 +2,7 @@
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
-  <StartAdFormDisplayedProbability>3</StartAdFormDisplayedProbability>
+  <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
   <TopAd>小号注册利器：开心网注册机</TopAd>
@@ -12,24 +12,18 @@
   <version>
     <last>20110617</last>
     <last1>20110617</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110617.zip</file>
-    <size>2272293</size>
-    <name>开心城管 Build 20110617</name>
-    <publisheddate>2011-06-17</publisheddate>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110620.zip</file>
+    <size>2292092</size>
+    <name>开心城管 Build 20110620</name>
+    <publisheddate>2011-06-20</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110617 What's New:
+Kaixin001.City Build 20110620 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-1. 新增“验证码”输入窗
-
-2. 新增“批量导入帐号”功能
-
-3. 新增“一键全部帮助”功能
-
-4. 新增随机获得两点经验功能
-
-5. 新增大量新式建筑，如：迪拜帆船酒店、悉尼歌剧院等
+1. 新增对“海运”的支持
+2. 新增对“警察抓罪犯”的支持(优先体验)
+3. 新增验证码输入窗自动关闭功能
+4. 新增“软件注册”功能
 ]]>
     </whatsnew>
   </version>
