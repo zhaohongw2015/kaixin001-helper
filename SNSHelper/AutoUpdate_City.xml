@@ -10,20 +10,20 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110620</last>
-    <last1>20110620</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110620.zip</file>
-    <size>2292092</size>
-    <name>开心城管 Build 20110620</name>
-    <publisheddate>2011-06-20</publisheddate>
+    <last>20110621</last>
+    <last1>20110621</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110621.zip</file>
+    <size>2297144</size>
+    <name>开心城管 Build 20110621</name>
+    <publisheddate>2011-06-21</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110620 What's New:
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 新增对“海运”的支持
-2. 新增对“警察抓罪犯”的支持(优先体验)
-3. 新增验证码输入窗自动关闭功能
-4. 新增“软件注册”功能
+Kaixin001.City Build 20110621 更新日志：
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+1. 进一步完善“海运”相关功能
+2. 新增对“警察抓罪犯”的支持
+3. 新增“在线卖货”功能（优先体验）
+4. 新增“自动使用体力”功能（优先体验）
 ]]>
     </whatsnew>
   </version>
