@@ -30,14 +30,16 @@ Kaixin001.City Build 20110622 更新日志:
 3. 新增“自定义执行顺序”功能，可在“帐号设置”面板中设置（VIP功能）
 ]]>
     </whatsnew>
-    <vipfunc>
+    <VIPFunc>
 <![CDATA[
 1. 自动使用体力
 2. 在线卖货
 3. “自定义执行顺序”：可在“帐号设置”面板中设置
 4. “启动后自运行”功能：可在“全局设置”面板中设置
 ]]>
-    </vipfunc>
+    </VIPFunc>
+    <PaymentLink1>http://blog.jailu.me/how_to_by_city_reg</PaymentLink1>
+    <PaymentLink2>http://www.cnblogs.com/jailu/archive/2011/06/21/how_to_by_city_reg.html</PaymentLink2>
   </version>
   <ads>
     <ad>
