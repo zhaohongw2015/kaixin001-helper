@@ -2,7 +2,7 @@
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
-  <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
+  <StartAdFormDisplayedProbability>4</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
   <TopAd>小号注册利器：开心网注册机</TopAd>
@@ -10,20 +10,19 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110621</last>
-    <last1>20110621</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110621.zip</file>
-    <size>2297144</size>
-    <name>开心城管 Build 20110621</name>
-    <publisheddate>2011-06-21</publisheddate>
+    <last>20110622</last>
+    <last1>20110622</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110622.zip</file>
+    <size>2307645</size>
+    <name>开心城管 Build 20110622</name>
+    <publisheddate>2011-06-22</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110621 更新日志：
+Kaixin001.City Build 20110622 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 进一步完善“海运”相关功能
-2. 新增对“警察抓罪犯”的支持
-3. 新增“在线卖货”功能（优先体验）
-4. 新增“自动使用体力”功能（优先体验）
+1. “分店信息”面板中添加“一键供货”功能
+2. 新增“启动后自运行”功能，可在“全局设置”面板中设置（VIP功能）
+3. 新增“自定义执行顺序”功能，可在“帐号设置”面板中设置（VIP功能）
 ]]>
     </whatsnew>
   </version>
