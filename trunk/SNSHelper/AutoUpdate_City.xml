@@ -10,28 +10,28 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110622</last>
-    <last1>20110622</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110622.zip</file>
-    <size>2307645</size>
-    <name>开心城管 Build 20110622</name>
-    <publisheddate>2011-06-22</publisheddate>
+    <last>20110623</last>
+    <last1>20110623</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110623.zip</file>
+    <size>2308623</size>
+    <name>开心城管 Build 20110623</name>
+    <publisheddate>2011-06-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110622 更新日志:
+Kaixin001.City Build 20110623 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. “分店信息”面板中添加“一键供货”功能
-2. 新增“启动后自运行”功能，可在“全局设置”面板中设置（VIP功能）
-3. 新增“自定义执行顺序”功能，可在“帐号设置”面板中设置（VIP功能）
+1. 火车站新增对9个、12个好友车皮的支持
+
+2. 修正非北京时区，货船返航时间计算错误的问题
 ]]>
     </whatsnew>
   </version>
   <VIPFunc>
 <![CDATA[
-1. 自动使用体力
-2. 在线卖货
-3. “自定义执行顺序”：可在“帐号设置”面板中设置
-4. “启动后自运行”功能：可在“全局设置”面板中设置
+1. 自动使用体力功能
+2. 模拟在线卖货功能
+3. 自定义“执行顺序”功能
+4. “启动后自运行”功能
 ]]>
   </VIPFunc>
   <PaymentLink1>http://blog.jailu.me/how_to_by_city_reg</PaymentLink1>
