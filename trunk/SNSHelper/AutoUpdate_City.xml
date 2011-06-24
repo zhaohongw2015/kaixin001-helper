@@ -10,19 +10,19 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110623</last>
-    <last1>20110623</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110623.zip</file>
-    <size>2308623</size>
-    <name>开心城管 Build 20110623</name>
-    <publisheddate>2011-06-23</publisheddate>
+    <last>20110624</last>
+    <last1>20110624</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110624.zip</file>
+    <size>2312691</size>
+    <name>开心城管 Build 20110624</name>
+    <publisheddate>2011-06-24</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110623 更新日志:
+Kaixin001.City Build 20110624 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 火车站新增对9个、12个好友车皮的支持
+1. 紧急修正开心网调整后，城管加载不到游戏游戏的Bug
 
-2. 修正非北京时区，货船返航时间计算错误的问题
+2. 火车站部分，新增自动接收好友车皮的功能（VIP功能）
 ]]>
     </whatsnew>
   </version>
@@ -32,6 +32,7 @@ Kaixin001.City Build 20110623 更新日志:
 2. 模拟在线卖货功能
 3. 自定义“执行顺序”功能
 4. “启动后自运行”功能
+5. 自动接收好友车皮的功能
 ]]>
   </VIPFunc>
   <PaymentLink1>http://blog.jailu.me/how_to_by_city_reg</PaymentLink1>
