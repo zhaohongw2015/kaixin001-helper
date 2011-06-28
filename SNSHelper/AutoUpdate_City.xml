@@ -5,22 +5,22 @@
   <StartAdFormDisplayedProbability>4</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
-  <TopAd>小号注册利器：开心网注册器</TopAd>
+  <TopAd></TopAd>
   <TopAdLink>http://item.taobao.com/item.htm?id=10616451726</TopAdLink>
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110627</last>
-    <last1>20110627</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110627.zip</file>
-    <size>2319633</size>
-    <name>开心城管 Build 20110627</name>
-    <publisheddate>2011-06-27</publisheddate>
+    <last>20110628</last>
+    <last1>20110628</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110628.zip</file>
+    <size>2319117</size>
+    <name>开心城管 Build 20110628</name>
+    <publisheddate>2011-06-28</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110627 更新日志:
+Kaixin001.City Build 20110628 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 新增火车站好友指定功能（VIP功能）
+1. 修正火车站发车出现错误导致城管工作失败的Bug
 ]]>
     </whatsnew>
   </version>
