@@ -5,22 +5,24 @@
   <StartAdFormDisplayedProbability>4</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
-  <TopAd></TopAd>
-  <TopAdLink>http://item.taobao.com/item.htm?id=10616451726</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://weibo.com/jailu</TopAdLink>
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110628</last>
-    <last1>20110628</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110628.zip</file>
-    <size>2319117</size>
-    <name>开心城管 Build 20110628</name>
-    <publisheddate>2011-06-28</publisheddate>
+    <last>20110729</last>
+    <last1>20110729</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110729.zip</file>
+    <size>2341553</size>
+    <name>开心城管 Build 20110729</name>
+    <publisheddate>2011-07-29</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110628 更新日志:
+Kaixin001.City Build 20110729 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正火车站发车出现错误导致城管工作失败的Bug
+1. 新增对“工厂”的支持（VIP功能）
+
+2. 新增对“海上油井”的支持（VIP功能）
 ]]>
     </whatsnew>
   </version>
@@ -32,6 +34,8 @@ Kaixin001.City Build 20110628 更新日志:
 4. “启动后自运行”功能
 5. 自动接收好友车皮的功能
 6. 指定火车站好友功能
+7. 工厂功能
+8. 海上油井功能
 ]]>
   </VIPFunc>
   <PaymentLink1>http://blog.jailu.me/how_to_by_city_reg</PaymentLink1>
