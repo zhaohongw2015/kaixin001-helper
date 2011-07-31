@@ -10,19 +10,19 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110729</last>
-    <last1>20110729</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110729.zip</file>
-    <size>2341553</size>
-    <name>开心城管 Build 20110729</name>
-    <publisheddate>2011-07-29</publisheddate>
+    <last>20110731</last>
+    <last1>20110731</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110731.zip</file>
+    <size>2334668</size>
+    <name>开心城管 Build 20110731</name>
+    <publisheddate>2011-07-31</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110729 更新日志:
+Kaixin001.City Build 20110731 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 新增对“工厂”的支持（VIP功能）
+1. 修正：开心网调整后，城管工作失败的问题
 
-2. 新增对“海上油井”的支持（VIP功能）
+2. 新增：缓存登陆信息，减少登陆次数，减小验证码出现的可能性（VIP功能）
 ]]>
     </whatsnew>
   </version>
@@ -36,6 +36,7 @@ Kaixin001.City Build 20110729 更新日志:
 6. 指定火车站好友功能
 7. 工厂功能
 8. 海上油井功能
+9. 缓存登陆信息功能
 ]]>
   </VIPFunc>
   <PaymentLink1>http://blog.jailu.me/how_to_by_city_reg</PaymentLink1>
