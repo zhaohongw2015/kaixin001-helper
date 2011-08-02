@@ -10,19 +10,21 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110731</last>
-    <last1>20110731</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110731.zip</file>
-    <size>2334668</size>
-    <name>开心城管 Build 20110731</name>
-    <publisheddate>2011-07-31</publisheddate>
+    <last>20110802</last>
+    <last1>20110802</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110802.zip</file>
+    <size>2350635</size>
+    <name>开心城管 Build 20110802</name>
+    <publisheddate>2011-08-02</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110731 更新日志:
+Kaixin001.City Build 20110802 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正：开心网调整后，城管工作失败的问题
+1. 修正：开心网调整后，验证码无法通过验证的问题
 
-2. 新增：缓存登陆信息，减少登陆次数，减小验证码出现的可能性（VIP功能）
+2. 修正：在线卖货出错的问题（VIP功能）
+
+3. 新增：单坑收益（VIP功能）
 ]]>
     </whatsnew>
   </version>
@@ -37,6 +39,7 @@ Kaixin001.City Build 20110731 更新日志:
 7. 工厂功能
 8. 海上油井功能
 9. 缓存登陆信息功能
+10. 单坑增益功能
 ]]>
   </VIPFunc>
   <PaymentLink1>http://blog.jailu.me/how_to_by_city_reg</PaymentLink1>
