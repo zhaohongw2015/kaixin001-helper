@@ -10,21 +10,19 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110802</last>
-    <last1>20110802</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110802.zip</file>
-    <size>2350635</size>
-    <name>开心城管 Build 20110802</name>
-    <publisheddate>2011-08-02</publisheddate>
+    <last>20110803</last>
+    <last1>20110803</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110803.zip</file>
+    <size>2341643</size>
+    <name>开心城管 Build 20110803</name>
+    <publisheddate>2011-08-03</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110802 更新日志:
+Kaixin001.City Build 20110803 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正：开心网调整后，验证码无法通过验证的问题
+1. 修正：多帐号下，频繁工作失败的问题
 
-2. 修正：在线卖货出错的问题（VIP功能）
-
-3. 新增：单坑收益（VIP功能）
+2. 修正：单坑移动、复位失败的问题（VIP功能）
 ]]>
     </whatsnew>
   </version>
