@@ -10,21 +10,19 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110810</last>
-    <last1>20110810</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110810.zip</file>
-    <size>2378566</size>
-    <name>开心城管 Build 20110810</name>
-    <publisheddate>2011-08-10</publisheddate>
+    <last>20110812</last>
+    <last1>20110812</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110812.zip</file>
+    <size>2382600</size>
+    <name>开心城管 Build 20110812</name>
+    <publisheddate>2011-08-12</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110810 更新日志:
+Kaixin001.City Build 20110812 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 新增：对二级码头卖货功能的支持
+1. 修正：对空闲状态的灰色经营识别出错，导出城管无法运行的Bug
 
-2. 新增：对“灰色经营”的支持（VIP功能）
-
-3. 新增：对二级、三级油井及工厂的支持（VIP功能）
+2. 新增：清除局部设置的功能（位置：农田/商业/住宅列表-右键-清除(所有)局部设置）
 ]]>
     </whatsnew>
   </version>
