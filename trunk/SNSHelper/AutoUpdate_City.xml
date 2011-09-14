@@ -10,21 +10,17 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110826</last>
-    <last1>20110826</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110826.zip</file>
-    <size>2387068</size>
-    <name>开心城管 Build 20110826</name>
-    <publisheddate>2011-08-26</publisheddate>
+    <last>20110914</last>
+    <last1>20110914</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110914.zip</file>
+    <size>2386512</size>
+    <name>开心城管 Build 20110914</name>
+    <publisheddate>2011-09-14</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110826 更新日志:
+Kaixin001.City Build 20110914 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正：无法处理新建农田、商业、住宅、船运等的问题
-
-2. 修正：分店供货失败的问题
-
-3. 优化启动速度
+1. 修正：开心网调整后，城管无法运行的问题
 ]]>
     </whatsnew>
   </version>
