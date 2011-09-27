@@ -2,7 +2,7 @@
 <data>
   <defaultadtitle>更多合作细节，请联系Mr.Jailu@gmail.com。</defaultadtitle>
   <defaultadurl>mailto:mr.jailu@gmail.com</defaultadurl>
-  <StartAdFormDisplayedProbability>4</StartAdFormDisplayedProbability>
+  <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
   <TopAd>Jailu@新浪微博</TopAd>
@@ -10,17 +10,29 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20110914</last>
-    <last1>20110914</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110914.zip</file>
-    <size>2386512</size>
-    <name>开心城管 Build 20110914</name>
-    <publisheddate>2011-09-14</publisheddate>
+    <last>20110927</last>
+    <last1>20110927</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20110927.zip</file>
+    <size>2389213</size>
+    <name>开心城管 Build 20110927</name>
+    <publisheddate>2011-09-27</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20110914 更新日志:
+Kaixin001.City Build 20110927 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正：开心网调整后，城管无法运行的问题
+1. 开放所有VIP功能
+   1. 自动使用体力功能
+   2. 模拟在线卖货功能
+   3. 自定义“执行顺序”功能
+   4. “启动后自运行”功能
+   5. 自动接收好友车皮的功能
+   6. 指定火车站好友功能
+   7. 工厂功能
+   8. 海上油井功能
+   9. 缓存登陆信息功能
+   10. 单坑增益功能
+   11. 自动救护功能
+   12. 灰色经营功能
 ]]>
     </whatsnew>
   </version>
