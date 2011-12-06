@@ -5,24 +5,22 @@
   <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/city.htm</StartAdFormPageUrl>
-  <TopAd>开心城管20111008问题收集帖</TopAd>
-  <TopAdLink>http://bbs.snsfun.com/thread-219424-1-1.html</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://weibo.com/jailu</TopAdLink>
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20111008</last>
-    <last1>20111008</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20111008.zip</file>
-    <size>2389420</size>
-    <name>开心城管 Build 20111008</name>
-    <publisheddate>2011-10-08</publisheddate>
+    <last>20111206</last>
+    <last1>20111206</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20111206.zip</file>
+    <size>2396160</size>
+    <name>开心城管 Build 20111206</name>
+    <publisheddate>2011-12-06</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20111008 更新日志:
+Kaixin001.City Build 20111206 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 1. 修正开心网调整后，城管加载游戏数据出错的问题
-2. 新增对“开心嘉园”的支持
-3. 新增缓存登陆信息功能
 ]]>
     </whatsnew>
   </version>
