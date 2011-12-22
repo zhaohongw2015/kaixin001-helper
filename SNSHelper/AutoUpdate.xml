@@ -5,21 +5,21 @@
   <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/farmerad.htm</StartAdFormPageUrl>
-  <TopAd>开心城市辅助工具：开心城管已发布</TopAd>
-  <TopAdLink>http://bbs.snsfun.com/thread-164492-1-1.html</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://weibo.com/jailu</TopAdLink>
   <version>
-    <last>20110121</last>
-    <last1>20110121</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20110121.zip</file>
-    <size>1585365</size>
-    <name>花园农夫 Build 20110121</name>
-    <publisheddate>2011-01-21</publisheddate>
+    <last>20111222</last>
+    <last1>20111222</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Farmer_Build_20111222.zip</file>
+    <size>1587286</size>
+    <name>花园农夫 Build 20111222</name>
+    <publisheddate>2011-12-22</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Framer.Build 20110121 What's New:
+Kaixin001.Framer.Build 20111222 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 紧急修复开心网调整造成的《农夫》出错的问题
+1. 修复开心网调整后，农夫登陆失败的问题
       ]]>
     </whatsnew>
   </version>
