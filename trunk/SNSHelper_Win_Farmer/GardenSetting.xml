@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Settings>
-  <GlobalSetting>
-    <WorkingInterval>60</WorkingInterval>
-    <NetworkDelay>3</NetworkDelay>
-  </GlobalSetting>
-  <AccountSettings>
-  </AccountSettings>
-</Settings>
