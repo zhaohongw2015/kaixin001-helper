@@ -5,24 +5,24 @@
   <StartAdFormDisplayedProbability>5</StartAdFormDisplayedProbability>
   <IsDisplayedStartAdForm>1</IsDisplayedStartAdForm>
   <StartAdFormPageUrl>http://rich.snsfun.com/villa.htm</StartAdFormPageUrl>
-  <TopAd>开心城市辅助工具：开心城管已发布</TopAd>
-  <TopAdLink>http://bbs.snsfun.com/thread-164492-1-1.html</TopAdLink>
+  <TopAd>Jailu@新浪微博</TopAd>
+  <TopAdLink>http://weibo.com/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20110412</last>
-    <last1>20110412</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20110412.zip</file>
-    <size>886200</size>
-    <name>开心庄主 Build 20110412</name>
-    <publisheddate>2011-04-12</publisheddate>
+    <last>20111223</last>
+    <last1>20111223</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20111223.zip</file>
+    <size>1696169</size>
+    <name>开心庄主 Build 20111223</name>
+    <publisheddate>2011-12-23</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20110412 What's New:
+Kaixin001.Villa.Build 20111223 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修复《庄主》被360等杀毒软件报木马的问题
+1. 修复开心网调整后，庄主登陆失败的问题
 
-2. 主界面上增加“查看MD5码”的链接
+2. 新增验证码输入窗体
 ]]>
     </whatsnew>
   </version>
