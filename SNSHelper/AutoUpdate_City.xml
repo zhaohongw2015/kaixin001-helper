@@ -10,17 +10,17 @@
   <MD5CheckingUrl>http://blog.jailu.me/kaixin001_city_md5</MD5CheckingUrl>
   <AddMe>1</AddMe>
   <version>
-    <last>20111223</last>
-    <last1>20111223</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20111223.zip</file>
+    <last>20120214</last>
+    <last1>20120214</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/City_Build_20120214.zip</file>
     <size>2397881</size>
-    <name>开心城管 Build 20111223</name>
-    <publisheddate>2011-12-23</publisheddate>
+    <name>开心城管 Build 20120214</name>
+    <publisheddate>2012-02-14</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.City Build 20111223 更新日志:
+Kaixin001.City Build 20120214 更新日志:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1. 修正开心网调整后，城管无法登陆的问题
+1. 修正开心网调整后，城管读取游戏失败的问题
 ]]>
     </whatsnew>
   </version>
