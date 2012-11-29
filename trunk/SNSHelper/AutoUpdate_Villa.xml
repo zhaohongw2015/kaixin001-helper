@@ -9,20 +9,18 @@
   <TopAdLink>http://weibo.com/jailu</TopAdLink>
   <AddMe>1</AddMe>
   <version>
-    <last>20111224</last>
-    <last1>20111224</last1>
-    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20111224.zip</file>
-    <size>1698293 </size>
-    <name>开心庄主 Build 20111224</name>
-    <publisheddate>2011-12-24</publisheddate>
+    <last>20121129</last>
+    <last1>20121129</last1>
+    <file>http://kaixin001-helper.googlecode.com/files/Villa_Build_20121129.zip</file>
+    <size>882731</size>
+    <name>开心庄主 Build 20121129</name>
+    <publisheddate>2012-11-29</publisheddate>
     <whatsnew>
       <![CDATA[
-Kaixin001.Villa.Build 20111224 What's New:
+Kaixin001.Villa.Build 20121129 What's New:
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-1. 修正某些情况下，输入验证码后，庄主出错退出的问题
-
-2. 新增WAP验证码输入窗，WAP操作可正常进行
+1. 修复开心网调整后，庄主登陆失败的问题
 ]]>
     </whatsnew>
   </version>
