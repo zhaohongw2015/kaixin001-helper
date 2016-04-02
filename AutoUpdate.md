@@ -1,0 +1,1 @@
+string latestFile = "Kaixin001.Helper.V1.0.Beta1.patch001.zip";
